@@ -1,0 +1,8 @@
+﻿  WarningList 0.1.cpp
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(7,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(70,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(184,132): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(74,6): warning C4101: warning: неиспользованная локальная переменная
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(73,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\Общий\Desktop\Доклады\WarningList 0.1.cpp(73,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningListTVersion.vcxproj -> C:\Users\Общий\source\repos\WarningListTVersion\Debug\WarningListTVersion.exe
