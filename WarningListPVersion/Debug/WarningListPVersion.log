@@ -1,0 +1,17 @@
+﻿  WarningList 0.4.cpp
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\Translite.h(9,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(11,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(106,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(251,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(271,13): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(290,19): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(312,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(477,133): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(114,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(113,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningList 0.4\WarningListPVersion\WarningList 0.4.cpp(114,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningListPVersion.vcxproj -> C:\Users\TopDesktop-1\source\repos\WarningList 0.4\Debug\WarningListPVersion.exe
