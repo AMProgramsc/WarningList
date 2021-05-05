@@ -67,8 +67,14 @@ WarningList 0.4 Basic id-24042021
 
 now you can change and add elements to the list 
 
-WarningList 0.4.1 Basic id-30042021(actual version)
+WarningList 0.4.1 Basic id-30042021
 
 -Added elements of the array can be deleted
 
 -Fixed Colors returned!
+
+WarningList 0.4.2 Basic id-04042021(actual version)
+
+-Fixed dynamic array d_syze is now vector
+
+-Fixed eternal cycle while(exit)
