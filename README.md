@@ -72,3 +72,9 @@ WarningList 0.4.2 Basic id-04052021(actual version)
 * Fixed dynamic array d_syze is now vector
 * Fixed eternal cycle while(exit)
 -----------------------------------
+WarningList 0.4.4 Basic id-10052021(actual version)
+-----------------------------------
+* Added item selection
+-----------------------------------
+
+
