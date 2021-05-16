@@ -6,6 +6,11 @@ This program is only suitable for students who need to quickly calculate their a
 I will try to release updates for my creation as often as possible. :)
 when you find an error, bug, or just want to somehow help in development, write to email <alexmasalov17@gmail.com>
 
+# Launching the program
+
+* Run exe file in Debug folder 
+-------------------------------
+# Versions
 ----------------------------------
 WarningList 0.1.0 Basic id-26102020
 ----------------------------------
