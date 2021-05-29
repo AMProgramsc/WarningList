@@ -81,8 +81,12 @@ WarningList 0.4.4 Basic id-10052021
 -----------------------------------
 * Added item selection
 -----------------------------------
-WarningList 0.4.5 Basic id-21052021(actual version)
+WarningList 0.4.5 Basic id-21052021
 -----------------------------------
 * Added Save and load information in file
+-----------------------------------
+WarningList 0.4.6 Basic id-28052021(actual version)
+-----------------------------------
+* Full Added Save,delete and load information in file
 -----------------------------------
 
