@@ -85,8 +85,12 @@ WarningList 0.4.5 Basic id-21052021
 -----------------------------------
 * Added Save and load information in file
 -----------------------------------
-WarningList 0.4.6 Basic id-28052021(actual version)
+WarningList 0.4.6 Basic id-28052021
 -----------------------------------
 * Full Added Save,delete and load information in file
+-----------------------------------
+WarningList 0.4.7 Basic id-03062021(actual version)
+-----------------------------------
+* Fixed not found and empty files 
 -----------------------------------
 
