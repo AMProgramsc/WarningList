@@ -12,7 +12,7 @@ when you find an error, bug, or just want to somehow help in development, write 
 -------------------------------
 # License information
 Extended WarningList is provided under the Apache License 2.0.
-
+ Apache License
 
 -------------------------------
 # Versions
