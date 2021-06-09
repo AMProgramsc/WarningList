@@ -10,6 +10,12 @@ when you find an error, bug, or just want to somehow help in development, write 
 
 * Run exe file in Debug folder 
 -------------------------------
+# License information
+Extended WarningList is provided under the Apache License 2.0.
+http://www.apache.org/licenses/
+
+
+-------------------------------
 # Versions
 ----------------------------------
 WarningList 0.1.0 Basic id-26102020
