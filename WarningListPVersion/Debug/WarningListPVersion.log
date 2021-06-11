@@ -1,0 +1,19 @@
+﻿  WarningList 0.4.7.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(11,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(10,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(134,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(430,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(451,14): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(470,20): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(499,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(667,133): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(736,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(136,14): warning C4101: selectdata: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(143,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(142,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.7.cpp(143,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningListPVersion.vcxproj -> C:\Users\TopDesktop-1\source\repos\WarningListPVersion\Debug\WarningListPVersion.exe
