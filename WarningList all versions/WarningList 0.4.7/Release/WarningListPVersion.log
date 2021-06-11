@@ -1,0 +1,37 @@
+﻿  Translite.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(9,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(100,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(244,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(259,13): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(278,19): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(304,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(470,133): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(111,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(110,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(113,6): warning C4101: add: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(111,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningList 0.4.2.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(9,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(9,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(103,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(248,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(268,13): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(287,19): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(316,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(482,133): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(111,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(110,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.2.cpp(111,6): warning C4101: hit: неиспользованная локальная переменная
+  Создание кода
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 327 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  WarningListPVersion.vcxproj -> C:\Users\TopDesktop-1\source\repos\WarningListPVersion\Release\WarningListPVersion.exe
