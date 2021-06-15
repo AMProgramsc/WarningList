@@ -8,7 +8,8 @@ when you find an error, bug, or just want to somehow help in development, write 
 
 # Launching the program
 
-* Run exe file in Debug folder 
+* Unpack and run exe file in Debug folder 
+
 -------------------------------
 # License information
 Extended WarningList is provided under the Apache License 2.0.
