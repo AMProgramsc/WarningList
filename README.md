@@ -100,7 +100,14 @@ WarningList 0.4.7 Basic id-03062021
 -----------------------------------
 * Fixed not found and empty files 
 -----------------------------------
-WarningList 0.4.8 Basic id-11062021(actual version)
+WarningList 0.4.8 Basic id-11062021
 -----------------------------------
 * Updated Interface 
 -----------------------------------
+WarningList 0.4.9 Basic id-18062021(actual version)
+-----------------------------------
+* Added - Set color for font and window
+* Updated - Russian version
+* Note - Last Basic version
+-----------------------------------
+
