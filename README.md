@@ -16,3 +16,10 @@ Extended WarningList is provided under the Apache License 2.0.
 
 More information can be found in the [License](https://github.com/AMProgramms/WarningList/blob/master/license.md) page
 
+-------------------------------
+# News
+
+* 18.06.2021 - Last Basic version release WarningList 0.4.9
+
+-------------------------------
+
