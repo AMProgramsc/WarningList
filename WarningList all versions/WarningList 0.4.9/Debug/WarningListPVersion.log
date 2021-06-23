@@ -1,0 +1,39 @@
+﻿  Translite.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(11,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(102,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(606,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(621,14): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(640,20): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(666,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(834,134): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(904,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(121,16): warning C4101: selectdata: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(129,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(127,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(131,6): warning C4101: add: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(129,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningList 0.4.9.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(11,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(10,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(124,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(626,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(647,14): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(666,20): warning C4018: >: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(695,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(863,133): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(932,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(126,14): warning C4101: selectdata: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(134,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(133,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\WarningList 0.4.9.cpp(134,6): warning C4101: hit: неиспользованная локальная переменная
+  Создание кода...
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(922): warning C4715: Translite: значение возвращается не при всех путях выполнения
+  WarningListPVersion.vcxproj -> C:\Users\TopDesktop-1\source\repos\WarningListPVersion\Debug\WarningListPVersion.exe
