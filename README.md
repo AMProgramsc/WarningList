@@ -19,8 +19,8 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 -------------------------------
 # News
 
+* 23.06.2021 - First offical release Alpha version WarningList
 * 18.06.2021 - Last Basic version release WarningList 0.4.9
-
 -------------------------------
 Detailed information about all versions is located in [All versions](https://github.com/AMProgramms/WarningList/wiki/All-versions)
 
