@@ -8,9 +8,25 @@
         Title="WindowLoad" Height="450" Width="800" Background="Black"  
         ContentRendered="Window_ContentRendered" >
     <Grid Margin="-2,0,2,0">
-        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="358" Foreground="#FF00DCFF" ValueChanged="ProgressLoad_ValueChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5 Alpha" VerticalAlignment="Top" Width="358" Height="46" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" IsEnabled="False" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="391*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="385" Foreground="#FF00DCFF" ValueChanged="ProgressLoad_ValueChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5.1 Alpha" VerticalAlignment="Top" Width="385" Height="46" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" IsEnabled="False" />
         <Button Name="Button2" Content="Start" HorizontalAlignment="Left" Margin="323,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
         <Button x:Name="Exiter" Content="Exit" HorizontalAlignment="Left" Margin="323,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
+        <Menu Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White" Grid.ColumnSpan="2">
+            <MenuItem Header="Help">
+                <MenuItem Header="WarningList" ></MenuItem>
+                <MenuItem Header="Version" ></MenuItem>
+                <Separator />
+                <MenuItem Header="About" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Load" ></MenuItem>
+
+        </Menu>
+        <TextBlock HorizontalAlignment="Left" Margin="637,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="145" Text="Created by AMPrograms"/>
+        <TextBlock HorizontalAlignment="Left" Margin="637,393,0,0" TextWrapping="Wrap" Text="©All rights reserved 2021" VerticalAlignment="Top" Width="145" Foreground="White"/>
     </Grid>
 </Window>

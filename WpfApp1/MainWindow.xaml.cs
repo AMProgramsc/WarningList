@@ -67,8 +67,9 @@ namespace WpfApp1
                 }
                 
             }
-           
+         
         }
+      
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
            
@@ -113,5 +114,6 @@ namespace WpfApp1
             */
         }
 
+       
     }
 }

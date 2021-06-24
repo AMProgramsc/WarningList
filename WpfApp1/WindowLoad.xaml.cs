@@ -27,6 +27,7 @@ namespace WpfApp1
         {
             
             InitializeComponent();
+        
         }
         
         private void Window_ContentRendered(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace WpfApp1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+        
             Close();
             window.Show();
 
