@@ -24,9 +24,11 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
        
-        double value;
-        double ClickS;
+        double value,valueS;
+        double ClickS,ClickN;
+        double NumberN;
         double result;
+        double warning = 0;
         int sizeS = 0;
         double TotalResult;
         
@@ -79,20 +81,76 @@ namespace WpfApp1
         {
             string s = (string)((Button)e.OriginalSource).Content;
             ClickS++;
+            NumberN = ClickS;
             value += Int32.Parse(s);
             Clicker.Text = ClickS.ToString();
             Textbox1.Text = value.ToString();
-            
+            GEN.Clear();
                 
 
                 if (ClickS == 5)
                 {
                     result = value / ClickS;
-                    listbox.Items[sizeS]= result;
+                valueS = value;
+                Lister.Items[sizeS]= result;
                     TotalResult += result;
-                    value = 0;
-                    result = 0;
-                    ClickS = 0;
+           
+                if (result <= 2.5)
+                {
+                    GEN.Text = "Your middle score = " + result + "\r\n";
+                    GEN.Text += "WARNING!!! Low-score! " + "\r\n";
+                    
+                    for (; warning < 2.6;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 1);
+                        valueS += 3;
+                        NumberN += 1;
+                        GEN.Text += "You need: " + 3 + " for " + warning + "\r\n";
+                    }
+                    warning = 0;
+                    
+                }
+                else if (result <= 3.5)
+                {
+                    GEN.Text = "Your middle score = " + result + "\r\n";
+                    GEN.Text += "Warning! Score equal 3!" + "\r\n";
+                    
+                    for (; warning < 3.6;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 1);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += "You need: " + 4 + " for " + warning + "\r\n";
+                    }
+                    
+                    warning = 0;
+                    
+                }
+                else if (result <= 4.5)
+                {
+                    GEN.Text = "Your middle score = " + result + "\r\n";
+                    GEN.Text += "Warning! Score equal 4!" + "\r\n";
+                    
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
+                        NumberN += 1;
+                        GEN.Text += "You need: " + 5 + " for " + warning + "\r\n";
+                    }
+                    warning = 0;
+                   
+                }
+                else
+                {
+                   
+                        GEN.Text = "Your middle score = " + result + "\r\n";
+                        GEN.Text += "Total score is normal! ;) " + "\r\n";
+                    
+                }
+                value = 0;
+                result = 0;
+                ClickS = 0;
                 sizeS++;
                 }
 
