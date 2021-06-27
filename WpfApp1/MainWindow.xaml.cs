@@ -23,12 +23,15 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        UserInfo user = new UserInfo();
         double value,valueS;
-        double ClickS,ClickN;
+        double ClickS;
         double NumberN;
         double result;
         double warning = 0;
+        string name,sername;
+        Random rand = new Random();
+        
         int sizeS = 0;
         double TotalResult;
         
@@ -59,7 +62,7 @@ namespace WpfApp1
             
             
             InitializeComponent();
-            
+            user.ID = rand.Next(10000);
             foreach (UIElement el in Root.Children)
             {
                 if (el is Button)
@@ -71,7 +74,27 @@ namespace WpfApp1
             }
          
         }
-      
+
+        private void Name_KeyDown(object sender, KeyEventArgs e)
+        {
+            user.Name += Name.Text;
+            if(e.Key == Key.Enter)
+            {
+                Name.IsReadOnly = true;
+            }
+        }
+
+        private void Sername_KeyDown(object sender, KeyEventArgs e)
+        {
+            user.Sername += Sername.Text;
+            if (e.Key == Key.Enter)
+            {
+                Sername.IsReadOnly = true;
+                Id.Text += rand.Next(10000).ToString();
+            }
+            
+        }
+
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
            

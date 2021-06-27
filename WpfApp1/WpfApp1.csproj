@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserInfo.cs" />
     <Compile Include="WindowLoad.xaml.cs">
       <DependentUpon>WindowLoad.xaml</DependentUpon>
     </Compile>
