@@ -30,49 +30,34 @@ namespace WpfApp1
         double result;
         double warning = 0;
         string name,sername;
+  
         Random rand = new Random();
         
-        int sizeS = 0;
+        int sizeS = 0, sizeC = 0;
         double TotalResult;
         
-        /*
-        public class SimpleVM : INotifyPropertyChanged
-        {
-            private int greeting;
-
-            public int Greeting
-            {
-                get { return greeting; }
-                set
-                {
-                    greeting = value;
-                    OnPropertyChanged(nameof(Greeting));
-                }
-            }
-
-            public event PropertyChangedEventHandler PropertyChanged;
-            public void OnPropertyChanged([CallerMemberName] string prop = "")
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-            }
-        }
-        */
+     
         public MainWindow()
         {
             
             
             InitializeComponent();
+            
             user.ID = rand.Next(10000);
-            foreach (UIElement el in Root.Children)
-            {
-                if (el is Button)
+
+            EnterC.IsEnabled = false;
+                foreach (UIElement el in Root.Children)
                 {
+                    if (el is Button)
+                    {
                     ((Button)el).Click += Button_Click;
-                    
+                    ((Button)el).IsEnabled = false;
+
+                    }
+
                 }
-                
-            }
-         
+          
+            
         }
 
         private void Name_KeyDown(object sender, KeyEventArgs e)
@@ -81,6 +66,7 @@ namespace WpfApp1
             if(e.Key == Key.Enter)
             {
                 Name.IsReadOnly = true;
+                
             }
         }
 
@@ -91,9 +77,32 @@ namespace WpfApp1
             {
                 Sername.IsReadOnly = true;
                 Id.Text += rand.Next(10000).ToString();
+                DialogeW.Text = "Enter subjects for score:";
             }
-            
+            EnterC.IsEnabled = true;
+           
         }
+
+        private void EnterC_KeyDown_1(object sender, KeyEventArgs e)
+        {
+        
+            if (e.Key == Key.Enter)
+            {       
+                sizeC = Int32.Parse(EnterC.Text);
+                EnterC.IsEnabled = false;
+                foreach (UIElement el in Root.Children)
+                {
+                    if (el is Button)
+                    {                      
+                        ((Button)el).IsEnabled = true;
+                    }
+
+                }
+
+            }
+        }
+
+       
 
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
@@ -111,7 +120,7 @@ namespace WpfApp1
             GEN.Clear();
                 
 
-                if (ClickS == 5)
+                if (ClickS == sizeC)
                 {
                     result = value / ClickS;
                 valueS = value;
@@ -174,8 +183,19 @@ namespace WpfApp1
                 value = 0;
                 result = 0;
                 ClickS = 0;
+                sizeC = 0;
                 sizeS++;
+                EnterC.IsEnabled = true;
+                foreach (UIElement el in Root.Children)
+                {
+                    if (el is Button)
+                    {
+                        ((Button)el).IsEnabled = false;
+                    }
+
                 }
+                EnterC.Clear();
+            }
 
             if(sizeS == 13)
             {

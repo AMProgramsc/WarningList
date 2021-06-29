@@ -13,9 +13,9 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="389" Foreground="#FF00DCFF" ValueChanged="ProgressLoad_ValueChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5.3 Alpha " VerticalAlignment="Top" Width="541" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36"  IsReadOnly="True" Background="Black" BorderBrush="Black"  />
-        <Button Name="Button2" Content="Start" HorizontalAlignment="Left" Margin="323,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
-        <Button x:Name="Exiter" Content="Exit" HorizontalAlignment="Left" Margin="323,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5.4 Alpha " VerticalAlignment="Top" Width="400" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36"  IsReadOnly="True" Background="Black" BorderBrush="Black"  />
+        <Button Name="Button2" Content="Start" HorizontalAlignment="Left" Margin="346,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
+        <Button x:Name="Exiter" Content="Exit" HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
         <Menu Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White" Grid.ColumnSpan="2">
             <MenuItem Header="Help" Foreground="White">
                 <MenuItem Header="WarningList" Foreground="Black" ></MenuItem>

@@ -26,7 +26,7 @@
             <ListBoxItem Background="#FFB89E9E" Content="OBJ"/>
             <ListBoxItem Background="#FFFF0AE9" Content="PE"/>
         </ListBox>
-        <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="261,29,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652"/>
+        <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="261,29,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652" IsReadOnly="True"/>
         <ToolBar HorizontalAlignment="Right" Height="26" Margin="0,0,6,0" VerticalAlignment="Top" Width="786" RenderTransformOrigin="0.5,0.5" >
             <ToolBar.RenderTransform>
                 <TransformGroup>
@@ -43,10 +43,10 @@
 
         <Button Content="2" HorizontalAlignment="Left" Margin="156,29,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
         <Button Content="3" HorizontalAlignment="Left" Margin="156,54,0,0" VerticalAlignment="Top" Width="100" Background="#FFFFFF12" Height="20"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="156,79,0,320" Width="100" Background="#FF0DB205"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="156,79,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>
         <Button Content="5" HorizontalAlignment="Left" Margin="156,104,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>
-        <TextBox Name="Clicker" HorizontalAlignment="Left" Height="23" Margin="261,57,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="Totalresult" HorizontalAlignment="Left" Height="23" Margin="380,57,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="402"/>
+        <TextBox Name="Clicker" HorizontalAlignment="Left" Height="23" Margin="261,57,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
+        <TextBox x:Name="Totalresult" HorizontalAlignment="Left" Height="23" Margin="380,57,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="402" IsReadOnly="True"/>
         <ListBox Name="Lister"  HorizontalAlignment="Left" Height="380" Margin="109,29,0,0" VerticalAlignment="Top" Width="42">
             <ListBoxItem/>
             <ListBoxItem/>
@@ -65,12 +65,14 @@
 
         <TextBox Name="GEN" HorizontalAlignment="Left" Margin="380,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="329" Width="402" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="380,26,0,0" TextWrapping="Wrap" Text="Enter subjects for your score:" VerticalAlignment="Top" Height="29" Width="402" Background="White" IsReadOnly="True"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="156,129,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="261,85,0,0" TextWrapping="Wrap" Text="Enter Clicks: " VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="380,26,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="29" Width="402" Background="White" IsReadOnly="True"/>
+        <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="156,129,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="256,129,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="124" KeyDown="Name_KeyDown"/>
         <TextBox Name="Sername" HorizontalAlignment="Left" Height="27" Margin="256,158,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="124" KeyDown="Sername_KeyDown"/>
         <TextBox Name="Id" HorizontalAlignment="Left" Height="23" Margin="256,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="124"/>
+        
+            <TextBox x:Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="261,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" KeyDown="EnterC_KeyDown_1" Text="0" />
+        
 
     </Grid>
 </Window>
