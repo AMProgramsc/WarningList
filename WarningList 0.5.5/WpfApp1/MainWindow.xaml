@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+
+    <Grid x:Name="Root" HorizontalAlignment="Right" Width="792" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="4,29,0,0" VerticalAlignment="Top" Width="105"  SelectionChanged="ListBox_SelectionChanged1">
+            <ListBoxItem Background="Red" Content="Match"  Height="20" Width="103"/>
+            <ListBoxItem Background="#FFD85757" Content="Physics"/>
+            <ListBoxItem Background="#FF1700FF" Content="Rus.Leng"/>
+            <ListBoxItem Background="#FF8176EE" Content="Literature"/>
+            <ListBoxItem Background="#FF3A97CD" Content="English"/>
+            <ListBoxItem Background="Cyan" Content="Solicalscince"/>
+            <ListBoxItem Background="#FF00B8B8" Content="History"/>
+            <ListBoxItem Background="#FF1EA200" Content="Chemistry"/>
+            <ListBoxItem Background="#FF00FF0C" Content="Biology"/>
+            <ListBoxItem Background="#FFFFAE00" Content="Computer scince"/>
+            <ListBoxItem Background="#FFFFF300" Content="Geography"/>
+            <ListBoxItem Background="#FFB89E9E" Content="OBJ"/>
+            <ListBoxItem Background="#FFFF0AE9" Content="PE"/>
+        </ListBox>
+        <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="261,29,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652" IsReadOnly="True"/>
+        <ToolBar HorizontalAlignment="Right" Height="26" Margin="0,0,6,0" VerticalAlignment="Top" Width="786" RenderTransformOrigin="0.5,0.5" >
+            <ToolBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0."/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.648"/>
+                </TransformGroup>
+            </ToolBar.RenderTransform>
+            <Button Content="Options" ContentStringFormat="Help"/>
+            <Separator />
+
+        </ToolBar>
+
+        <Button Content="2" HorizontalAlignment="Left" Margin="156,29,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="156,54,0,0" VerticalAlignment="Top" Width="100" Background="#FFFFFF12" Height="20"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="156,79,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="156,104,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>
+        <TextBox Name="Clicker" HorizontalAlignment="Left" Height="23" Margin="261,54,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
+        <TextBox x:Name="Totalresult" HorizontalAlignment="Left" Height="23" Margin="380,57,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="402" IsReadOnly="True"/>
+        <ListBox Name="Lister"  HorizontalAlignment="Left" Height="380" Margin="109,29,0,0" VerticalAlignment="Top" Width="42">
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+        </ListBox>
+
+        <TextBox Name="GEN" HorizontalAlignment="Left" Margin="380,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="329" Width="402" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+
+        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="380,29,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="28" Width="402" Background="White" IsReadOnly="True"/>
+        <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="156,129,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="256,129,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="124" KeyDown="Name_KeyDown"/>
+        <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="256,158,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="124" KeyDown="Sername_KeyDown"/>
+        <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="256,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="124"/>
+        
+            <TextBox x:Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="261,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" KeyDown="EnterC_KeyDown_1" Text="Enter score:" MouseEnter="EnterC_MouseEnter" RenderTransformOrigin="0.509,0.043" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="256,210,0,0" TextWrapping="Wrap" Text="For edit name subject" VerticalAlignment="Top" Width="125"/>
+
+
+    </Grid>
+</Window>
