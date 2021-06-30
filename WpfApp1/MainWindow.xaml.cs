@@ -24,7 +24,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         UserInfo user = new UserInfo();
-        double value,valueS;
+        double value, valueS, valueN;
         double ClickS;
         double NumberN;
         double result;
@@ -42,9 +42,9 @@ namespace WpfApp1
             
             
             InitializeComponent();
-            
+           
             user.ID = rand.Next(10000);
-
+            listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
                 foreach (UIElement el in Root.Children)
                 {
@@ -72,23 +72,33 @@ namespace WpfApp1
 
         private void Sername_KeyDown(object sender, KeyEventArgs e)
         {
+
             user.Sername += Sername.Text;
             if (e.Key == Key.Enter)
             {
                 Sername.IsReadOnly = true;
                 Id.Text += rand.Next(10000).ToString();
                 DialogeW.Text = "Enter subjects for score:";
+                //EnterC.IsEnabled = true;
+                listbox.IsEnabled = true;
             }
-            EnterC.IsEnabled = true;
-           
         }
+
+        private void EnterC_MouseEnter(object sender, MouseEventArgs e)
+        {
+            EnterC.Clear();
+        }
+
+
 
         private void EnterC_KeyDown_1(object sender, KeyEventArgs e)
         {
-        
+
+            
             if (e.Key == Key.Enter)
             {       
                 sizeC = Int32.Parse(EnterC.Text);
+               
                 EnterC.IsEnabled = false;
                 foreach (UIElement el in Root.Children)
                 {
@@ -106,7 +116,28 @@ namespace WpfApp1
 
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
-           
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo , MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    foreach (UIElement el in Root.Children)
+                    {
+                        if (el is Button)
+                        {
+
+                            ((Button)el).IsEnabled = false;
+
+                        }
+
+                    }
+                    EnterC.IsEnabled = true;
+                    listbox.IsEnabled = false;
+                    break;
+                case MessageBoxResult.No:
+                    listbox.SelectedItem = false;
+                    break;
+            }
+       
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -115,16 +146,17 @@ namespace WpfApp1
             ClickS++;
             NumberN = ClickS;
             value += Int32.Parse(s);
+            valueN = Int32.Parse(s);
             Clicker.Text = ClickS.ToString();
             Textbox1.Text = value.ToString();
             GEN.Clear();
-                
+            Score.Items.Add(valueN);
 
-                if (ClickS == sizeC)
+            if (ClickS == sizeC)
                 {
                     result = value / ClickS;
                 valueS = value;
-                Lister.Items[sizeS]= result;
+                Lister.Items[listbox.SelectedIndex] = result;
                     TotalResult += result;
            
                 if (result <= 2.5)
@@ -195,6 +227,8 @@ namespace WpfApp1
 
                 }
                 EnterC.Clear();
+                EnterC.IsEnabled = false;
+                listbox.IsEnabled = true;
             }
 
             if(sizeS == 13)
