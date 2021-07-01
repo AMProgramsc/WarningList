@@ -29,8 +29,9 @@ namespace WpfApp1
         double NumberN;
         double result;
         double warning = 0;
-        string name,sername;
-  
+        string name,sername,sizeN;
+        bool delete = false;
+        int Count = 13;
         Random rand = new Random();
         
         int sizeS = 0, sizeC = 0;
@@ -44,6 +45,7 @@ namespace WpfApp1
             InitializeComponent();
            
             user.ID = rand.Next(10000);
+            Namer.IsEnabled = false;
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
                 foreach (UIElement el in Root.Children)
@@ -84,6 +86,67 @@ namespace WpfApp1
             }
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+           
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    
+                   
+                    
+                    listbox.IsEnabled = false;
+                    Namer.IsEnabled = true;
+                    DialogeW.Text = "Enter name subject";
+                    break;
+                case MessageBoxResult.No:
+                   
+                    break;
+            }
+        }
+
+        private void TextBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Namer.Clear();
+        }
+
+        private void Namer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                sizeN = Namer.Text;
+                
+                //listbox.Items.Add(sizeN);
+                Lister.Items.Add(0);
+                listbox.Items.Insert(Count, sizeN);
+                Count++;
+                Namer.IsEnabled = false;
+                listbox.IsEnabled = true;
+
+            }
+        }
+
+  
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+            MessageBoxResult resulter = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (resulter)
+            {
+                case MessageBoxResult.Yes:
+                    delete = true;
+                    listbox.IsEnabled = true;
+                    break;
+                case MessageBoxResult.No:
+                  
+                    break;
+            }
+          
+            
+        }
+
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)
         {
             EnterC.Clear();
@@ -116,28 +179,37 @@ namespace WpfApp1
 
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo , MessageBoxImage.Warning);
-            switch (result)
+            if (delete == true)
             {
-                case MessageBoxResult.Yes:
-                    foreach (UIElement el in Root.Children)
-                    {
-                        if (el is Button)
+                listbox.Items.Remove(listbox.SelectedItem);
+                Lister.Items.Remove(listbox.SelectedItem);
+                Count--;
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        foreach (UIElement el in Root.Children)
                         {
+                            if (el is Button)
+                            {
 
-                            ((Button)el).IsEnabled = false;
+                                ((Button)el).IsEnabled = false;
+
+                            }
 
                         }
-
-                    }
-                    EnterC.IsEnabled = true;
-                    listbox.IsEnabled = false;
-                    break;
-                case MessageBoxResult.No:
-                    listbox.SelectedItem = false;
-                    break;
+                        EnterC.IsEnabled = true;
+                        listbox.IsEnabled = false;
+                        break;
+                    case MessageBoxResult.No:
+                        listbox.SelectedItem = false;
+                        break;
+                }
             }
-       
+            delete = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -151,6 +223,7 @@ namespace WpfApp1
             Textbox1.Text = value.ToString();
             GEN.Clear();
             Score.Items.Add(valueN);
+            
 
             if (ClickS == sizeC)
                 {
@@ -229,9 +302,10 @@ namespace WpfApp1
                 EnterC.Clear();
                 EnterC.IsEnabled = false;
                 listbox.IsEnabled = true;
+                Score.Items.Clear();
             }
 
-            if(sizeS == 13)
+            if(sizeS == Count)
             {
                 TotalResult /= 13;
                 Totalresult.Text = "Your total result = " + TotalResult;
