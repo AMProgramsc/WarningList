@@ -34,7 +34,7 @@ namespace WpfApp1
         int Count = 13;
         Random rand = new Random();
         
-        int sizeS = 0, sizeC = 0;
+        int sizeS = 0, sizeC = 0,sizeR =0;
         double TotalResult;
         
      
@@ -113,6 +113,7 @@ namespace WpfApp1
 
         private void Namer_KeyDown(object sender, KeyEventArgs e)
         {
+            
             if (e.Key == Key.Enter)
             {
                 sizeN = Namer.Text;
@@ -127,13 +128,32 @@ namespace WpfApp1
             }
         }
 
-  
+        private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DialogeW.Text = "Confirm?";
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    value -= Int32.Parse(Score.SelectedItem.ToString());
+                    Score.Items.Remove(Score.SelectedItem);
+                    ClickS--;
+                    DialogeW.Text = "Press Buttons for score";
+                    Score.SelectedItem = false;
+                    break;
+                case MessageBoxResult.No:
+                    Score.SelectedItem = false;
+                    DialogeW.Text = "Press Buttons for score";
+                    break;
+            }
+
+        }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
-            MessageBoxResult resulter = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            switch (resulter)
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
             {
                 case MessageBoxResult.Yes:
                     delete = true;
@@ -157,19 +177,27 @@ namespace WpfApp1
         private void EnterC_KeyDown_1(object sender, KeyEventArgs e)
         {
 
-            
             if (e.Key == Key.Enter)
-            {       
+            {
                 sizeC = Int32.Parse(EnterC.Text);
-               
-                EnterC.IsEnabled = false;
-                foreach (UIElement el in Root.Children)
+                if (sizeC < 3)
                 {
-                    if (el is Button)
-                    {                      
-                        ((Button)el).IsEnabled = true;
-                    }
+                    DialogeW.Text = "Error! Score very small!";
+                    EnterC.Clear();
+                }
+                else 
+                {
 
+                    DialogeW.Text = "Press Buttons for score";
+                    EnterC.IsEnabled = false;
+                    foreach (UIElement el in Root.Children)
+                    {
+                        if (el is Button)
+                        {
+                            ((Button)el).IsEnabled = true;
+                        }
+
+                    }
                 }
 
             }
@@ -187,6 +215,7 @@ namespace WpfApp1
             }
             else
             {
+                DialogeW.Text = "Change subject";
                 MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {

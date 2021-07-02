@@ -68,7 +68,7 @@
         <TextBox Name="GEN" HorizontalAlignment="Left" Margin="384,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="329" Width="402" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
 
         <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,29,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="28" Width="402" Background="White" IsReadOnly="True"/>
-        <ListBox Name="Score" HorizontalAlignment="Left" Height="279" Margin="162,129,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox Name="Score" HorizontalAlignment="Left" Height="279" Margin="162,129,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="Score_SelectionChanged"/>
         <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,130,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="123" KeyDown="Name_KeyDown"/>
         <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,158,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="123" KeyDown="Sername_KeyDown"/>
         <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,187,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123"/>
