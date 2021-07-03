@@ -24,6 +24,10 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         UserInfo user = new UserInfo();
+        OptionsD options = new OptionsD();
+        SernameD sn = new SernameD();
+        NameD n = new NameD();
+
         double value, valueS, valueN;
         double ClickS;
         double NumberN;
@@ -40,10 +44,10 @@ namespace WpfApp1
      
         public MainWindow()
         {
-            
-            
+
+         
             InitializeComponent();
-           
+            
             user.ID = rand.Next(10000);
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
@@ -128,6 +132,28 @@ namespace WpfApp1
             }
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            options.Show();
+        }
+
+        
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
+                MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (response == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.Current.Shutdown();
+            }
+
+            base.OnClosing(e);
+        }
+        
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DialogeW.Text = "Confirm?";

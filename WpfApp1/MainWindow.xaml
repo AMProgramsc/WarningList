@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" >
-
+    
     <Grid x:Name="Root" HorizontalAlignment="Right" Width="792" >
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -38,7 +38,7 @@
                     <TranslateTransform X="-0.648"/>
                 </TransformGroup>
             </ToolBar.RenderTransform>
-            <Button Content="Options" ContentStringFormat="Help"/>
+            <Button Content="Options" ContentStringFormat="Help" Click="Button_Click_3"/>
             <Separator />
 
         </ToolBar>

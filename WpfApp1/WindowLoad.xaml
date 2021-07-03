@@ -6,27 +6,34 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="WindowLoad" Height="450" Width="800" Background="Black"  
-        ContentRendered="Window_ContentRendered" >
+        ContentRendered="Window_ContentRendered"  Closing="Window_Closing_1"  >
+
     <Grid Margin="-2,0,2,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="391*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="651*"/>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="389" Foreground="#FF00DCFF" ValueChanged="ProgressLoad_ValueChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5.7 Alpha " VerticalAlignment="Top" Width="400" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36"   Background="Black"   />
+        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" Text="WarningList 0.5.8 Alpha " VerticalAlignment="Top" Width="400" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36"   Background="Black"   />
         <Button Name="Button2" Content="Start" HorizontalAlignment="Left" Margin="346,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
         <Button x:Name="Exiter" Content="Exit" HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
-        <Menu Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White" Grid.ColumnSpan="2">
-            <MenuItem Header="Help" Foreground="White">
-                <MenuItem Header="WarningList" Foreground="Black" ></MenuItem>
-                <MenuItem Header="Version" Foreground="Black" ></MenuItem>
+        <Menu Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White" Grid.ColumnSpan="3">
+            <MenuItem Name="Menu" Header="Help" Foreground="White" >
+                <MenuItem Name="WarningList" Header="WarningList" Foreground="Black" Click="WarningList_Click" ></MenuItem>
+                <MenuItem Name="Version" Header="Version" Foreground="Black" Click="Version_Click" ></MenuItem>
                 <Separator />
-                <MenuItem Header="About" Foreground="Black" ></MenuItem>
+                <MenuItem Name="About" Header="About" Foreground="Black" Click="About_Click" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Load" ></MenuItem>
+            <MenuItem Header="Settings" Foreground="White">
+                <MenuItem Name="Language" Header="Language" Foreground="Black"  ></MenuItem>
+                <MenuItem Name="General" Header="General" Foreground="Black" Click="General_Click"  ></MenuItem>
+            </MenuItem>
 
         </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="637,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="145" Text="Created by AMPrograms"/>
-        <TextBlock HorizontalAlignment="Left" Margin="637,393,0,0" TextWrapping="Wrap" Text="©All rights reserved 2021" VerticalAlignment="Top" Width="145" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="637,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="145" Text="Created by AMPrograms" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="637,393,0,0" TextWrapping="Wrap" Text="©All rights reserved 2021" VerticalAlignment="Top" Width="145" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="559,1,0,0" TextWrapping="Wrap" Text="Warning! Don't press button X, otherwise the running process will hang in the task manager!" VerticalAlignment="Top" Height="98" Width="223" Foreground="White" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

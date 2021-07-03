@@ -22,14 +22,21 @@ namespace WpfApp1
     public partial class WindowLoad : Window
     {
         MainWindow window = new MainWindow();
-      
+        WindowLoad wow;
+        About about = new About();
+        Informations info = new Informations();
+        Version ver = new Version();
+        Settings set = new Settings();
+
         public WindowLoad()
         {
-            
+           
+    
             InitializeComponent();
         
         }
-        
+      
+
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             BackgroundWorker worker = new BackgroundWorker();
@@ -44,7 +51,7 @@ namespace WpfApp1
             for (int i = 0; i <= 100; i++)
             {
                 (sender as BackgroundWorker).ReportProgress(i);
-                Thread.Sleep(50);
+                Thread.Sleep(25);
             }
         }
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -60,14 +67,17 @@ namespace WpfApp1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-        
-            Close();
+            
+  
             window.Show();
+            Close();
+
 
         }
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
             window.Close();
             Close();
         }
@@ -76,5 +86,43 @@ namespace WpfApp1
         {
 
         }
+
+       
+
+        private void WarningList_Click(object sender, RoutedEventArgs e)
+        {
+            info.Show();
+           
+        }
+
+        private void Version_Click(object sender, RoutedEventArgs e)
+        {
+            ver.Show();
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            about.Show();
+        }
+
+        private void General_Click(object sender, RoutedEventArgs e)
+        {
+            set.Show();
+        }
+
+   
+        
+        private void Window_Closing_1(object sender, CancelEventArgs e)
+        {
+            if (ProgressLoad.Value < 100)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+        
     }
 }
