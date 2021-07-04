@@ -22,7 +22,7 @@ namespace WpfApp1
     public partial class WindowLoad : Window
     {
         MainWindow window = new MainWindow();
-        WindowLoad wow;
+   
         About about = new About();
         Informations info = new Informations();
         Version ver = new Version();
@@ -30,10 +30,9 @@ namespace WpfApp1
 
         public WindowLoad()
         {
-           
-    
+            //window.Close();
             InitializeComponent();
-        
+           
         }
       
 
@@ -45,6 +44,7 @@ namespace WpfApp1
             worker.ProgressChanged += worker_ProgressChanged;
 
             worker.RunWorkerAsync();
+            
         }
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -53,7 +53,11 @@ namespace WpfApp1
                 (sender as BackgroundWorker).ReportProgress(i);
                 Thread.Sleep(25);
             }
+            
         }
+        
+      
+        
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             
@@ -67,19 +71,20 @@ namespace WpfApp1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-  
-            window.Show();
+
+
             Close();
+            
+            window.Show();
 
 
         }
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
             window.Close();
             Close();
+            Application.Current.Shutdown();
         }
 
         private void ProgressLoad_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -109,9 +114,6 @@ namespace WpfApp1
         {
             set.Show();
         }
-
-   
-        
         private void Window_Closing_1(object sender, CancelEventArgs e)
         {
             if (ProgressLoad.Value < 100)
@@ -123,6 +125,6 @@ namespace WpfApp1
                 e.Cancel = false;
             }
         }
-        
+
     }
 }

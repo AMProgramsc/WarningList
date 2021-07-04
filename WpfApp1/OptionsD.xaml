@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="OptionsD" Height="275" Width="400">
     <Grid>
-        
+        <RadioButton x:Name="Test" Content="Test" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.39,0.513"/>
+        <Expander Header="Expander" HorizontalAlignment="Left" Height="100" Margin="282,31,0,0" VerticalAlignment="Top" Width="100">
+            <Grid Background="#FFE5E5E5"/>
+        </Expander>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="100"/>
+        <Slider HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="239"/>
+
     </Grid>
 </Window>

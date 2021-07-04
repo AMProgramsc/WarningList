@@ -36,6 +36,8 @@ namespace WpfApp1
         string name,sername,sizeN;
         bool delete = false;
         int Count = 13;
+        int hit =0;
+        bool Check;
         Random rand = new Random();
         
         int sizeS = 0, sizeC = 0,sizeR =0;
@@ -44,10 +46,10 @@ namespace WpfApp1
      
         public MainWindow()
         {
-
-         
-            InitializeComponent();
             
+            
+            InitializeComponent();
+           
             user.ID = rand.Next(10000);
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
@@ -97,9 +99,7 @@ namespace WpfApp1
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    
-                   
-                    
+
                     listbox.IsEnabled = false;
                     Namer.IsEnabled = true;
                     DialogeW.Text = "Enter name subject";
@@ -137,7 +137,7 @@ namespace WpfApp1
             options.Show();
         }
 
-        
+
         protected override void OnClosing(CancelEventArgs e)
         {
             var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
@@ -153,25 +153,35 @@ namespace WpfApp1
 
             base.OnClosing(e);
         }
-        
+
+
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DialogeW.Text = "Confirm?";
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
+                DialogeW.Text = "Confirm?";
+                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+
+
+                    // Score.SelectedItem = false;
                     value -= Int32.Parse(Score.SelectedItem.ToString());
                     Score.Items.Remove(Score.SelectedItem);
+                  
                     ClickS--;
-                    DialogeW.Text = "Press Buttons for score";
-                    Score.SelectedItem = false;
+                        DialogeW.Text = "Press Buttons for score";
+                  
+
                     break;
-                case MessageBoxResult.No:
-                    Score.SelectedItem = false;
-                    DialogeW.Text = "Press Buttons for score";
-                    break;
-            }
+                    case MessageBoxResult.No:
+                        Score.SelectedItem = false;
+                        DialogeW.Text = "Press Buttons for score";
+                        
+                        break;
+
+                }
+            result = MessageBoxResult.No;
+
 
         }
 
@@ -278,7 +288,7 @@ namespace WpfApp1
             Textbox1.Text = value.ToString();
             GEN.Clear();
             Score.Items.Add(valueN);
-            
+           
 
             if (ClickS == sizeC)
                 {

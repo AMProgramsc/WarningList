@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="Settings" Height="450" Width="800">
     <Grid>
-        
+        <Slider HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="390"/>
+        <Expander Header="Expander" HorizontalAlignment="Left" Height="230" Margin="10,49,0,0" VerticalAlignment="Top" Width="100">
+            <StackPanel HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="100">
+                <RadioButton>RadioButton</RadioButton>
+                <RadioButton >Test1</RadioButton>
+                <RadioButton >Test2</RadioButton>
+                <CheckBox >Test3</CheckBox>
+            </StackPanel>
+        </Expander>
+      
+
     </Grid>
 </Window>
