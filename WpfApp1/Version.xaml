@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Version" Height="450" Width="800">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="772" Height="100"/>
+    <Grid Background="Black">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" Height="399" Foreground="White" FontSize="16"><Run Text="Version 0.6 Alpha 2(Interface) - Release 26.05.2021"/><LineBreak/><Run Text="--------------------------------------------------------"/><LineBreak/><Run Text="-Updated interface"/><LineBreak/><Run Text="-Updated window Version"/><LineBreak/><Run Text="-Updated window About"/><LineBreak/><Run Text="-Updated windows Settings and Options"/><LineBreak/><Run Text="--------------------------------------------------------"/></TextBlock>
 
     </Grid>
 </Window>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Informations" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="419" Width="792" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="419" Width="792" FontSize="16" Background="Black" Foreground="White"><Run FontWeight="Bold" FontSize="20" Text="Warninglist"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="WarningList - this is a program that calculates your GPA by entering several values. This program is very suitable for both schoolchildrens and students... "/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>

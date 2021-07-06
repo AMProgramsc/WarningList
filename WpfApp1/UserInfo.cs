@@ -8,8 +8,8 @@ namespace WpfApp1
 {
     class UserInfo
     {
+       
         public int ID { get; set; }
-
         public string Name { get; set; }
         public string Sername { get; set; }
     }

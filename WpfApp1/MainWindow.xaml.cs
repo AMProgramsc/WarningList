@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -25,7 +26,7 @@ namespace WpfApp1
     {
         UserInfo user = new UserInfo();
         OptionsD options = new OptionsD();
-        SernameD sn = new SernameD();
+       SernameD snr = new SernameD();
         NameD n = new NameD();
 
         double value, valueS, valueN;
@@ -33,12 +34,13 @@ namespace WpfApp1
         double NumberN;
         double result;
         double warning = 0;
-        string name,sername,sizeN;
+        Random rand = new Random();
+        string sizeN;
         bool delete = false;
         int Count = 13;
         int hit =0;
         bool Check;
-        Random rand = new Random();
+       
         
         int sizeS = 0, sizeC = 0,sizeR =0;
         double TotalResult;
@@ -50,10 +52,12 @@ namespace WpfApp1
             
             InitializeComponent();
            
-            user.ID = rand.Next(10000);
+           
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
+      
+     
                 foreach (UIElement el in Root.Children)
                 {
                     if (el is Button)
@@ -64,33 +68,12 @@ namespace WpfApp1
                     }
 
                 }
-          
+            
             
         }
+      
 
-        private void Name_KeyDown(object sender, KeyEventArgs e)
-        {
-            user.Name += Name.Text;
-            if(e.Key == Key.Enter)
-            {
-                Name.IsReadOnly = true;
-                
-            }
-        }
 
-        private void Sername_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            user.Sername += Sername.Text;
-            if (e.Key == Key.Enter)
-            {
-                Sername.IsReadOnly = true;
-                Id.Text += rand.Next(10000).ToString();
-                DialogeW.Text = "Enter subjects for score:";
-                //EnterC.IsEnabled = true;
-                listbox.IsEnabled = true;
-            }
-        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -154,10 +137,23 @@ namespace WpfApp1
             base.OnClosing(e);
         }
 
+        private void Name_MouseEnter(object sender, MouseEventArgs e)
+        {
+            n.Show();
+            if(Sername.Text != null)
+            {
+              
+                Name.IsEnabled = false;
+                Id.Text = rand.Next(10000).ToString();
+              
+                listbox.IsEnabled = true;
+            }
+        }
 
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-                DialogeW.Text = "Confirm?";
+            
+            DialogeW.Text = "Confirm?";
                 MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
@@ -243,6 +239,8 @@ namespace WpfApp1
 
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
+            Name.Text = File.ReadAllText(@"Name.txt");
+            Sername.Text = File.ReadAllText(@"Sername.txt");
             if (delete == true)
             {
                 listbox.Items.Remove(listbox.SelectedItem);

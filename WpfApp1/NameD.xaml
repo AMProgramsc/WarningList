@@ -8,7 +8,7 @@
         Title="NameD" Height="100" Width="350">
     <Grid>
         <TextBox  HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" Text="Your name:" VerticalAlignment="Top" Width="126" FontSize="24" Margin="0,0,0,-1" />
-        <TextBox x:Name="NAME" HorizontalAlignment="Left" Height="70" Margin="126,0,0,-1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216" FontSize="24"/>
+        <TextBox x:Name="NAME" HorizontalAlignment="Left" Height="70" Margin="126,0,0,-1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216" FontSize="24" KeyDown="NAME_KeyDown"/>
 
     </Grid>
 </Window>

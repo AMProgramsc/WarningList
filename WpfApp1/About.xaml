@@ -5,9 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="About" Height="450" Width="800">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="419" Width="792" FontSize="22"/>
+        Title="About" Height="450" Width="800" Background="Black" Foreground="Black">
+    <Grid Background="Black" Margin="0,0,0,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="163" Width="792" FontSize="18" Foreground="White"><Run FontWeight="Bold" FontSize="20" Text="About me:"/><LineBreak/><Run Text="--------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="Hello! My name Alexander! It's my three project You probably know me from two other projects, namely RPG BASIC and Snake. I've been programmimg for 2 years  now and 3 mounts. My main classification is C++, C(Newble),and C#(3 - 6 mounts). The development of the program is onging   to this day..."/><LineBreak/><Run Text="--------------------------------------------------------------------------------------------------------------"/><LineBreak/></TextBlock>
+        <StackPanel Margin="555,352,0,10"
+                    Orientation="Horizontal">
+            <Image Source="https://bitemycoin.com/wp-content/uploads/2018/06/GitHub-Logo.png" Margin="0,10,0,13" Stretch="Fill" Width="27" />
+            <TextBlock Text="" Margin="3,14,0,13" Foreground="White" Height="28" VerticalAlignment="Center" Width="184" Background="Black"><Hyperlink Click="hyperlink_Click"><Run Text="https://github.com/AMProgramms"/></Hyperlink></TextBlock>
+
+
+        </StackPanel>
 
     </Grid>
 </Window>

@@ -33,7 +33,6 @@ C:\Users\TopDesktop-1\source\repos\WpfApp3\WpfApp1\obj\Debug\WindowLoad.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\WpfApp1.pdb
-C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WindowLoad.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\App.g.cs
@@ -61,3 +60,4 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\OptionsD.b
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\SernameD.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Settings.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Version.baml
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache

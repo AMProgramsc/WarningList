@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,36 @@ namespace WpfApp1
     /// </summary>
     public partial class SernameD : Window
     {
+        UserInfo user = new UserInfo();
+        string sername = "Sername.txt";
+
         public SernameD()
         {
             InitializeComponent();
+            
+        }
+
+        private void SERNAME_KeyDown(object sender, KeyEventArgs e)
+        {
+         
+        
+            
+            if (e.Key == Key.Enter)
+            {
+
+                File.WriteAllText(sername, SERNAME.Text);
+
+                Close();
+            }
+        
+        
+        
+        
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }
