@@ -25,7 +25,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         UserInfo user = new UserInfo();
-        OptionsD options = new OptionsD();
+       
        SernameD snr = new SernameD();
         NameD n = new NameD();
 
@@ -117,7 +117,7 @@ namespace WpfApp1
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            options.Show();
+            
         }
 
 
@@ -197,6 +197,122 @@ namespace WpfApp1
             }
           
             
+        }
+
+        private void Background_Checked(object sender, RoutedEventArgs e)
+        {
+            Root.Background = Brushes.Black;
+            Menu.Background = Brushes.White;
+            Lister.Foreground = Brushes.White;
+            EnterC.Foreground = Brushes.White;
+            Textbox1.Foreground = Brushes.White;
+            Name.Foreground = Brushes.White;
+            Sername.Foreground = Brushes.White;
+            Id.Foreground = Brushes.White;
+            Namer.Foreground = Brushes.White;
+            Totalresult.Foreground = Brushes.White;
+            DialogeW.Foreground = Brushes.White;
+            GEN.Foreground = Brushes.White;
+            Score.Foreground = Brushes.White;
+       
+        }
+
+
+        private void Red_Click(object sender, RoutedEventArgs e)
+        {
+          
+            Lister.Foreground = Brushes.Red;
+            EnterC.Foreground = Brushes.Red;
+            Textbox1.Foreground = Brushes.Red;
+            Name.Foreground = Brushes.Red;
+            Sername.Foreground = Brushes.Red;
+            Id.Foreground = Brushes.Red;
+            Namer.Foreground = Brushes.Red;
+            Totalresult.Foreground = Brushes.Red;
+            DialogeW.Foreground = Brushes.Red;
+            GEN.Foreground = Brushes.Red;
+            Score.Foreground = Brushes.Red;
+        }
+
+        private void Blue_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Lister.Foreground = Brushes.Blue;
+            EnterC.Foreground = Brushes.Blue;
+            Textbox1.Foreground = Brushes.Blue;
+            Name.Foreground = Brushes.Blue;
+            Sername.Foreground = Brushes.Blue;
+            Id.Foreground = Brushes.Blue;
+            Namer.Foreground = Brushes.Blue;
+            Totalresult.Foreground = Brushes.Blue;
+            DialogeW.Foreground = Brushes.Blue;
+            GEN.Foreground = Brushes.Blue;
+            Score.Foreground = Brushes.Blue;
+        }
+
+        private void Green_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Lister.Foreground = Brushes.Green;
+            EnterC.Foreground = Brushes.Green;
+            Textbox1.Foreground = Brushes.Green;
+            Name.Foreground = Brushes.Green;
+            Sername.Foreground = Brushes.Green;
+            Id.Foreground = Brushes.Green;
+            Namer.Foreground = Brushes.Green;
+            Totalresult.Foreground = Brushes.Green;
+            DialogeW.Foreground = Brushes.Green;
+            GEN.Foreground = Brushes.Green;
+            Score.Foreground = Brushes.Green;
+        }
+
+        private void Yellow_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Lister.Foreground = Brushes.DarkOrange;
+            EnterC.Foreground = Brushes.DarkOrange;
+            Textbox1.Foreground = Brushes.DarkOrange;
+            Name.Foreground = Brushes.DarkOrange;
+            Sername.Foreground = Brushes.DarkOrange;
+            Id.Foreground = Brushes.DarkOrange;
+            Namer.Foreground = Brushes.DarkOrange;
+            Totalresult.Foreground = Brushes.DarkOrange;
+            DialogeW.Foreground = Brushes.DarkOrange;
+            GEN.Foreground = Brushes.DarkOrange;
+            Score.Foreground = Brushes.DarkOrange;
+        }
+
+        private void Black_Click(object sender, RoutedEventArgs e)
+        {
+          
+            Lister.Foreground = Brushes.Black;
+            EnterC.Foreground = Brushes.Black;
+            Textbox1.Foreground = Brushes.Black;
+            Name.Foreground = Brushes.Black;
+            Sername.Foreground = Brushes.Black;
+            Id.Foreground = Brushes.Black;
+            Namer.Foreground = Brushes.Black;
+            Totalresult.Foreground = Brushes.Black;
+            DialogeW.Foreground = Brushes.Black;
+            GEN.Foreground = Brushes.Black;
+            Score.Foreground = Brushes.Black;
+        }
+
+        private void Background_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Root.Background = Brushes.White;
+            Menu.Background = Brushes.Gray;
+            Lister.Foreground = Brushes.Black;
+            EnterC.Foreground = Brushes.Black;
+            Textbox1.Foreground = Brushes.Black;
+            Name.Foreground =  Brushes.Black; 
+            Sername.Foreground = Brushes.Black;
+            Id.Foreground = Brushes.Black;
+            Namer.Foreground = Brushes.Black;
+            Totalresult.Foreground = Brushes.Black;
+            DialogeW.Foreground = Brushes.Black;
+            GEN.Foreground = Brushes.Black;
+            Score.Foreground = Brushes.Black;
         }
 
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)

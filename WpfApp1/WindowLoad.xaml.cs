@@ -21,8 +21,8 @@ namespace WpfApp1
     /// </summary>
     public partial class WindowLoad : Window
     {
+
         MainWindow window = new MainWindow();
-   
         About about = new About();
         Informations info = new Informations();
         Version ver = new Version();
@@ -69,10 +69,11 @@ namespace WpfApp1
                 Exiter.Visibility = Visibility.Visible;
             }
         }
+   
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-
+            
             Close();
             
             window.Show();
@@ -82,6 +83,7 @@ namespace WpfApp1
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
+           
             window.Close();
             Close();
             Application.Current.Shutdown();
