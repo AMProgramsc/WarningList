@@ -64,6 +64,9 @@
     <Compile Include="NameD.xaml.cs">
       <DependentUpon>NameD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewName.xaml.cs">
+      <DependentUpon>NewName.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SernameD.xaml.cs">
       <DependentUpon>SernameD.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NameD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

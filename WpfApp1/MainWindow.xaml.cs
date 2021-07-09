@@ -24,10 +24,10 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        UserInfo user = new UserInfo();
-       
+       UserInfo user = new UserInfo();
+       NewName nnr = new NewName();
        SernameD snr = new SernameD();
-        NameD n = new NameD();
+       NameD n = new NameD();
 
         double value, valueS, valueN;
         double ClickS;
@@ -35,14 +35,16 @@ namespace WpfApp1
         double result;
         double warning = 0;
         Random rand = new Random();
+        string inf = "Inf.txt";
         string sizeN;
         bool delete = false;
+        bool edit = false;
         int Count = 13;
         int hit =0;
         bool Check;
        
         
-        int sizeS = 0, sizeC = 0,sizeR =0;
+        int sizeS = 0, sizeC = 0,sizeR = -1;
         double TotalResult;
         
      
@@ -71,28 +73,6 @@ namespace WpfApp1
             
             
         }
-      
-
-
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-           
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
-
-                    listbox.IsEnabled = false;
-                    Namer.IsEnabled = true;
-                    DialogeW.Text = "Enter name subject";
-                    break;
-                case MessageBoxResult.No:
-                   
-                    break;
-            }
-        }
-
         private void TextBox_MouseEnter(object sender, MouseEventArgs e)
         {
             Namer.Clear();
@@ -106,21 +86,14 @@ namespace WpfApp1
                 sizeN = Namer.Text;
                 
                 //listbox.Items.Add(sizeN);
-                Lister.Items.Add(0);
-                listbox.Items.Insert(Count, sizeN);
+                Lister.Items.Add("-");
+                listbox.Items.Add(sizeN);
                 Count++;
                 Namer.IsEnabled = false;
                 listbox.IsEnabled = true;
 
             }
         }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-
         protected override void OnClosing(CancelEventArgs e)
         {
             var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
@@ -181,24 +154,7 @@ namespace WpfApp1
 
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
-                    delete = true;
-                    listbox.IsEnabled = true;
-                    break;
-                case MessageBoxResult.No:
-                  
-                    break;
-            }
-          
-            
-        }
-
+   
         private void Background_Checked(object sender, RoutedEventArgs e)
         {
             Root.Background = Brushes.Black;
@@ -315,12 +271,61 @@ namespace WpfApp1
             Score.Foreground = Brushes.Black;
         }
 
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+
+                    listbox.IsEnabled = false;
+                    Namer.IsEnabled = true;
+                    DialogeW.Text = "Enter name subject";
+
+                    break;
+                case MessageBoxResult.No:
+
+                    break;
+            }
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    delete = true;
+                    listbox.IsEnabled = true;
+                    DialogeW.Text = "Click element for delete!";
+                    break;
+                case MessageBoxResult.No:
+
+                    break;
+            }
+        }
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    edit = true;
+                    listbox.IsEnabled = true;
+                    DialogeW.Text = "Click element for edit!";
+                    nnr.Show();
+                    
+                    break;
+                case MessageBoxResult.No:
+
+                    break;
+            }
+        }
+
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)
         {
             EnterC.Clear();
         }
-
-
 
         private void EnterC_KeyDown_1(object sender, KeyEventArgs e)
         {
@@ -355,13 +360,27 @@ namespace WpfApp1
 
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
+            sizeN = File.ReadAllText(@"Newname.txt");           
             Name.Text = File.ReadAllText(@"Name.txt");
             Sername.Text = File.ReadAllText(@"Sername.txt");
             if (delete == true)
             {
+             
                 listbox.Items.Remove(listbox.SelectedItem);
                 Lister.Items.Remove(listbox.SelectedItem);
                 Count--;
+                DialogeW.Text = "Change subject";
+                
+            }
+            if (edit == true)
+            {
+
+            
+                listbox.Items[listbox.SelectedIndex + 1] = sizeN;
+               
+                DialogeW.Text = "Change subject";
+             
+               
             }
             else
             {
@@ -388,6 +407,8 @@ namespace WpfApp1
                         break;
                 }
             }
+        
+            edit = false;
             delete = false;
         }
 
@@ -490,16 +511,6 @@ namespace WpfApp1
                 Totalresult.Text = "Your total result = " + TotalResult;
             }
             
-            /*
-            foreach (var item in listbox.Items)
-            {
-                if(ClickS == 5)
-                {
-                    result = value / ClickS;
-                  
-                }
-            }
-            */
         }
 
        

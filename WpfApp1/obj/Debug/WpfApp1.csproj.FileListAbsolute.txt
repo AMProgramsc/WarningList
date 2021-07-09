@@ -59,3 +59,5 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\SernameD.b
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Settings.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Version.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NewName.g.cs
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NewName.baml
