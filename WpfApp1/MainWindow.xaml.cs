@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace WpfApp1
 {
@@ -320,6 +321,56 @@ namespace WpfApp1
 
                     break;
             }
+        }
+
+        private void R_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Red });
+            listbox.Items.Remove(listbox.SelectedItem);
+         
+
+        }
+
+        private void G_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Green });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void B_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Blue });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void O_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Orange });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void C_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Cyan });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void Y_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Yellow });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void Br_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Brown });
+            listbox.Items.Remove(listbox.SelectedItem);
+        }
+
+        private void Gr_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Gray });
+            listbox.Items.Remove(listbox.SelectedItem);
         }
 
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)
