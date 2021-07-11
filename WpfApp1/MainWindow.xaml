@@ -57,6 +57,12 @@
                     <MenuItem x:Name="Yellow" Header="Yellow" Foreground="#FFFFC500" Click="Yellow_Click"   />
                     <MenuItem x:Name="Black" Header="Black" Foreground="Black" Click="Black_Click" />
                 </MenuItem>
+                <MenuItem x:Name="FontS" Header="Font" Foreground="Black"   >
+                    <MenuItem x:Name="bold" Header="Bold" FontWeight="Bold" Click="bold_Click" />
+                    <MenuItem x:Name="italic" Header="Italic" FontStyle="Italic" Click="italic_Click"  />
+                    <MenuItem x:Name="underline" Header="Underline" Click="underline_Click"/>
+                    <MenuItem x:Name="normal" Header="Normal" Click="normal_Click" />
+                </MenuItem>
             </MenuItem>
         </Menu>
         <Button Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
@@ -85,7 +91,7 @@
 
         <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,27,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="28" Width="402" Background="{x:Null}" IsReadOnly="True" FontWeight="Bold"/>
         <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="Score_SelectionChanged" Background="{x:Null}"/>
-        <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,127,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="123"  MouseEnter="Name_MouseEnter" Background="{x:Null}"/>
+        <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,127,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="123"  MouseEnter="Name_MouseEnter" Background="{x:Null}" />
         <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,156,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="123" Background="{x:Null}" />
         <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123" Background="{x:Null}"/>
 

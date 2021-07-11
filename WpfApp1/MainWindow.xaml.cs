@@ -373,6 +373,79 @@ namespace WpfApp1
             listbox.Items.Remove(listbox.SelectedItem);
         }
 
+        private void bold_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.FontWeight = FontWeights.Bold;
+            Menu.FontWeight = FontWeights.Bold;
+            Lister.FontWeight = FontWeights.Bold;
+            EnterC.FontWeight = FontWeights.Bold;
+            Textbox1.FontWeight = FontWeights.Bold;
+            Name.FontWeight = FontWeights.Bold;
+            Sername.FontWeight = FontWeights.Bold;
+            Id.FontWeight = FontWeights.Bold;
+            Namer.FontWeight = FontWeights.Bold;
+            Totalresult.FontWeight = FontWeights.Bold;
+            GEN.FontWeight = FontWeights.Bold;
+            Score.FontWeight = FontWeights.Bold;
+        }
+
+        private void italic_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.FontStyle = FontStyles.Italic;
+            Menu.FontStyle = FontStyles.Italic;
+            Lister.FontStyle = FontStyles.Italic;
+            EnterC.FontStyle = FontStyles.Italic;
+            Textbox1.FontStyle = FontStyles.Italic;
+            Name.FontStyle = FontStyles.Italic;
+            Sername.FontStyle = FontStyles.Italic;
+            Id.FontStyle = FontStyles.Italic;
+            Namer.FontStyle = FontStyles.Italic;
+            Totalresult.FontStyle = FontStyles.Italic;
+            GEN.FontStyle = FontStyles.Italic;
+            Score.FontStyle = FontStyles.Italic;
+        }
+
+        private void underline_Click(object sender, RoutedEventArgs e)
+        {
+            EnterC.TextDecorations = TextDecorations.Underline;
+            Textbox1.TextDecorations = TextDecorations.Underline;
+            Name.TextDecorations = TextDecorations.Underline;
+            Sername.TextDecorations = TextDecorations.Underline;
+            Id.TextDecorations = TextDecorations.Underline;
+            Namer.TextDecorations = TextDecorations.Underline;
+            Totalresult.TextDecorations = TextDecorations.Underline;
+            GEN.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void normal_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.FontWeight = FontWeights.Normal; 
+            Menu.FontWeight = FontWeights.Normal;
+            Lister.FontWeight = FontWeights.Normal;
+            EnterC.FontWeight = FontWeights.Normal;
+            Textbox1.FontWeight = FontWeights.Normal;
+            Name.FontWeight = FontWeights.Normal;
+            Sername.FontWeight = FontWeights.Normal;
+            Id.FontWeight = FontWeights.Normal;
+            Namer.FontWeight = FontWeights.Normal;
+            Totalresult.FontWeight = FontWeights.Normal;
+            GEN.FontWeight = FontWeights.Normal;
+            Score.FontWeight = FontWeights.Normal;
+            listbox.FontStyle = FontStyles.Normal;
+            Menu.FontStyle = FontStyles.Normal;
+            Lister.FontStyle = FontStyles.Normal;
+            EnterC.FontStyle = FontStyles.Normal;
+            Textbox1.FontStyle = FontStyles.Normal;
+            Name.FontStyle = FontStyles.Normal;
+            Sername.FontStyle = FontStyles.Normal;
+            Id.FontStyle = FontStyles.Normal;
+            Namer.FontStyle = FontStyles.Normal;
+            Totalresult.FontStyle = FontStyles.Normal;
+            GEN.FontStyle = FontStyles.Normal;
+            Score.FontStyle = FontStyles.Normal;
+    
+        }
+
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)
         {
             EnterC.Clear();
@@ -462,7 +535,7 @@ namespace WpfApp1
             edit = false;
             delete = false;
         }
-
+//(c)AMProgramms, 2021
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string s = (string)((Button)e.OriginalSource).Content;
@@ -567,3 +640,4 @@ namespace WpfApp1
        
     }
 }
+//(c)AMProgramms, 2021

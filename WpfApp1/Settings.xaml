@@ -16,7 +16,7 @@
                 <CheckBox >Test3</CheckBox>
             </StackPanel>
         </Expander>
-      
+
 
     </Grid>
 </Window>

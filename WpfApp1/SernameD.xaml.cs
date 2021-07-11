@@ -53,3 +53,4 @@ namespace WpfApp1
         }
     }
 }
+//(c)AMProgramms, 2021
