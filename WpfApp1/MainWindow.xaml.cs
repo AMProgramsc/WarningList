@@ -43,7 +43,7 @@ namespace WpfApp1
         int Count = 13;
         int hit =0;
         bool Check;
-       
+        int cls, cls2;
         
         int sizeS = 0, sizeC = 0,sizeR = -1;
         double TotalResult;
@@ -54,8 +54,8 @@ namespace WpfApp1
             
             
             InitializeComponent();
-           
-           
+            ColorPick.IsEnabled = false;
+            ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
@@ -173,88 +173,6 @@ namespace WpfApp1
             Score.Foreground = Brushes.White;
        
         }
-
-
-        private void Red_Click(object sender, RoutedEventArgs e)
-        {
-          
-            Lister.Foreground = Brushes.Red;
-            EnterC.Foreground = Brushes.Red;
-            Textbox1.Foreground = Brushes.Red;
-            Name.Foreground = Brushes.Red;
-            Sername.Foreground = Brushes.Red;
-            Id.Foreground = Brushes.Red;
-            Namer.Foreground = Brushes.Red;
-            Totalresult.Foreground = Brushes.Red;
-            DialogeW.Foreground = Brushes.Red;
-            GEN.Foreground = Brushes.Red;
-            Score.Foreground = Brushes.Red;
-        }
-
-        private void Blue_Click(object sender, RoutedEventArgs e)
-        {
-           
-            Lister.Foreground = Brushes.Blue;
-            EnterC.Foreground = Brushes.Blue;
-            Textbox1.Foreground = Brushes.Blue;
-            Name.Foreground = Brushes.Blue;
-            Sername.Foreground = Brushes.Blue;
-            Id.Foreground = Brushes.Blue;
-            Namer.Foreground = Brushes.Blue;
-            Totalresult.Foreground = Brushes.Blue;
-            DialogeW.Foreground = Brushes.Blue;
-            GEN.Foreground = Brushes.Blue;
-            Score.Foreground = Brushes.Blue;
-        }
-
-        private void Green_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Lister.Foreground = Brushes.Green;
-            EnterC.Foreground = Brushes.Green;
-            Textbox1.Foreground = Brushes.Green;
-            Name.Foreground = Brushes.Green;
-            Sername.Foreground = Brushes.Green;
-            Id.Foreground = Brushes.Green;
-            Namer.Foreground = Brushes.Green;
-            Totalresult.Foreground = Brushes.Green;
-            DialogeW.Foreground = Brushes.Green;
-            GEN.Foreground = Brushes.Green;
-            Score.Foreground = Brushes.Green;
-        }
-
-        private void Yellow_Click(object sender, RoutedEventArgs e)
-        {
-           
-            Lister.Foreground = Brushes.DarkOrange;
-            EnterC.Foreground = Brushes.DarkOrange;
-            Textbox1.Foreground = Brushes.DarkOrange;
-            Name.Foreground = Brushes.DarkOrange;
-            Sername.Foreground = Brushes.DarkOrange;
-            Id.Foreground = Brushes.DarkOrange;
-            Namer.Foreground = Brushes.DarkOrange;
-            Totalresult.Foreground = Brushes.DarkOrange;
-            DialogeW.Foreground = Brushes.DarkOrange;
-            GEN.Foreground = Brushes.DarkOrange;
-            Score.Foreground = Brushes.DarkOrange;
-        }
-
-        private void Black_Click(object sender, RoutedEventArgs e)
-        {
-          
-            Lister.Foreground = Brushes.Black;
-            EnterC.Foreground = Brushes.Black;
-            Textbox1.Foreground = Brushes.Black;
-            Name.Foreground = Brushes.Black;
-            Sername.Foreground = Brushes.Black;
-            Id.Foreground = Brushes.Black;
-            Namer.Foreground = Brushes.Black;
-            Totalresult.Foreground = Brushes.Black;
-            DialogeW.Foreground = Brushes.Black;
-            GEN.Foreground = Brushes.Black;
-            Score.Foreground = Brushes.Black;
-        }
-
         private void Background_Unchecked(object sender, RoutedEventArgs e)
         {
             Root.Background = Brushes.White;
@@ -321,56 +239,6 @@ namespace WpfApp1
 
                     break;
             }
-        }
-
-        private void R_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Red });
-            listbox.Items.Remove(listbox.SelectedItem);
-         
-
-        }
-
-        private void G_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Green });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void B_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Blue });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void O_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Orange });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void C_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Cyan });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void Y_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Yellow });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void Br_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Brown });
-            listbox.Items.Remove(listbox.SelectedItem);
-        }
-
-        private void Gr_Click(object sender, RoutedEventArgs e)
-        {
-            listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = Brushes.Gray });
-            listbox.Items.Remove(listbox.SelectedItem);
         }
 
         private void bold_Click(object sender, RoutedEventArgs e)
@@ -444,6 +312,58 @@ namespace WpfApp1
             GEN.FontStyle = FontStyles.Normal;
             Score.FontStyle = FontStyles.Normal;
     
+        }
+
+        private void Color_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPick.IsEnabled = true;
+            ColorPick.Visibility = Visibility.Visible;
+            cls2++;
+        }
+
+        private void FontColor_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPick.IsEnabled = true;
+            ColorPick.Visibility = Visibility.Visible;
+            cls++;
+        }
+
+        
+
+        private void ColorPick_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            if (cls == 1)
+            {
+                string c1 = ColorPick.SelectedColor.Value.ToString();
+               
+                SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+                Lister.Foreground = ck;
+                EnterC.Foreground = ck;
+                Textbox1.Foreground = ck;
+                Name.Foreground = ck;
+                Sername.Foreground = ck;
+                Id.Foreground = ck;
+                Namer.Foreground = ck;
+                Totalresult.Foreground = ck;
+                DialogeW.Foreground = ck;
+                GEN.Foreground = ck;
+                Score.Foreground = ck;
+             
+            }
+            if(cls2 == 1)
+            {
+                string c1 = ColorPick.SelectedColor.Value.ToString();
+                SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+                listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = ck });
+                listbox.Items.Remove(listbox.SelectedItem);
+            }
+
+
+            cls = 0;
+            cls2 = 0;
+            ColorPick.IsEnabled = false;
+            ColorPick.Visibility = Visibility.Hidden;
+            
         }
 
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)

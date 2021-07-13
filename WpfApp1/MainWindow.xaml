@@ -3,15 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:WpfApp1" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
+        Title="MainWindow" Height="450" Width="820" >
 
 
-    <Grid x:Name="Root" HorizontalAlignment="Right" Width="792" Background="White" >
+    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="6,27,0,0" VerticalAlignment="Top" Width="110"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}"  >
             <ListBoxItem Background="Red" Content="Match"  Height="20" Width="108"/>
             <ListBoxItem Background="#FFD85757" Content="Physics"/>
@@ -31,15 +35,7 @@
                     <MenuItem Name="Add" Header="Add" Click="Add_Click"></MenuItem>
                     <MenuItem Name="Delete" Header="Delete" Click="Delete_Click"></MenuItem>
                     <MenuItem Name="Edit" Header="Edit" Click="Edit_Click" ></MenuItem>
-                    <MenuItem Name="Color" Header="Color" >
-                        <MenuItem Header="Red" Click="R_Click"  ></MenuItem>
-                        <MenuItem Header="Green" Click="G_Click"  ></MenuItem>
-                        <MenuItem Header="Blue" Click="B_Click"  ></MenuItem>
-                        <MenuItem Header="Orange" Click="O_Click"   ></MenuItem>
-                        <MenuItem Header="Cyan" Click="C_Click"   ></MenuItem>
-                        <MenuItem Header="Yellow" Click="Y_Click" ></MenuItem>
-                        <MenuItem Header="Brown" Click="Br_Click"  ></MenuItem>
-                        <MenuItem Header="Gray" Click="Gr_Click"  ></MenuItem>
+                    <MenuItem Name="Color" Header="Color" Click="Color_Click" >
                     </MenuItem>
                 </ContextMenu>
             </ListBox.ContextMenu>
@@ -50,13 +46,7 @@
                 <TextBlock Text="Color" Width="70" />
                 <Separator/>
                 <CheckBox x:Name="Background" Content="Background" Checked="Background_Checked" Unchecked="Background_Unchecked"   />
-                <MenuItem x:Name="FontColor" Header="FontColor" Foreground="Black"   >
-                    <MenuItem x:Name="Red" Header="Red" Foreground="Red" Click="Red_Click"     />
-                    <MenuItem x:Name="Blue" Header="Blue" Foreground="#FF0051FF" Click="Blue_Click"   />
-                    <MenuItem x:Name="Green" Header="Green" Foreground="#FF14AA05" Click="Green_Click"  />
-                    <MenuItem x:Name="Yellow" Header="Yellow" Foreground="#FFFFC500" Click="Yellow_Click"   />
-                    <MenuItem x:Name="Black" Header="Black" Foreground="Black" Click="Black_Click" />
-                </MenuItem>
+                <MenuItem x:Name="FontColor" Header="FontColor" Foreground="Black" Click="FontColor_Click"   ></MenuItem>
                 <MenuItem x:Name="FontS" Header="Font" Foreground="Black"   >
                     <MenuItem x:Name="bold" Header="Bold" FontWeight="Bold" Click="bold_Click" />
                     <MenuItem x:Name="italic" Header="Italic" FontStyle="Italic" Click="italic_Click"  />
