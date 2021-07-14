@@ -37,9 +37,11 @@ namespace WpfApp1
         double warning = 0;
         Random rand = new Random();
         string inf = "Inf.txt";
-        string sizeN;
+        string sizeN, sizeG,sizeH;
         bool delete = false;
         bool edit = false;
+        bool name = false;
+        bool enter = false;
         int Count = 13;
         int hit =0;
         bool Check;
@@ -59,9 +61,9 @@ namespace WpfApp1
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
-      
-     
-                foreach (UIElement el in Root.Children)
+           
+
+            foreach (UIElement el in Root.Children)
                 {
                     if (el is Button)
                     {
@@ -81,18 +83,36 @@ namespace WpfApp1
 
         private void Namer_KeyDown(object sender, KeyEventArgs e)
         {
-            
-            if (e.Key == Key.Enter)
+            if (name == true)
             {
-                sizeN = Namer.Text;
-                
-                //listbox.Items.Add(sizeN);
-                Lister.Items.Add("-");
-                listbox.Items.Add(sizeN);
-                Count++;
-                Namer.IsEnabled = false;
-                listbox.IsEnabled = true;
+                if (e.Key == Key.Enter)
+                {
+                    sizeH = Namer.Text;
+                  
+                    //listbox.Items.Add(sizeN);
+                    Lister.Items.Add("-");
+                    listbox.Items.Add(new ListBoxItem() { Content = sizeH, Background = Brushes.Red });
+                    listbox.SelectedItem = sizeH;
+                    Count++;
+                    Namer.IsEnabled = false;
+                    listbox.IsEnabled = true;
+                    name = false;
+                }
+            }
+            if (edit == true)
+            {
+                DialogeW.Text = "Change subject";
+                if (e.Key == Key.Enter)
+                {
 
+                    sizeG = Namer.Text;
+                    listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = sizeG, Background = Brushes.Red});
+                    listbox.Items.Remove(listbox.SelectedItem);
+                    Namer.IsEnabled = false;
+                    listbox.IsEnabled = true;
+
+                }
+               
             }
         }
         protected override void OnClosing(CancelEventArgs e)
@@ -199,6 +219,7 @@ namespace WpfApp1
 
                     listbox.IsEnabled = false;
                     Namer.IsEnabled = true;
+                    name = true;
                     DialogeW.Text = "Enter name subject";
 
                     break;
@@ -230,9 +251,11 @@ namespace WpfApp1
             {
                 case MessageBoxResult.Yes:
                     edit = true;
-                    listbox.IsEnabled = true;
+                    //listbox.IsEnabled = true;
+                    listbox.IsEnabled = false;
+                    Namer.IsEnabled = true;
                     DialogeW.Text = "Click element for edit!";
-                    nnr.Show();
+                    //nnr.Show();
                     
                     break;
                 case MessageBoxResult.No:
@@ -311,13 +334,44 @@ namespace WpfApp1
             Totalresult.FontStyle = FontStyles.Normal;
             GEN.FontStyle = FontStyles.Normal;
             Score.FontStyle = FontStyles.Normal;
+            EnterC.TextDecorations = null;
+            Textbox1.TextDecorations = null;
+            Name.TextDecorations = null;
+            Sername.TextDecorations = null;
+            Id.TextDecorations = null;
+            Namer.TextDecorations = null;
+            Totalresult.TextDecorations = null;
+            GEN.TextDecorations = null;
+        
+    }
+
     
+
+        private void ColorPick_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                ColorPick.IsEnabled = false;
+                ColorPick.Visibility = Visibility.Hidden;
+                cls = 0;
+                cls2 = 0;
+                        break;
+                    case MessageBoxResult.No:
+                        
+                        break;
+
+            }
+            
         }
 
         private void Color_Click(object sender, RoutedEventArgs e)
         {
             ColorPick.IsEnabled = true;
             ColorPick.Visibility = Visibility.Visible;
+     
             cls2++;
         }
 
@@ -335,35 +389,38 @@ namespace WpfApp1
             if (cls == 1)
             {
                 string c1 = ColorPick.SelectedColor.Value.ToString();
-               
-                SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-                Lister.Foreground = ck;
-                EnterC.Foreground = ck;
-                Textbox1.Foreground = ck;
-                Name.Foreground = ck;
-                Sername.Foreground = ck;
-                Id.Foreground = ck;
-                Namer.Foreground = ck;
-                Totalresult.Foreground = ck;
-                DialogeW.Foreground = ck;
-                GEN.Foreground = ck;
-                Score.Foreground = ck;
-             
+              
+                    SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+                    Lister.Foreground = ck;
+                    EnterC.Foreground = ck;
+                    Textbox1.Foreground = ck;
+                    Name.Foreground = ck;
+                    Sername.Foreground = ck;
+                    Id.Foreground = ck;
+                    Namer.Foreground = ck;
+                    Totalresult.Foreground = ck;
+                    DialogeW.Foreground = ck;
+                    GEN.Foreground = ck;
+                    Score.Foreground = ck;
+
+                DialogeW.Text = "Nice! Press Mouse Right Button for confirm:";
             }
             if(cls2 == 1)
             {
                 string c1 = ColorPick.SelectedColor.Value.ToString();
                 SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-                listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = listbox.SelectedItem, Background = ck });
-                listbox.Items.Remove(listbox.SelectedItem);
+
+                ListBoxItem lbi = listbox.Items[listbox.SelectedIndex] as ListBoxItem;
+                lbi.Background = ck;
+                DialogeW.Text = "Nice! Press Mouse Right Button for confirm:";
+
             }
 
 
-            cls = 0;
-            cls2 = 0;
-            ColorPick.IsEnabled = false;
-            ColorPick.Visibility = Visibility.Hidden;
-            
+            DialogeW.Text = "Change subject:";
+
+
+
         }
 
         private void EnterC_MouseEnter(object sender, MouseEventArgs e)
@@ -407,6 +464,8 @@ namespace WpfApp1
             sizeN = File.ReadAllText(@"Newname.txt");           
             Name.Text = File.ReadAllText(@"Name.txt");
             Sername.Text = File.ReadAllText(@"Sername.txt");
+            cls = 0;
+            cls2 = 0;
             if (delete == true)
             {
              
@@ -416,16 +475,7 @@ namespace WpfApp1
                 DialogeW.Text = "Change subject";
                 
             }
-            if (edit == true)
-            {
-
-            
-                listbox.Items[listbox.SelectedIndex + 1] = sizeN;
-               
-                DialogeW.Text = "Change subject";
-             
-               
-            }
+           
             else
             {
                 DialogeW.Text = "Change subject";
@@ -449,11 +499,12 @@ namespace WpfApp1
                     case MessageBoxResult.No:
                         listbox.SelectedItem = false;
                         break;
+
                 }
             }
-        
             edit = false;
             delete = false;
+        
         }
 //(c)AMProgramms, 2021
         private void Button_Click(object sender, RoutedEventArgs e)

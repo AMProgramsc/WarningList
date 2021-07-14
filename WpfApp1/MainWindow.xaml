@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  />
+        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged" MouseDown="ColorPick_MouseDown"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="6,27,0,0" VerticalAlignment="Top" Width="110"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}"  >
             <ListBoxItem Background="Red" Content="Match"  Height="20" Width="108"/>
             <ListBoxItem Background="#FFD85757" Content="Physics"/>
