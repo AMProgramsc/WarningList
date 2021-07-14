@@ -22,7 +22,7 @@ Extended WarningList is provided under the Apache License 2.0.
 More information can be found in the [License](https://github.com/AMProgramms/WarningList/blob/master/license.md) page
 
 -------------------------------
-# News
+# Latest News
 * 14.07.2021 - Offical release WarningList 0.6.6 Alpha
 * 13.07.2021 - Offical release WarningList 0.6.5 Alpha
 * 11.07.2021 - Offical release WarningList 0.6.4 Alpha
@@ -30,15 +30,6 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 * 09.07.2021 - Offical release WarningList 0.6.2 Alpha
 * 07.07.2021 - Offical release WarningList 0.6.1 Alpha
 * 06.07.2021 - Offical release WarningList 0.6 Alpha
-* 04.07.2021 - Offical release WarningList 0.5.9 Alpha
-* 03.07.2021 - Offical release WarningList 0.5.8 Alpha
-* 02.07.2021 - Offical release WarningList 0.5.7 Alpha
-* 01.07.2021 - Offical release WarningList 0.5.6 Alpha
-* 30.06.2021 - Offical release WarningList 0.5.5 Alpha
-* 29.06.2021 - Offical release WarningList 0.5.4 Alpha
-* 27.06.2021 - Offical release WarningList 0.5.3 Alpha
-* 26.06.2021 - Offical release WarningList 0.5.2 Alpha
-* 24.06.2021 - Offical release WarningList 0.5.1 Alpha
 * 23.06.2021 - First offical release Alpha version WarningList
 * 18.06.2021 - Last Basic version release WarningList 0.4.9
 -------------------------------
