@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using GongSolutions.Wpf.DragDrop;
 
 namespace WpfApp1
 {
@@ -365,6 +366,26 @@ namespace WpfApp1
 
             }
             
+        }
+
+        private void DgDp_Click(object sender, RoutedEventArgs e)
+        {
+            listbox.AllowDrop = true;
+          
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+
+            Lister.Items.Clear();
+            for(int g= 0; g < listbox.Items.Count; g++)
+            {
+                Lister.Items.Add("-");
+            }
+            GEN.Clear();
+            Totalresult.Clear();
+               
+
         }
 
         private void Color_Click(object sender, RoutedEventArgs e)
