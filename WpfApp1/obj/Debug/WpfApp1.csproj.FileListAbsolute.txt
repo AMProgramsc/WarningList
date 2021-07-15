@@ -79,3 +79,6 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\ru\Xceed.W
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.pdb
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.xml
