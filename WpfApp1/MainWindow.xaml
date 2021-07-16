@@ -7,8 +7,8 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:dd="urn:gong-wpf-dragdrop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="820" >
-
+        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" >
+   
 
     <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" >
         <Grid.ColumnDefinitions>
@@ -43,8 +43,8 @@
             </ListBox.ContextMenu>
         </ListBox>
         <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="267,27,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652" IsReadOnly="True" Background="{x:Null}" dd:DragDrop.IsDragSource="False" dd:DragDrop.IsDropTarget="False"/>
-        <Menu x:Name="Menu" Height="24" VerticalAlignment="Top" Foreground="Black" Background="#FFC5C5C5" BorderBrush="Gray" Margin="0,-2,0,0">
-            <MenuItem Header="Options" Foreground="Black" Width="64">
+        <Menu x:Name="Menu" Height="24" VerticalAlignment="Top" Foreground="Black" Background="#FFC5C5C5" BorderBrush="Gray">
+            <MenuItem Header="Options" Foreground="Black" Width="56">
                 <TextBlock Text="Color" Width="70" />
                 <Separator/>
                 <CheckBox x:Name="Background" Content="Background" Checked="Background_Checked" Unchecked="Background_Unchecked"   />
@@ -55,10 +55,24 @@
                     <MenuItem x:Name="underline" Header="Underline" Click="underline_Click"/>
                     <MenuItem x:Name="normal" Header="Normal" Click="normal_Click" />
                 </MenuItem>
+                <Separator/>
+                <MenuItem  Header="Main" Foreground="Black" ></MenuItem>
+                <Separator/>
+                <MenuItem  Header="Resolution" Foreground="Black" >
+                    <MenuItem x:Name="C" Header="1360x768" Click="C_Click"  />
+                    <MenuItem x:Name="P" Header="1600x900" Click="P_Click"   />
+                    <MenuItem x:Name="D" Header="1920x1080" Click="D_Click"  />
+                    
+                </MenuItem>
             </MenuItem>
 
-            <MenuItem Name="Reset" Header="Reset" Foreground="Black" Width="48" Click="Reset_Click"  />
-
+            <MenuItem Name="Reset" Header="Reset" Foreground="Black" Width="46" Click="Reset_Click"  />
+            <MenuItem Name="Debug" Header="Debug" Foreground="Black" Width="48" Visibility="Hidden" >
+                <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
+                <MenuItem Name="Void"  Header="VOID"  />
+                <MenuItem Header="Test" />
+               
+            </MenuItem>
 
         </Menu>
         <Button Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
@@ -66,7 +80,6 @@
         <Button Content="4" HorizontalAlignment="Left" Margin="162,77,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>
         <Button Content="5" HorizontalAlignment="Left" Margin="162,102,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>
         <TextBox Name="Clicker" HorizontalAlignment="Left" Height="23" Margin="267,52,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" IsReadOnly="True" Background="{x:Null}"/>
-        <TextBox x:Name="Totalresult" HorizontalAlignment="Left" Height="23" Margin="384,55,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="402" IsReadOnly="True" Background="{x:Null}"/>
         <ListBox Name="Lister"  HorizontalAlignment="Left" Height="380" Margin="116,27,0,0" VerticalAlignment="Top" Width="43" Background="{x:Null}">
             <ListBoxItem Content="-"/>
             <ListBoxItem Content="-"/>
@@ -85,14 +98,16 @@
 
         <TextBox Name="GEN" HorizontalAlignment="Left" Margin="384,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="328" Width="402" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Background="{x:Null}"/>
 
-        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,27,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="28" Width="402" Background="{x:Null}" IsReadOnly="True" FontWeight="Bold"/>
+        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,27,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="48" Width="402" Background="{x:Null}" IsReadOnly="True" FontWeight="Bold"/>
         <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="Score_SelectionChanged" Background="{x:Null}"  />
         <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,127,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="123"  MouseEnter="Name_MouseEnter" Background="{x:Null}" />
         <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,156,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="123" Background="{x:Null}" />
-        <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123" Background="{x:Null}"/>
+        <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123" Background="{x:Null}" IsReadOnly="True" />
 
         <TextBox x:Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="267,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" KeyDown="EnterC_KeyDown_1" Text="Enter score:" MouseEnter="EnterC_MouseEnter" RenderTransformOrigin="0.509,0.043" Background="{x:Null}" />
         <TextBox Name="Namer" HorizontalAlignment="Left" Height="25" Margin="262,210,0,0" TextWrapping="Wrap" Text="For edit name subject" VerticalAlignment="Top" Width="123" MouseEnter="TextBox_MouseEnter" KeyDown="Namer_KeyDown" Background="{x:Null}"/>
+        <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" />
+        <TextBox Name="Result" HorizontalAlignment="Left" Height="23" Margin="262,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="Total Result:" IsReadOnly="True" Background="{x:Null}" />
 
 
     </Grid>

@@ -36,6 +36,7 @@ namespace WpfApp1
         double NumberN;
         double result;
         double warning = 0;
+        double Tresult;
         Random rand = new Random();
         string inf = "Inf.txt";
         string sizeN, sizeG,sizeH;
@@ -188,7 +189,7 @@ namespace WpfApp1
             Sername.Foreground = Brushes.White;
             Id.Foreground = Brushes.White;
             Namer.Foreground = Brushes.White;
-            Totalresult.Foreground = Brushes.White;
+            Result.Foreground = Brushes.White;
             DialogeW.Foreground = Brushes.White;
             GEN.Foreground = Brushes.White;
             Score.Foreground = Brushes.White;
@@ -205,7 +206,7 @@ namespace WpfApp1
             Sername.Foreground = Brushes.Black;
             Id.Foreground = Brushes.Black;
             Namer.Foreground = Brushes.Black;
-            Totalresult.Foreground = Brushes.Black;
+            Result.Foreground = Brushes.Black;
             DialogeW.Foreground = Brushes.Black;
             GEN.Foreground = Brushes.Black;
             Score.Foreground = Brushes.Black;
@@ -276,7 +277,7 @@ namespace WpfApp1
             Sername.FontWeight = FontWeights.Bold;
             Id.FontWeight = FontWeights.Bold;
             Namer.FontWeight = FontWeights.Bold;
-            Totalresult.FontWeight = FontWeights.Bold;
+            Result.FontWeight = FontWeights.Bold;
             GEN.FontWeight = FontWeights.Bold;
             Score.FontWeight = FontWeights.Bold;
         }
@@ -292,7 +293,7 @@ namespace WpfApp1
             Sername.FontStyle = FontStyles.Italic;
             Id.FontStyle = FontStyles.Italic;
             Namer.FontStyle = FontStyles.Italic;
-            Totalresult.FontStyle = FontStyles.Italic;
+            Result.FontStyle = FontStyles.Italic;
             GEN.FontStyle = FontStyles.Italic;
             Score.FontStyle = FontStyles.Italic;
         }
@@ -305,7 +306,7 @@ namespace WpfApp1
             Sername.TextDecorations = TextDecorations.Underline;
             Id.TextDecorations = TextDecorations.Underline;
             Namer.TextDecorations = TextDecorations.Underline;
-            Totalresult.TextDecorations = TextDecorations.Underline;
+            Result.TextDecorations = TextDecorations.Underline;
             GEN.TextDecorations = TextDecorations.Underline;
         }
 
@@ -320,7 +321,7 @@ namespace WpfApp1
             Sername.FontWeight = FontWeights.Normal;
             Id.FontWeight = FontWeights.Normal;
             Namer.FontWeight = FontWeights.Normal;
-            Totalresult.FontWeight = FontWeights.Normal;
+            Result.FontWeight = FontWeights.Normal;
             GEN.FontWeight = FontWeights.Normal;
             Score.FontWeight = FontWeights.Normal;
             listbox.FontStyle = FontStyles.Normal;
@@ -332,7 +333,7 @@ namespace WpfApp1
             Sername.FontStyle = FontStyles.Normal;
             Id.FontStyle = FontStyles.Normal;
             Namer.FontStyle = FontStyles.Normal;
-            Totalresult.FontStyle = FontStyles.Normal;
+            Result.FontStyle = FontStyles.Normal;
             GEN.FontStyle = FontStyles.Normal;
             Score.FontStyle = FontStyles.Normal;
             EnterC.TextDecorations = null;
@@ -341,7 +342,7 @@ namespace WpfApp1
             Sername.TextDecorations = null;
             Id.TextDecorations = null;
             Namer.TextDecorations = null;
-            Totalresult.TextDecorations = null;
+            Tres.TextDecorations = null;
             GEN.TextDecorations = null;
         
     }
@@ -383,9 +384,32 @@ namespace WpfApp1
                 Lister.Items.Add("-");
             }
             GEN.Clear();
-            Totalresult.Clear();
+            Tresult = 0;
                
 
+        }
+
+        private void Complete_Click(object sender, RoutedEventArgs e)
+        {
+            sizeS = Count;
+        }
+
+        private void C_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Height = 1360;
+            Application.Current.MainWindow.Width = 768;
+        }
+
+        private void P_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Height = 1600;
+            Application.Current.MainWindow.Width = 900;
+        }
+
+        private void D_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Height = 1920;
+            Application.Current.MainWindow.Width = 1080;
         }
 
         private void Color_Click(object sender, RoutedEventArgs e)
@@ -419,7 +443,7 @@ namespace WpfApp1
                     Sername.Foreground = ck;
                     Id.Foreground = ck;
                     Namer.Foreground = ck;
-                    Totalresult.Foreground = ck;
+                    Tres.Foreground = ck;
                     DialogeW.Foreground = ck;
                     GEN.Foreground = ck;
                     Score.Foreground = ck;
@@ -525,7 +549,38 @@ namespace WpfApp1
             }
             edit = false;
             delete = false;
-        
+            if (sizeS == Count)
+            {
+                TotalResult /= Count;
+                TotalResult = Math.Round(TotalResult, 2);
+
+                Tres.Text = "Your total result = " + TotalResult;
+                if (TotalResult <= 2.5)
+                {
+                    Tres.Foreground = Brushes.Red;
+                    Tres.Text = TotalResult.ToString();
+                }
+                else if (TotalResult <= 3.5)
+                {
+                    Tres.Foreground = Brushes.Orange;
+                    Tres.Text = TotalResult.ToString();
+                }
+                else if (TotalResult <= 4.5)
+                {
+                    Tres.Foreground = Brushes.Green;
+                    Tres.Text = TotalResult.ToString();
+                }
+                else if (TotalResult <= 5)
+                {
+                    Tres.Foreground = Brushes.LightBlue;
+                    Tres.Text = TotalResult.ToString();
+                }
+                else 
+                {
+                    Tres.Foreground = Brushes.DarkRed;
+                    Tres.Text = "-";
+                }
+            }
         }
 //(c)AMProgramms, 2021
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -543,13 +598,18 @@ namespace WpfApp1
 
             if (ClickS == sizeC)
                 {
-                    result = value / ClickS;
+               
+                result = value / ClickS ;
+               result = Math.Round(result, 2);
                 valueS = value;
                 Lister.Items[listbox.SelectedIndex] = result;
-                    TotalResult += result;
-           
+               
+                TotalResult += result;
+             
+
                 if (result <= 2.5)
                 {
+                 
                     GEN.Text = "Your middle score = " + result + "\r\n";
                     GEN.Text += "WARNING!!! Low-score! " + "\r\n";
                     
@@ -621,11 +681,7 @@ namespace WpfApp1
                 Score.Items.Clear();
             }
 
-            if(sizeS == Count)
-            {
-                TotalResult /= 13;
-                Totalresult.Text = "Your total result = " + TotalResult;
-            }
+            
             
         }
 
