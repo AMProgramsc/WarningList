@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Settings" Height="450" Width="800">
+        Title="Settings" Height="450" Width="800" Background="Black">
     <Grid>
-        <Slider HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="390"/>
-        <Expander Header="Expander" HorizontalAlignment="Left" Height="230" Margin="10,49,0,0" VerticalAlignment="Top" Width="100">
-            <StackPanel HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="100">
-                <RadioButton>RadioButton</RadioButton>
-                <RadioButton >Test1</RadioButton>
-                <RadioButton >Test2</RadioButton>
-                <CheckBox >Test3</CheckBox>
+        <Expander Header="Resolution" HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" Foreground="White">
+            <StackPanel HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="100" Margin="0,0,-2,0">
+                <RadioButton Content="1024х768" Background="White" Foreground="White"/>
+                <RadioButton Content="1366x768" Background="White" Foreground="White"/>
+                <RadioButton Content="1600x900" Foreground="White" />
+                <RadioButton Content="1920x1080" Background="White" Foreground="White" />
             </StackPanel>
         </Expander>
+        <CheckBox Name="Debug" Content="Debug mode" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Checked="CheckBox_Checked" Unchecked="Debug_Unchecked"  />
+        <CheckBox x:Name="Fullscreen" Content="Fullscreen mode" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="111" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked"  />
+        <CheckBox x:Name="VOID" Content="Void" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  />
 
 
     </Grid>

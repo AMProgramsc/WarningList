@@ -48,7 +48,8 @@ namespace WpfApp1
         int hit =0;
         bool Check;
         int cls, cls2;
-        
+        int check = 0;
+        int screen = 0;
         int sizeS = 0, sizeC = 0,sizeR = -1;
         double TotalResult;
         
@@ -56,8 +57,9 @@ namespace WpfApp1
         public MainWindow()
         {
             
-            
             InitializeComponent();
+            check = Int32.Parse(File.ReadLines("Settings.txt").First());
+            screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
             ColorPick.IsEnabled = false;
             ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
@@ -75,12 +77,22 @@ namespace WpfApp1
                     }
 
                 }
-            
-            
+
+            if (check == 1)
+            {
+                Debug.Visibility = Visibility.Visible;
+            }
+            if (screen == 1)
+            {
+                WindowState = WindowState.Maximized;
+                WindowStyle = WindowStyle.None;
+            }
+
         }
         private void TextBox_MouseEnter(object sender, MouseEventArgs e)
         {
             Namer.Clear();
+           
         }
 
         private void Namer_KeyDown(object sender, KeyEventArgs e)
@@ -143,6 +155,18 @@ namespace WpfApp1
                 Id.Text = rand.Next(10000).ToString();
               
                 listbox.IsEnabled = true;
+                check = Int32.Parse(File.ReadLines("Settings.txt").First());
+                screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+                if (check == 1)
+                {
+                    Debug.Visibility = Visibility.Visible;
+                }
+                if (screen == 1)
+                {
+                    WindowState = WindowState.Maximized;
+                    WindowStyle = WindowStyle.None;
+                }
+
             }
         }
 
@@ -371,7 +395,7 @@ namespace WpfApp1
 
         private void DgDp_Click(object sender, RoutedEventArgs e)
         {
-            listbox.AllowDrop = true;
+           
           
         }
 
@@ -394,23 +418,7 @@ namespace WpfApp1
             sizeS = Count;
         }
 
-        private void C_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Height = 1360;
-            Application.Current.MainWindow.Width = 768;
-        }
-
-        private void P_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Height = 1600;
-            Application.Current.MainWindow.Width = 900;
-        }
-
-        private void D_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Height = 1920;
-            Application.Current.MainWindow.Width = 1080;
-        }
+       
 
         private void Color_Click(object sender, RoutedEventArgs e)
         {
@@ -551,6 +559,7 @@ namespace WpfApp1
             delete = false;
             if (sizeS == Count)
             {
+                Tres.IsReadOnly = false;
                 TotalResult /= Count;
                 TotalResult = Math.Round(TotalResult, 2);
 
@@ -580,7 +589,9 @@ namespace WpfApp1
                     Tres.Foreground = Brushes.DarkRed;
                     Tres.Text = "-";
                 }
+                Tres.IsReadOnly = true;
             }
+            
         }
 //(c)AMProgramms, 2021
         private void Button_Click(object sender, RoutedEventArgs e)

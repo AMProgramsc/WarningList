@@ -58,12 +58,7 @@
                 <Separator/>
                 <MenuItem  Header="Main" Foreground="Black" ></MenuItem>
                 <Separator/>
-                <MenuItem  Header="Resolution" Foreground="Black" >
-                    <MenuItem x:Name="C" Header="1360x768" Click="C_Click"  />
-                    <MenuItem x:Name="P" Header="1600x900" Click="P_Click"   />
-                    <MenuItem x:Name="D" Header="1920x1080" Click="D_Click"  />
-                    
-                </MenuItem>
+    
             </MenuItem>
 
             <MenuItem Name="Reset" Header="Reset" Foreground="Black" Width="46" Click="Reset_Click"  />
@@ -98,15 +93,15 @@
 
         <TextBox Name="GEN" HorizontalAlignment="Left" Margin="384,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="328" Width="402" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Background="{x:Null}"/>
 
-        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,27,0,0" TextWrapping="Wrap" Text="Enter name and sername:" VerticalAlignment="Top" Height="48" Width="402" Background="{x:Null}" IsReadOnly="True" FontWeight="Bold"/>
+        <TextBox x:Name="DialogeW" HorizontalAlignment="Left" Margin="384,27,0,0" TextWrapping="Wrap" Text="Enter name and seсname:" VerticalAlignment="Top" Height="48" Width="402" Background="{x:Null}" IsReadOnly="True" FontWeight="Bold"/>
         <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="Score_SelectionChanged" Background="{x:Null}"  />
         <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,127,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Width="123"  MouseEnter="Name_MouseEnter" Background="{x:Null}" />
-        <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,156,0,0" TextWrapping="Wrap" Text="Sername: " VerticalAlignment="Top" Width="123" Background="{x:Null}" />
+        <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,156,0,0" TextWrapping="Wrap" Text="Seсname: " VerticalAlignment="Top" Width="123" Background="{x:Null}" />
         <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123" Background="{x:Null}" IsReadOnly="True" />
 
         <TextBox x:Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="267,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" KeyDown="EnterC_KeyDown_1" Text="Enter score:" MouseEnter="EnterC_MouseEnter" RenderTransformOrigin="0.509,0.043" Background="{x:Null}" />
         <TextBox Name="Namer" HorizontalAlignment="Left" Height="25" Margin="262,210,0,0" TextWrapping="Wrap" Text="For edit name subject" VerticalAlignment="Top" Width="123" MouseEnter="TextBox_MouseEnter" KeyDown="Namer_KeyDown" Background="{x:Null}"/>
-        <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" />
+        <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" IsReadOnly="True" />
         <TextBox Name="Result" HorizontalAlignment="Left" Height="23" Margin="262,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="Total Result:" IsReadOnly="True" Background="{x:Null}" />
 
 
