@@ -49,7 +49,8 @@ namespace WpfApp1
         bool Check;
         int cls, cls2;
         int check = 0;
-        int screen = 0;
+      
+     
         int sizeS = 0, sizeC = 0,sizeR = -1;
         double TotalResult;
         
@@ -58,14 +59,15 @@ namespace WpfApp1
         {
             
             InitializeComponent();
-            check = Int32.Parse(File.ReadLines("Settings.txt").First());
-            screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+            check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+           
+           
             ColorPick.IsEnabled = false;
             ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
-           
+            Menu.IsEnabled = false;
 
             foreach (UIElement el in Root.Children)
                 {
@@ -82,11 +84,7 @@ namespace WpfApp1
             {
                 Debug.Visibility = Visibility.Visible;
             }
-            if (screen == 1)
-            {
-                WindowState = WindowState.Maximized;
-                WindowStyle = WindowStyle.None;
-            }
+          
 
         }
         private void TextBox_MouseEnter(object sender, MouseEventArgs e)
@@ -152,21 +150,19 @@ namespace WpfApp1
             {
               
                 Name.IsEnabled = false;
+                Menu.IsEnabled = true;
                 Id.Text = rand.Next(10000).ToString();
               
                 listbox.IsEnabled = true;
-                check = Int32.Parse(File.ReadLines("Settings.txt").First());
-                screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+                check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+             
+   
                 if (check == 1)
                 {
                     Debug.Visibility = Visibility.Visible;
                 }
-                if (screen == 1)
-                {
-                    WindowState = WindowState.Maximized;
-                    WindowStyle = WindowStyle.None;
-                }
-
+             
+            
             }
         }
 
@@ -393,11 +389,7 @@ namespace WpfApp1
             
         }
 
-        private void DgDp_Click(object sender, RoutedEventArgs e)
-        {
-           
-          
-        }
+      
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
@@ -418,7 +410,31 @@ namespace WpfApp1
             sizeS = Count;
         }
 
-       
+        private void AE_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPick.IsEnabled = true;
+            ColorPick.Visibility = Visibility.Visible;
+            Namer.IsEnabled = true;
+            listbox.IsEnabled = true;
+            EnterC.IsEnabled = true;
+            Menu.IsEnabled = true;
+            GEN.IsReadOnly = false;
+            Namer.IsReadOnly = false;
+            Namer.IsEnabled = true;
+            Sername.IsReadOnly = true;
+            Name.IsReadOnly = true;
+            foreach (UIElement el in Root.Children)
+            {
+                if (el is Button)
+                {
+                
+                    ((Button)el).IsEnabled = true;
+
+
+                }
+
+            }
+        }
 
         private void Color_Click(object sender, RoutedEventArgs e)
         {

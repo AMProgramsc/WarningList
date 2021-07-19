@@ -8,7 +8,7 @@
         xmlns:dd="urn:gong-wpf-dragdrop"
         mc:Ignorable="d"
         Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" >
-   
+
 
     <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" >
         <Grid.ColumnDefinitions>
@@ -17,7 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged" MouseDown="ColorPick_MouseDown"  />
+        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged" MouseDown="ColorPick_MouseDown" Background="{x:Null}"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="6,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"   >
             <ListBoxItem Background="Red" Content="Match"  Height="20" Width="108"/>
             <ListBoxItem Background="#FFD85757" Content="Physics"/>
@@ -38,7 +38,7 @@
                     <MenuItem Name="Delete" Header="Delete" Click="Delete_Click"></MenuItem>
                     <MenuItem Name="Edit" Header="Edit" Click="Edit_Click" ></MenuItem>
                     <MenuItem Name="Color" Header="Color" Click="Color_Click" ></MenuItem>
-                    <MenuItem Name="DgDp" Header="DragDrop" Click="DgDp_Click"  ></MenuItem>
+
                 </ContextMenu>
             </ListBox.ContextMenu>
         </ListBox>
@@ -58,15 +58,15 @@
                 <Separator/>
                 <MenuItem  Header="Main" Foreground="Black" ></MenuItem>
                 <Separator/>
-    
+
             </MenuItem>
 
             <MenuItem Name="Reset" Header="Reset" Foreground="Black" Width="46" Click="Reset_Click"  />
             <MenuItem Name="Debug" Header="Debug" Foreground="Black" Width="48" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
-                <MenuItem Name="Void"  Header="VOID"  />
+                <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
                 <MenuItem Header="Test" />
-               
+
             </MenuItem>
 
         </Menu>

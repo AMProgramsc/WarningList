@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -27,14 +28,26 @@ namespace WpfApp1
         Informations info = new Informations();
         Version ver = new Version();
         Settings set = new Settings();
-
+        int screen = 0;
+        int pb = 0;
         public WindowLoad()
         {
             //window.Close();
             InitializeComponent();
-           
+            T.IsEnabled = false;
+            screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
+            pb = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
+            if (screen == 1)
+            {
+                WindowState = WindowState.Maximized;
+            }
+            if(pb == 1)
+            {
+                ProgressLoad.Visibility = Visibility.Hidden;
+            }
+
         }
-      
+
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
@@ -67,13 +80,14 @@ namespace WpfApp1
                 ProgressLoad.Visibility = Visibility.Hidden;
                 Button2.Visibility = Visibility.Visible;
                 Exiter.Visibility = Visibility.Visible;
+                T.IsEnabled = true;
             }
         }
    
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             
+
             Close();
             
             window.Show();
@@ -84,7 +98,7 @@ namespace WpfApp1
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
            
-            window.Close();
+            this.Close();
             Close();
             Application.Current.Shutdown();
         }
@@ -118,6 +132,7 @@ namespace WpfApp1
         }
         private void Window_Closing_1(object sender, CancelEventArgs e)
         {
+          
             if (ProgressLoad.Value < 100)
             {
                 e.Cancel = true;
@@ -126,6 +141,7 @@ namespace WpfApp1
             {
                 e.Cancel = false;
             }
+            this.Visibility = Visibility.Collapsed;
         }
 
        

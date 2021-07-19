@@ -3,21 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:WpfApp1" 
         mc:Ignorable="d"
-        Title="Settings" Height="450" Width="800" Background="Black">
-    <Grid>
-        <Expander Header="Resolution" HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Background="{x:Null}" Foreground="White">
-            <StackPanel HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="100" Margin="0,0,-2,0">
-                <RadioButton Content="1024х768" Background="White" Foreground="White"/>
-                <RadioButton Content="1366x768" Background="White" Foreground="White"/>
-                <RadioButton Content="1600x900" Foreground="White" />
-                <RadioButton Content="1920x1080" Background="White" Foreground="White" />
+        Title="Settings"  Background="Black" Closing="Window_Closing"  Width="800" Height="450" >
+    <Grid >
+        <CheckBox Name="Debug" Content="Debug mode" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Checked="CheckBox_Checked" Unchecked="Debug_Unchecked" MouseEnter="Debug_MouseEnter" MouseLeave="Debug_MouseLeave"  />
+        <CheckBox x:Name="Fullscreen" Content="Fullscreen mode" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="111" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked" MouseEnter="Fullscreen_MouseEnter" MouseLeave="Fullscreen_MouseLeave"   />
+        <CheckBox x:Name="VOID" Content="Void" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Visibility="Hidden" MouseEnter="VOID_MouseEnter" MouseLeave="VOID_MouseLeave" Checked="VOID_Checked"  />
+        <TextBox Name="Texter" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="772" Background="{x:Null}" Foreground="White"/>
+        <Expander Header="Language" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="100" Foreground="White">
+            <StackPanel>
+                <RadioButton Content="Русский" Background="White" Foreground="White"   />
+                <RadioButton Content="English" Background="White" Foreground="White"/>
+                <RadioButton Content="Français" Foreground="White" />
+                <RadioButton Content="Deutsche" Background="White" Foreground="White" />
+                <RadioButton Content="Український" Background="White" Foreground="White" />
             </StackPanel>
         </Expander>
-        <CheckBox Name="Debug" Content="Debug mode" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Checked="CheckBox_Checked" Unchecked="Debug_Unchecked"  />
-        <CheckBox x:Name="Fullscreen" Content="Fullscreen mode" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="111" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked"  />
-        <CheckBox x:Name="VOID" Content="Void" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  />
+        <Grid/>
+        <CheckBox x:Name="Pb" Content="Progressbar" HorizontalAlignment="Left" Margin="124,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Pb_Checked" MouseEnter="Pb_MouseEnter" MouseLeave="Pb_MouseLeave" Unchecked="Pb_Unchecked"    />
+        <CheckBox x:Name="Sound" Content="Sound" HorizontalAlignment="Left" Margin="124,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="111" />
+
 
 
     </Grid>
