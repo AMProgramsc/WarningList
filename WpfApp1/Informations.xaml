@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
         Title="Informations" Height="450" Width="800">
     <Grid Background="Black">
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="133" Width="792" FontSize="16" Background="Black" Foreground="White"><Run FontWeight="Bold" FontSize="20" Text="Warninglist"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="WarningList - this is a program that calculates your GPA by entering several values. This program is very suitable for both schoolchildrens and students... "/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="                                                                        "/><Run FontWeight="Bold" FontSize="14" Text="Image Instruction:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="133" Width="792" FontSize="16" Background="Black" Foreground="White"><Run FontWeight="Bold" FontSize="20" Text="Warninglist"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="{x:Static res:Resources.WarningList}"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="                                                                             "/><Run FontWeight="Bold" FontSize="14" Text="{x:Static res:Resources.Image}"/></TextBlock>
         <Image HorizontalAlignment="Left" Height="276" Margin="150,133,0,0" VerticalAlignment="Top" Width="492" Source="Instruct.bmp"/>
 
     </Grid>

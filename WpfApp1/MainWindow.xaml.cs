@@ -49,7 +49,7 @@ namespace WpfApp1
         bool Check;
         int cls, cls2;
         int check = 0;
-      
+        int lang = 0;
      
         int sizeS = 0, sizeC = 0,sizeR = -1;
         double TotalResult;
@@ -57,7 +57,27 @@ namespace WpfApp1
      
         public MainWindow()
         {
-            
+            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
+            if (lang == 0)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            }
+            if (lang == 1)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
+            }
+            if (lang == 2)
+            {
+
+            }
+            if (lang == 3)
+            {
+
+            }
+            if (lang == 4)
+            {
+
+            }
             InitializeComponent();
             check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
            
@@ -113,7 +133,7 @@ namespace WpfApp1
             }
             if (edit == true)
             {
-                DialogeW.Text = "Change subject";
+                DialogeW.Text = Properties.Resources.Dialoge2;
                 if (e.Key == Key.Enter)
                 {
 
@@ -129,8 +149,7 @@ namespace WpfApp1
         }
         protected override void OnClosing(CancelEventArgs e)
         {
-            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
-                MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            var response = MessageBox.Show(Properties.Resources.Message1, Properties.Resources.Box1,MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (response == MessageBoxResult.No)
             {
                 e.Cancel = true;
@@ -169,8 +188,8 @@ namespace WpfApp1
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
-            DialogeW.Text = "Confirm?";
-                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            DialogeW.Text = Properties.Resources.Dialoge3;
+                MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -181,13 +200,13 @@ namespace WpfApp1
                     Score.Items.Remove(Score.SelectedItem);
                   
                     ClickS--;
-                        DialogeW.Text = "Press Buttons for score";
+                        DialogeW.Text = Properties.Resources.Dialoge4;
                   
 
                     break;
                     case MessageBoxResult.No:
                         Score.SelectedItem = false;
-                        DialogeW.Text = "Press Buttons for score";
+                        DialogeW.Text = Properties.Resources.Dialoge4;
                         
                         break;
 
@@ -234,7 +253,7 @@ namespace WpfApp1
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
             switch (result)
             {
                 case MessageBoxResult.Yes:
@@ -242,7 +261,7 @@ namespace WpfApp1
                     listbox.IsEnabled = false;
                     Namer.IsEnabled = true;
                     name = true;
-                    DialogeW.Text = "Enter name subject";
+                    DialogeW.Text = Properties.Resources.Dialoge5;
 
                     break;
                 case MessageBoxResult.No:
@@ -253,13 +272,13 @@ namespace WpfApp1
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
             switch (result)
             {
                 case MessageBoxResult.Yes:
                     delete = true;
                     listbox.IsEnabled = true;
-                    DialogeW.Text = "Click element for delete!";
+                    DialogeW.Text = Properties.Resources.Dialoge6;
                     break;
                 case MessageBoxResult.No:
 
@@ -268,7 +287,7 @@ namespace WpfApp1
         }
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
             switch (result)
             {
                 case MessageBoxResult.Yes:
@@ -276,7 +295,7 @@ namespace WpfApp1
                     //listbox.IsEnabled = true;
                     listbox.IsEnabled = false;
                     Namer.IsEnabled = true;
-                    DialogeW.Text = "Click element for edit!";
+                    DialogeW.Text = Properties.Resources.Dialoge7;
                     //nnr.Show();
                     
                     break;
@@ -372,7 +391,7 @@ namespace WpfApp1
         private void ColorPick_MouseDown(object sender, MouseButtonEventArgs e)
         {
             
-                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -472,7 +491,7 @@ namespace WpfApp1
                     GEN.Foreground = ck;
                     Score.Foreground = ck;
 
-                DialogeW.Text = "Nice! Press Mouse Right Button for confirm:";
+                DialogeW.Text = Properties.Resources.Dialoge8;
             }
             if(cls2 == 1)
             {
@@ -481,12 +500,12 @@ namespace WpfApp1
 
                 ListBoxItem lbi = listbox.Items[listbox.SelectedIndex] as ListBoxItem;
                 lbi.Background = ck;
-                DialogeW.Text = "Nice! Press Mouse Right Button for confirm:";
+                DialogeW.Text = Properties.Resources.Dialoge8;
 
             }
 
 
-            DialogeW.Text = "Change subject:";
+            DialogeW.Text = Properties.Resources.Dialoge2;
 
 
 
@@ -505,13 +524,13 @@ namespace WpfApp1
                 sizeC = Int32.Parse(EnterC.Text);
                 if (sizeC < 3)
                 {
-                    DialogeW.Text = "Error! Score very small!";
+                    DialogeW.Text = Properties.Resources.Dialoge9;
                     EnterC.Clear();
                 }
                 else 
                 {
 
-                    DialogeW.Text = "Press Buttons for score";
+                    DialogeW.Text = Properties.Resources.Dialoge4;
                     EnterC.IsEnabled = false;
                     foreach (UIElement el in Root.Children)
                     {
@@ -541,14 +560,14 @@ namespace WpfApp1
                 listbox.Items.Remove(listbox.SelectedItem);
                 Lister.Items.Remove(listbox.SelectedItem);
                 Count--;
-                DialogeW.Text = "Change subject";
+                DialogeW.Text = Properties.Resources.Dialoge2;
                 
             }
            
             else
             {
-                DialogeW.Text = "Change subject";
-                MessageBoxResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                DialogeW.Text = Properties.Resources.Dialoge2;
+                MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -579,7 +598,7 @@ namespace WpfApp1
                 TotalResult /= Count;
                 TotalResult = Math.Round(TotalResult, 2);
 
-                Tres.Text = "Your total result = " + TotalResult;
+                Tres.Text = Properties.Resources.Gen1 + TotalResult;
                 if (TotalResult <= 2.5)
                 {
                     Tres.Foreground = Brushes.Red;
@@ -637,30 +656,30 @@ namespace WpfApp1
                 if (result <= 2.5)
                 {
                  
-                    GEN.Text = "Your middle score = " + result + "\r\n";
-                    GEN.Text += "WARNING!!! Low-score! " + "\r\n";
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
                     
                     for (; warning < 2.6;)
                     {
                         warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
-                        GEN.Text += "You need: " + 3 + " for " + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
                     }
                     warning = 0;
                     
                 }
                 else if (result <= 3.5)
                 {
-                    GEN.Text = "Your middle score = " + result + "\r\n";
-                    GEN.Text += "Warning! Score equal 3!" + "\r\n";
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "\r\n";
                     
                     for (; warning < 3.6;)
                     {
                         warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
-                        GEN.Text += "You need: " + 4 + " for " + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
                     }
                     
                     warning = 0;
@@ -668,15 +687,15 @@ namespace WpfApp1
                 }
                 else if (result <= 4.5)
                 {
-                    GEN.Text = "Your middle score = " + result + "\r\n";
-                    GEN.Text += "Warning! Score equal 4!" + "\r\n";
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "\r\n";
                     
                     for (; warning < 4.6;)
                     {
                         warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
-                        GEN.Text += "You need: " + 5 + " for " + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
                     }
                     warning = 0;
                    
@@ -684,8 +703,8 @@ namespace WpfApp1
                 else
                 {
                    
-                        GEN.Text = "Your middle score = " + result + "\r\n";
-                        GEN.Text += "Total score is normal! ;) " + "\r\n";
+                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                        GEN.Text += Properties.Resources.Gen4 + "\r\n";
                     
                 }
                 value = 0;

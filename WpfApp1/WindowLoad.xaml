@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
         Title="WindowLoad" Height="450" Width="800" Background="Black"  
         ContentRendered="Window_ContentRendered"  Closing="Window_Closing_1" SizeToContent="WidthAndHeight">
@@ -18,18 +19,18 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="364" Foreground="#FF00C5FF" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   ><Run Text="WarningList"/><Run Text=" "/><Run Text="0."/><Run Text="7"/><Run Text=" Alpha"/></TextBlock>
-        <Button Name="Button2" Content="Start" HorizontalAlignment="Left" Margin="346,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
-        <Button x:Name="Exiter" Content="Exit" HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
+        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="382" Foreground="#FF00C5FF" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   ><Run Text="WarningList"/><Run Text=" "/><Run Text="0."/><Run Text="7"/><Run Text=".1"/><Run Text=" Alpha"/></TextBlock>
+        <Button Name="Button2" Content="{x:Static res:Resources.Start}" HorizontalAlignment="Left" Margin="346,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
+        <Button x:Name="Exiter" Content="{x:Static res:Resources.Exit}" HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
         <Menu Name="T" Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White">
-            <MenuItem Name="Menu" Header="Help" Foreground="White" >
-                <TextBlock  Text="Informaintion" Foreground="Black"  />
+            <MenuItem Name="Menu" Header="{x:Static res:Resources.Help}" Foreground="White" >
+                <TextBlock  Text="{x:Static res:Resources.Information}" Foreground="Black"  />
                 <Separator />
                 <MenuItem Name="WL" Header="WarningList" Foreground="Black"  >
                     <MenuItem Name="WarningList" Header="WarningList" Foreground="Black" Click="WarningList_Click" ></MenuItem>
-                    <MenuItem Name="Version" Header="Version" Foreground="Black" Click="Version_Click" ></MenuItem>
-                    <MenuItem Name="About" Header="About" Foreground="Black" Click="About_Click" ></MenuItem>
+                    <MenuItem Name="Version" Header="{x:Static res:Resources.Version}" Foreground="Black" Click="Version_Click" ></MenuItem>
+                    <MenuItem Name="About" Header="{x:Static res:Resources.About}" Foreground="Black" Click="About_Click" ></MenuItem>
                 </MenuItem>
                 <MenuItem  Header="Test" Foreground="Black"  >
 
@@ -41,12 +42,12 @@
 
 
             </MenuItem>
-            <MenuItem Header="Load" ></MenuItem>
-            <MenuItem Header="Settings" Foreground="White" Click="General_Click" ></MenuItem>
+            <MenuItem Header="{x:Static res:Resources.Load}" ></MenuItem>
+            <MenuItem Header="{x:Static res:Resources.Settings}" Foreground="White" Click="General_Click" ></MenuItem>
 
         </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="590,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="192"><Run Text="Created by AMPrograms"/><Run Text=" 2"/><Run Text="0"/><Run Text="18-2"/><Run Text="021"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="590,393,0,0" TextWrapping="Wrap" Text="©All rights reserved " VerticalAlignment="Top" Width="145" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="613,1,0,0" TextWrapping="Wrap" Text="Warning! Don't press button X, otherwise the running process will hang in the task manager!" VerticalAlignment="Top" Width="169" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="590,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="192"><Run Text="{x:Static res:Resources.Creator}"/><Run Text=" 2"/><Run Text="0"/><Run Text="18-2"/><Run Text="021"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="590,393,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Rights}" VerticalAlignment="Top" Width="145" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="613,1,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Warning}" VerticalAlignment="Top" Width="169" Foreground="White"/>
     </Grid>
 </Window>

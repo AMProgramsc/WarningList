@@ -30,13 +30,36 @@ namespace WpfApp1
         Settings set = new Settings();
         int screen = 0;
         int pb = 0;
+        int lang = 0;
         public WindowLoad()
         {
-            //window.Close();
+          
+            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
+            if (lang == 0)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            }
+            if (lang == 1)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
+            }
+            if (lang == 2)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
+            }
+            if (lang == 3)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
+            }
+            if (lang == 4)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
+            }
             InitializeComponent();
             T.IsEnabled = false;
             screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
             pb = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
+           
             if (screen == 1)
             {
                 WindowState = WindowState.Maximized;
