@@ -1,0 +1,7 @@
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\bin\Debug\WarningListCsharp.exe.config
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\bin\Debug\WarningListCsharp.exe
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\bin\Debug\WarningListCsharp.pdb
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\obj\Debug\WarningListCsharp.csprojAssemblyReference.cache
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\obj\Debug\WarningListCsharp.csproj.CoreCompileInputs.cache
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\obj\Debug\WarningListCsharp.exe
+C:\Users\Общий\source\repos\WarningListCsharp\WarningListCsharp\obj\Debug\WarningListCsharp.pdb
