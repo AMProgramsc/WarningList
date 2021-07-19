@@ -1,0 +1,8 @@
+﻿  Translite.cpp
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.h(9,32): warning C4081: требуется "newline"; обнаружен ";"
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(100,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(407,133): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(108,11): warning C4101: hit2: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(107,6): warning C4101: correct: неиспользованная локальная переменная
+C:\Users\TopDesktop-1\source\repos\WarningListPVersion\WarningListPVersion\Translite.cpp(108,6): warning C4101: hit: неиспользованная локальная переменная
+  WarningListPVersion.vcxproj -> C:\Users\TopDesktop-1\source\repos\WarningListPVersion\Debug\WarningListPVersion.exe
