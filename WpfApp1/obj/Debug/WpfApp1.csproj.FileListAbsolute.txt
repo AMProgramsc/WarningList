@@ -82,3 +82,15 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.pdb
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\GongSolutions.WPF.DragDrop.xml
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\ru-RU\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.ru-RU.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\ru-RU\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\fr-FR\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\de-DE\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\uk-UA\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.fr-FR.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.de-DE.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.uk-UA.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\fr-FR\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\de-DE\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\uk-UA\WpfApp1.resources.dll
