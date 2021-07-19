@@ -118,169 +118,169 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>À propos</value>
   </data>
   <data name="AboutMe" xml:space="preserve">
-    <value>Hello! My name Alexander! It's my three project You probably know me from two other projects, namely RPG BASIC and Snake. I've been programmimg for 3 years. My main classification is C++, C(Newble),and C#(3 - 6 mounts). The development of the program is onging to this day...</value>
+    <value>Bonjour! Je m'appelle Alexandre ! Ce sont mes trois projets Vous me connaissez probablement pour deux autres projets, à savoir RPG BASIC et Snake. Je programme depuis 3 ans. Ma classification principale est C++, C (Newble) et C# (3 - 6 montures). Le développement du programme se poursuit à ce jour...</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="AM" xml:space="preserve">
-    <value>About me:</value>
+    <value>Sur moi:</value>
   </data>
   <data name="Background" xml:space="preserve">
-    <value>Background</value>
+    <value>Arrière-plan</value>
   </data>
   <data name="Biology" xml:space="preserve">
-    <value>Biology</value>
+    <value>La biologie</value>
   </data>
   <data name="Bold" xml:space="preserve">
-    <value>Bold</value>
+    <value>Audacieux</value>
   </data>
   <data name="Box1" xml:space="preserve">
-    <value>Exiting...</value>
+    <value>Sortie...</value>
   </data>
   <data name="Box2" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Confirmer</value>
   </data>
   <data name="Chemistry" xml:space="preserve">
-    <value>Chemistry</value>
+    <value>Chimie</value>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>Couleur</value>
   </data>
   <data name="Computerscience" xml:space="preserve">
-    <value>Computer science</value>
+    <value>L'informatique</value>
   </data>
   <data name="Creator" xml:space="preserve">
-    <value>Created by AMPrograms</value>
+    <value>Créé par AMPrograms</value>
   </data>
   <data name="Debug" xml:space="preserve">
-    <value>Debug mode</value>
+    <value>Mode débogage</value>
   </data>
   <data name="DebugD" xml:space="preserve">
-    <value>Debug</value>
+    <value>Déboguer</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Effacer</value>
   </data>
   <data name="Desc" xml:space="preserve">
-    <value>Description about all versions located at the link: </value>
+    <value>Description de toutes les versions situées sur le lien :</value>
   </data>
   <data name="Dialoge1" xml:space="preserve">
-    <value>Enter name and surname:</value>
+    <value>Entrez le nom et le prénom :</value>
   </data>
   <data name="Dialoge2" xml:space="preserve">
-    <value>Change subject</value>
+    <value>Change le sujet</value>
   </data>
   <data name="Dialoge3" xml:space="preserve">
-    <value>Confirm?</value>
+    <value>Confirmer?</value>
   </data>
   <data name="Dialoge4" xml:space="preserve">
-    <value>Press Buttons for score</value>
+    <value>Appuyez sur les boutons pour le score</value>
   </data>
   <data name="Dialoge5" xml:space="preserve">
-    <value>Enter name subject</value>
+    <value>Entrez le nom du sujet</value>
   </data>
   <data name="Dialoge6" xml:space="preserve">
-    <value>Click element for delete!</value>
+    <value>Cliquez sur l'élément à supprimer !</value>
   </data>
   <data name="Dialoge7" xml:space="preserve">
-    <value>Click element for edit!</value>
+    <value>Cliquez sur l'élément pour le modifier !</value>
   </data>
   <data name="Dialoge8" xml:space="preserve">
-    <value>Nice! Press Mouse Right Button for confirm:</value>
+    <value>Agréable! Appuyez sur le bouton droit de la souris pour confirmer :</value>
   </data>
   <data name="Dialoge9" xml:space="preserve">
-    <value>Error! Score very small!</value>
+    <value>Erreur! Score très petit!</value>
   </data>
   <data name="Dm" xml:space="preserve">
-    <value>Debug mode, more opportunity</value>
+    <value>Mode débogage, plus d'opportunités</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Éditer</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>English</value>
+    <value>Anglais</value>
   </data>
   <data name="EnterC" xml:space="preserve">
-    <value>Enter score:</value>
+    <value>Saisir le score :</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Sortir</value>
   </data>
   <data name="Font" xml:space="preserve">
-    <value>Font</value>
+    <value>La fonte</value>
   </data>
   <data name="FontColor" xml:space="preserve">
-    <value>FontColor</value>
+    <value>Couleur de la fonte</value>
   </data>
   <data name="Fs" xml:space="preserve">
-    <value>This is fullscreen mode</value>
+    <value>C'est le mode plein écran</value>
   </data>
   <data name="Fullscreen" xml:space="preserve">
-    <value>Fullscreen mode</value>
+    <value>Mode plein écran</value>
   </data>
   <data name="Gen" xml:space="preserve">
-    <value>Your middle score</value>
+    <value>Votre score moyen</value>
   </data>
   <data name="Gen1" xml:space="preserve">
-    <value>WARNING!!! Low-score!</value>
+    <value>ATTENTION!!! Note faible !</value>
   </data>
   <data name="Gen2" xml:space="preserve">
-    <value>Warning! Score equal 3!</value>
+    <value>Avertissement! Score égal à 3 !</value>
   </data>
   <data name="Gen3" xml:space="preserve">
-    <value>Warning! Score equal 4!</value>
+    <value>Avertissement! Score égal à 4 !</value>
   </data>
   <data name="Gen4" xml:space="preserve">
-    <value>Total score is normal! ;)</value>
+    <value>Le score total est normal ! ;)</value>
   </data>
   <data name="GenF" xml:space="preserve">
-    <value> for </value>
+    <value> pour </value>
   </data>
   <data name="GenN" xml:space="preserve">
-    <value> You need: </value>
+    <value> Vous avez besoin:</value>
   </data>
   <data name="Geography" xml:space="preserve">
-    <value>Geography</value>
+    <value>La géographie</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Aider</value>
   </data>
   <data name="History" xml:space="preserve">
-    <value>History</value>
+    <value>Histoire</value>
   </data>
   <data name="Image" xml:space="preserve">
-    <value>Image instruction</value>
+    <value>Instructions d'image</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Informations</value>
   </data>
   <data name="Italic" xml:space="preserve">
-    <value>Italic</value>
+    <value>Italique</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Langue</value>
   </data>
   <data name="Literature" xml:space="preserve">
-    <value>Lirerature</value>
+    <value>Littérature</value>
   </data>
   <data name="Load" xml:space="preserve">
-    <value>Load</value>
+    <value>Charge</value>
   </data>
   <data name="Match" xml:space="preserve">
-    <value>Match</value>
+    <value>Correspondre</value>
   </data>
   <data name="Message1" xml:space="preserve">
-    <value>Do you really want to exit?</value>
+    <value>Voulez-vous vraiment sortir?</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name:</value>
+    <value>Nom:</value>
   </data>
   <data name="Namer" xml:space="preserve">
-    <value>For edit name subject</value>
+    <value>Pour modifier le nom du sujet</value>
   </data>
   <data name="Normal" xml:space="preserve">
     <value>Normal</value>
@@ -289,13 +289,13 @@
     <value>Options</value>
   </data>
   <data name="Pb" xml:space="preserve">
-    <value>Responsible for progressbar visibility</value>
+    <value>Responsable de la visibilité de la barre de progression</value>
   </data>
   <data name="PE" xml:space="preserve">
-    <value>PE</value>
+    <value>Éducation physique</value>
   </data>
   <data name="Physics" xml:space="preserve">
-    <value>Physics</value>
+    <value>La physique</value>
   </data>
   <data name="Progressbar" xml:space="preserve">
     <value>Progressbar</value>
@@ -307,52 +307,52 @@
     <value>©All rights reserved</value>
   </data>
   <data name="RusLeng" xml:space="preserve">
-    <value>Rus.Leng</value>
+    <value>Français</value>
   </data>
   <data name="Secname" xml:space="preserve">
-    <value>Surname:</value>
+    <value>Nom de famille:</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Paramètres</value>
   </data>
   <data name="Solicalscience" xml:space="preserve">
     <value>Solicalscience</value>
   </data>
   <data name="Sound" xml:space="preserve">
-    <value>Sound</value>
+    <value>Sonner</value>
   </data>
   <data name="Start" xml:space="preserve">
     <value>Start</value>
   </data>
   <data name="Succeses" xml:space="preserve">
-    <value>Succeses! For the changes to take effect, restart the program.</value>
+    <value>Succès ! Pour que les modifications prennent effet, redémarrez le programme.</value>
   </data>
   <data name="Sure" xml:space="preserve">
-    <value>Are you sure?</value>
+    <value>Êtes-vous sûr?</value>
   </data>
   <data name="SureVoid1" xml:space="preserve">
-    <value>You shouldn't do this...</value>
+    <value>Tu ne devrais pas faire ça...</value>
   </data>
   <data name="SureVoid2" xml:space="preserve">
-    <value>Do not do this!</value>
+    <value>Ne faites pas cela!</value>
   </data>
   <data name="SureVoid3" xml:space="preserve">
-    <value>Go out!</value>
+    <value>Sortir!</value>
   </data>
   <data name="SV2" xml:space="preserve">
-    <value>Sure?</value>
+    <value>Sûr?</value>
   </data>
   <data name="SV3" xml:space="preserve">
-    <value>And who will ask you ...</value>
+    <value>Et qui vous demandera...</value>
   </data>
   <data name="Totalresult" xml:space="preserve">
-    <value>Total rersult:</value>
+    <value>Résultat total :</value>
   </data>
   <data name="Tres" xml:space="preserve">
-    <value>Your total result = </value>
+    <value>Résultat total :</value>
   </data>
   <data name="Underline" xml:space="preserve">
-    <value>Underline</value>
+    <value>Souligner</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
@@ -364,18 +364,18 @@
     <value>VOID</value>
   </data>
   <data name="Voider" xml:space="preserve">
-    <value>You shouldn't click on this...</value>
+    <value>Tu ne devrais pas cliquer dessus...</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning! Don't press button X, otherwise the running process will hang in the task manager!</value>
+    <value>Avertissement! N'appuyez pas sur le bouton X, sinon le processus en cours se bloquera dans le gestionnaire de tâches !</value>
   </data>
   <data name="WarningList" xml:space="preserve">
-    <value>WarningList - this is a program that calculates your GPA by entering several values. This program is very suitable for both schoolchildrens and students...</value>
+    <value>WarningList - c'est un programme qui calcule votre GPA en entrant plusieurs valeurs. Ce programme convient aussi bien aux écoliers qu'aux étudiants...</value>
   </data>
   <data name="Yname" xml:space="preserve">
-    <value>Your name:</value>
+    <value>Votre nom:</value>
   </data>
   <data name="Ysurname" xml:space="preserve">
-    <value>Your surname:</value>
+    <value>Votre nom de famille :</value>
   </data>
 </root>

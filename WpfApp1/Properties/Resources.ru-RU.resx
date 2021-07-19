@@ -118,264 +118,264 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>Автор</value>
   </data>
   <data name="AboutMe" xml:space="preserve">
-    <value>Hello! My name Alexander! It's my three project You probably know me from two other projects, namely RPG BASIC and Snake. I've been programmimg for 3 years. My main classification is C++, C(Newble),and C#(3 - 6 mounts). The development of the program is onging to this day...</value>
+    <value>Привествую! Моё имя Александр! Это мой третий проект, вы наверноё знаете меня по двум другим проектам, а именно RPG BASIC и Snake. Я программирую уже как 3 года. Моя основная классификация - C++, C,и C#(3 - 6 месяцев). Разработка программы ведётся и по сей день...</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Добавить</value>
   </data>
   <data name="AM" xml:space="preserve">
-    <value>About me:</value>
+    <value>Об авторе:</value>
   </data>
   <data name="Background" xml:space="preserve">
-    <value>Background</value>
+    <value>Задний фон</value>
   </data>
   <data name="Biology" xml:space="preserve">
-    <value>Biology</value>
+    <value>Биология</value>
   </data>
   <data name="Bold" xml:space="preserve">
-    <value>Bold</value>
+    <value>Жирный</value>
   </data>
   <data name="Box1" xml:space="preserve">
-    <value>Exiting...</value>
+    <value>Выход...</value>
   </data>
   <data name="Box2" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Подтвердить</value>
   </data>
   <data name="Chemistry" xml:space="preserve">
-    <value>Chemistry</value>
+    <value>Химия</value>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>Цвет</value>
   </data>
   <data name="Computerscience" xml:space="preserve">
-    <value>Computer science</value>
+    <value>Информатика</value>
   </data>
   <data name="Creator" xml:space="preserve">
-    <value>Created by AMPrograms</value>
+    <value>Создал AMPrograms</value>
   </data>
   <data name="Debug" xml:space="preserve">
-    <value>Debug mode</value>
+    <value>Для разработчиков</value>
   </data>
   <data name="DebugD" xml:space="preserve">
-    <value>Debug</value>
+    <value>Отладка</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Удалить</value>
   </data>
   <data name="Desc" xml:space="preserve">
-    <value>Description about all versions located at the link: </value>
+    <value>Описание обо всех версиях находится по ссылке: </value>
   </data>
   <data name="Dialoge1" xml:space="preserve">
-    <value>Enter name and surname:</value>
+    <value>Введите имя и фамилию:</value>
   </data>
   <data name="Dialoge2" xml:space="preserve">
-    <value>Change subject</value>
+    <value>Выберите предмет</value>
   </data>
   <data name="Dialoge3" xml:space="preserve">
-    <value>Confirm?</value>
+    <value>Подтвердить?</value>
   </data>
   <data name="Dialoge4" xml:space="preserve">
-    <value>Press Buttons for score</value>
+    <value>Нажмите кнопку для увеличения счета</value>
   </data>
   <data name="Dialoge5" xml:space="preserve">
-    <value>Enter name subject</value>
+    <value>Введите имя предмета</value>
   </data>
   <data name="Dialoge6" xml:space="preserve">
-    <value>Click element for delete!</value>
+    <value>Нажмите на элемент что бы удалить его!</value>
   </data>
   <data name="Dialoge7" xml:space="preserve">
-    <value>Click element for edit!</value>
+    <value>Нажмите на элемент что бы отредактировать его!</value>
   </data>
   <data name="Dialoge8" xml:space="preserve">
-    <value>Nice! Press Mouse Right Button for confirm:</value>
+    <value>Отлично! Нажмите правую кнопку мыши что бы принять результат.</value>
   </data>
   <data name="Dialoge9" xml:space="preserve">
-    <value>Error! Score very small!</value>
+    <value>Ошибка! Слишком мало для получения результата!</value>
   </data>
   <data name="Dm" xml:space="preserve">
-    <value>Debug mode, more opportunity</value>
+    <value>Для разработчиков</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Редактировать</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>English</value>
+    <value>Английский язык</value>
   </data>
   <data name="EnterC" xml:space="preserve">
-    <value>Enter score:</value>
+    <value>Введите оценку:</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Выйти</value>
   </data>
   <data name="Font" xml:space="preserve">
-    <value>Font</value>
+    <value>Шрифт</value>
   </data>
   <data name="FontColor" xml:space="preserve">
-    <value>FontColor</value>
+    <value>Цвет шрифта</value>
   </data>
   <data name="Fs" xml:space="preserve">
-    <value>This is fullscreen mode</value>
+    <value>Это полноэкранный режим</value>
   </data>
   <data name="Fullscreen" xml:space="preserve">
-    <value>Fullscreen mode</value>
+    <value>Полноэкранный режим</value>
   </data>
   <data name="Gen" xml:space="preserve">
-    <value>Your middle score</value>
+    <value>Ваш средний балл:</value>
   </data>
   <data name="Gen1" xml:space="preserve">
-    <value>WARNING!!! Low-score!</value>
+    <value>ВНИМАНИЕ!!! Слишком низкий средний балл!</value>
   </data>
   <data name="Gen2" xml:space="preserve">
-    <value>Warning! Score equal 3!</value>
+    <value>Внимание! Средний балл равен 3!</value>
   </data>
   <data name="Gen3" xml:space="preserve">
-    <value>Warning! Score equal 4!</value>
+    <value>Внимание! Средний балл равен 4!</value>
   </data>
   <data name="Gen4" xml:space="preserve">
-    <value>Total score is normal! ;)</value>
+    <value>Твой средний балл в порядке! ;)</value>
   </data>
   <data name="GenF" xml:space="preserve">
-    <value> for </value>
+    <value> для </value>
   </data>
   <data name="GenN" xml:space="preserve">
-    <value> You need: </value>
+    <value>Тебе нужно: </value>
   </data>
   <data name="Geography" xml:space="preserve">
-    <value>Geography</value>
+    <value>География</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Помощь</value>
   </data>
   <data name="History" xml:space="preserve">
-    <value>History</value>
+    <value>История</value>
   </data>
   <data name="Image" xml:space="preserve">
-    <value>Image instruction</value>
+    <value>Фотоинструкция</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Информация</value>
   </data>
   <data name="Italic" xml:space="preserve">
-    <value>Italic</value>
+    <value>Наклонённый</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Язык</value>
   </data>
   <data name="Literature" xml:space="preserve">
-    <value>Lirerature</value>
+    <value>Литература</value>
   </data>
   <data name="Load" xml:space="preserve">
-    <value>Load</value>
+    <value>Загрузить</value>
   </data>
   <data name="Match" xml:space="preserve">
-    <value>Match</value>
+    <value>Математика</value>
   </data>
   <data name="Message1" xml:space="preserve">
-    <value>Do you really want to exit?</value>
+    <value>Вы точно хотите выйти?</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name:</value>
+    <value>Имя:</value>
   </data>
   <data name="Namer" xml:space="preserve">
-    <value>For edit name subject</value>
+    <value>Для редактирования имени предмета</value>
   </data>
   <data name="Normal" xml:space="preserve">
-    <value>Normal</value>
+    <value>Нормальный</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>Options</value>
+    <value>Настройка</value>
   </data>
   <data name="Pb" xml:space="preserve">
-    <value>Responsible for progressbar visibility</value>
+    <value>Видимость progreessbar'а</value>
   </data>
   <data name="PE" xml:space="preserve">
-    <value>PE</value>
+    <value>Физкультура</value>
   </data>
   <data name="Physics" xml:space="preserve">
-    <value>Physics</value>
+    <value>Физика</value>
   </data>
   <data name="Progressbar" xml:space="preserve">
     <value>Progressbar</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value>Reset</value>
+    <value>Сброс</value>
   </data>
   <data name="Rights" xml:space="preserve">
-    <value>©All rights reserved</value>
+    <value>©Все права защищены</value>
   </data>
   <data name="RusLeng" xml:space="preserve">
-    <value>Rus.Leng</value>
+    <value>Русский язык</value>
   </data>
   <data name="Secname" xml:space="preserve">
-    <value>Surname:</value>
+    <value>Фамилия:</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Настройки</value>
   </data>
   <data name="Solicalscience" xml:space="preserve">
-    <value>Solicalscience</value>
+    <value>Обществознание</value>
   </data>
   <data name="Sound" xml:space="preserve">
-    <value>Sound</value>
+    <value>Звук</value>
   </data>
   <data name="Start" xml:space="preserve">
-    <value>Start</value>
+    <value>Старт</value>
   </data>
   <data name="Succeses" xml:space="preserve">
-    <value>Succeses! For the changes to take effect, restart the program.</value>
+    <value>Отлично! Перезагрузите программу что бы изменения вступили в силу!</value>
   </data>
   <data name="Sure" xml:space="preserve">
-    <value>Are you sure?</value>
+    <value>Вы уверены?</value>
   </data>
   <data name="SureVoid1" xml:space="preserve">
-    <value>You shouldn't do this...</value>
+    <value>Ты не должен делать этого...</value>
   </data>
   <data name="SureVoid2" xml:space="preserve">
-    <value>Do not do this!</value>
+    <value>Ты не должен!</value>
   </data>
   <data name="SureVoid3" xml:space="preserve">
-    <value>Go out!</value>
+    <value>Прочь отсюда!</value>
   </data>
   <data name="SV2" xml:space="preserve">
-    <value>Sure?</value>
+    <value>Уверен?</value>
   </data>
   <data name="SV3" xml:space="preserve">
-    <value>And who will ask you ...</value>
+    <value>Будто тебя кто то спрашивал...</value>
   </data>
   <data name="Totalresult" xml:space="preserve">
-    <value>Total rersult:</value>
+    <value>Общий балл:</value>
   </data>
   <data name="Tres" xml:space="preserve">
-    <value>Your total result = </value>
+    <value>Общий балл:</value>
   </data>
   <data name="Underline" xml:space="preserve">
-    <value>Underline</value>
+    <value>Подчёркнутый</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version</value>
+    <value>Версия</value>
   </data>
   <data name="Versions" xml:space="preserve">
-    <value>Versions</value>
+    <value>Версии</value>
   </data>
   <data name="Void" xml:space="preserve">
     <value>VOID</value>
   </data>
   <data name="Voider" xml:space="preserve">
-    <value>You shouldn't click on this...</value>
+    <value>Ты не должен это делать...</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning! Don't press button X, otherwise the running process will hang in the task manager!</value>
+    <value>Вниманме! Не нажимайте на кнопку X, иначе процесс останется в диспетчере задач!</value>
   </data>
   <data name="WarningList" xml:space="preserve">
-    <value>WarningList - this is a program that calculates your GPA by entering several values. This program is very suitable for both schoolchildrens and students...</value>
+    <value>WarningList - это программа с помощью которой вы можете узнать свой текущий средний балл ,путём ввода оценок,а также свой общий балл. Данная программа подойдёт для школьников и студентов...</value>
   </data>
   <data name="Yname" xml:space="preserve">
-    <value>Your name:</value>
+    <value>Ваше имя:</value>
   </data>
   <data name="Ysurname" xml:space="preserve">
-    <value>Your surname:</value>
+    <value>Ваша фамилия:</value>
   </data>
 </root>

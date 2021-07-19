@@ -118,264 +118,264 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>Автор</value>
   </data>
   <data name="AboutMe" xml:space="preserve">
-    <value>Hello! My name Alexander! It's my three project You probably know me from two other projects, namely RPG BASIC and Snake. I've been programmimg for 3 years. My main classification is C++, C(Newble),and C#(3 - 6 mounts). The development of the program is onging to this day...</value>
+    <value>Вітають! Моє ім'я Олександр! Це мій третій проект, ви наверноё знаєте мене по двом іншим проектам, а саме RPG BASIC і Snake. Я програмую вже як 3 роки. Моя основна класифікація - C ++, C, і C # (3 - 6 місяців). Розробка програми ведеться і до цього дня ...</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Додати</value>
   </data>
   <data name="AM" xml:space="preserve">
-    <value>About me:</value>
+    <value>Про автора:</value>
   </data>
   <data name="Background" xml:space="preserve">
-    <value>Background</value>
+    <value>Заднiй фон</value>
   </data>
   <data name="Biology" xml:space="preserve">
-    <value>Biology</value>
+    <value>Бiологiя</value>
   </data>
   <data name="Bold" xml:space="preserve">
-    <value>Bold</value>
+    <value>Жирний</value>
   </data>
   <data name="Box1" xml:space="preserve">
-    <value>Exiting...</value>
+    <value>Вихiд...</value>
   </data>
   <data name="Box2" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Підтвердити</value>
   </data>
   <data name="Chemistry" xml:space="preserve">
-    <value>Chemistry</value>
+    <value>Хімія</value>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>Колір</value>
   </data>
   <data name="Computerscience" xml:space="preserve">
-    <value>Computer science</value>
+    <value>Інформатика</value>
   </data>
   <data name="Creator" xml:space="preserve">
-    <value>Created by AMPrograms</value>
+    <value>Створив AMPrograms</value>
   </data>
   <data name="Debug" xml:space="preserve">
-    <value>Debug mode</value>
+    <value>Для разработчікво</value>
   </data>
   <data name="DebugD" xml:space="preserve">
-    <value>Debug</value>
+    <value>Налагодження</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Вилучити</value>
   </data>
   <data name="Desc" xml:space="preserve">
-    <value>Description about all versions located at the link: </value>
+    <value />
   </data>
   <data name="Dialoge1" xml:space="preserve">
-    <value>Enter name and surname:</value>
+    <value>Введіть ім'я та прізвище:</value>
   </data>
   <data name="Dialoge2" xml:space="preserve">
-    <value>Change subject</value>
+    <value>Виберіть предмет</value>
   </data>
   <data name="Dialoge3" xml:space="preserve">
-    <value>Confirm?</value>
+    <value>Підтвердити?</value>
   </data>
   <data name="Dialoge4" xml:space="preserve">
-    <value>Press Buttons for score</value>
+    <value>Натисніть кнопку для збільшення рахунку</value>
   </data>
   <data name="Dialoge5" xml:space="preserve">
-    <value>Enter name subject</value>
+    <value>Введіть ім'я предмета</value>
   </data>
   <data name="Dialoge6" xml:space="preserve">
-    <value>Click element for delete!</value>
+    <value>Натисніть на елемент що б видалити його!</value>
   </data>
   <data name="Dialoge7" xml:space="preserve">
-    <value>Click element for edit!</value>
+    <value>Натисніть на елемент що б відредагувати його!</value>
   </data>
   <data name="Dialoge8" xml:space="preserve">
-    <value>Nice! Press Mouse Right Button for confirm:</value>
+    <value>Відмінно! Натисніть праву кнопку миші щоб прийняти результат.</value>
   </data>
   <data name="Dialoge9" xml:space="preserve">
-    <value>Error! Score very small!</value>
+    <value>Помилка! Занадто мало для отримання результату!</value>
   </data>
   <data name="Dm" xml:space="preserve">
-    <value>Debug mode, more opportunity</value>
+    <value>Для разработчікво</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Редагувати</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>English</value>
+    <value>Англійська мова</value>
   </data>
   <data name="EnterC" xml:space="preserve">
-    <value>Enter score:</value>
+    <value>Введіть оцінку:</value>
   </data>
   <data name="Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Вийти</value>
   </data>
   <data name="Font" xml:space="preserve">
-    <value>Font</value>
+    <value>Шрифт</value>
   </data>
   <data name="FontColor" xml:space="preserve">
-    <value>FontColor</value>
+    <value>Колір шрифту</value>
   </data>
   <data name="Fs" xml:space="preserve">
-    <value>This is fullscreen mode</value>
+    <value>Це повноекранний режим</value>
   </data>
   <data name="Fullscreen" xml:space="preserve">
-    <value>Fullscreen mode</value>
+    <value>Повноекранний режим</value>
   </data>
   <data name="Gen" xml:space="preserve">
-    <value>Your middle score</value>
+    <value>Ваш середній бал:</value>
   </data>
   <data name="Gen1" xml:space="preserve">
-    <value>WARNING!!! Low-score!</value>
+    <value>УВАГА!!! Занадто низький середній бал!</value>
   </data>
   <data name="Gen2" xml:space="preserve">
-    <value>Warning! Score equal 3!</value>
+    <value>Увага! Середній бал дорівнює 3!</value>
   </data>
   <data name="Gen3" xml:space="preserve">
-    <value>Warning! Score equal 4!</value>
+    <value>Увага! Середній бал дорівнює 4!</value>
   </data>
   <data name="Gen4" xml:space="preserve">
-    <value>Total score is normal! ;)</value>
+    <value>Твій середній бал в порядку! ;)</value>
   </data>
   <data name="GenF" xml:space="preserve">
-    <value> for </value>
+    <value> для </value>
   </data>
   <data name="GenN" xml:space="preserve">
-    <value> You need: </value>
+    <value>Тобі потрібно: </value>
   </data>
   <data name="Geography" xml:space="preserve">
-    <value>Geography</value>
+    <value>Географія</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Допомога</value>
   </data>
   <data name="History" xml:space="preserve">
-    <value>History</value>
+    <value>Історія</value>
   </data>
   <data name="Image" xml:space="preserve">
-    <value>Image instruction</value>
+    <value>Фотоінструкція</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Iнформація</value>
   </data>
   <data name="Italic" xml:space="preserve">
-    <value>Italic</value>
+    <value>Нахилений</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Мова</value>
   </data>
   <data name="Literature" xml:space="preserve">
-    <value>Lirerature</value>
+    <value>Література</value>
   </data>
   <data name="Load" xml:space="preserve">
-    <value>Load</value>
+    <value>Завантажити</value>
   </data>
   <data name="Match" xml:space="preserve">
-    <value>Match</value>
+    <value>Математика</value>
   </data>
   <data name="Message1" xml:space="preserve">
-    <value>Do you really want to exit?</value>
+    <value>Ви точно хочете вийти?</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name:</value>
+    <value>Iм'я:</value>
   </data>
   <data name="Namer" xml:space="preserve">
-    <value>For edit name subject</value>
+    <value>Для редагування імені предмета</value>
   </data>
   <data name="Normal" xml:space="preserve">
-    <value>Normal</value>
+    <value>Нормальний</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>Options</value>
+    <value>Налаштування</value>
   </data>
   <data name="Pb" xml:space="preserve">
-    <value>Responsible for progressbar visibility</value>
+    <value>Видимість progreessbar'а</value>
   </data>
   <data name="PE" xml:space="preserve">
-    <value>PE</value>
+    <value>Фізкультура</value>
   </data>
   <data name="Physics" xml:space="preserve">
-    <value>Physics</value>
+    <value>Фiзика</value>
   </data>
   <data name="Progressbar" xml:space="preserve">
     <value>Progressbar</value>
   </data>
   <data name="Reset" xml:space="preserve">
-    <value>Reset</value>
+    <value>Скидання</value>
   </data>
   <data name="Rights" xml:space="preserve">
-    <value>©All rights reserved</value>
+    <value>©Всі права захищені</value>
   </data>
   <data name="RusLeng" xml:space="preserve">
-    <value>Rus.Leng</value>
+    <value>Українська мова</value>
   </data>
   <data name="Secname" xml:space="preserve">
-    <value>Surname:</value>
+    <value>Прізвище:</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Налаштування</value>
   </data>
   <data name="Solicalscience" xml:space="preserve">
-    <value>Solicalscience</value>
+    <value>Суспільствознавство</value>
   </data>
   <data name="Sound" xml:space="preserve">
-    <value>Sound</value>
+    <value>Звук</value>
   </data>
   <data name="Start" xml:space="preserve">
-    <value>Start</value>
+    <value>Старт</value>
   </data>
   <data name="Succeses" xml:space="preserve">
-    <value>Succeses! For the changes to take effect, restart the program.</value>
+    <value>Відмінно! Перезавантажте програму щоб зміни вступили в силу!</value>
   </data>
   <data name="Sure" xml:space="preserve">
-    <value>Are you sure?</value>
+    <value>Ви впевнені</value>
   </data>
   <data name="SureVoid1" xml:space="preserve">
-    <value>You shouldn't do this...</value>
+    <value>Ти не повинен робити цього ...</value>
   </data>
   <data name="SureVoid2" xml:space="preserve">
-    <value>Do not do this!</value>
+    <value>Ти не повинен!</value>
   </data>
   <data name="SureVoid3" xml:space="preserve">
-    <value>Go out!</value>
+    <value>Геть звідси!</value>
   </data>
   <data name="SV2" xml:space="preserve">
-    <value>Sure?</value>
+    <value>Упевнений?</value>
   </data>
   <data name="SV3" xml:space="preserve">
-    <value>And who will ask you ...</value>
+    <value>Ніби тебе хтось питав ...</value>
   </data>
   <data name="Totalresult" xml:space="preserve">
-    <value>Total rersult:</value>
+    <value>Загальний бал:</value>
   </data>
   <data name="Tres" xml:space="preserve">
-    <value>Your total result = </value>
+    <value>Загальний бал:</value>
   </data>
   <data name="Underline" xml:space="preserve">
-    <value>Underline</value>
+    <value>Підкреслений</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version</value>
+    <value>Версія</value>
   </data>
   <data name="Versions" xml:space="preserve">
-    <value>Versions</value>
+    <value>Версії</value>
   </data>
   <data name="Void" xml:space="preserve">
     <value>VOID</value>
   </data>
   <data name="Voider" xml:space="preserve">
-    <value>You shouldn't click on this...</value>
+    <value>Ти не повинен це робити ...</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning! Don't press button X, otherwise the running process will hang in the task manager!</value>
+    <value>Вніманме! Не натискайте на кнопку X, інакше процес залишиться в диспетчері завдань!</value>
   </data>
   <data name="WarningList" xml:space="preserve">
-    <value>WarningList - this is a program that calculates your GPA by entering several values. This program is very suitable for both schoolchildrens and students...</value>
+    <value>WarningList - це програма за допомогою якої ви можете дізнатися свій поточний середній бал, шляхом введення оцінок, а також свій загальний бал. Дана програма підійде для школярів і студентів ...</value>
   </data>
   <data name="Yname" xml:space="preserve">
-    <value>Your name:</value>
+    <value>Ваше ім'я:</value>
   </data>
   <data name="Ysurname" xml:space="preserve">
-    <value>Your surname:</value>
+    <value>Ваше прізвище:</value>
   </data>
 </root>
