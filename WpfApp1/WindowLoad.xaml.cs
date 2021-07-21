@@ -31,9 +31,10 @@ namespace WpfApp1
         int screen = 0;
         int pb = 0;
         int lang = 0;
+
         public WindowLoad()
         {
-          
+
             lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
             if (lang == 0)
             {

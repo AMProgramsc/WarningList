@@ -24,6 +24,7 @@ namespace WpfApp1
         int screen = 0;
         int pb = 0;
         int lang = 0;
+        int type = 0;
         public int _width =100;
         public int _height = 100;
     
@@ -33,22 +34,27 @@ namespace WpfApp1
             if (lang == 0)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+                
             }
             if (lang == 1)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
+               
             }
             if (lang == 2)
             {
-
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
+                
             }
             if (lang == 3)
             {
-
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
+              
             }
             if (lang == 4)
             {
-
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
+                
             }
             InitializeComponent();
           
@@ -73,6 +79,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
 
         }
@@ -94,6 +102,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -114,8 +124,10 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
-         
+
         }
 
         private void Fullscreen_Unchecked(object sender, RoutedEventArgs e)
@@ -135,6 +147,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -228,6 +242,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -259,6 +275,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -275,6 +293,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -291,6 +311,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -307,6 +329,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -323,6 +347,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -339,6 +365,8 @@ namespace WpfApp1
                 w.WriteLine(pb.ToString());
                 w.WriteLine("Language:");
                 w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
             }
         }
 
@@ -346,6 +374,96 @@ namespace WpfApp1
         {
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
+        }
+
+        private void RadioButton_Checked_6(object sender, RoutedEventArgs e)
+        {
+            type = 0;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+            }
+        }
+
+        private void RadioButton_Checked_7(object sender, RoutedEventArgs e)
+        {
+            type = 1;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+            }
+        }
+
+        private void RadioButton_Checked_8(object sender, RoutedEventArgs e)
+        {
+            type = 2;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+            }
+        }
+
+        private void RadioButton_Checked_9(object sender, RoutedEventArgs e)
+        {
+            type = 3;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+            }
+        }
+
+        private void RadioButton_Checked_10(object sender, RoutedEventArgs e)
+        {
+            type = 4;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+            }
         }
     }
 }
