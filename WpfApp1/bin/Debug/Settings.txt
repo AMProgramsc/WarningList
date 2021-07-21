@@ -5,4 +5,6 @@ Fullscreen:
 Progressbar:
 0
 Language:
-0
+1
+TypeSys:
+4
