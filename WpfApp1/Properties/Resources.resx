@@ -223,16 +223,16 @@
     <value>Fullscreen mode</value>
   </data>
   <data name="Gen" xml:space="preserve">
-    <value>Your middle score</value>
+    <value>Your middle score: </value>
   </data>
   <data name="Gen1" xml:space="preserve">
     <value>WARNING!!! Low-score!</value>
   </data>
   <data name="Gen2" xml:space="preserve">
-    <value>Warning! Score equal 3!</value>
+    <value>Warning! Score equal: </value>
   </data>
   <data name="Gen3" xml:space="preserve">
-    <value>Warning! Score equal 4!</value>
+    <value>Warning! Score equal: </value>
   </data>
   <data name="Gen4" xml:space="preserve">
     <value>Total score is normal! ;)</value>
@@ -307,7 +307,7 @@
     <value>©All rights reserved</value>
   </data>
   <data name="RusLeng" xml:space="preserve">
-    <value>Rus.Leng</value>
+    <value>NN</value>
   </data>
   <data name="Secname" xml:space="preserve">
     <value>Surname:</value>
@@ -346,10 +346,10 @@
     <value>And who will ask you ...</value>
   </data>
   <data name="Totalresult" xml:space="preserve">
-    <value>Total rersult:</value>
+    <value>Total rersult: </value>
   </data>
   <data name="Tres" xml:space="preserve">
-    <value>Your total result = </value>
+    <value>Total result:</value>
   </data>
   <data name="Underline" xml:space="preserve">
     <value>Underline</value>

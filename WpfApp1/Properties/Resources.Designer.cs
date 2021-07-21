@@ -376,7 +376,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Your middle score.
+        ///   Ищет локализованную строку, похожую на Your middle score: .
         /// </summary>
         public static string Gen {
             get {
@@ -394,7 +394,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Warning! Score equal 3!.
+        ///   Ищет локализованную строку, похожую на Warning! Score equal: .
         /// </summary>
         public static string Gen2 {
             get {
@@ -403,7 +403,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Warning! Score equal 4!.
+        ///   Ищет локализованную строку, похожую на Warning! Score equal: .
         /// </summary>
         public static string Gen3 {
             get {
@@ -628,7 +628,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Rus.Leng.
+        ///   Ищет локализованную строку, похожую на NN.
         /// </summary>
         public static string RusLeng {
             get {
@@ -745,7 +745,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Total rersult:.
+        ///   Ищет локализованную строку, похожую на Total rersult: .
         /// </summary>
         public static string Totalresult {
             get {
@@ -754,7 +754,7 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Your total result = .
+        ///   Ищет локализованную строку, похожую на Total result:.
         /// </summary>
         public static string Tres {
             get {

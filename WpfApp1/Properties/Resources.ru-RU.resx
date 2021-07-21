@@ -223,16 +223,16 @@
     <value>Полноэкранный режим</value>
   </data>
   <data name="Gen" xml:space="preserve">
-    <value>Ваш средний балл:</value>
+    <value>Ваш средний балл: </value>
   </data>
   <data name="Gen1" xml:space="preserve">
     <value>ВНИМАНИЕ!!! Слишком низкий средний балл!</value>
   </data>
   <data name="Gen2" xml:space="preserve">
-    <value>Внимание! Средний балл равен 3!</value>
+    <value>Внимание! Средний балл равен: </value>
   </data>
   <data name="Gen3" xml:space="preserve">
-    <value>Внимание! Средний балл равен 4!</value>
+    <value>Внимание! Средний балл равен: </value>
   </data>
   <data name="Gen4" xml:space="preserve">
     <value>Твой средний балл в порядке! ;)</value>
