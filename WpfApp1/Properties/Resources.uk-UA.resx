@@ -129,6 +129,12 @@
   <data name="AM" xml:space="preserve">
     <value>Про автора:</value>
   </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Авто вибір</value>
+  </data>
+  <data name="AutoT" xml:space="preserve">
+    <value>Автоматично вибирає потрібний тип системи з відповідності з обраним мовою</value>
+  </data>
   <data name="Background" xml:space="preserve">
     <value>Заднiй фон</value>
   </data>
@@ -200,6 +206,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Редагувати</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Тип системи освіти</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>Англійська мова</value>

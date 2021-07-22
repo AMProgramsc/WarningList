@@ -129,6 +129,12 @@
   <data name="AM" xml:space="preserve">
     <value>About me:</value>
   </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto choice</value>
+  </data>
+  <data name="AutoT" xml:space="preserve">
+    <value>Automatically selects the desired system type according to the selected language</value>
+  </data>
   <data name="Background" xml:space="preserve">
     <value>Background</value>
   </data>
@@ -200,6 +206,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Type system education</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
