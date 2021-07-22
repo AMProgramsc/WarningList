@@ -26,10 +26,10 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-       UserInfo user = new UserInfo();
-       NewName nnr = new NewName();
-       SernameD snr = new SernameD();
-       NameD n = new NameD();
+        UserInfo user = new UserInfo();
+        NewName nnr = new NewName();
+        SernameD snr = new SernameD();
+        NameD n = new NameD();
 
         double value, valueS, valueN;
         double ClickS;
@@ -39,22 +39,847 @@ namespace WpfApp1
         double Tresult;
         Random rand = new Random();
         string inf = "Inf.txt";
-        string sizeN, sizeG,sizeH;
+        string sizeN, sizeG, sizeH;
         bool delete = false;
         bool edit = false;
         bool name = false;
         bool enter = false;
         int Count = 13;
-        int hit =0;
+        int hit = 0;
         bool Check;
         int cls, cls2;
         int check = 0;
         int lang = 0;
         int type = 0;
-        int sizeS = 0, sizeC = 0,sizeR = -1;
+        int sizeS = 0, sizeC = 0, sizeR = -1;
         double TotalResult;
-        
-     
+        public void Russian()
+        {
+            if (type == 0)
+            {
+                if (result <= 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 2.6;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 1);
+                        valueS += 3;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 3.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "3" + "\r\n";
+
+                    for (; warning < 3.6;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 1);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result <= 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "4" + "\r\n";
+
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
+        public void English()
+        {
+         
+         
+            //Main
+            if (type == 1)
+            {
+                if (result < 2)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "F" + "\r\n";
+
+                    for (; warning <= 1.5;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "E" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "E" + "\r\n";
+
+                    for (; warning <= 2.5;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "D" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result < 4)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "D" + "\r\n";
+
+                    for (; warning < 3.5;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "C" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "C" + "\r\n";
+
+                    for (; warning < 4.5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "B" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 6)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "B" + "\r\n";
+
+                    for (; warning < 5.5;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 6);
+                        valueS += 6;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "A" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 7)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "A" + "\r\n";
+
+                    for (; warning <= 6.5;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 7);
+                        valueS += 7;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "A*" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + " - " + "A*" + "\r\n";
+
+                }
+                if (result <= 1.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "F";
+                }
+                else if (result < 2 && result > 1.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "E";
+                }
+                else if (result <= 2.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "D";
+                }
+                else if (result < 3 && result > 2.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "D+";
+                }
+                else if (result < 3 && result >= 2.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "C-";
+                }
+                else if (result <= 3.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "C";
+                }
+                else if (result < 4 && result > 3.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "C+";
+                }
+                else if (result < 4 && result >= 3.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "B-";
+                }
+                else if (result <= 4.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "B";
+                }
+                else if (result < 5 && result > 4.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "B+";
+                }
+                else if (result < 5 && result >= 4.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "A-";
+                }
+                else if (result <= 5.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "A";
+                }
+                else if (result <= 6 && result > 6.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "A*";
+                }
+                else if (result == 6)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "A*";
+                }
+                //End
+
+            }
+        }   
+        public void French()
+        {
+            if (type == 2)
+            {
+                if (result <= 1.2)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "<7" + "\r\n";
+
+                    for (; warning <= 1.5;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "8" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result > 1.2 && result < 1.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "8" + "\r\n";
+
+                    for (; warning <= 1.5;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "9" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 2 && result > 1.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "9" + "\r\n";
+
+                    for (; warning <= 2;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "10" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result < 2 && result >= 1.9)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "10" + "\r\n";
+
+                    for (; warning <= 2;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "11" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result < 2.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "11" + "\r\n";
+
+                    for (; warning <= 2.5;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "12" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3 && result > 2.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "12" + "\r\n";
+
+                    for (; warning <= 3;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "13" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3 && result >= 2.9)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "13" + "\r\n";
+
+                    for (; warning <= 3;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "14" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "14" + "\r\n";
+
+                    for (; warning <= 3.5;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "15" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 4 && result > 3.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "15" + "\r\n";
+
+                    for (; warning <= 4;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "16" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 4 && result >= 3.9)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "16" + "\r\n";
+
+                    for (; warning <= 4;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "17" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "17" + "\r\n";
+
+                    for (; warning <= 4.5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "18" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 5 && result > 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "18" + "\r\n";
+
+                    for (; warning <= 5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "19" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 5 && result >= 4.9)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "19" + "\r\n";
+
+                    for (; warning <= 5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "20" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + " - " + "20" + "\r\n";
+
+                }
+
+                if (result <= 1.2)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "<7";
+                }
+                else if (result > 1.2 && result < 1.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "8";
+                }
+                else if (result < 2 && result >= 1.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "9";
+                }
+                else if (result < 2 && result >= 1.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "10";
+                }
+                else if (result < 2.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "11";
+                }
+                else if (result < 3 && result >= 2.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "12";
+                }
+                else if (result < 3 && result >= 2.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "13";
+                }
+                else if (result < 3.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "14";
+                }
+                else if (result < 4 && result >= 3.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "15";
+                }
+                else if (result < 4 && result >= 3.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "16";
+                }
+                else if (result < 4.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "17";
+                }
+                else if (result < 5 && result >= 4.5)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "18";
+                }
+                else if (result < 5 && result >= 4.9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "19";
+                }
+                else
+                {
+                    Lister.Items[listbox.SelectedIndex] = "20";
+                }
+            }
+        }
+        public void Germany()
+        {
+
+
+
+
+            if (type == 3)
+            {
+
+                if (result < 3)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "6" + "\r\n";
+
+                    for (; warning <= 1.5;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 6 && result >= 3)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning <= 3;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 6);
+                        valueS += 6;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result <= 9 && result >= 6)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning <= 4.5;)
+                    {
+                        warning = (valueS + 9) / (NumberN + 9);
+                        valueS += 9;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "3" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result <= 12 && result >= 9)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "3" + "\r\n";
+
+                    for (; warning <= 6;)
+                    {
+                        warning = (valueS + 12) / (NumberN + 12);
+                        valueS += 12;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "2" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result <= 15 && result >= 12)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen3 + "2" + "\r\n";
+
+                    for (; warning <= 7.5;)
+                    {
+                        warning = (valueS + 15) / (NumberN + 15);
+                        valueS += 15;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "1" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + " - " + "1" + "\r\n";
+
+                }
+                if (result < 3)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "6";
+                }
+                else if (result <= 6 && result >= 3)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "5";
+                }
+                else if (result <= 9 && result >= 6)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "4";
+                }
+                else if (result <= 12 && result >= 9)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "3";
+                }
+                else if (result <= 15 && result >= 12)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "2";
+                }
+                else
+                {
+                    Lister.Items[listbox.SelectedIndex] = "1";
+                }
+            }
+        }
+        public void Ukraine()
+        {
+            if (type == 4)
+            {
+                if (result <= 1.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 1.6;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 2 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 2.6;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 3.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 3.6;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 5.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning < 5.6;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 6);
+                        valueS += 6;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 6.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "6" + "\r\n";
+
+                    for (; warning < 6.6;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 7);
+                        valueS += 7;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 7 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 7.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "7" + "\r\n";
+
+                    for (; warning < 7.6;)
+                    {
+                        warning = (valueS + 8) / (NumberN + 8);
+                        valueS += 8;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 8 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 8.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "8" + "\r\n";
+
+                    for (; warning < 8.6;)
+                    {
+                        warning = (valueS + 9) / (NumberN + 9);
+                        valueS += 9;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 9 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 9.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "9" + "\r\n";
+
+                    for (; warning < 9.6;)
+                    {
+                        warning = (valueS + 10) / (NumberN + 10);
+                        valueS += 10;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 10 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 10.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "10" + "\r\n";
+
+                    for (; warning < 10.6;)
+                    {
+                        warning = (valueS + 11) / (NumberN + 11);
+                        valueS += 11;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 11 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 11.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "11" + "\r\n";
+
+                    for (; warning < 11.6;)
+                    {
+                        warning = (valueS + 12) / (NumberN + 12);
+                        valueS += 12;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 12 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
         public MainWindow()
         {
             //Language pick
@@ -96,7 +921,7 @@ namespace WpfApp1
             EnterC.IsEnabled = false;
             Menu.IsEnabled = false;
             //English
-            if(type == 1)
+            if (type == 1)
             {
                 D1.Content = "1";
                 D2.Content = "2";
@@ -116,7 +941,7 @@ namespace WpfApp1
                 T6.Visibility = Visibility.Visible;
                 T7.Visibility = Visibility.Visible;
                 Score.Height = 210;
-                Score.Margin = new Thickness(162,197,0,0);
+                Score.Margin = new Thickness(162, 197, 0, 0);
             }
             //French
             if (type == 2)
@@ -166,15 +991,15 @@ namespace WpfApp1
                 T1.Visibility = Visibility.Visible;
                 T1.Text = "(6)";
                 T2.Visibility = Visibility.Visible;
-                T1.Text = "(5)";
+                T2.Text = "(5)";
                 T3.Visibility = Visibility.Visible;
-                T1.Text = "(4)";
+                T3.Text = "(4)";
                 T4.Visibility = Visibility.Visible;
-                T1.Text = "(3)";
+                T4.Text = "(3)";
                 T5.Visibility = Visibility.Visible;
-                T1.Text = "(2)";
+                T5.Text = "(2)";
                 T6.Visibility = Visibility.Visible;
-                T1.Text = "(1)";
+                T6.Text = "(1)";
                 Score.Height = 235;
                 Score.Margin = new Thickness(162, 172, 0, 0);
             }
@@ -757,6 +1582,7 @@ namespace WpfApp1
                 //English GPA
                 if(type == 1)
                 {
+
                     if (TotalResult <= 1.5)
                     {
                         Tres.Foreground = Brushes.Red;
@@ -808,6 +1634,182 @@ namespace WpfApp1
                         Tres.Text = "A*";
                     }
                 }
+                if(type == 2)
+                {
+                    if (result <= 1.2)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = "<7";
+                    }
+                    if (result < 1.5 && result > 1.2)
+                    {
+                        Tres.Foreground = Brushes.HotPink;
+                        Tres.Text = "8";
+                    }
+                    else if (result < 2 && result >= 1.5)
+                    {
+                        Tres.Foreground = Brushes.HotPink;
+                        Tres.Text = "9";
+                    }
+                    else if (result < 2 && result >= 1.9)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = "10";
+                    }
+                    else if (result < 2.5)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = "11";
+                    }
+                    else if (result < 3 && result >= 2.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = "12";
+                    }
+                    else if (result < 3 && result >= 2.9)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = "13";
+                    }
+                    else if (result < 3.5)
+                    {
+                        Tres.Foreground = Brushes.GreenYellow;
+                        Tres.Text = "14";
+                    }
+                    else if (result < 4 && result >= 3.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = "15";
+                    }
+                    else if (result < 4 && result >= 3.9)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = "16";
+                    }
+                    else if (result < 4.5)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = "17";
+                    }
+                    else if (result < 5 && result >= 4.5)
+                    {
+                        Tres.Foreground = Brushes.DarkCyan;
+                        Tres.Text = "18";
+                    }
+                    else if (result < 5 && result >= 4.9)
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = "19";
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = "20";
+                    }
+                }
+                //Germany
+                if(type == 3)
+                {
+                    if (result < 3)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = "6";
+                    }
+                    else if (result <= 6 && result >= 3)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = "5";
+                    }
+                    else if (result <= 9 && result >= 6)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = "4";
+                    }
+                    else if (result <= 12 && result >= 9)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = "3";
+                    }
+                    else if (result <= 15 && result >= 12)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = "2";
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = "1";
+                    }
+                }
+                //Ukraine
+                if(type == 4)
+                {
+                    if (TotalResult <= 1.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 2.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 3.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 4.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 5.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 6.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 7.5)
+                    {
+                        Tres.Foreground = Brushes.GreenYellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 8.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 9.5)
+                    {
+                        Tres.Foreground = Brushes.DarkGreen;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 10.5)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 11.5)
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 12)
+                    {
+                        Tres.Foreground = Brushes.DarkBlue;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
                 
             }
             
@@ -837,233 +1839,16 @@ namespace WpfApp1
                
                 TotalResult += result;
                 //Russian
-                if (type == 0)
-                {
-                    if (result <= 2.5)
-                    {
-
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen1 + "\r\n";
-
-                        for (; warning < 2.6;)
-                        {
-                            warning = (valueS + 3) / (NumberN + 1);
-                            valueS += 3;
-                            NumberN += 1;
-                            GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else if (result <= 3.5)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen2 + "3" + "\r\n";
-
-                        for (; warning < 3.6;)
-                        {
-                            warning = (valueS + 4) / (NumberN + 1);
-                            valueS += 4;
-                            NumberN += 1;
-                            GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
-                        }
-
-                        warning = 0;
-
-                    }
-                    else if (result <= 4.5)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen3 + "4" + "\r\n";
-
-                        for (; warning < 4.6;)
-                        {
-                            warning = (valueS + 5) / (NumberN + 1);
-                            valueS += 5;
-                            NumberN += 1;
-                            GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else
-                    {
-
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen4 + "\r\n";
-
-                    }
-                    Lister.Items[listbox.SelectedIndex] = result;
-                }
+                Russian();
                 //English
-                if (type == 1)
-                {
-                    if (result < 2)
-                    {
-
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen1 + " - " + "F" + "\r\n";
-
-                        for (; warning <= 1.5;)
-                        {
-                            warning = (valueS + 2) / (NumberN + 2);
-                            valueS += 2;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "E" + Properties.Resources.GenF + warning + "\r\n";
-
-                        }
-                        warning = 0;
-
-                    }
-                    else if (result < 3)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen2 + "E" + "\r\n";
-
-                        for (; warning <= 2.5;)
-                        {
-                            warning = (valueS + 3) / (NumberN + 3);
-                            valueS += 3;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "D" + Properties.Resources.GenF + warning + "\r\n";
-                        }
-
-                        warning = 0;
-
-                    }
-                    else if (result < 4)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen3 + "D" + "\r\n";
-
-                        for (; warning < 3.5;)
-                        {
-                            warning = (valueS + 4) / (NumberN + 4);
-                            valueS += 4;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "C" + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else if (result < 5)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen3 + "C" + "\r\n";
-
-                        for (; warning < 4.5;)
-                        {
-                            warning = (valueS + 5) / (NumberN + 5);
-                            valueS += 5;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "B" + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else if (result <= 6)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen3 + "B" + "\r\n";
-
-                        for (; warning < 5.5;)
-                        {
-                            warning = (valueS + 6) / (NumberN + 6);
-                            valueS += 6;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "A" + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else if (result < 7)
-                    {
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen3 + "A" + "\r\n";
-
-                        for (; warning <= 6.5;)
-                        {
-                            warning = (valueS + 7) / (NumberN + 7);
-                            valueS += 7;
-                            NumberN += 1;
-                            warning = Math.Round(warning, 2);
-                            GEN.Text += Properties.Resources.GenN + "A*" + Properties.Resources.GenF + warning + "\r\n";
-                        }
-                        warning = 0;
-
-                    }
-                    else
-                    {
-
-                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                        GEN.Text += Properties.Resources.Gen4 + " - " + "A*" + "\r\n";
-
-                    }
-                    if (result <= 1.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "F";
-                    }
-                    else if (result < 2 && result > 1.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "E";
-                    }
-                    else if (result <= 2.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "D";
-                    }
-                    else if (result < 3 && result > 2.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "D+";
-                    }
-                    else if (result < 3 && result >= 2.9)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "C-";
-                    }
-                    else if (result <= 3.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "C";
-                    }
-                    else if (result < 4 && result > 3.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "C+";
-                    }
-                    else if (result < 4 && result >= 3.9)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "B-";
-                    }
-                    else if (result <= 4.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "B";
-                    }
-                    else if (result < 5 && result > 4.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "B+";
-                    }
-                    else if (result < 5 && result >= 4.9)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "A-";
-                    }
-                    else if (result <= 5.5)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "A";
-                    }
-                    else if (result <= 6 && result > 6.9)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "A*";
-                    }
-                    else if (result == 6)
-                    {
-                        Lister.Items[listbox.SelectedIndex] = "A*";
-                    }
-                          
-                    
-                }
-                value = 0;
+                English();
+                //French
+                French();
+                //Germany
+                Germany();
+                //Ukraine
+                Ukraine();
+                    value = 0;
                 result = 0;
                 ClickS = 0;
                 sizeC = 0;

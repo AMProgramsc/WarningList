@@ -25,6 +25,7 @@ namespace WpfApp1
         int pb = 0;
         int lang = 0;
         int type = 0;
+        int auto = 0;
         public int _width =100;
         public int _height = 100;
     
@@ -57,10 +58,14 @@ namespace WpfApp1
                 
             }
             InitializeComponent();
-          
-           
-        }
+            auto = Int32.Parse(File.ReadLines("Settings.txt").Skip(11).First());
+            if (auto == 1)
+            {
+                Type.IsEnabled = false;
+            }
 
+        }
+        //Fullscreen/Debug/VOID
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
            
@@ -81,6 +86,8 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
 
         }
@@ -104,6 +111,8 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
 
@@ -126,6 +135,8 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
 
         }
@@ -149,6 +160,8 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
 
@@ -185,18 +198,12 @@ namespace WpfApp1
             Texter.Clear();
             Texter.Foreground = Brushes.White;
         }
-
+        //VOID
         private void VOID_MouseLeave(object sender, MouseEventArgs e)
         {
             Texter.Foreground = Brushes.White;
             Texter.Clear();
         }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-        
-        }
-
         private void VOID_Checked(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.SureVoid1, MessageBoxButton.YesNo, MessageBoxImage.Warning);
@@ -224,7 +231,7 @@ namespace WpfApp1
                     break;
             }
         }
-
+        //Progressbar
         private void Pb_Checked(object sender, RoutedEventArgs e)
         {
             pb = 1;
@@ -244,20 +251,19 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void Pb_MouseEnter(object sender, MouseEventArgs e)
         {
             Texter.Text = Properties.Resources.Pb;
         }
-
         private void Pb_MouseLeave(object sender, MouseEventArgs e)
         {
             Texter.Clear();
             Texter.Foreground = Brushes.White;
         }
-
         private void Pb_Unchecked(object sender, RoutedEventArgs e)
         {
             pb = 0;
@@ -277,12 +283,18 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
+        //Language
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             lang = 0;
+            if(auto == 1)
+            {
+                type = 1;
+            }
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -295,12 +307,17 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
             lang = 1;
+            if (auto == 1)
+            {
+                type = 0;
+            }
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -313,12 +330,17 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
         {
             lang = 2;
+            if (auto == 1)
+            {
+                type = lang;
+            }
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -331,12 +353,17 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void RadioButton_Checked_4(object sender, RoutedEventArgs e)
         {
             lang = 3;
+            if (auto == 1)
+            {
+                type = lang;
+            }
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -349,12 +376,17 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void RadioButton_Checked_5(object sender, RoutedEventArgs e)
         {
             lang = 4;
+            if (auto == 1)
+            {
+                type = lang;
+            }
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -367,35 +399,43 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
-
+        //Type system
         private void RadioButton_Checked_6(object sender, RoutedEventArgs e)
         {
-            type = 0;
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-            }
+           
+                type = 0;
+      
+                using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+                {
+                    w.WriteLine("Debug:");
+                    w.WriteLine(check.ToString());
+                    w.WriteLine("Fullscreen:");
+                    w.WriteLine(screen.ToString());
+                    w.WriteLine("Progressbar:");
+                    w.WriteLine(pb.ToString());
+                    w.WriteLine("Language:");
+                    w.WriteLine(lang.ToString());
+                    w.WriteLine("TypeSys:");
+                    w.WriteLine(type.ToString());
+                    w.WriteLine("Auto:");
+                    w.WriteLine(auto.ToString());
+                }
+            
         }
-
+       
         private void RadioButton_Checked_7(object sender, RoutedEventArgs e)
         {
+
+
             type = 1;
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
@@ -409,48 +449,86 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+
             }
         }
 
         private void RadioButton_Checked_8(object sender, RoutedEventArgs e)
         {
-            type = 2;
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-            }
+           
+                type = 2;
+            
+            
+                type = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
+                using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+                {
+                    w.WriteLine("Debug:");
+                    w.WriteLine(check.ToString());
+                    w.WriteLine("Fullscreen:");
+                    w.WriteLine(screen.ToString());
+                    w.WriteLine("Progressbar:");
+                    w.WriteLine(pb.ToString());
+                    w.WriteLine("Language:");
+                    w.WriteLine(lang.ToString());
+                    w.WriteLine("TypeSys:");
+                    w.WriteLine(type.ToString());
+                    w.WriteLine("Auto:");
+                    w.WriteLine(auto.ToString());
+                }
+            
         }
 
         private void RadioButton_Checked_9(object sender, RoutedEventArgs e)
         {
-            type = 3;
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-            }
+                
+                type = 3;
+
+                using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+                {
+                    w.WriteLine("Debug:");
+                    w.WriteLine(check.ToString());
+                    w.WriteLine("Fullscreen:");
+                    w.WriteLine(screen.ToString());
+                    w.WriteLine("Progressbar:");
+                    w.WriteLine(pb.ToString());
+                    w.WriteLine("Language:");
+                    w.WriteLine(lang.ToString());
+                    w.WriteLine("TypeSys:");
+                    w.WriteLine(type.ToString());
+                    w.WriteLine("Auto:");
+                    w.WriteLine(auto.ToString());
+                }
+            
         }
 
         private void RadioButton_Checked_10(object sender, RoutedEventArgs e)
         {
-            type = 4;
+          
+                type = 4;
+
+                using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+                {
+                    w.WriteLine("Debug:");
+                    w.WriteLine(check.ToString());
+                    w.WriteLine("Fullscreen:");
+                    w.WriteLine(screen.ToString());
+                    w.WriteLine("Progressbar:");
+                    w.WriteLine(pb.ToString());
+                    w.WriteLine("Language:");
+                    w.WriteLine(lang.ToString());
+                    w.WriteLine("TypeSys:");
+                    w.WriteLine(type.ToString());
+                    w.WriteLine("Auto:");
+                    w.WriteLine(auto.ToString());
+                }
+            
+        }
+        //Auto choice
+        private void Test_Checked(object sender, RoutedEventArgs e)
+        {
+            auto = 1;
             using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
             {
                 w.WriteLine("Debug:");
@@ -463,7 +541,39 @@ namespace WpfApp1
                 w.WriteLine(lang.ToString());
                 w.WriteLine("TypeSys:");
                 w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
             }
+        }
+
+        private void Test_Unchecked(object sender, RoutedEventArgs e)
+        {
+            auto = 0;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+            }
+        }
+
+        private void Test_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Texter.Text = Properties.Resources.AutoT;
+        }
+
+        private void Test_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Texter.Clear();
         }
     }
 }

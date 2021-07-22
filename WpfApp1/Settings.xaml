@@ -23,7 +23,7 @@
         </Expander>
         <Grid>
             <Button Content="Restart" HorizontalAlignment="Left" Margin="707,46,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" />
-            <Expander Header="Type system education" HorizontalAlignment="Left" Height="235" Margin="111,39,0,0" VerticalAlignment="Top" Width="149" Foreground="White">
+            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="111,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White">
                 <StackPanel>
                     <RadioButton Content="Российская" Background="White" Foreground="White" Checked="RadioButton_Checked_6"   />
                     <RadioButton Content="English" Background="White" Foreground="White" Checked="RadioButton_Checked_7"  />
@@ -35,7 +35,7 @@
         </Grid>
         <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Pb_Checked" MouseEnter="Pb_MouseEnter" MouseLeave="Pb_MouseLeave" Unchecked="Pb_Unchecked"    />
         <CheckBox x:Name="Sound" Content="{x:Static res:Resources.Sound}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" />
-        <CheckBox x:Name="Test" Content="Test1" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" />
+        <CheckBox x:Name="Test" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Checked="Test_Checked" Unchecked="Test_Unchecked" MouseEnter="Test_MouseEnter" MouseLeave="Test_MouseLeave"  />
 
 
 
