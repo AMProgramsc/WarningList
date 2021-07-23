@@ -62,3 +62,11 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\ru-RU\WpfA
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WarningList.csproj.CopyComplete
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\be-BY\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.be-BY.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\be-BY\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
