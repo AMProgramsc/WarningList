@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="About" Height="450" Width="800" Background="Black" Foreground="Black">
+        Title="About" Height="450" Width="820" Background="Black" Foreground="Black" Closing="Window_Closing" >
     <Grid Background="Black" Margin="0,0,0,2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

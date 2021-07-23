@@ -29,6 +29,12 @@ namespace WpfApp1
             Process.Start("https://github.com/AMProgramms"); //открытие ссылки в браузере
 
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }
 //(c)AMProgramms, 2021

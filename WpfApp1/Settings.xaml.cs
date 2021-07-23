@@ -31,32 +31,7 @@ namespace WpfApp1
     
         public Settings()
         {
-            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
-            if (lang == 0)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-                
-            }
-            if (lang == 1)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
-               
-            }
-            if (lang == 2)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
-                
-            }
-            if (lang == 3)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-              
-            }
-            if (lang == 4)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
-                
-            }
+         
             InitializeComponent();
             auto = Int32.Parse(File.ReadLines("Settings.txt").Skip(11).First());
             if (auto == 1)
@@ -404,9 +379,12 @@ namespace WpfApp1
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+            File.WriteAllText("Exit.txt", "2");
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            
             Application.Current.Shutdown();
+           
         }
         //Type system
         private void RadioButton_Checked_6(object sender, RoutedEventArgs e)
@@ -525,6 +503,52 @@ namespace WpfApp1
                 }
             
         }
+        //Belarus
+        private void BY_Checked(object sender, RoutedEventArgs e)
+        {
+            lang = 5;
+            if (auto == 1)
+            {
+                type = lang;
+            }
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+            }
+        }
+
+        private void BE_Checked(object sender, RoutedEventArgs e)
+        {
+            type = 5;
+
+
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+            }
+        }
         //Auto choice
         private void Test_Checked(object sender, RoutedEventArgs e)
         {
@@ -575,6 +599,44 @@ namespace WpfApp1
         {
             Texter.Clear();
         }
+        //Reset
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Box2, Properties.Resources.Sure, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    auto = 0;
+                    type = 0;
+                    lang = 1;
+                    screen = 0;
+                    pb = 0;
+                    check = 0;
+                    using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+                    {
+                        w.WriteLine("Debug:");
+                        w.WriteLine(check.ToString());
+                        w.WriteLine("Fullscreen:");
+                        w.WriteLine(screen.ToString());
+                        w.WriteLine("Progressbar:");
+                        w.WriteLine(pb.ToString());
+                        w.WriteLine("Language:");
+                        w.WriteLine(lang.ToString());
+                        w.WriteLine("TypeSys:");
+                        w.WriteLine(type.ToString());
+                        w.WriteLine("Auto:");
+                        w.WriteLine(auto.ToString());
+                    }
+                    break;
+                case MessageBoxResult.No:
+                   
+                    break;
+            }
+           
+        }
+
+       
     }
 }
 //(c)AMProgramms, 2021

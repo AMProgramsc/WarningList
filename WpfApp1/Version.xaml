@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="Version" Height="450" Width="800">
+        Title="Version" Height="450" Width="800" Closing="Window_Closing" >
     <Grid Background="Black">
 
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" Height="46" Foreground="White" FontSize="16" Margin="10,46,0,0" ><Run Text="{x:Static res:Resources.Desc}"/><Hyperlink Click="Hyperlink_Click" ><Run Text="https://github.com/AMProgramms/WarningList/wiki/All-versions"/></Hyperlink></TextBlock>

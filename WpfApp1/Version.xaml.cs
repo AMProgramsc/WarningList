@@ -24,33 +24,19 @@ namespace WpfApp1
         int lang = 0;
         public Version()
         {
-            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
-            if (lang == 0)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-            }
-            if (lang == 1)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
-            }
-            if (lang == 2)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
-            }
-            if (lang == 3)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-            }
-            if (lang == 4)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
-            }
+        
             InitializeComponent();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/AMProgramms/WarningList/wiki/All-versions");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

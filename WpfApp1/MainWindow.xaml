@@ -19,8 +19,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged" MouseDown="ColorPick_MouseDown" Background="{x:Null}"  />
-        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="6,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"   >
-            <ListBoxItem Background="Red" Content="{x:Static res:Resources.Match}"  Height="20" Width="108"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"   >
+            <ListBoxItem Background="Red" Content="{x:Static res:Resources.Match}"   />
             <ListBoxItem Background="#FFD85757" Content="{x:Static res:Resources.Physics}"/>
             <ListBoxItem Background="#FF1700FF" Content="{x:Static res:Resources.RusLeng}"/>
             <ListBoxItem Background="#FF8176EE" Content="{x:Static res:Resources.Literature}"/>
@@ -64,8 +64,8 @@
             <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="48" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
                 <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
-                <MenuItem Header="Test" />
-
+                <MenuItem Name="AP" Header="All Paused" Click="AP_Click"  />
+                <MenuItem Name="R" Header="Reset" Click="R_Click"   />
             </MenuItem>
 
         </Menu>

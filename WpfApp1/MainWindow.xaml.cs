@@ -46,12 +46,13 @@ namespace WpfApp1
         bool enter = false;
         int Count = 13;
         int hit = 0;
-        bool Check;
+        int exit = 0, exit1;
         int cls, cls2;
         int check = 0;
         int lang = 0;
         int type = 0;
         int sizeS = 0, sizeC = 0, sizeR = -1;
+        int mainE, loadE, SettE;
         double TotalResult;
         public void Russian()
         {
@@ -880,6 +881,158 @@ namespace WpfApp1
                 Lister.Items[listbox.SelectedIndex] = result;
             }
         }
+        public void Belarus()
+        {
+            if (type == 5)
+            {
+                if (result <= 1.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 1.6;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 2 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 2.6;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 3.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+
+                    for (; warning < 3.6;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 5.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning < 5.6;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 6);
+                        valueS += 6;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 6.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "6" + "\r\n";
+
+                    for (; warning < 6.6;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 7);
+                        valueS += 7;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 7 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 7.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "7" + "\r\n";
+
+                    for (; warning < 7.6;)
+                    {
+                        warning = (valueS + 8) / (NumberN + 8);
+                        valueS += 8;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 8 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 8.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "8" + "\r\n";
+
+                    for (; warning < 8.6;)
+                    {
+                        warning = (valueS + 9) / (NumberN + 9);
+                        valueS += 9;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 9 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 9.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "9" + "\r\n";
+
+                    for (; warning < 9.6;)
+                    {
+                        warning = (valueS + 10) / (NumberN + 10);
+                        valueS += 10;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + 10 + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
         public MainWindow()
         {
             //Language pick
@@ -909,8 +1062,14 @@ namespace WpfApp1
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
 
             }
+            if (lang == 5)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("be-BY");
 
+            }
+            
             InitializeComponent();
+            File.WriteAllText("Exit.txt", "0");
             check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
             type = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
            
@@ -968,9 +1127,16 @@ namespace WpfApp1
                 T4.Width = 38;
                 T5.Visibility = Visibility.Visible;
                 T5.Text = "(20-17)";
+               
                 T5.Width = 38;
                 Score.Height = 255;
                 Score.Margin = new Thickness(162, 152, 0, 0);
+            }
+            if(lang == 2)
+            {
+                Namer.Height = 40;
+                Result.Margin = new Thickness(262, 250, 0, 0);
+                Tres.Margin = new Thickness(262, 260, 0, 0);
             }
             //German
             if (type == 3)
@@ -1000,8 +1166,15 @@ namespace WpfApp1
                 T5.Text = "(2)";
                 T6.Visibility = Visibility.Visible;
                 T6.Text = "(1)";
+               
                 Score.Height = 235;
                 Score.Margin = new Thickness(162, 172, 0, 0);
+            }
+            if (lang == 3)
+            {
+                Namer.Height = 40;
+                Result.Margin = new Thickness(262, 250, 0, 0);
+                Tres.Margin = new Thickness(262, 260, 0, 0);
             }
             //Ukraine
             if (type == 4)
@@ -1039,6 +1212,37 @@ namespace WpfApp1
                 A3.Visibility = Visibility.Visible;
                 Score.Height = 85;
                 Score.Margin = new Thickness(162, 322, 0, 0);
+            }
+            //Belarus
+            if (type == 5)
+            {
+                D1.Content = "1";
+                D2.Content = "2";
+                D2.Background = Brushes.HotPink;
+                D3.Content = "3";
+                D3.Background = Brushes.Pink;
+                C1.Content = "4";
+                C1.Background = Brushes.DarkOrange;
+                C2.Content = "5";
+                C2.Background = Brushes.Orange;
+                C3.Content = "6";
+                C3.Background = Brushes.Yellow;
+                B1.Content = "7";
+                B1.Background = Brushes.GreenYellow;
+                B2.Content = "8";
+                B2.Background = Brushes.Green;
+                B3.Content = "9";
+                B3.Background = Brushes.Cyan;
+                A1.Content = "10";
+                A1.Background = Brushes.Blue;
+                C2.Visibility = Visibility.Visible;
+                C3.Visibility = Visibility.Visible;
+                B1.Visibility = Visibility.Visible;
+                B2.Visibility = Visibility.Visible;
+                B3.Visibility = Visibility.Visible;
+                A1.Visibility = Visibility.Visible;
+                Score.Height = 135;
+                Score.Margin = new Thickness(162, 272, 0, 0);
             }
             //Russian
             foreach (UIElement el in Root.Children)
@@ -1099,19 +1303,44 @@ namespace WpfApp1
                
             }
         }
-
+        //Exit
         protected override void OnClosing(CancelEventArgs e)
         {
-            var response = MessageBox.Show(Properties.Resources.Message1, Properties.Resources.Box1,MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
-            if (response == MessageBoxResult.No)
+            exit = Int32.Parse(File.ReadAllText("Exit.txt"));
+          
+            if (exit == 1)
             {
-                e.Cancel = true;
-            }
-            else
-            {
+                mainE = 1;
+                File.WriteAllText("Exit.txt", mainE.ToString());
                 Application.Current.Shutdown();
-            }
 
+              
+            }
+            if (exit == 2)
+            {
+                
+                File.WriteAllText("Exit.txt", mainE.ToString());
+          
+                Application.Current.Shutdown();
+                
+               
+            }
+            if(exit == 0)
+            {
+                MessageBoxResult result = MessageBox.Show(Properties.Resources.Message1, Properties.Resources.Box1, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        mainE = 1;
+                        File.WriteAllText("Exit.txt", mainE.ToString());
+                        Application.Current.Shutdown();
+
+                        break;
+                    case MessageBoxResult.No:
+                        e.Cancel = true;
+                        break;
+                }
+            }
             base.OnClosing(e);
         }
         //Function name and surname input 
@@ -1390,7 +1619,7 @@ namespace WpfApp1
             GEN.IsReadOnly = false;
             Namer.IsReadOnly = false;
             Namer.IsEnabled = true;
-            Sername.IsReadOnly = true;
+            Sername.IsReadOnly = false;
             Name.IsReadOnly = true;
             foreach (UIElement el in Root.Children)
             {
@@ -1404,6 +1633,59 @@ namespace WpfApp1
 
             }
         }
+
+        private void AP_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPick.IsEnabled = false;
+            ColorPick.Visibility = Visibility.Hidden;
+            Namer.IsEnabled = false;
+            listbox.IsEnabled = false;
+            EnterC.IsEnabled = false;
+            Menu.IsEnabled = true;
+            GEN.IsReadOnly = true;
+            Namer.IsReadOnly = false;
+            Namer.IsEnabled = false;
+            Sername.IsReadOnly = true;
+            Name.IsReadOnly = false;
+            foreach (UIElement el in Root.Children)
+            {
+                if (el is Button)
+                {
+
+                    ((Button)el).IsEnabled = false;
+
+
+                }
+
+            }
+        }
+
+        private void R_Click(object sender, RoutedEventArgs e)
+        {
+            ColorPick.IsEnabled = false;
+            ColorPick.Visibility = Visibility.Hidden;
+            Namer.IsEnabled = false;
+            listbox.IsEnabled = true;
+            EnterC.IsEnabled = false;
+            Menu.IsEnabled = true;
+            GEN.IsReadOnly = true;
+            Namer.IsReadOnly = false;
+            Namer.IsEnabled = true;
+            Sername.IsReadOnly = true;
+            Name.IsReadOnly = true;
+            foreach (UIElement el in Root.Children)
+            {
+                if (el is Button)
+                {
+
+                    ((Button)el).IsEnabled = false;
+
+
+                }
+
+            }
+        }
+
         //Menu Color
         private void Color_Click(object sender, RoutedEventArgs e)
         {
@@ -1634,6 +1916,7 @@ namespace WpfApp1
                         Tres.Text = "A*";
                     }
                 }
+                //France
                 if(type == 2)
                 {
                     if (result <= 1.2)
@@ -1810,7 +2093,62 @@ namespace WpfApp1
                         Tres.Text = "-";
                     }
                 }
-                
+                //Belarus
+                if (type == 4)
+                {
+                    if (TotalResult <= 1.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 2.5)
+                    {
+                        Tres.Foreground = Brushes.HotPink;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 3.5)
+                    {
+                        Tres.Foreground = Brushes.DarkOrange;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 4.5)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 5.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 6.5)
+                    {
+                        Tres.Foreground = Brushes.GreenYellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 7.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 8.5)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 9.5)
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = TotalResult.ToString();
+                    }
+           
+            
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
             }
             
         }
@@ -1848,6 +2186,8 @@ namespace WpfApp1
                 Germany();
                 //Ukraine
                 Ukraine();
+                //Belarus
+                Belarus();
                     value = 0;
                 result = 0;
                 ClickS = 0;

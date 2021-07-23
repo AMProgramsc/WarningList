@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -25,47 +28,32 @@ namespace WpfApp1
 
         MainWindow window = new MainWindow();
         About about = new About();
+
         Informations info = new Informations();
         Version ver = new Version();
         Settings set = new Settings();
         int screen = 0;
         int pb = 0;
         int lang = 0;
-
+        int exit = 0, exit1 = 0;
+        int mainE;
         public WindowLoad()
         {
 
-            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
-            if (lang == 0)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-            }
-            if (lang == 1)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
-            }
-            if (lang == 2)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
-            }
-            if (lang == 3)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-            }
-            if (lang == 4)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
-            }
+
+
             InitializeComponent();
+
+
             T.IsEnabled = false;
             screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
             pb = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
-           
+
             if (screen == 1)
             {
                 WindowState = WindowState.Maximized;
             }
-            if(pb == 1)
+            if (pb == 1)
             {
                 ProgressLoad.Visibility = Visibility.Hidden;
             }
@@ -81,7 +69,7 @@ namespace WpfApp1
             worker.ProgressChanged += worker_ProgressChanged;
 
             worker.RunWorkerAsync();
-            
+
         }
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -90,15 +78,15 @@ namespace WpfApp1
                 (sender as BackgroundWorker).ReportProgress(i);
                 Thread.Sleep(25);
             }
-            
+
         }
-        
-      
-        
+
+
+
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            
-                ProgressLoad.Value = e.ProgressPercentage;
+
+            ProgressLoad.Value = e.ProgressPercentage;
             if (ProgressLoad.Value == 100)
             {
                 ProgressLoad.Visibility = Visibility.Hidden;
@@ -107,13 +95,13 @@ namespace WpfApp1
                 T.IsEnabled = true;
             }
         }
-   
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
 
-            Close();
-            
+
+            this.Visibility = Visibility.Hidden;
+
             window.Show();
 
 
@@ -121,7 +109,7 @@ namespace WpfApp1
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
-           
+
             this.Close();
             Close();
             Application.Current.Shutdown();
@@ -132,12 +120,12 @@ namespace WpfApp1
 
         }
 
-       
+
 
         private void WarningList_Click(object sender, RoutedEventArgs e)
         {
             info.Show();
-           
+
         }
 
         private void Version_Click(object sender, RoutedEventArgs e)
@@ -156,19 +144,44 @@ namespace WpfApp1
         }
         private void Window_Closing_1(object sender, CancelEventArgs e)
         {
-          
-            if (ProgressLoad.Value < 100)
+            exit = Int32.Parse(File.ReadLines("Exit.txt").First());
+            if (exit == 1)
             {
-                e.Cancel = true;
-            }
-            else
-            {
-                e.Cancel = false;
-            }
-            this.Visibility = Visibility.Collapsed;
-        }
 
-       
+                File.WriteAllText("Exit.txt", mainE.ToString());
+                Application.Current.Shutdown();
+
+
+            }
+            if (exit == 2)
+            {
+
+                File.WriteAllText("Exit.txt", mainE.ToString());
+                Application.Current.Shutdown();
+
+
+            }
+            if (exit == 0)
+            {
+                MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Message1, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                switch (result)
+                {
+                case MessageBoxResult.Yes:
+                 mainE = 1;
+                File.WriteAllText("Exit.txt", mainE.ToString());
+
+                Application.Current.Shutdown();
+
+                break;
+                    case MessageBoxResult.No:
+                        e.Cancel = true;
+                break;
+
+            }
+        }
     }
+
+}
+    
 }
 //(c)AMProgramms, 2021

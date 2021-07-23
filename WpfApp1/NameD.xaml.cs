@@ -25,30 +25,11 @@ namespace WpfApp1
         UserInfo user = new UserInfo();
         SernameD sn = new SernameD();
         string name = "Name.txt";
-        int lang = 0;
+      
         public NameD()
         {
-            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
-            if (lang == 0)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-            }
-            if (lang == 1)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
-            }
-            if (lang == 2)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
-            }
-            if (lang == 3)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-            }
-            if (lang == 4)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
-            }
+            
+        
             InitializeComponent();
         }
         private void NAME_KeyDown(object sender, KeyEventArgs e)
@@ -61,6 +42,12 @@ namespace WpfApp1
                 sn.Show();
                Close();
             }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
         }
     }
 }
