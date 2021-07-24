@@ -646,6 +646,15 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Restart.
+        /// </summary>
+        public static string Restart {
+            get {
+                return ResourceManager.GetString("Restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на ©All rights reserved.
         /// </summary>
         public static string Rights {
@@ -705,6 +714,15 @@ namespace WpfApp1.Properties {
         public static string Start {
             get {
                 return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

@@ -160,7 +160,7 @@
     <value>Informatik</value>
   </data>
   <data name="Creator" xml:space="preserve">
-    <value>Created by AMPrograms 2018-2021</value>
+    <value>Created by AMPrograms</value>
   </data>
   <data name="Debug" xml:space="preserve">
     <value>Debug-Modus</value>
@@ -311,6 +311,9 @@
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Neu starten</value>
   </data>
   <data name="Rights" xml:space="preserve">
     <value>©All rights reserved</value>

@@ -312,6 +312,9 @@
   <data name="Reset" xml:space="preserve">
     <value>Скидання</value>
   </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Перезапустити</value>
+  </data>
   <data name="Rights" xml:space="preserve">
     <value>©Всі права захищені</value>
   </data>

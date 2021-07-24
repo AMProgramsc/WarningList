@@ -312,6 +312,9 @@
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
   </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Redémarrer</value>
+  </data>
   <data name="Rights" xml:space="preserve">
     <value>©All rights reserved</value>
   </data>
