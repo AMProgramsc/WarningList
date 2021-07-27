@@ -26,6 +26,11 @@ namespace WpfApp1
         int lang = 0;
         int type = 0;
         int auto = 0;
+        int checkR;
+        int screenR;
+        int pbR;
+        int langR;
+        int typeR;
         public int _width =100;
         public int _height = 100;
     
@@ -34,8 +39,29 @@ namespace WpfApp1
          
             InitializeComponent();
             auto = Int32.Parse(File.ReadLines("Settings.txt").Skip(11).First());
+            checkR = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+            screenR = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
+            pbR = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
+      
+            if (checkR == 1)
+            {
+                Debug.IsChecked = true;
+            
+            }
+            if (screenR == 1)
+            {
+                Fullscreen.IsChecked = true;
+
+            }
+            if (pbR == 1)
+            {
+                Pb.IsChecked = true;
+
+            }
+            
             if (auto == 1)
             {
+                Auto.IsChecked = true;
                 Type.IsEnabled = false;
             }
 

@@ -19,8 +19,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="231,188,0,0" VerticalAlignment="Top" Width="392" Foreground="#FF00C5FF" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="231,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="392" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   ><Run Text="WarningList"/><Run Text=" "/><Run Text="0."/><Run Text="7"/><Run Text=".4 Alpha"/></TextBlock>
+        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="200,188,0,0" VerticalAlignment="Top" Width="436" Foreground="#FF00C5FF" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   Text="WarningList 0.7.6 Pre-Beta"   />
         <Button Name="Button2" Content="{x:Static res:Resources.Start}" HorizontalAlignment="Left" Margin="346,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
         <Button x:Name="Exiter" Content="{x:Static res:Resources.Exit}" HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
         <Menu Name="T" Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White">
@@ -42,7 +42,7 @@
 
 
             </MenuItem>
-            <MenuItem Header="{x:Static res:Resources.Load}" ></MenuItem>
+            <MenuItem Header="{x:Static res:Resources.Load}" Click="MenuItem_Click" ></MenuItem>
             <MenuItem Header="{x:Static res:Resources.Settings}" Foreground="White" Click="General_Click" ></MenuItem>
 
         </Menu>

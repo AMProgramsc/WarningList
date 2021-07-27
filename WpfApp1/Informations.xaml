@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="Informations" Height="450" Width="800" Closing="Window_Closing" >
+        Title="Informations" Height="450" Width="812" Closing="Window_Closing" >
     <Grid Background="Black">
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="133" Width="792" FontSize="16" Background="Black" Foreground="White"><Run FontWeight="Bold" FontSize="20" Text="Warninglist"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="{x:Static res:Resources.WarningList}"/><LineBreak/><Run Text="---------------------------------------------------------------------------------------------------------------------------"/><LineBreak/><Run Text="                                                                             "/><Run FontWeight="Bold" FontSize="14" Text="{x:Static res:Resources.Image}"/></TextBlock>
         <Image HorizontalAlignment="Left" Height="276" Margin="150,133,0,0" VerticalAlignment="Top" Width="492" Source="Instruct.bmp"/>

@@ -8,7 +8,7 @@
         xmlns:dd="urn:gong-wpf-dragdrop"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" >
+        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight"  >
 
 
     <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" >
@@ -61,13 +61,14 @@
 
             </MenuItem>
             <MenuItem x:Name="Reset" Header="{x:Static res:Resources.Reset}" Foreground="Black" Width="45" Click="Reset_Click"  />
+            <MenuItem x:Name="Save" Header="Save" Foreground="Black" Width="45" Click="Save_Click"   />
             <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="48" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
                 <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
                 <MenuItem Name="AP" Header="All Paused" Click="AP_Click"  />
                 <MenuItem Name="R" Header="Reset" Click="R_Click"   />
             </MenuItem>
-
+           
         </Menu>
         <Button Name="D1" Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
         <Button Name="D2" Content="3" HorizontalAlignment="Left" Margin="162,52,0,0" VerticalAlignment="Top" Width="100" Background="Yellow" Height="20"/>
@@ -96,12 +97,11 @@
         <ListBox Name="Score" HorizontalAlignment="Left" Height="280" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="Score_SelectionChanged" Background="{x:Null}"  />
         <TextBox Name="Name" HorizontalAlignment="Left" Height="29" Margin="262,127,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Name}" VerticalAlignment="Top" Width="123"  MouseEnter="Name_MouseEnter" Background="{x:Null}" />
         <TextBox Name="Sername" HorizontalAlignment="Left" Height="29" Margin="262,156,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Secname}" VerticalAlignment="Top" Width="123" Background="{x:Null}" />
-        <TextBox Name="Id" HorizontalAlignment="Left" Height="25" Margin="262,185,0,0" TextWrapping="Wrap" Text="ID: " VerticalAlignment="Top" Width="123" Background="{x:Null}" IsReadOnly="True" />
 
         <TextBox x:Name="EnterC" HorizontalAlignment="Left" Height="23" Margin="267,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" KeyDown="EnterC_KeyDown_1" Text="{x:Static res:Resources.EnterC}" MouseEnter="EnterC_MouseEnter" RenderTransformOrigin="0.509,0.043" Background="{x:Null}" />
-        <TextBox Name="Namer" HorizontalAlignment="Left" Height="25" Margin="262,210,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Namer}" VerticalAlignment="Top" Width="123" MouseEnter="TextBox_MouseEnter" KeyDown="Namer_KeyDown" Background="{x:Null}"/>
-        <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" IsReadOnly="True" />
-        <TextBox Name="Result" HorizontalAlignment="Left" Height="23" Margin="262,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="{x:Static res:Resources.Totalresult}" IsReadOnly="True" Background="{x:Null}" />
+        <TextBox Name="Namer" HorizontalAlignment="Left" Height="25" Margin="261,185,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Namer}" VerticalAlignment="Top" Width="123" MouseEnter="TextBox_MouseEnter" KeyDown="Namer_KeyDown" Background="{x:Null}"/>
+        <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" IsReadOnly="True" />
+        <TextBox Name="Result" HorizontalAlignment="Left" Height="23" Margin="262,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="{x:Static res:Resources.Totalresult}" IsReadOnly="True" Background="{x:Null}" />
         <Button Name="C2" Content="5" HorizontalAlignment="Left" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" Background="Green" Height="20" Visibility="Hidden"/>
         <Button Name="C3" Content="6" HorizontalAlignment="Left" Margin="162,152,0,0" VerticalAlignment="Top" Width="100" Background="Cyan" Height="20" Visibility="Hidden"/>
         <Button Name="B1" Content="7" HorizontalAlignment="Left" Margin="162,177,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden" />

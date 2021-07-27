@@ -30,7 +30,6 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\About.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Informations.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NameD.g.cs
-C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NewName.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\SernameD.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Settings.g.cs
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Version.g.cs
@@ -42,7 +41,6 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\About.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Informations.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\MainWindow.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NameD.baml
-C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\NewName.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\SernameD.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Settings.baml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\Version.baml
@@ -65,7 +63,6 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.pd
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\be-BY\WpfApp1.resources.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.be-BY.resources
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\be-BY\WpfApp1.resources.dll
-C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

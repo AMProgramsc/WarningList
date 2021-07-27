@@ -27,8 +27,9 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         UserInfo user = new UserInfo();
-        NewName nnr = new NewName();
+     
         SernameD snr = new SernameD();
+     
         NameD n = new NameD();
 
         double value, valueS, valueN;
@@ -39,20 +40,24 @@ namespace WpfApp1
         double Tresult;
         Random rand = new Random();
         string inf = "Inf.txt";
+        string fileS;
         string sizeN, sizeG, sizeH;
         bool delete = false;
         bool edit = false;
         bool name = false;
         bool enter = false;
         int Count = 13;
+        int stringS,countS , countE;
         int hit = 0;
         int exit = 0, exit1;
+        int iy;
         int cls, cls2;
         int check = 0;
         int lang = 0;
         int type = 0;
-        int sizeS = 0, sizeC = 0, sizeR = -1;
-        int mainE, loadE, SettE;
+        int sizeS = 0, sizeC = 0, sizeR;
+        int mainE, save, file;
+        string saveS = "Save.txt";
         double TotalResult;
         public void Russian()
         {
@@ -1070,6 +1075,9 @@ namespace WpfApp1
             
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
+   
+            
+          
             check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
             type = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
            
@@ -1079,6 +1087,9 @@ namespace WpfApp1
             listbox.IsEnabled = false;
             EnterC.IsEnabled = false;
             Menu.IsEnabled = false;
+            Edit.IsEnabled = false;
+            Delete.IsEnabled = false;
+            Color.IsEnabled = false;
             //English
             if (type == 1)
             {
@@ -1135,8 +1146,8 @@ namespace WpfApp1
             if(lang == 2)
             {
                 Namer.Height = 40;
-                Result.Margin = new Thickness(262, 250, 0, 0);
-                Tres.Margin = new Thickness(262, 260, 0, 0);
+                Result.Margin = new Thickness(262, 233, 0, 0);
+                Tres.Margin = new Thickness(262, 256, 0, 0);
             }
             //German
             if (type == 3)
@@ -1173,8 +1184,8 @@ namespace WpfApp1
             if (lang == 3)
             {
                 Namer.Height = 40;
-                Result.Margin = new Thickness(262, 250, 0, 0);
-                Tres.Margin = new Thickness(262, 260, 0, 0);
+                Result.Margin = new Thickness(262, 233, 0, 0);
+                Tres.Margin = new Thickness(262, 256, 0, 0);
             }
             //Ukraine
             if (type == 4)
@@ -1260,14 +1271,13 @@ namespace WpfApp1
             {
                 Debug.Visibility = Visibility.Visible;
             }
-          
 
         }
         private void TextBox_MouseEnter(object sender, MouseEventArgs e)
         {
             Namer.Clear();
-           
         }
+
         //Functions add and edit
         private void Namer_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1278,13 +1288,16 @@ namespace WpfApp1
                     sizeH = Namer.Text;
                   
                     //listbox.Items.Add(sizeN);
-                    Lister.Items.Add("-");
+                    Lister.Items.Add(new ListBoxItem() { Content = "-"});
                     listbox.Items.Add(new ListBoxItem() { Content = sizeH, Background = Brushes.Red });
                     listbox.SelectedItem = sizeH;
                     Count++;
                     Namer.IsEnabled = false;
                     listbox.IsEnabled = true;
                     name = false;
+                    Edit.IsEnabled = false;
+                    Delete.IsEnabled = false;
+                    Color.IsEnabled = false;
                 }
             }
             if (edit == true)
@@ -1298,11 +1311,16 @@ namespace WpfApp1
                     listbox.Items.Remove(listbox.SelectedItem);
                     Namer.IsEnabled = false;
                     listbox.IsEnabled = true;
+                    Edit.IsEnabled = false;
+                    Delete.IsEnabled = false;
+                    Color.IsEnabled = false;
 
                 }
                
             }
+          
         }
+
         //Exit
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -1331,6 +1349,7 @@ namespace WpfApp1
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
+                      
                         mainE = 1;
                         File.WriteAllText("Exit.txt", mainE.ToString());
                         Application.Current.Shutdown();
@@ -1343,30 +1362,80 @@ namespace WpfApp1
             }
             base.OnClosing(e);
         }
+
         //Function name and surname input 
         private void Name_MouseEnter(object sender, MouseEventArgs e)
         {
-            n.Show();
-            if(Sername.Text != null)
+            file = Int32.Parse(File.ReadLines("File.txt").First());
+            if (file == 1)
             {
-              
-                Name.IsEnabled = false;
-                Menu.IsEnabled = true;
-                Id.Text = rand.Next(10000).ToString();
-              
-                listbox.IsEnabled = true;
-                check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
-             
-   
-                if (check == 1)
+                file = 0;
+                File.WriteAllText("File.txt", file.ToString());
+                n.Close();
+
+                int strings = System.IO.File.ReadAllLines("Save.txt").Length;
+
+
+                listbox.Items.Clear();
+                Lister.Items.Clear();
+
+                Name.Text = File.ReadLines("Save.txt").First();
+                Sername.Text = File.ReadLines("Save.txt").Skip(1).First();
+                countS = strings / 3 + 2;
+                countE = strings - countS + 2;
+                int y = countE;
+                for (int s = 2; s < countS; s++)
                 {
-                    Debug.Visibility = Visibility.Visible;
+
+                    string c1 = File.ReadLines("Save.txt").Skip(y).First();
+                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+                    listbox.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(s).First(), Background = ckl });
+                    //listbox.Items.Add(File.ReadLines("Save.txt").Skip(s).First());
+                    y++;
+
                 }
-             
-            
+
+                for (int sf = countS; sf < countE; sf++)
+                {
+                    Lister.Items.Add(File.ReadLines("Save.txt").Skip(sf).First());
+                }
+                /*
+                foreach (var lbi in listbox.Items)
+                {
+                    string c1 = File.ReadLines("Save.txt").Skip(countE + countS).First();
+                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+                    //ListBoxItem lbi = listbox.Items[0] as ListBoxItem;
+                    lbi.Background = Brushes.Red;
+                }
+                */
+               
+
+
+            }
+            else
+            {
+                n.Show();
+                if (Sername.Text != null)
+                {
+
+                    Name.IsEnabled = false;
+                    Menu.IsEnabled = true;
+
+                    listbox.IsEnabled = true;
+                    check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+
+
+                    if (check == 1)
+                    {
+                        Debug.Visibility = Visibility.Visible;
+                    }
+
+
+                }
             }
         }
-        //Functon delete for Lister
+
+        //Functon delete for Score
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
@@ -1408,7 +1477,6 @@ namespace WpfApp1
             Textbox1.Foreground = Brushes.White;
             Name.Foreground = Brushes.White;
             Sername.Foreground = Brushes.White;
-            Id.Foreground = Brushes.White;
             Namer.Foreground = Brushes.White;
             Result.Foreground = Brushes.White;
             DialogeW.Foreground = Brushes.White;
@@ -1425,7 +1493,6 @@ namespace WpfApp1
             Textbox1.Foreground = Brushes.Black;
             Name.Foreground =  Brushes.Black; 
             Sername.Foreground = Brushes.Black;
-            Id.Foreground = Brushes.Black;
             Namer.Foreground = Brushes.Black;
             Result.Foreground = Brushes.Black;
             DialogeW.Foreground = Brushes.Black;
@@ -1458,12 +1525,20 @@ namespace WpfApp1
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    delete = true;
+             
                     listbox.IsEnabled = true;
-                    DialogeW.Text = Properties.Resources.Dialoge6;
+                    DialogeW.Text = Properties.Resources.Dialoge6;                 
+                        Lister.Items.RemoveAt(listbox.SelectedIndex);
+                        listbox.Items.Remove(listbox.SelectedItem);
+                    Count--;
+                        DialogeW.Text = Properties.Resources.Dialoge2;
+                    Edit.IsEnabled = false;
+                    Delete.IsEnabled = false;
+                    Color.IsEnabled = false;
+
                     break;
                 case MessageBoxResult.No:
-
+                 
                     break;
             }
         }
@@ -1486,6 +1561,7 @@ namespace WpfApp1
                     break;
             }
         }
+
         //Fonts pick
         private void bold_Click(object sender, RoutedEventArgs e)
         {
@@ -1496,13 +1572,11 @@ namespace WpfApp1
             Textbox1.FontWeight = FontWeights.Bold;
             Name.FontWeight = FontWeights.Bold;
             Sername.FontWeight = FontWeights.Bold;
-            Id.FontWeight = FontWeights.Bold;
             Namer.FontWeight = FontWeights.Bold;
             Result.FontWeight = FontWeights.Bold;
             GEN.FontWeight = FontWeights.Bold;
             Score.FontWeight = FontWeights.Bold;
         }
-
         private void italic_Click(object sender, RoutedEventArgs e)
         {
             listbox.FontStyle = FontStyles.Italic;
@@ -1512,7 +1586,6 @@ namespace WpfApp1
             Textbox1.FontStyle = FontStyles.Italic;
             Name.FontStyle = FontStyles.Italic;
             Sername.FontStyle = FontStyles.Italic;
-            Id.FontStyle = FontStyles.Italic;
             Namer.FontStyle = FontStyles.Italic;
             Result.FontStyle = FontStyles.Italic;
             GEN.FontStyle = FontStyles.Italic;
@@ -1525,12 +1598,10 @@ namespace WpfApp1
             Textbox1.TextDecorations = TextDecorations.Underline;
             Name.TextDecorations = TextDecorations.Underline;
             Sername.TextDecorations = TextDecorations.Underline;
-            Id.TextDecorations = TextDecorations.Underline;
             Namer.TextDecorations = TextDecorations.Underline;
             Result.TextDecorations = TextDecorations.Underline;
             GEN.TextDecorations = TextDecorations.Underline;
         }
-
         private void normal_Click(object sender, RoutedEventArgs e)
         {
             listbox.FontWeight = FontWeights.Normal; 
@@ -1540,7 +1611,6 @@ namespace WpfApp1
             Textbox1.FontWeight = FontWeights.Normal;
             Name.FontWeight = FontWeights.Normal;
             Sername.FontWeight = FontWeights.Normal;
-            Id.FontWeight = FontWeights.Normal;
             Namer.FontWeight = FontWeights.Normal;
             Result.FontWeight = FontWeights.Normal;
             GEN.FontWeight = FontWeights.Normal;
@@ -1552,7 +1622,6 @@ namespace WpfApp1
             Textbox1.FontStyle = FontStyles.Normal;
             Name.FontStyle = FontStyles.Normal;
             Sername.FontStyle = FontStyles.Normal;
-            Id.FontStyle = FontStyles.Normal;
             Namer.FontStyle = FontStyles.Normal;
             Result.FontStyle = FontStyles.Normal;
             GEN.FontStyle = FontStyles.Normal;
@@ -1561,7 +1630,6 @@ namespace WpfApp1
             Textbox1.TextDecorations = null;
             Name.TextDecorations = null;
             Sername.TextDecorations = null;
-            Id.TextDecorations = null;
             Namer.TextDecorations = null;
             Tres.TextDecorations = null;
             GEN.TextDecorations = null;
@@ -1587,7 +1655,6 @@ namespace WpfApp1
             
         }
 
-
         //Debug functions
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
@@ -1607,6 +1674,46 @@ namespace WpfApp1
         {
             sizeS = Count;
         }
+
+        //Load function
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            
+          
+            
+        }
+        //Save function
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+           
+            using (System.IO.StreamWriter w = new StreamWriter(saveS))
+            {
+                w.WriteLine(File.ReadAllText("Name.txt"));
+                w.WriteLine(File.ReadAllText("Sername.txt"));
+
+
+
+                foreach (ListBoxItem s in listbox.Items)
+                {
+                    string str = s.Content + " ";
+                    w.WriteLine(str);
+                }
+                foreach (ListBoxItem sr in Lister.Items)
+                {
+                    string ster = sr.Content + " ";
+                    w.WriteLine(ster);
+                }
+                foreach (ListBoxItem fs in listbox.Items)
+                {
+                    string str = fs.Background + " ";
+                    w.WriteLine(str);
+                }
+            }
+
+
+
+        }
+
         //Color pick
         private void AE_Click(object sender, RoutedEventArgs e)
         {
@@ -1716,7 +1823,6 @@ namespace WpfApp1
                     Textbox1.Foreground = ck;
                     Name.Foreground = ck;
                     Sername.Foreground = ck;
-                    Id.Foreground = ck;
                     Namer.Foreground = ck;
                     Tres.Foreground = ck;
                     DialogeW.Foreground = ck;
@@ -1782,29 +1888,24 @@ namespace WpfApp1
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
 
-            sizeN = File.ReadAllText(@"Newname.txt");           
+        
             Name.Text = File.ReadAllText(@"Name.txt");
             Sername.Text = File.ReadAllText(@"Sername.txt");
             cls = 0;
             cls2 = 0;
+
             //Delete fuction
-            if (delete == true)
-            {
-             
-                listbox.Items.Remove(listbox.SelectedItem);
-                Lister.Items.Remove(listbox.SelectedItem);
-                Count--;
+           
+            //Item pick
+          
                 DialogeW.Text = Properties.Resources.Dialoge2;
-                
-            }
-           //Item pick
-            else
-            {
-                DialogeW.Text = Properties.Resources.Dialoge2;
-                MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                switch (result)
+                MessageBoxResult resultrt = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+          
+            
+                switch (resultrt)
                 {
                     case MessageBoxResult.Yes:
+
                         foreach (UIElement el in Root.Children)
                         {
                             if (el is Button)
@@ -1819,11 +1920,17 @@ namespace WpfApp1
                         listbox.IsEnabled = false;
                         break;
                     case MessageBoxResult.No:
+
                         listbox.SelectedItem = false;
+                        Edit.IsEnabled = true;
+                        Delete.IsEnabled = true;
+                        Color.IsEnabled = true;
+
                         break;
 
                 }
-            }
+            
+           
             edit = false;
             delete = false;
             // Total Result
@@ -2157,6 +2264,7 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string s = (string)((Button)e.OriginalSource).Content;
+            
             ClickS++;
             NumberN = ClickS;
             value += Int32.Parse(s);
@@ -2192,7 +2300,7 @@ namespace WpfApp1
                 result = 0;
                 ClickS = 0;
                 sizeC = 0;
-                sizeS++;
+
                 EnterC.IsEnabled = true;
                 foreach (UIElement el in Root.Children)
                 {

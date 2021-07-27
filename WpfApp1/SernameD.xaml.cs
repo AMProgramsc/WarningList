@@ -22,11 +22,41 @@ namespace WpfApp1
     {
         UserInfo user = new UserInfo();
         string sername = "Sername.txt";
-    
+        int lang;
         public SernameD()
         {
-            
-          
+
+            lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
+            if (lang == 0)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+
+            }
+            if (lang == 1)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
+
+            }
+            if (lang == 2)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
+
+            }
+            if (lang == 3)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
+
+            }
+            if (lang == 4)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
+
+            }
+            if (lang == 5)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("be-BY");
+
+            }
             InitializeComponent();
             
         }
@@ -34,8 +64,7 @@ namespace WpfApp1
         private void SERNAME_KeyDown(object sender, KeyEventArgs e)
         {
          
-        
-            
+                
             if (e.Key == Key.Enter)
             {
 

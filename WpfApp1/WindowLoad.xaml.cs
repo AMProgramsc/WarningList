@@ -25,7 +25,7 @@ namespace WpfApp1
     /// </summary>
     public partial class WindowLoad : Window
     {
-
+       
         MainWindow window = new MainWindow();
         About about = new About();
 
@@ -37,6 +37,8 @@ namespace WpfApp1
         int lang = 0;
         int exit = 0, exit1 = 0;
         int mainE;
+        int file = 0;
+        int countS;
         public WindowLoad()
         {
 
@@ -57,7 +59,7 @@ namespace WpfApp1
             {
                 ProgressLoad.Visibility = Visibility.Hidden;
             }
-
+          
         }
 
 
@@ -101,7 +103,7 @@ namespace WpfApp1
 
 
             this.Visibility = Visibility.Hidden;
-
+      
             window.Show();
 
 
@@ -142,6 +144,17 @@ namespace WpfApp1
         {
             set.Show();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            file = 1;
+            File.WriteAllText("File.txt",file.ToString());
+          
+            this.Visibility = Visibility.Hidden;
+            window.Show();
+           
+        }
+
         private void Window_Closing_1(object sender, CancelEventArgs e)
         {
             exit = Int32.Parse(File.ReadLines("Exit.txt").First());
@@ -161,6 +174,7 @@ namespace WpfApp1
 
 
             }
+        
             if (exit == 0)
             {
                 MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Message1, MessageBoxButton.YesNo, MessageBoxImage.Warning);

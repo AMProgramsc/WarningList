@@ -38,9 +38,6 @@
     <ApplicationIcon>wllogo_lXd_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=8.0.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
-      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.8.0.1\lib\netstandard2.0\FirebirdSql.Data.FirebirdClient.dll</HintPath>
-    </Reference>
     <Reference Include="GongSolutions.WPF.DragDrop, Version=2.0.0.0, Culture=neutral, PublicKeyToken=91f1945125b7a587, processorArchitecture=MSIL">
       <HintPath>..\packages\gong-wpf-dragdrop.2.3.2\lib\net47\GongSolutions.WPF.DragDrop.dll</HintPath>
     </Reference>
@@ -93,9 +90,6 @@
     </Compile>
     <Compile Include="NameD.xaml.cs">
       <DependentUpon>NameD.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NewName.xaml.cs">
-      <DependentUpon>NewName.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.fr-FR.Designer.cs">
       <DependentUpon>Resources.fr-FR.resx</DependentUpon>
@@ -156,10 +150,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NameD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="NewName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,9 +217,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Instruct.bmp" />
   </ItemGroup>
