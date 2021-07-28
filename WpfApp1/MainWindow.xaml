@@ -8,17 +8,17 @@
         xmlns:dd="urn:gong-wpf-dragdrop"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight"  >
+        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" Activated="Window_Activated" >
 
 
-    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" >
+    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged" MouseDown="ColorPick_MouseDown" Background="{x:Null}"  />
+        <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  Background="{x:Null}"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"   >
             <ListBoxItem Background="Red" Content="{x:Static res:Resources.Match}"   />
             <ListBoxItem Background="#FFD85757" Content="{x:Static res:Resources.Physics}"/>
@@ -61,7 +61,7 @@
 
             </MenuItem>
             <MenuItem x:Name="Reset" Header="{x:Static res:Resources.Reset}" Foreground="Black" Width="45" Click="Reset_Click"  />
-            <MenuItem x:Name="Save" Header="Save" Foreground="Black" Width="45" Click="Save_Click"   />
+            <MenuItem x:Name="Save" Header="{x:Static res:Resources.Save}" Foreground="Black" Width="45" Click="Save_Click"   />
             <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="48" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
                 <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>

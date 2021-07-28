@@ -32,16 +32,19 @@ namespace WpfApp1
      
         NameD n = new NameD();
 
+   
         double value, valueS, valueN;
         double ClickS;
         double NumberN;
         double result;
         double warning = 0;
         double Tresult;
-        Random rand = new Random();
+        double TotalResult;
         string inf = "Inf.txt";
         string fileS;
         string sizeN, sizeG, sizeH;
+        string cj = "Black";
+        string saveS = "Save.txt";
         bool delete = false;
         bool edit = false;
         bool name = false;
@@ -57,8 +60,8 @@ namespace WpfApp1
         int type = 0;
         int sizeS = 0, sizeC = 0, sizeR;
         int mainE, save, file;
-        string saveS = "Save.txt";
-        double TotalResult;
+        int bg;
+        int fs;
         public void Russian()
         {
             if (type == 0)
@@ -1038,6 +1041,141 @@ namespace WpfApp1
                 Lister.Items[listbox.SelectedIndex] = result;
             }
         }
+
+        public void BackgroundN()
+        {
+            bg = 1;
+            Root.Background = Brushes.Black;
+            Menu.Background = Brushes.White;
+            Lister.Foreground = Brushes.White;
+            EnterC.Foreground = Brushes.White;
+            Textbox1.Foreground = Brushes.White;
+            Name.Foreground = Brushes.White;
+            Sername.Foreground = Brushes.White;
+            Namer.Foreground = Brushes.White;
+            Result.Foreground = Brushes.White;
+            DialogeW.Foreground = Brushes.White;
+            GEN.Foreground = Brushes.White;
+            Score.Foreground = Brushes.White;
+        }
+        public void BackgroundU()
+        {
+            bg = 0;
+            Root.Background = Brushes.White;
+            Menu.Background = Brushes.Gray;
+            Lister.Foreground = Brushes.Black;
+            EnterC.Foreground = Brushes.Black;
+            Textbox1.Foreground = Brushes.Black;
+            Name.Foreground = Brushes.Black;
+            Sername.Foreground = Brushes.Black;
+            Namer.Foreground = Brushes.Black;
+            Result.Foreground = Brushes.Black;
+            DialogeW.Foreground = Brushes.Black;
+            GEN.Foreground = Brushes.Black;
+            Score.Foreground = Brushes.Black;
+        }
+
+        public void Bold()
+        {
+            fs = 1;
+            listbox.FontWeight = FontWeights.Bold;
+            Menu.FontWeight = FontWeights.Bold;
+            Lister.FontWeight = FontWeights.Bold;
+            EnterC.FontWeight = FontWeights.Bold;
+            Textbox1.FontWeight = FontWeights.Bold;
+            Name.FontWeight = FontWeights.Bold;
+            Sername.FontWeight = FontWeights.Bold;
+            Namer.FontWeight = FontWeights.Bold;
+            Result.FontWeight = FontWeights.Bold;
+            GEN.FontWeight = FontWeights.Bold;
+            Score.FontWeight = FontWeights.Bold;
+            Clicker.FontWeight = FontWeights.Bold;
+            Namer.Height = 40;
+            Result.Margin = new Thickness(262, 223, 0, 0);
+            Tres.Margin = new Thickness(262, 246, 0, 0);
+        }
+        public void Italic()
+        {
+            fs = 2;
+            listbox.FontStyle = FontStyles.Italic;
+            Menu.FontStyle = FontStyles.Italic;
+            Lister.FontStyle = FontStyles.Italic;
+            EnterC.FontStyle = FontStyles.Italic;
+            Textbox1.FontStyle = FontStyles.Italic;
+            Name.FontStyle = FontStyles.Italic;
+            Sername.FontStyle = FontStyles.Italic;
+            Namer.FontStyle = FontStyles.Italic;
+            Result.FontStyle = FontStyles.Italic;
+            GEN.FontStyle = FontStyles.Italic;
+            Score.FontStyle = FontStyles.Italic;
+            Clicker.FontStyle = FontStyles.Italic;
+        }
+        public void Underline()
+        {
+            fs = 3;
+            EnterC.TextDecorations = TextDecorations.Underline;
+            Textbox1.TextDecorations = TextDecorations.Underline;
+            Name.TextDecorations = TextDecorations.Underline;
+            Sername.TextDecorations = TextDecorations.Underline;
+            Namer.TextDecorations = TextDecorations.Underline;
+            Result.TextDecorations = TextDecorations.Underline;
+            GEN.TextDecorations = TextDecorations.Underline;
+            Clicker.TextDecorations = TextDecorations.Underline;
+        }
+        public void Normal()
+        {
+            fs = 0;
+            listbox.FontWeight = FontWeights.Normal;
+            Menu.FontWeight = FontWeights.Normal;
+            Lister.FontWeight = FontWeights.Normal;
+            EnterC.FontWeight = FontWeights.Normal;
+            Textbox1.FontWeight = FontWeights.Normal;
+            Name.FontWeight = FontWeights.Normal;
+            Sername.FontWeight = FontWeights.Normal;
+            Namer.FontWeight = FontWeights.Normal;
+            Result.FontWeight = FontWeights.Normal;
+            GEN.FontWeight = FontWeights.Normal;
+            Score.FontWeight = FontWeights.Normal;
+            listbox.FontStyle = FontStyles.Normal;
+            Clicker.FontStyle = FontStyles.Normal;
+            Menu.FontStyle = FontStyles.Normal;
+            Lister.FontStyle = FontStyles.Normal;
+            EnterC.FontStyle = FontStyles.Normal;
+            Textbox1.FontStyle = FontStyles.Normal;
+            Name.FontStyle = FontStyles.Normal;
+            Sername.FontStyle = FontStyles.Normal;
+            Namer.FontStyle = FontStyles.Normal;
+            Result.FontStyle = FontStyles.Normal;
+            GEN.FontStyle = FontStyles.Normal;
+            Score.FontStyle = FontStyles.Normal;
+            Clicker.FontStyle = FontStyles.Normal;
+            Result.TextDecorations = null;
+            EnterC.TextDecorations = null;
+            Textbox1.TextDecorations = null;
+            Name.TextDecorations = null;
+            Sername.TextDecorations = null;
+            Namer.TextDecorations = null;
+            Tres.TextDecorations = null;
+            GEN.TextDecorations = null;
+            Clicker.TextDecorations = null;
+        }
+        
+        public void ColorPickSC()
+        {
+            SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(cj);
+            Lister.Foreground = ck;
+            EnterC.Foreground = ck;
+            Textbox1.Foreground = ck;
+            Name.Foreground = ck;
+            Sername.Foreground = ck;
+            Namer.Foreground = ck;
+            Tres.Foreground = ck;
+            DialogeW.Foreground = ck;
+            GEN.Foreground = ck;
+            Score.Foreground = ck;
+            Clicker.Foreground = ck;
+            Result.Foreground = ck;
+        }
         public MainWindow()
         {
             //Language pick
@@ -1366,54 +1504,8 @@ namespace WpfApp1
         //Function name and surname input 
         private void Name_MouseEnter(object sender, MouseEventArgs e)
         {
-            file = Int32.Parse(File.ReadLines("File.txt").First());
-            if (file == 1)
-            {
-                file = 0;
-                File.WriteAllText("File.txt", file.ToString());
-                n.Close();
-
-                int strings = System.IO.File.ReadAllLines("Save.txt").Length;
-
-
-                listbox.Items.Clear();
-                Lister.Items.Clear();
-
-                Name.Text = File.ReadLines("Save.txt").First();
-                Sername.Text = File.ReadLines("Save.txt").Skip(1).First();
-                countS = strings / 3 + 2;
-                countE = strings - countS + 2;
-                int y = countE;
-                for (int s = 2; s < countS; s++)
-                {
-
-                    string c1 = File.ReadLines("Save.txt").Skip(y).First();
-                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-                    listbox.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(s).First(), Background = ckl });
-                    //listbox.Items.Add(File.ReadLines("Save.txt").Skip(s).First());
-                    y++;
-
-                }
-
-                for (int sf = countS; sf < countE; sf++)
-                {
-                    Lister.Items.Add(File.ReadLines("Save.txt").Skip(sf).First());
-                }
-                /*
-                foreach (var lbi in listbox.Items)
-                {
-                    string c1 = File.ReadLines("Save.txt").Skip(countE + countS).First();
-                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-                    //ListBoxItem lbi = listbox.Items[0] as ListBoxItem;
-                    lbi.Background = Brushes.Red;
-                }
-                */
-               
-
-
-            }
-            else
-            {
+          
+          
                 n.Show();
                 if (Sername.Text != null)
                 {
@@ -1429,10 +1521,8 @@ namespace WpfApp1
                     {
                         Debug.Visibility = Visibility.Visible;
                     }
-
-
                 }
-            }
+            
         }
 
         //Functon delete for Score
@@ -1470,34 +1560,11 @@ namespace WpfApp1
    //Background pick
         private void Background_Checked(object sender, RoutedEventArgs e)
         {
-            Root.Background = Brushes.Black;
-            Menu.Background = Brushes.White;
-            Lister.Foreground = Brushes.White;
-            EnterC.Foreground = Brushes.White;
-            Textbox1.Foreground = Brushes.White;
-            Name.Foreground = Brushes.White;
-            Sername.Foreground = Brushes.White;
-            Namer.Foreground = Brushes.White;
-            Result.Foreground = Brushes.White;
-            DialogeW.Foreground = Brushes.White;
-            GEN.Foreground = Brushes.White;
-            Score.Foreground = Brushes.White;
-       
+            BackgroundN();
         }
         private void Background_Unchecked(object sender, RoutedEventArgs e)
         {
-            Root.Background = Brushes.White;
-            Menu.Background = Brushes.Gray;
-            Lister.Foreground = Brushes.Black;
-            EnterC.Foreground = Brushes.Black;
-            Textbox1.Foreground = Brushes.Black;
-            Name.Foreground =  Brushes.Black; 
-            Sername.Foreground = Brushes.Black;
-            Namer.Foreground = Brushes.Black;
-            Result.Foreground = Brushes.Black;
-            DialogeW.Foreground = Brushes.Black;
-            GEN.Foreground = Brushes.Black;
-            Score.Foreground = Brushes.Black;
+            BackgroundU();
         }
         
         //Mouse right click menu
@@ -1565,94 +1632,40 @@ namespace WpfApp1
         //Fonts pick
         private void bold_Click(object sender, RoutedEventArgs e)
         {
-            listbox.FontWeight = FontWeights.Bold;
-            Menu.FontWeight = FontWeights.Bold;
-            Lister.FontWeight = FontWeights.Bold;
-            EnterC.FontWeight = FontWeights.Bold;
-            Textbox1.FontWeight = FontWeights.Bold;
-            Name.FontWeight = FontWeights.Bold;
-            Sername.FontWeight = FontWeights.Bold;
-            Namer.FontWeight = FontWeights.Bold;
-            Result.FontWeight = FontWeights.Bold;
-            GEN.FontWeight = FontWeights.Bold;
-            Score.FontWeight = FontWeights.Bold;
+            Bold();
         }
         private void italic_Click(object sender, RoutedEventArgs e)
         {
-            listbox.FontStyle = FontStyles.Italic;
-            Menu.FontStyle = FontStyles.Italic;
-            Lister.FontStyle = FontStyles.Italic;
-            EnterC.FontStyle = FontStyles.Italic;
-            Textbox1.FontStyle = FontStyles.Italic;
-            Name.FontStyle = FontStyles.Italic;
-            Sername.FontStyle = FontStyles.Italic;
-            Namer.FontStyle = FontStyles.Italic;
-            Result.FontStyle = FontStyles.Italic;
-            GEN.FontStyle = FontStyles.Italic;
-            Score.FontStyle = FontStyles.Italic;
+            Italic();
         }
-
         private void underline_Click(object sender, RoutedEventArgs e)
         {
-            EnterC.TextDecorations = TextDecorations.Underline;
-            Textbox1.TextDecorations = TextDecorations.Underline;
-            Name.TextDecorations = TextDecorations.Underline;
-            Sername.TextDecorations = TextDecorations.Underline;
-            Namer.TextDecorations = TextDecorations.Underline;
-            Result.TextDecorations = TextDecorations.Underline;
-            GEN.TextDecorations = TextDecorations.Underline;
+            Underline();
+          
         }
         private void normal_Click(object sender, RoutedEventArgs e)
         {
-            listbox.FontWeight = FontWeights.Normal; 
-            Menu.FontWeight = FontWeights.Normal;
-            Lister.FontWeight = FontWeights.Normal;
-            EnterC.FontWeight = FontWeights.Normal;
-            Textbox1.FontWeight = FontWeights.Normal;
-            Name.FontWeight = FontWeights.Normal;
-            Sername.FontWeight = FontWeights.Normal;
-            Namer.FontWeight = FontWeights.Normal;
-            Result.FontWeight = FontWeights.Normal;
-            GEN.FontWeight = FontWeights.Normal;
-            Score.FontWeight = FontWeights.Normal;
-            listbox.FontStyle = FontStyles.Normal;
-            Menu.FontStyle = FontStyles.Normal;
-            Lister.FontStyle = FontStyles.Normal;
-            EnterC.FontStyle = FontStyles.Normal;
-            Textbox1.FontStyle = FontStyles.Normal;
-            Name.FontStyle = FontStyles.Normal;
-            Sername.FontStyle = FontStyles.Normal;
-            Namer.FontStyle = FontStyles.Normal;
-            Result.FontStyle = FontStyles.Normal;
-            GEN.FontStyle = FontStyles.Normal;
-            Score.FontStyle = FontStyles.Normal;
-            EnterC.TextDecorations = null;
-            Textbox1.TextDecorations = null;
-            Name.TextDecorations = null;
-            Sername.TextDecorations = null;
-            Namer.TextDecorations = null;
-            Tres.TextDecorations = null;
-            GEN.TextDecorations = null;
-        
-    }
+            Normal();
+        }
         private void ColorPick_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            if (ColorPick.Visibility == Visibility.Visible)
+            {
                 MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
-                ColorPick.IsEnabled = false;
-                ColorPick.Visibility = Visibility.Hidden;
-                cls = 0;
-                cls2 = 0;
+                        ColorPick.IsEnabled = false;
+                        ColorPick.Visibility = Visibility.Hidden;
+                        cls = 0;
+                        cls2 = 0;
                         break;
                     case MessageBoxResult.No:
-                        
+
                         break;
 
+                }
             }
-            
         }
 
         //Debug functions
@@ -1678,9 +1691,76 @@ namespace WpfApp1
         //Load function
         private void Window_Activated(object sender, EventArgs e)
         {
-            
-          
-            
+            file = Int32.Parse(File.ReadLines("File.txt").First());
+            if (file == 1)
+            {
+                Name.IsEnabled = false;
+                Menu.IsEnabled = true;
+                listbox.IsEnabled = true;
+                n.Close();
+
+                int strings = System.IO.File.ReadAllLines("Save.txt").Length;
+
+
+                listbox.Items.Clear();
+                Lister.Items.Clear();
+
+                Name.Text = File.ReadLines("Save.txt").First();
+                Sername.Text = File.ReadLines("Save.txt").Skip(1).First();
+                bg = Int32.Parse(File.ReadLines("Save.txt").Skip(2).First());
+                fs = Int32.Parse(File.ReadLines("Save.txt").Skip(3).First());
+                cj = File.ReadLines("Save.txt").Skip(4).First();
+               
+                if(bg == 1)
+                {
+                    BackgroundN();
+                }
+                else 
+                {
+                    BackgroundU();
+                }
+                switch(fs)
+                {
+                    case 0:
+                        Normal();
+                        break;
+                    case 1:
+                        Bold();
+                        break;
+                    case 2:
+                        Italic();
+                        break;
+                    case 3:
+                        Underline();
+                        break;
+
+                }
+                ColorPickSC();
+                countS = strings / 3 + 4;
+                countE = strings - countS + 5;
+                int y = countE;
+                for (int s = 5; s < countS; s++)
+                {
+
+                    string ch = File.ReadLines("Save.txt").Skip(y).First();
+                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(ch);
+                    listbox.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(s).First(), Background = ckl });
+                    y++;
+
+                }
+
+                for (int sf = countS; sf < countE; sf++)
+                {
+                    Lister.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(sf).First() });
+                }
+
+                file = 0;
+                File.WriteAllText("File.txt", file.ToString());
+
+
+            }
+
+
         }
         //Save function
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -1690,9 +1770,9 @@ namespace WpfApp1
             {
                 w.WriteLine(File.ReadAllText("Name.txt"));
                 w.WriteLine(File.ReadAllText("Sername.txt"));
-
-
-
+                w.WriteLine(bg);
+                w.WriteLine(fs);
+                w.WriteLine(cj);
                 foreach (ListBoxItem s in listbox.Items)
                 {
                     string str = s.Content + " ";
@@ -1708,6 +1788,7 @@ namespace WpfApp1
                     string str = fs.Background + " ";
                     w.WriteLine(str);
                 }
+               
             }
 
 
@@ -1815,20 +1896,24 @@ namespace WpfApp1
         {
             if (cls == 1)
             {
-                string c1 = ColorPick.SelectedColor.Value.ToString();
-              
-                    SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-                    Lister.Foreground = ck;
-                    EnterC.Foreground = ck;
-                    Textbox1.Foreground = ck;
-                    Name.Foreground = ck;
-                    Sername.Foreground = ck;
-                    Namer.Foreground = ck;
-                    Tres.Foreground = ck;
-                    DialogeW.Foreground = ck;
-                    GEN.Foreground = ck;
-                    Score.Foreground = ck;
+                cj = ColorPick.SelectedColor.Value.ToString();
+                switch (fs)
+                {
+                    case 0:
+                        Normal();
+                        break;
+                    case 1:
+                        Bold();
+                        break;
+                    case 2:
+                        Italic();
+                        break;
+                    case 3:
+                        Underline();
+                        break;
 
+                }
+                ColorPickSC();
                 DialogeW.Text = Properties.Resources.Dialoge8;
             }
             if(cls2 == 1)

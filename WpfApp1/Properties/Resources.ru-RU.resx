@@ -321,6 +321,9 @@
   <data name="RusLeng" xml:space="preserve">
     <value>Русский язык</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
   <data name="Secname" xml:space="preserve">
     <value>Фамилия:</value>
   </data>

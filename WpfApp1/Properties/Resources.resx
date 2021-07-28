@@ -321,6 +321,9 @@
   <data name="RusLeng" xml:space="preserve">
     <value>NN</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="Secname" xml:space="preserve">
     <value>Surname:</value>
   </data>
