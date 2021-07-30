@@ -25,6 +25,7 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 
 -------------------------------
 # Latest News
+* 30.07.2021 - Offical release WarningList 0.7.8 Pre-beta
 * 28.07.2021 - Offical release WarningList 0.7.7 Pre-beta
 * 27.07.2021 - Offical release WarningList 0.7.6 Pre-beta
 * 23.07.2021 - Offical release WarningList 0.7.4 Alpha
