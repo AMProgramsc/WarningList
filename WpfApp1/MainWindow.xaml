@@ -12,14 +12,9 @@
 
 
     <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        
         <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  Background="{x:Null}"  />
-        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"   >
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" Drop="listbox_Drop"   >
             <ListBoxItem Background="Red" Content="{x:Static res:Resources.Match}"   />
             <ListBoxItem Background="#FFD85757" Content="{x:Static res:Resources.Physics}"/>
             <ListBoxItem Background="#FF1700FF" Content="{x:Static res:Resources.RusLeng}"/>

@@ -32,7 +32,7 @@ namespace WpfApp1
      
         NameD n = new NameD();
 
-   
+        MessageBoxResult resultrt;
         double value, valueS, valueN;
         double ClickS;
         double NumberN;
@@ -49,6 +49,7 @@ namespace WpfApp1
         bool edit = false;
         bool name = false;
         bool enter = false;
+        bool drop = false;
         int Count = 13;
         int stringS,countS , countE;
         int hit = 0;
@@ -58,8 +59,8 @@ namespace WpfApp1
         int check = 0;
         int lang = 0;
         int type = 0;
-        int sizeS = 0, sizeC = 0, sizeR;
-        int mainE, save, file;
+        int sizeS = 0, sizeC = 0;
+        int mainE, file;
         int bg;
         int fs;
         public void Russian()
@@ -1041,6 +1042,92 @@ namespace WpfApp1
                 Lister.Items[listbox.SelectedIndex] = result;
             }
         }
+        public void Czech()
+        {
+            if (type == 6)
+            {
+                if (result < 1.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "1" + "\r\n";
+
+                    for (; warning <= 1.5;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 2);
+                        valueS += 2;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "2" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "2" + "\r\n";
+
+                    for (; warning <= 2.5;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 3);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "3" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "3" + "\r\n";
+
+                    for (; warning <= 3.5;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 4);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result < 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning <= 4.5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 5);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + " - " + "5" + "\r\n";
+
+                }
+
+                    Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
+
 
         public void BackgroundN()
         {
@@ -1210,7 +1297,11 @@ namespace WpfApp1
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("be-BY");
 
             }
-            
+            if (lang == 6)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("cs-CZ");
+
+            }
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
    
@@ -1281,12 +1372,6 @@ namespace WpfApp1
                 Score.Height = 255;
                 Score.Margin = new Thickness(162, 152, 0, 0);
             }
-            if(lang == 2)
-            {
-                Namer.Height = 40;
-                Result.Margin = new Thickness(262, 233, 0, 0);
-                Tres.Margin = new Thickness(262, 256, 0, 0);
-            }
             //German
             if (type == 3)
             {
@@ -1318,12 +1403,6 @@ namespace WpfApp1
                
                 Score.Height = 235;
                 Score.Margin = new Thickness(162, 172, 0, 0);
-            }
-            if (lang == 3)
-            {
-                Namer.Height = 40;
-                Result.Margin = new Thickness(262, 233, 0, 0);
-                Tres.Margin = new Thickness(262, 256, 0, 0);
             }
             //Ukraine
             if (type == 4)
@@ -1393,7 +1472,31 @@ namespace WpfApp1
                 Score.Height = 135;
                 Score.Margin = new Thickness(162, 272, 0, 0);
             }
-            //Russian
+            //Czech Republic
+            if(type == 6)
+            {
+                D1.Content = "1";
+                D2.Content = "2";
+                D2.Background = Brushes.Orange;
+                D3.Content = "3";
+                D3.Background = Brushes.Yellow;
+                C1.Content = "4";
+                C1.Background = Brushes.Green;
+                C2.Content = "5";
+                C2.Background = Brushes.Blue;
+                C2.Visibility = Visibility.Visible;
+
+                Score.Height = 255;
+                Score.Margin = new Thickness(162, 152, 0, 0);
+            }
+            if (lang == 2 || lang == 3 || lang == 6)
+            {
+                Namer.Height = 40;
+                Result.Margin = new Thickness(262, 223, 0, 0);
+                Tres.Margin = new Thickness(262, 246, 0, 0);
+            }
+            //Russian - 0
+
             foreach (UIElement el in Root.Children)
                 {
                     if (el is Button)
@@ -1592,13 +1695,17 @@ namespace WpfApp1
             switch (result)
             {
                 case MessageBoxResult.Yes:
-             
-                    listbox.IsEnabled = true;
-                    DialogeW.Text = Properties.Resources.Dialoge6;                 
+
+                    delete = true;
+                   
+
+                    DialogeW.Text = Properties.Resources.Dialoge6;
+                    
                         Lister.Items.RemoveAt(listbox.SelectedIndex);
                         listbox.Items.Remove(listbox.SelectedItem);
                     Count--;
-                        DialogeW.Text = Properties.Resources.Dialoge2;
+
+                    DialogeW.Text = Properties.Resources.Dialoge2;
                     Edit.IsEnabled = false;
                     Delete.IsEnabled = false;
                     Color.IsEnabled = false;
@@ -1675,7 +1782,7 @@ namespace WpfApp1
             Lister.Items.Clear();
             for(int g= 0; g < listbox.Items.Count; g++)
             {
-                Lister.Items.Add("-");
+                Lister.Items.Add( new ListBoxItem() { Content = "-"});
             }
             GEN.Clear();
             Tresult = 0;
@@ -1686,6 +1793,12 @@ namespace WpfApp1
         private void Complete_Click(object sender, RoutedEventArgs e)
         {
             sizeS = Count;
+        }
+
+        private void listbox_Drop(object sender, DragEventArgs e)
+        {
+            drop = true;
+            
         }
 
         //Load function
@@ -1890,7 +2003,7 @@ namespace WpfApp1
             cls++;
         }
 
-        
+ 
         //ColorPicker
         private void ColorPick_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
@@ -1968,39 +2081,29 @@ namespace WpfApp1
             }
         }
 
-       
+
         //Main Selection
         private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
         {
 
-        
+
             Name.Text = File.ReadAllText(@"Name.txt");
             Sername.Text = File.ReadAllText(@"Sername.txt");
             cls = 0;
             cls2 = 0;
 
             //Delete fuction
-           
+
             //Item pick
-          
-                DialogeW.Text = Properties.Resources.Dialoge2;
-                MessageBoxResult resultrt = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
-          
-            
+
+            DialogeW.Text = Properties.Resources.Dialoge2;
+            if (delete == false && drop == false && edit == false)
+            {
+                resultrt = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
                 switch (resultrt)
                 {
                     case MessageBoxResult.Yes:
-
-                        foreach (UIElement el in Root.Children)
-                        {
-                            if (el is Button)
-                            {
-
-                                ((Button)el).IsEnabled = false;
-
-                            }
-
-                        }
                         EnterC.IsEnabled = true;
                         listbox.IsEnabled = false;
                         break;
@@ -2014,10 +2117,11 @@ namespace WpfApp1
                         break;
 
                 }
-            
+            }
            
             edit = false;
-            delete = false;
+           delete = false;
+            drop = false;
             // Total Result
             if (sizeS == Count)
             {
@@ -2286,7 +2390,7 @@ namespace WpfApp1
                     }
                 }
                 //Belarus
-                if (type == 4)
+                if (type == 5)
                 {
                     if (TotalResult <= 1.5)
                     {
@@ -2335,6 +2439,40 @@ namespace WpfApp1
                     }
            
             
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
+                //Czech
+                if (type == 6)
+                {
+                    if (TotalResult <= 1.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 2.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 3.5)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 4.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 5)
+                    {
+                        Tres.Foreground = Brushes.LightBlue;
+                        Tres.Text = TotalResult.ToString();
+                    }
                     else
                     {
                         Tres.Foreground = Brushes.DarkRed;

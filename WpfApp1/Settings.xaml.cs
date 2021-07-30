@@ -662,7 +662,49 @@ namespace WpfApp1
            
         }
 
-       
+        private void CS_Checked(object sender, RoutedEventArgs e)
+        {
+            type = 6;
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+            }
+        }
+
+        private void CZ_Checked(object sender, RoutedEventArgs e)
+        {
+            lang = 6;
+            if (auto == 1)
+            {
+                type = lang;
+            }
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(check.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(screen.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(pb.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(lang.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(type.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(auto.ToString());
+            }
+        }
     }
 }
 //(c)AMProgramms, 2021

@@ -20,6 +20,7 @@
                 <RadioButton Content="Deutsche" Background="White" Foreground="White" Checked="RadioButton_Checked_4" />
                 <RadioButton Content="Український" Background="White" Foreground="White" Checked="RadioButton_Checked_5" />
                 <RadioButton Name="BY" Content="Беларускі" Background="White" Foreground="White" Checked="BY_Checked"  />
+                <RadioButton Name="CZ" Content="Čeština" Background="White" Foreground="White" Checked="CZ_Checked"   />
             </StackPanel>
         </Expander>
         <Grid>
@@ -32,6 +33,7 @@
                     <RadioButton Content="Deutsche" Background="White" Foreground="White" Checked="RadioButton_Checked_9"  />
                     <RadioButton Content="Українська" Background="White" Foreground="White" Checked="RadioButton_Checked_10" />
                     <RadioButton x:Name="BE" Content="Беларусі" Background="White" Foreground="White" Checked="BE_Checked"  />
+                    <RadioButton x:Name="CS" Content="Čeština" Background="White" Foreground="White" Checked="CS_Checked"   />
                 </StackPanel>
             </Expander>
             <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_1" />

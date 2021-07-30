@@ -61,6 +61,10 @@ namespace WpfApp1
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("be-BY");
 
             }
+            if(lang == 6)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("cs-CZ");
+            }
             InitializeComponent();
         }
         private void NAME_KeyDown(object sender, KeyEventArgs e)
