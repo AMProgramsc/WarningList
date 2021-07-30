@@ -67,3 +67,6 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Run
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\cs-CZ\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.cs-CZ.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\cs-CZ\WpfApp1.resources.dll
