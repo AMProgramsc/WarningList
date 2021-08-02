@@ -70,3 +70,12 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\System.Thr
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\cs-CZ\WpfApp1.resources.dll
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.cs-CZ.resources
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\cs-CZ\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\da-DK\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\fi-FI\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\bin\Debug\bg-BG\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.da-DK.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.fi-FI.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.bg-BG.resources
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\da-DK\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\fi-FI\WpfApp1.resources.dll
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WpfApp1\obj\Debug\bg-BG\WpfApp1.resources.dll
