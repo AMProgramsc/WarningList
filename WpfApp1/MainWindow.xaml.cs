@@ -139,7 +139,7 @@ namespace WpfApp1
 
                     for (; warning <= 1.5;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -156,7 +156,7 @@ namespace WpfApp1
 
                     for (; warning <= 2.5;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -173,7 +173,7 @@ namespace WpfApp1
 
                     for (; warning < 3.5;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -189,7 +189,7 @@ namespace WpfApp1
 
                     for (; warning < 4.5;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -205,7 +205,7 @@ namespace WpfApp1
 
                     for (; warning < 5.5;)
                     {
-                        warning = (valueS + 6) / (NumberN + 6);
+                        warning = (valueS + 6) / (NumberN + 1);
                         valueS += 6;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -221,7 +221,7 @@ namespace WpfApp1
 
                     for (; warning <= 6.5;)
                     {
-                        warning = (valueS + 7) / (NumberN + 7);
+                        warning = (valueS + 7) / (NumberN + 1);
                         valueS += 7;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -309,7 +309,7 @@ namespace WpfApp1
 
                     for (; warning <= 1.5;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -327,7 +327,7 @@ namespace WpfApp1
 
                     for (; warning <= 1.5;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -344,7 +344,7 @@ namespace WpfApp1
 
                     for (; warning <= 2;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -361,7 +361,7 @@ namespace WpfApp1
 
                     for (; warning <= 2;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -378,7 +378,7 @@ namespace WpfApp1
 
                     for (; warning <= 2.5;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -394,7 +394,7 @@ namespace WpfApp1
 
                     for (; warning <= 3;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -410,7 +410,7 @@ namespace WpfApp1
 
                     for (; warning <= 3;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -426,7 +426,7 @@ namespace WpfApp1
 
                     for (; warning <= 3.5;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -442,7 +442,7 @@ namespace WpfApp1
 
                     for (; warning <= 4;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -458,7 +458,7 @@ namespace WpfApp1
 
                     for (; warning <= 4;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -474,7 +474,7 @@ namespace WpfApp1
 
                     for (; warning <= 4.5;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -490,7 +490,7 @@ namespace WpfApp1
 
                     for (; warning <= 5;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -506,7 +506,7 @@ namespace WpfApp1
 
                     for (; warning <= 5;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -583,10 +583,6 @@ namespace WpfApp1
         }
         public void Germany()
         {
-
-
-
-
             if (type == 3)
             {
 
@@ -598,7 +594,7 @@ namespace WpfApp1
 
                     for (; warning <= 1.5;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -615,7 +611,7 @@ namespace WpfApp1
 
                     for (; warning <= 3;)
                     {
-                        warning = (valueS + 6) / (NumberN + 6);
+                        warning = (valueS + 6) / (NumberN + 1);
                         valueS += 6;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -632,7 +628,7 @@ namespace WpfApp1
 
                     for (; warning <= 4.5;)
                     {
-                        warning = (valueS + 9) / (NumberN + 9);
+                        warning = (valueS + 9) / (NumberN + 1);
                         valueS += 9;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -649,7 +645,7 @@ namespace WpfApp1
 
                     for (; warning <= 6;)
                     {
-                        warning = (valueS + 12) / (NumberN + 12);
+                        warning = (valueS + 12) / (NumberN + 1);
                         valueS += 12;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -666,7 +662,7 @@ namespace WpfApp1
 
                     for (; warning <= 7.5;)
                     {
-                        warning = (valueS + 15) / (NumberN + 15);
+                        warning = (valueS + 15) / (NumberN + 1);
                         valueS += 15;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -716,14 +712,14 @@ namespace WpfApp1
                 {
 
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "1" + "\r\n";
 
                     for (; warning < 1.6;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 2 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "2" + Properties.Resources.GenF + warning + "\r\n";
                     }
                     warning = 0;
 
@@ -732,14 +728,14 @@ namespace WpfApp1
                 {
 
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "2" + "\r\n";
 
                     for (; warning < 2.6;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "3" + Properties.Resources.GenF + warning + "\r\n";
                     }
                     warning = 0;
 
@@ -748,14 +744,14 @@ namespace WpfApp1
                 {
 
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "3" + "\r\n";
 
                     for (; warning < 3.6;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
                     }
                     warning = 0;
 
@@ -767,10 +763,10 @@ namespace WpfApp1
 
                     for (; warning < 4.6;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
-                        valueS += 4;
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -782,10 +778,10 @@ namespace WpfApp1
 
                     for (; warning < 5.6;)
                     {
-                        warning = (valueS + 6) / (NumberN + 6);
+                        warning = (valueS + 6) / (NumberN + 1);
                         valueS += 6;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -797,10 +793,10 @@ namespace WpfApp1
 
                     for (; warning < 6.6;)
                     {
-                        warning = (valueS + 7) / (NumberN + 7);
+                        warning = (valueS + 7) / (NumberN + 1);
                         valueS += 7;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 7 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "7" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -812,10 +808,10 @@ namespace WpfApp1
 
                     for (; warning < 7.6;)
                     {
-                        warning = (valueS + 8) / (NumberN + 8);
+                        warning = (valueS + 8) / (NumberN + 1);
                         valueS += 8;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 8 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "8" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -827,10 +823,10 @@ namespace WpfApp1
 
                     for (; warning < 8.6;)
                     {
-                        warning = (valueS + 9) / (NumberN + 9);
+                        warning = (valueS + 9) / (NumberN + 1);
                         valueS += 9;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 9 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "9" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -842,10 +838,10 @@ namespace WpfApp1
 
                     for (; warning < 9.6;)
                     {
-                        warning = (valueS + 10) / (NumberN + 10);
+                        warning = (valueS + 10) / (NumberN + 1);
                         valueS += 10;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 10 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "10" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -857,10 +853,10 @@ namespace WpfApp1
 
                     for (; warning < 10.6;)
                     {
-                        warning = (valueS + 11) / (NumberN + 11);
+                        warning = (valueS + 11) / (NumberN + 1);
                         valueS += 11;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 11 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "11" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -872,10 +868,10 @@ namespace WpfApp1
 
                     for (; warning < 11.6;)
                     {
-                        warning = (valueS + 12) / (NumberN + 12);
+                        warning = (valueS + 12) / (NumberN + 1);
                         valueS += 12;
                         NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 12 + Properties.Resources.GenF + warning + "\r\n";
+                        GEN.Text += Properties.Resources.GenN + "12" + Properties.Resources.GenF + warning + "\r\n";
                     }
 
                     warning = 0;
@@ -902,7 +898,7 @@ namespace WpfApp1
 
                     for (; warning < 1.6;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 2 + Properties.Resources.GenF + warning + "\r\n";
@@ -918,7 +914,7 @@ namespace WpfApp1
 
                     for (; warning < 2.6;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
@@ -934,7 +930,7 @@ namespace WpfApp1
 
                     for (; warning < 3.6;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
@@ -949,7 +945,7 @@ namespace WpfApp1
 
                     for (; warning < 4.6;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 4 + Properties.Resources.GenF + warning + "\r\n";
@@ -964,7 +960,7 @@ namespace WpfApp1
 
                     for (; warning < 5.6;)
                     {
-                        warning = (valueS + 6) / (NumberN + 6);
+                        warning = (valueS + 6) / (NumberN + 1);
                         valueS += 6;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 5 + Properties.Resources.GenF + warning + "\r\n";
@@ -979,7 +975,7 @@ namespace WpfApp1
 
                     for (; warning < 6.6;)
                     {
-                        warning = (valueS + 7) / (NumberN + 7);
+                        warning = (valueS + 7) / (NumberN + 1);
                         valueS += 7;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 7 + Properties.Resources.GenF + warning + "\r\n";
@@ -994,7 +990,7 @@ namespace WpfApp1
 
                     for (; warning < 7.6;)
                     {
-                        warning = (valueS + 8) / (NumberN + 8);
+                        warning = (valueS + 8) / (NumberN + 1);
                         valueS += 8;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 8 + Properties.Resources.GenF + warning + "\r\n";
@@ -1009,7 +1005,7 @@ namespace WpfApp1
 
                     for (; warning < 8.6;)
                     {
-                        warning = (valueS + 9) / (NumberN + 9);
+                        warning = (valueS + 9) / (NumberN + 1);
                         valueS += 9;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 9 + Properties.Resources.GenF + warning + "\r\n";
@@ -1024,7 +1020,7 @@ namespace WpfApp1
 
                     for (; warning < 9.6;)
                     {
-                        warning = (valueS + 10) / (NumberN + 10);
+                        warning = (valueS + 10) / (NumberN + 1);
                         valueS += 10;
                         NumberN += 1;
                         GEN.Text += Properties.Resources.GenN + 10 + Properties.Resources.GenF + warning + "\r\n";
@@ -1054,7 +1050,7 @@ namespace WpfApp1
 
                     for (; warning <= 1.5;)
                     {
-                        warning = (valueS + 2) / (NumberN + 2);
+                        warning = (valueS + 2) / (NumberN + 1);
                         valueS += 2;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -1072,7 +1068,7 @@ namespace WpfApp1
 
                     for (; warning <= 2.5;)
                     {
-                        warning = (valueS + 3) / (NumberN + 3);
+                        warning = (valueS + 3) / (NumberN + 1);
                         valueS += 3;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -1089,7 +1085,7 @@ namespace WpfApp1
 
                     for (; warning <= 3.5;)
                     {
-                        warning = (valueS + 4) / (NumberN + 4);
+                        warning = (valueS + 4) / (NumberN + 1);
                         valueS += 4;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -1106,7 +1102,7 @@ namespace WpfApp1
 
                     for (; warning <= 4.5;)
                     {
-                        warning = (valueS + 5) / (NumberN + 5);
+                        warning = (valueS + 5) / (NumberN + 1);
                         valueS += 5;
                         NumberN += 1;
                         warning = Math.Round(warning, 2);
@@ -1127,7 +1123,332 @@ namespace WpfApp1
                     Lister.Items[listbox.SelectedIndex] = result;
             }
         }
+        public void Finland()
+        {
+            if(type == 7)
+            {
+                if (result <= 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "4" + "\r\n";
 
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 5.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning < 5.6;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 1);
+                        valueS += 6;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "6" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 6.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "6" + "\r\n";
+
+                    for (; warning < 6.6;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 1);
+                        valueS += 7;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "7" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 7.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "7" + "\r\n";
+
+                    for (; warning < 7.6;)
+                    {
+                        warning = (valueS + 8) / (NumberN + 1);
+                        valueS += 8;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "8" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 8.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "8" + "\r\n";
+
+                    for (; warning < 8.6;)
+                    {
+                        warning = (valueS + 9) / (NumberN + 1);
+                        valueS += 9;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "9" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 9.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "9" + "\r\n";
+
+                    for (; warning < 9.6;)
+                    {
+                        warning = (valueS + 10) / (NumberN + 1);
+                        valueS += 10;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "10" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
+        public void Bulgaria()
+        {
+            if (type == 8)
+            {
+                if (result < 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "2" + "\r\n";
+
+                    for (; warning <= 2.5;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 1);
+                        valueS += 3;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "3" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 3.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "3" + "\r\n";
+
+                    for (; warning <= 3.5;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 1);
+                        valueS += 4;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
+
+                    }
+                    warning = 0;
+
+                }
+                else if (result < 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning <= 4.5;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else if (result < 5.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning <= 5.5;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 1);
+                        valueS += 6;
+                        NumberN += 1;
+                        warning = Math.Round(warning, 2);
+                        GEN.Text += Properties.Resources.GenN + "6" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + " - " + "6" + "\r\n";
+
+                }
+
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        }
+        public void Denmark()
+        {
+            if(type == 9)
+            {
+                if (result < 0)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "F" + "\r\n";
+
+                    for (; warning < 0;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 1);
+                        valueS += 2;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "Fx" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result < 2)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "Fx" + "\r\n";
+
+                    for (; warning < 1;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 1);
+                        valueS += 2;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "E" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result < 4)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "E" + "\r\n";
+
+                    for (; warning < 2;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 1);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "D" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result < 7)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "D" + "\r\n";
+
+                    for (; warning < 3.5;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 1);
+                        valueS += 7;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "C" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result < 10)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "C" + "\r\n";
+
+                    for (; warning < 5;)
+                    {
+                        warning = (valueS + 10) / (NumberN + 1);
+                        valueS += 10;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "B" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result < 12)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "B" + "\r\n";
+
+                    for (; warning < 6;)
+                    {
+                        warning = (valueS + 12) / (NumberN + 1);
+                        valueS += 12;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "A" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + "A" + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                if (result < 0)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "F";
+                }
+                else if (result < 2)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "Fx";
+                }
+                else if (result < 4)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "E";
+                }
+                else if (result < 7)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "D";
+                }
+                else if (result < 10)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "C";
+                }
+                else if (result < 12)
+                {
+                    Lister.Items[listbox.SelectedIndex] = "B";
+                }
+                else
+                {
+                    Lister.Items[listbox.SelectedIndex] = "A";
+                }
+            }
+        }
 
         public void BackgroundN()
         {
@@ -1300,7 +1621,18 @@ namespace WpfApp1
             if (lang == 6)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("cs-CZ");
-
+            }
+            if(lang == 7 )
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fi-FI");
+            }
+            if (lang == 8)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("bg-BG");
+            }
+            if (lang == 9)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("da-DK");
             }
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
@@ -1388,6 +1720,7 @@ namespace WpfApp1
                 C3.Background = Brushes.Blue;
                 C3.Visibility = Visibility.Visible;
                 C2.Visibility = Visibility.Visible;
+
                 T1.Visibility = Visibility.Visible;
                 T1.Text = "(6)";
                 T2.Visibility = Visibility.Visible;
@@ -1488,6 +1821,81 @@ namespace WpfApp1
 
                 Score.Height = 255;
                 Score.Margin = new Thickness(162, 152, 0, 0);
+            }
+            //Finland
+            if(type == 7)
+            {
+                D1.Content = "4";
+                D2.Content = "5";
+                D2.Background = Brushes.HotPink;
+                D3.Content = "6";
+                D3.Background = Brushes.Orange;
+                C1.Content = "7";
+                C1.Background = Brushes.Yellow;
+                C2.Content = "8";
+                C2.Background = Brushes.Green;
+                C3.Content = "9";
+                C3.Background = Brushes.Cyan;
+                B1.Content = "10";
+                B1.Background = Brushes.Blue;
+                C2.Visibility = Visibility.Visible;
+                C3.Visibility = Visibility.Visible;
+                B1.Visibility = Visibility.Visible;
+                Score.Height = 210;
+                Score.Margin = new Thickness(162, 197, 0, 0);
+            }
+            //Bulgaria
+            if(type == 8)
+            {
+                D1.Content = "2";
+                D2.Content = "3";
+                D2.Background = Brushes.Orange;
+                D3.Content = "4";
+                D3.Background = Brushes.Yellow;
+                C1.Content = "5";
+                C1.Background = Brushes.Green;
+                C2.Content = "6";
+                C2.Background = Brushes.Blue;
+                C2.Visibility = Visibility.Visible;
+
+                Score.Height = 255;
+                Score.Margin = new Thickness(162, 152, 0, 0);
+            }
+            //Denmark
+            if (type == 9)
+            {
+                D1.Content = "-3";
+                D2.Content = "0";
+                D2.Background = Brushes.HotPink;
+                D3.Content = "2";
+                D3.Background = Brushes.Orange;
+                C1.Content = "4";
+                C1.Background = Brushes.Yellow;
+                C2.Content = "7";
+                C2.Background = Brushes.Green;
+                C3.Content = "10";
+                C3.Background = Brushes.Cyan;
+                B1.Content = "12";
+                B1.Background = Brushes.Blue;
+                C2.Visibility = Visibility.Visible;
+                C3.Visibility = Visibility.Visible;
+                B1.Visibility = Visibility.Visible;
+                T1.Text = "(F)";
+                T1.Visibility = Visibility.Visible;
+                T2.Text = "(Fx)";
+                T2.Visibility = Visibility.Visible;
+                T3.Text = "(E)";
+                T3.Visibility = Visibility.Visible;
+                T4.Text = "(D)";
+                T4.Visibility = Visibility.Visible;
+                T5.Text = "(C)";
+                T5.Visibility = Visibility.Visible;
+                T6.Text = "(B)";
+                T6.Visibility = Visibility.Visible;
+                T7.Text = "(A)";
+                T7.Visibility = Visibility.Visible;
+                Score.Height = 210;
+                Score.Margin = new Thickness(162, 197, 0, 0);
             }
             if (lang == 2 || lang == 3 || lang == 6)
             {
@@ -2479,6 +2887,118 @@ namespace WpfApp1
                         Tres.Text = "-";
                     }
                 }
+                //Finland
+                if (type == 7)
+                {
+                    if (TotalResult <= 4.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 5.5)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 6.5)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 7.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 8.5)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 9.5)
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
+                //Bulgaria
+                if(type == 8)
+                {
+                    if (TotalResult <= 2.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    if (TotalResult <= 3.5)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 4.5)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else if (TotalResult <= 5.5)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = TotalResult.ToString();
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
+                //Denmark
+                if(type == 9)
+                {
+                    if (TotalResult < 0)
+                    {
+                        Tres.Foreground = Brushes.Red;
+                        Tres.Text = "F";
+                    }
+                    else if (TotalResult < 2)
+                    {
+                        Tres.Foreground = Brushes.HotPink;
+                        Tres.Text = "Fx";
+                    }
+                    else if (TotalResult < 4)
+                    {
+                        Tres.Foreground = Brushes.Orange;
+                        Tres.Text = "E";
+                    }
+                    else if (TotalResult < 7)
+                    {
+                        Tres.Foreground = Brushes.Yellow;
+                        Tres.Text = "D";
+                    }
+                    else if (TotalResult < 10)
+                    {
+                        Tres.Foreground = Brushes.Green;
+                        Tres.Text = "C";
+                    }
+                    else if (TotalResult < 12)
+                    {
+                        Tres.Foreground = Brushes.Cyan;
+                        Tres.Text = "B";
+                    }
+                    else if (TotalResult == 12)
+                    {
+                        Tres.Foreground = Brushes.Blue;
+                        Tres.Text = "A";
+                    }
+                    else
+                    {
+                        Tres.Foreground = Brushes.DarkRed;
+                        Tres.Text = "-";
+                    }
+                }
             }
             
         }
@@ -2496,14 +3016,14 @@ namespace WpfApp1
             Textbox1.Text = value.ToString();
             GEN.Clear();
             Score.Items.Add(valueN);
-           
+            
 
             if (ClickS == sizeC)
                 {
-               
+                valueS = value;
                 result = value / ClickS ;
                result = Math.Round(result, 2);
-                valueS = value;
+               
                 
                
                 TotalResult += result;
@@ -2519,6 +3039,15 @@ namespace WpfApp1
                 Ukraine();
                 //Belarus
                 Belarus();
+                //Czech
+                Czech();
+                //Finland
+                Finland();
+                //Bulgaria
+                Bulgaria();
+                //Denmark
+                Denmark();
+
                     value = 0;
                 result = 0;
                 ClickS = 0;

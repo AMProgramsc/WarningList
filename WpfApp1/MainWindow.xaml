@@ -56,8 +56,8 @@
 
             </MenuItem>
             <MenuItem x:Name="Reset" Header="{x:Static res:Resources.Reset}" Foreground="Black" Width="45" Click="Reset_Click"  />
-            <MenuItem x:Name="Save" Header="{x:Static res:Resources.Save}" Foreground="Black" Width="45" Click="Save_Click"   />
-            <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="48" Visibility="Hidden" >
+            <MenuItem x:Name="Save" Header="{x:Static res:Resources.Save}" Foreground="Black" Width="67" Click="Save_Click"   />
+            <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="70" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
                 <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
                 <MenuItem Name="AP" Header="All Paused" Click="AP_Click"  />
@@ -106,9 +106,9 @@
         <Button Name="A2" Content="11" HorizontalAlignment="Left" Margin="162,277,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
         <Button Name="A3" Content="12" HorizontalAlignment="Left" Margin="162,302,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
         <TextBlock Name="T1" HorizontalAlignment="Left" Margin="218,29,0,0" TextWrapping="Wrap" Text="(F)" VerticalAlignment="Top" Width="15" Visibility="Hidden" Height="19" RenderTransformOrigin="0.667,0.3"/>
-        <TextBlock Name="T2" HorizontalAlignment="Left" Margin="218,54,0,0" TextWrapping="Wrap" Text="(E)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
+        <TextBlock Name="T2" HorizontalAlignment="Left" Margin="218,54,0,0" TextWrapping="Wrap" Text="(E)" VerticalAlignment="Top" Width="19" Visibility="Hidden"/>
         <TextBlock Name="T3" HorizontalAlignment="Left" Margin="218,79,0,0" TextWrapping="Wrap" Text="(D)" VerticalAlignment="Top" Width="16" Visibility="Hidden"/>
-        <TextBlock Name="T4" HorizontalAlignment="Left" Margin="218,104,0,0" TextWrapping="Wrap" Text="(C)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
+        <TextBlock Name="T4" HorizontalAlignment="Left" Margin="218,104,0,0" TextWrapping="Wrap" Text="(C)" VerticalAlignment="Top" Width="17" Visibility="Hidden"/>
         <TextBlock Name="T5" HorizontalAlignment="Left" Margin="218,129,0,0" TextWrapping="Wrap" Text="(B)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
         <TextBlock Name="T6" HorizontalAlignment="Left" Margin="218,154,0,0" TextWrapping="Wrap" Text="(A)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
         <TextBlock Name="T7" HorizontalAlignment="Left" Margin="218,179,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>

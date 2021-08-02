@@ -111,10 +111,20 @@ namespace WpfApp1
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Message1, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    mainE = 1;
+                    File.WriteAllText("Exit.txt", mainE.ToString());
+                   
+                    Application.Current.Shutdown();
+                    break;
+                case MessageBoxResult.No:
 
-            this.Close();
-            Close();
-            Application.Current.Shutdown();
+                    break;
+            }
+          
         }
 
         private void ProgressLoad_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

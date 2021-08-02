@@ -65,10 +65,21 @@ namespace WpfApp1
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("cs-CZ");
             }
+            if (lang == 7)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fi-FI");
+            }
+            if (lang == 8)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("bg-BG");
+            }
+            if (lang == 9)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("da-DK");
+            }
             InitializeComponent();
         }
         private void NAME_KeyDown(object sender, KeyEventArgs e)
-        
         {
        
             if (e.Key == Key.Enter)

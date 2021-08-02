@@ -12,35 +12,144 @@
         <CheckBox x:Name="Fullscreen" Content="{x:Static res:Resources.Fullscreen}" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="158" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked" MouseEnter="Fullscreen_MouseEnter" MouseLeave="Fullscreen_MouseLeave"   />
         <CheckBox x:Name="VOID" Content="{x:Static res:Resources.Void}" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Visibility="Hidden" MouseEnter="VOID_MouseEnter" MouseLeave="VOID_MouseLeave" Checked="VOID_Checked"  />
         <TextBox Name="Texter" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="772" Background="{x:Null}" Foreground="White"/>
-        <Expander Header="{x:Static res:Resources.Language}" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="100" Foreground="White">
+        <Expander Header="{x:Static res:Resources.Language}" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="122" Foreground="White">
             <StackPanel>
-                <RadioButton Content="English" Background="White" Foreground="White" Checked="RadioButton_Checked_1"   />
-                <RadioButton Content="Русский" Background="White" Foreground="White" Checked="RadioButton_Checked_2"/>
-                <RadioButton Content="Français" Foreground="White" Checked="RadioButton_Checked_3" />
-                <RadioButton Content="Deutsche" Background="White" Foreground="White" Checked="RadioButton_Checked_4" />
-                <RadioButton Content="Український" Background="White" Foreground="White" Checked="RadioButton_Checked_5" />
-                <RadioButton Name="BY" Content="Беларускі" Background="White" Foreground="White" Checked="BY_Checked"  />
-                <RadioButton Name="CZ" Content="Čeština" Background="White" Foreground="White" Checked="CZ_Checked"   />
+                <RadioButton   Background="White" Foreground="White" Checked="RadioButton_Checked_1"     >
+                    <WrapPanel>
+                        <Image Source="https://www.ixpa-interim.com/wp-content/uploads/2019/01/Flags_UK.png" Width="17" Height="15" />
+                        <TextBlock Text=" English" Width="44" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_2">
+                    <WrapPanel>
+                        <Image Source="https://cdn.webshopapp.com/shops/94414/files/54940454/russia-flag-icon-free-download.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Русский" Width="49" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Foreground="White" Checked="RadioButton_Checked_3" >
+                    <WrapPanel>
+                        <Image Source="https://cdn.webshopapp.com/shops/94414/files/54002808/france-flag-icon-free-download.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Français" Width="49" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_4" >
+                    <WrapPanel>
+                        <Image Source="https://www.worldatlas.com/img/flag/de-flag.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Deutsche" Width="53" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_5" >
+                    <WrapPanel>
+                        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1599px-Flag_of_Ukraine.svg.png" Width="17" Height="15" />
+                        <TextBlock Text=" Український" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="BY"  Background="White" Foreground="White" Checked="BY_Checked"  >
+                    <WrapPanel>
+                        <Image Source="https://cdn.pixabay.com/photo/2015/11/12/15/52/flag-1040528_960_720.png" Width="17" Height="15" />
+                        <TextBlock Text=" Беларускі" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="CZ"  Background="White" Foreground="White" Checked="CZ_Checked"   >
+                    <WrapPanel>
+                        <Image Source="https://store.donanimhaber.com/6a/de/9c/6ade9c25b5c123080a64f1196d90a45f.png" Width="17" Height="15" />
+                        <TextBlock Text=" Čeština" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="FI"  Background="White" Foreground="White" Checked="FI_Checked"   >
+                    <WrapPanel>
+                        <Image Source="https://pbs.twimg.com/media/EJQFYGzWwAA-HoX.png" Width="17" Height="15" />
+                        <TextBlock Text=" Suomalainen" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="BG"  Background="White" Foreground="White" Checked="BG_Checked"   >
+                    <WrapPanel>
+                        <Image Source="https://flagpedia.asia/data/flags/ultra/bg.png" Width="17" Height="15" />
+                        <TextBlock Text=" Български" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="DK"  Background="White" Foreground="White" Checked="DK_Checked"    >
+                    <WrapPanel>
+                        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bandera_de_Huéscar_%28Granada%29.png/1600px-Bandera_de_Huéscar_%28Granada%29.png" Width="17" Height="15" />
+                        <TextBlock Text=" Dansk" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
             </StackPanel>
         </Expander>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Button Content="{x:Static res:Resources.Restart}" HorizontalAlignment="Left" Margin="682,46,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" />
-            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="111,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White">
+            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="133,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White">
                 <StackPanel>
-                    <RadioButton Content="Российская" Background="White" Foreground="White" Checked="RadioButton_Checked_6"   />
-                    <RadioButton Content="English" Background="White" Foreground="White" Checked="RadioButton_Checked_7"  />
-                    <RadioButton Content="Français" Foreground="White" Checked="RadioButton_Checked_8"   />
-                    <RadioButton Content="Deutsche" Background="White" Foreground="White" Checked="RadioButton_Checked_9"  />
-                    <RadioButton Content="Українська" Background="White" Foreground="White" Checked="RadioButton_Checked_10" />
-                    <RadioButton x:Name="BE" Content="Беларусі" Background="White" Foreground="White" Checked="BE_Checked"  />
-                    <RadioButton x:Name="CS" Content="Čeština" Background="White" Foreground="White" Checked="CS_Checked"   />
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_6"   >
+                        <WrapPanel>
+                            <Image Source="https://cdn.webshopapp.com/shops/94414/files/54940454/russia-flag-icon-free-download.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Российская" Width="68" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Background="White" Foreground="White" Checked="RadioButton_Checked_7"  >
+                        <WrapPanel>
+                            <Image Source="https://www.ixpa-interim.com/wp-content/uploads/2019/01/Flags_UK.png" Width="17" Height="15" />
+                            <TextBlock Text=" English" Width="44" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Foreground="White" Checked="RadioButton_Checked_8"   >
+                        <WrapPanel>
+                            <Image Source="https://cdn.webshopapp.com/shops/94414/files/54002808/france-flag-icon-free-download.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Français" Width="49" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_9"  >
+                        <WrapPanel>
+                            <Image Source="https://www.worldatlas.com/img/flag/de-flag.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Deutsche" Width="53" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_10" >
+                        <WrapPanel>
+                            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1599px-Flag_of_Ukraine.svg.png" Width="17" Height="15" />
+                            <TextBlock Text=" Українська" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton x:Name="BE"  Background="White" Foreground="White" Checked="BE_Checked"  >
+                        <WrapPanel>
+                            <Image Source="https://cdn.pixabay.com/photo/2015/11/12/15/52/flag-1040528_960_720.png" Width="17" Height="15" />
+                            <TextBlock Text=" Беларускі" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton x:Name="CS"  Background="White" Foreground="White" Checked="CS_Checked"   >
+                        <WrapPanel>
+                            <Image Source="https://store.donanimhaber.com/6a/de/9c/6ade9c25b5c123080a64f1196d90a45f.png" Width="17" Height="15" />
+                            <TextBlock Text=" Čeština" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="fi"  Background="White" Foreground="White" Checked="fi_Checked_1"   >
+                        <WrapPanel>
+                            <Image Source="https://pbs.twimg.com/media/EJQFYGzWwAA-HoX.png" Width="17" Height="15" />
+                            <TextBlock Text=" Suomalainen" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="bg"  Background="White" Foreground="White" Checked="bg_Checked_1"   >
+                        <WrapPanel>
+                            <Image Source="https://flagpedia.asia/data/flags/ultra/bg.png" Width="17" Height="15" />
+                            <TextBlock Text=" Български" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="DA"  Background="White" Foreground="White" Checked="DA_Checked"    >
+                        <WrapPanel>
+                            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bandera_de_Huéscar_%28Granada%29.png/1600px-Bandera_de_Huéscar_%28Granada%29.png" Width="17" Height="15" />
+                            <TextBlock Text=" Dansk" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
                 </StackPanel>
             </Expander>
             <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_1" />
         </Grid>
         <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Pb_Checked" MouseEnter="Pb_MouseEnter" MouseLeave="Pb_MouseLeave" Unchecked="Pb_Unchecked"    />
         <CheckBox x:Name="Sound" Content="{x:Static res:Resources.Sound}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" />
-        <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="131" Checked="Test_Checked" Unchecked="Test_Unchecked" MouseEnter="Test_MouseEnter" MouseLeave="Test_MouseLeave"  />
+        <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Test_Checked" Unchecked="Test_Unchecked" MouseEnter="Test_MouseEnter" MouseLeave="Test_MouseLeave"  />
 
 
 
