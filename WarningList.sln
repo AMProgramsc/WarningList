@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarningList", "WpfApp1\WarningList.csproj", "{57CD333C-5D34-4134-AC7F-8011F6E09319}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarningList", "WarningList\WarningList.csproj", "{57CD333C-5D34-4134-AC7F-8011F6E09319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
