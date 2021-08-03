@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="AboutMe" xml:space="preserve">
+    <value>Hallo! Mein Name Alexander! Es sind meine drei Projekte Ihr kennt mich wahrscheinlich von zwei anderen Projekten, nämlich RPG BASIC und Snake. Ich programmiere seit 3 Jahren. Meine Hauptklassifizierung ist C++, C (Newble) und C # (3 - 6 Mounts). Die Entwicklung des Programms schreitet bis heute voran...</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>Über mich:</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Automatische Auswahl</value>
+  </data>
+  <data name="AutoT" xml:space="preserve">
+    <value>Wählt automatisch den gewünschten Systemtyp entsprechend der ausgewählten Sprache aus</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Hintergrund</value>
+  </data>
+  <data name="Biology" xml:space="preserve">
+    <value>Biologie</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Fett gedruckt</value>
+  </data>
+  <data name="Box1" xml:space="preserve">
+    <value>Beenden...</value>
+  </data>
+  <data name="Box2" xml:space="preserve">
+    <value>Bestätigen</value>
+  </data>
+  <data name="Chemistry" xml:space="preserve">
+    <value>Chemie</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farbe</value>
+  </data>
+  <data name="Computerscience" xml:space="preserve">
+    <value>Informatik</value>
+  </data>
+  <data name="Creator" xml:space="preserve">
+    <value>Created by AMPrograms</value>
+  </data>
+  <data name="Debug" xml:space="preserve">
+    <value>Debug-Modus</value>
+  </data>
+  <data name="DebugD" xml:space="preserve">
+    <value>Debuggen</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>Beschreibung zu allen Versionen unter dem Link:</value>
+  </data>
+  <data name="Dialoge1" xml:space="preserve">
+    <value>Name und Nachname eingeben:</value>
+  </data>
+  <data name="Dialoge2" xml:space="preserve">
+    <value>Das Thema wechseln</value>
+  </data>
+  <data name="Dialoge3" xml:space="preserve">
+    <value>Bestätigen?</value>
+  </data>
+  <data name="Dialoge4" xml:space="preserve">
+    <value>Drücken Sie die Tasten für die Punktzahl</value>
+  </data>
+  <data name="Dialoge5" xml:space="preserve">
+    <value>Namensbetreff eingeben</value>
+  </data>
+  <data name="Dialoge6" xml:space="preserve">
+    <value>Element zum Löschen anklicken!</value>
+  </data>
+  <data name="Dialoge7" xml:space="preserve">
+    <value>Element zum Bearbeiten anklicken!</value>
+  </data>
+  <data name="Dialoge8" xml:space="preserve">
+    <value>Nett! Drücken Sie zur Bestätigung die rechte Maustaste:</value>
+  </data>
+  <data name="Dialoge9" xml:space="preserve">
+    <value>Error! Punktzahl sehr klein!</value>
+  </data>
+  <data name="Dm" xml:space="preserve">
+    <value>Debug-Modus, mehr Möglichkeiten</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Art des Bildungssystems</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="EnterC" xml:space="preserve">
+    <value>Punktzahl eingeben:</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Ausgang</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Schriftart</value>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>Schriftfarbe</value>
+  </data>
+  <data name="Fs" xml:space="preserve">
+    <value>Dies ist der Vollbildmodus</value>
+  </data>
+  <data name="Fullscreen" xml:space="preserve">
+    <value>Vollbildmodus</value>
+  </data>
+  <data name="Gen" xml:space="preserve">
+    <value>Ihre mittlere Punktzahl</value>
+  </data>
+  <data name="Gen1" xml:space="preserve">
+    <value>WARNUNG!!! Niedriger Punktestand!</value>
+  </data>
+  <data name="Gen2" xml:space="preserve">
+    <value>Warnung! Punktzahl gleich 3!</value>
+  </data>
+  <data name="Gen3" xml:space="preserve">
+    <value>Warnung! Punktzahl gleich 4!</value>
+  </data>
+  <data name="Gen4" xml:space="preserve">
+    <value>Gesamtpunktzahl ist normal! ;)</value>
+  </data>
+  <data name="GenF" xml:space="preserve">
+    <value>  zum </value>
+  </data>
+  <data name="GenN" xml:space="preserve">
+    <value>Du brauchst:</value>
+  </data>
+  <data name="Geography" xml:space="preserve">
+    <value>Erdkunde</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Geschichte</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Bildanleitung</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Kursiv</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="Literature" xml:space="preserve">
+    <value>Literatur</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Belastung</value>
+  </data>
+  <data name="Match" xml:space="preserve">
+    <value>Spiel</value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>Willst du wirklich gehen?</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Namer" xml:space="preserve">
+    <value>Zum Bearbeiten des Namensbetreffs</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="Pb" xml:space="preserve">
+    <value>Verantwortlich für die Sichtbarkeit des Fortschrittsbalkens</value>
+  </data>
+  <data name="PE" xml:space="preserve">
+    <value>BKL</value>
+  </data>
+  <data name="Physics" xml:space="preserve">
+    <value>Physik</value>
+  </data>
+  <data name="Progressbar" xml:space="preserve">
+    <value>Progressbar</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Neu starten</value>
+  </data>
+  <data name="Rights" xml:space="preserve">
+    <value>©All rights reserved</value>
+  </data>
+  <data name="RusLeng" xml:space="preserve">
+    <value>Deutsche Sprache</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Secname" xml:space="preserve">
+    <value>Nachname:</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Solicalscience" xml:space="preserve">
+    <value>Sozialwissenschaften</value>
+  </data>
+  <data name="Sound" xml:space="preserve">
+    <value>Klang</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Succeses" xml:space="preserve">
+    <value>Erfolge! Starten Sie das Programm neu, damit die Änderungen wirksam werden.</value>
+  </data>
+  <data name="Sure" xml:space="preserve">
+    <value>Bist du sicher?</value>
+  </data>
+  <data name="SureVoid1" xml:space="preserve">
+    <value>Das solltest du nicht tun...</value>
+  </data>
+  <data name="SureVoid2" xml:space="preserve">
+    <value>Mach das nicht!</value>
+  </data>
+  <data name="SureVoid3" xml:space="preserve">
+    <value>Hinausgehen!</value>
+  </data>
+  <data name="SV2" xml:space="preserve">
+    <value>Sicher?</value>
+  </data>
+  <data name="SV3" xml:space="preserve">
+    <value>Und wer wird dich fragen...</value>
+  </data>
+  <data name="Totalresult" xml:space="preserve">
+    <value>Gesamtergebnis:</value>
+  </data>
+  <data name="Tres" xml:space="preserve">
+    <value>Gesamtergebnis:</value>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>Unterstreichen</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versions</value>
+  </data>
+  <data name="Void" xml:space="preserve">
+    <value>VOID</value>
+  </data>
+  <data name="Voider" xml:space="preserve">
+    <value>Das sollte man nicht anklicken...</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warnung! Taste X nicht drücken, sonst hängt sich der laufende Prozess im Taskmanager auf!</value>
+  </data>
+  <data name="WarningList" xml:space="preserve">
+    <value>WarningList - Dies ist ein Programm, das Ihren GPA durch Eingabe mehrerer Werte berechnet. Dieses Programm ist sowohl für Schüler als auch für Studenten sehr gut geeignet...</value>
+  </data>
+  <data name="Yname" xml:space="preserve">
+    <value>Dein Name:</value>
+  </data>
+  <data name="Ysurname" xml:space="preserve">
+    <value>Dein Familienname:</value>
+  </data>
+</root>

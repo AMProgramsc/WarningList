@@ -1,0 +1,157 @@
+﻿<Window x:Class="WpfApp1.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1" 
+        xmlns:res="clr-namespace:WpfApp1.Properties"
+        mc:Ignorable="d"
+        Title="Settings"  Background="Black" Closing="Window_Closing"  Width="800" Height="450" >
+    <Grid >
+        <CheckBox Name="Debug" Content="{x:Static res:Resources.Debug}" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="145" Checked="CheckBox_Checked" Unchecked="Debug_Unchecked" MouseEnter="Debug_MouseEnter" MouseLeave="Debug_MouseLeave"  />
+        <CheckBox x:Name="Fullscreen" Content="{x:Static res:Resources.Fullscreen}" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="158" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked" MouseEnter="Fullscreen_MouseEnter" MouseLeave="Fullscreen_MouseLeave"   />
+        <CheckBox x:Name="VOID" Content="{x:Static res:Resources.Void}" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Visibility="Hidden" MouseEnter="VOID_MouseEnter" MouseLeave="VOID_MouseLeave" Checked="VOID_Checked"  />
+        <TextBox Name="Texter" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="772" Background="{x:Null}" Foreground="White"/>
+        <Expander Header="{x:Static res:Resources.Language}" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="122" Foreground="White">
+            <StackPanel>
+                <RadioButton   Background="White" Foreground="White" Checked="RadioButton_Checked_1"     >
+                    <WrapPanel>
+                        <Image Source="Flags_UK.png" Width="17" Height="15" />
+                        <TextBlock Text=" English" Width="44" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_2">
+                    <WrapPanel>
+                        <Image Source="RU.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Русский" Width="49" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Foreground="White" Checked="RadioButton_Checked_3" >
+                    <WrapPanel>
+                        <Image Source="Fr.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Français" Width="49" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_4" >
+                    <WrapPanel>
+                        <Image Source="de-flag.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Deutsche" Width="53" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_5" >
+                    <WrapPanel>
+                        <Image Source="UA.png" Width="17" Height="15" />
+                        <TextBlock Text=" Український" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="BY"  Background="White" Foreground="White" Checked="BY_Checked"  >
+                    <WrapPanel>
+                        <Image Source="BE.png" Width="17" Height="15" />
+                        <TextBlock Text=" Беларускі" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="CZ"  Background="White" Foreground="White" Checked="CZ_Checked"   >
+                    <WrapPanel>
+                        <Image Source="CZ.png" Width="17" Height="15" />
+                        <TextBlock Text=" Čeština" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="FI"  Background="White" Foreground="White" Checked="FI_Checked"   >
+                    <WrapPanel>
+                        <Image Source="fl.jpg" Width="17" Height="15" />
+                        <TextBlock Text=" Suomalainen" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="BG"  Background="White" Foreground="White" Checked="BG_Checked"   >
+                    <WrapPanel>
+                        <Image Source="bg.png" Width="17" Height="15" />
+                        <TextBlock Text=" Български" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Name="DK"  Background="White" Foreground="White" Checked="DK_Checked"    >
+                    <WrapPanel>
+                        <Image Source="DK.png" Width="17" Height="15" />
+                        <TextBlock Text=" Dansk" Width="72" />
+                    </WrapPanel>
+                </RadioButton>
+            </StackPanel>
+        </Expander>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="{x:Static res:Resources.Restart}" HorizontalAlignment="Left" Margin="682,46,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" />
+            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="133,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White">
+                <StackPanel>
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_6"   >
+                        <WrapPanel>
+                            <Image Source="RU.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Российская" Width="68" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Background="White" Foreground="White" Checked="RadioButton_Checked_7"  >
+                        <WrapPanel>
+                            <Image Source="Flags_UK.png" Width="17" Height="15" />
+                            <TextBlock Text=" English" Width="44" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Foreground="White" Checked="RadioButton_Checked_8"   >
+                        <WrapPanel>
+                            <Image Source="Fr.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Français" Width="49" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_9"  >
+                        <WrapPanel>
+                            <Image Source="de-flag.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Deutsche" Width="53" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_10" >
+                        <WrapPanel>
+                            <Image Source="UA.png" Width="17" Height="15" />
+                            <TextBlock Text=" Українська" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton x:Name="BE"  Background="White" Foreground="White" Checked="BE_Checked"  >
+                        <WrapPanel>
+                            <Image Source="BE.png" Width="17" Height="15" />
+                            <TextBlock Text=" Беларускі" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton x:Name="CS"  Background="White" Foreground="White" Checked="CS_Checked"   >
+                        <WrapPanel>
+                            <Image Source="CZ.png" Width="17" Height="15" />
+                            <TextBlock Text=" Čeština" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="fi"  Background="White" Foreground="White" Checked="fi_Checked_1"   >
+                        <WrapPanel>
+                            <Image Source="fl.jpg" Width="17" Height="15" />
+                            <TextBlock Text=" Suomalainen" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="bg"  Background="White" Foreground="White" Checked="bg_Checked_1"   >
+                        <WrapPanel>
+                            <Image Source="bg.png" Width="17" Height="15" />
+                            <TextBlock Text=" Български" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Name="DA"  Background="White" Foreground="White" Checked="DA_Checked"    >
+                        <WrapPanel>
+                            <Image Source="DK.png" Width="17" Height="15" />
+                            <TextBlock Text=" Dansk" Width="72" />
+                        </WrapPanel>
+                    </RadioButton>
+                </StackPanel>
+            </Expander>
+            <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_1" />
+        </Grid>
+        <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Pb_Checked" MouseEnter="Pb_MouseEnter" MouseLeave="Pb_MouseLeave" Unchecked="Pb_Unchecked"    />
+        <CheckBox x:Name="Sound" Content="{x:Static res:Resources.Sound}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" />
+        <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Test_Checked" Unchecked="Test_Unchecked" MouseEnter="Test_MouseEnter" MouseLeave="Test_MouseLeave"  />
+
+
+
+    </Grid>
+</Window>
