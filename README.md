@@ -1,6 +1,6 @@
 # WarningList
 
-When you find an error, bug, or just want to somehow help in development, write to email <alexmasalov17@gmail.com>
+When you find an error, bug, or just want to somehow help in development, write to email <alexmasalov21@gmail.com>
 
 # Launching the program
 
