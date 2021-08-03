@@ -1,10 +1,6 @@
 # WarningList
 
-Hi it's my new project! Your name WarningList. 
-This programm allows you to evaluate your situation with ratings. 
-This program is only suitable for students who need to quickly calculate their average score. So far, the program is quite raw. 
-I will try to release updates for my creation as often as possible. :)
-when you find an error, bug, or just want to somehow help in development, write to email <alexmasalov17@gmail.com>
+When you find an error, bug, or just want to somehow help in development, write to email <alexmasalov17@gmail.com>
 
 # Launching the program
 
@@ -25,14 +21,11 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 
 -------------------------------
 # Latest News
+* 03.07.2021 - Offical release WarningList 0.8 Beta
 * 02.07.2021 - Offical release WarningList 0.7.9 Pre-beta
 * 30.07.2021 - Offical release WarningList 0.7.8 Pre-beta
 * 28.07.2021 - Offical release WarningList 0.7.7 Pre-beta
 * 27.07.2021 - Offical release WarningList 0.7.6 Pre-beta
-* 23.07.2021 - Offical release WarningList 0.7.4 Alpha
-* 22.07.2021 - Offical release WarningList 0.7.3 Alpha
-* 21.07.2021 - Offical release WarningList 0.7.2 Alpha
-* 20.07.2021 - Offical release WarningList 0.7.1 Alpha
 * 19.07.2021 - Offical release WarningList 0.7 Alpha
 * 06.07.2021 - Offical release WarningList 0.6 Alpha
 * 23.06.2021 - First offical release Alpha version WarningList
