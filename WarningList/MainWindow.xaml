@@ -9,9 +9,8 @@
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" Activated="Window_Activated" >
-
-
-    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown" >
+ 
+    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown" KeyDown="Root_KeyDown" >
         
         <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  Background="{x:Null}"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" Drop="listbox_Drop"   >
@@ -37,7 +36,7 @@
                 </ContextMenu>
             </ListBox.ContextMenu>
         </ListBox>
-        <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="267,27,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652" IsReadOnly="True" Background="{x:Null}" dd:DragDrop.IsDragSource="False" dd:DragDrop.IsDropTarget="False"/>
+        <TextBox Name="Textbox1" HorizontalAlignment="Left" Height="23" Margin="267,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" RenderTransformOrigin="1,0.652" IsReadOnly="True" Background="{x:Null}" dd:DragDrop.IsDragSource="False" dd:DragDrop.IsDropTarget="False"/>
         <Menu x:Name="Menu" Height="24" VerticalAlignment="Top" Foreground="Black" Background="#FFC5C5C5" BorderBrush="Gray">
             <MenuItem Header="{x:Static res:Resources.Options}" Foreground="Black" Width="76">
                 <TextBlock Text="{x:Static res:Resources.Color}" Width="70" />
@@ -68,16 +67,16 @@
                 <Separator/>
             </MenuItem>
             <MenuItem x:Name="Reset" Header="{x:Static res:Resources.Reset}" Foreground="Black" Width="49" Click="Reset_Click"  />
-           
+
             <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="70" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
                 <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
                 <MenuItem Name="AP" Header="All Paused" Click="AP_Click"  />
                 <MenuItem Name="R" Header="Reset" Click="R_Click"   />
             </MenuItem>
-           
+
         </Menu>
-        <Button Name="D1" Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
+        <Button  Name="D1" Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
         <Button Name="D2" Content="3" HorizontalAlignment="Left" Margin="162,52,0,0" VerticalAlignment="Top" Width="100" Background="Yellow" Height="20"/>
         <Button Name="D3" Content="4" HorizontalAlignment="Left" Margin="162,77,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>
         <Button Name="C1" Content="5" HorizontalAlignment="Left" Margin="162,102,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>

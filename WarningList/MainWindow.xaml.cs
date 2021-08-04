@@ -2391,6 +2391,9 @@ namespace WpfApp1
             }
 
         }
+
+       
+
         private void TextBox_MouseEnter(object sender, MouseEventArgs e)
         {
             Namer.Clear();
@@ -2799,6 +2802,93 @@ namespace WpfApp1
          
         }
 
+        private void Root_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+                try
+                {
+                if (Textbox1.Text != "")
+                {
+                    ClickS++;
+                    string mSting = e.Key.ToString();
+                    string NewString = mSting.TrimStart('D');
+                    NumberN = ClickS;
+                    value += Int32.Parse(NewString.ToString());
+                    valueN = Int32.Parse(NewString.ToString());
+                    Clicker.Text = ClickS.ToString();
+                    Textbox1.Text = value.ToString();
+                    GEN.Clear();
+                    Score.Items.Add(valueN);
+                    if (ClickS == sizeC)
+                    {
+                        valueS = value;
+                        result = value / ClickS;
+                        result = Math.Round(result, 2);
+
+
+
+                        TotalResult += result;
+                        //Russian
+                        Russian();
+                        //English
+                        English();
+                        //French
+                        French();
+                        //Germany
+                        Germany();
+                        //Ukraine
+                        Ukraine();
+                        //Belarus
+                        Belarus();
+                        //Czech
+                        Czech();
+                        //Finland
+                        Finland();
+                        //Bulgaria
+                        Bulgaria();
+                        //Denmark
+                        Denmark();
+
+                        value = 0;
+                        result = 0;
+                        ClickS = 0;
+                        sizeC = 0;
+                        if (Lister.Items[listbox.SelectedIndex] != "-")
+                        {
+                            sizeS++;
+                        }
+                        else
+                        {
+
+                        }
+                        EnterC.IsEnabled = true;
+                        foreach (UIElement el in Root.Children)
+                        {
+                            if (el is Button)
+                            {
+                                ((Button)el).IsEnabled = false;
+                            }
+
+                        }
+                        Textbox1.Clear();
+                        EnterC.Clear();
+                        EnterC.IsEnabled = false;
+                        listbox.IsEnabled = true;
+                        Score.Items.Clear();
+                    }
+                    Res();
+                }
+                }
+
+                catch (Exception exp)
+                {
+                    DialogeW.Text = exp.Message;
+                ClickS--;
+                }
+            
+            
+        }
+
         //Color pick
         private void AE_Click(object sender, RoutedEventArgs e)
         {
@@ -2958,9 +3048,10 @@ namespace WpfApp1
                     }
                     else
                     {
-
+                        
                         DialogeW.Text = Properties.Resources.Dialoge4;
                         EnterC.IsEnabled = false;
+                       
                         foreach (UIElement el in Root.Children)
                         {
                             if (el is Button)
@@ -2969,6 +3060,7 @@ namespace WpfApp1
                             }
 
                         }
+                        Textbox1.Text = "0";
                     }
                 }
                 catch(Exception exp)
@@ -2987,8 +3079,6 @@ namespace WpfApp1
            
             cls = 0;
             cls2 = 0;
-
-            //Delete fuction
 
             //Item pick
 
@@ -3088,6 +3178,7 @@ namespace WpfApp1
                     }
 
                 }
+                Textbox1.Clear();
                 EnterC.Clear();
                 EnterC.IsEnabled = false;
                 listbox.IsEnabled = true;
