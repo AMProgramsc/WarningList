@@ -12,7 +12,7 @@ When you find an error, bug, or just want to somehow help in development, write 
 # System requirements
 
 * Windows 7,8, 10 with installed .NET Framework 4.7.2v and higher
-* For Basic version - Visual C++ 15-19 and higher
+* For Basic version - Visual C++ 17 and higher
 -------------------------------
 # License information
 Extended WarningList is provided under the Apache License 2.0.
@@ -21,6 +21,7 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 
 -------------------------------
 # Latest News
+* 04.07.2021 - Offical release WarningList 0.8.1 Beta
 * 03.07.2021 - Offical release WarningList 0.8 Beta
 * 02.07.2021 - Offical release WarningList 0.7.9 Pre-beta
 * 30.07.2021 - Offical release WarningList 0.7.8 Pre-beta
