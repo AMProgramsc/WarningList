@@ -50,6 +50,7 @@ namespace WpfApp1
         bool name = false;
         bool enter = false;
         bool drop = false;
+        bool res = false;
         int Count;
         int stringS,countS , countE;
         int hit = 0;
@@ -1454,7 +1455,6 @@ namespace WpfApp1
         {
             bg = 1;
             Root.Background = Brushes.Black;
-            Menu.Background = Brushes.White;
             Lister.Foreground = Brushes.White;
             EnterC.Foreground = Brushes.White;
             Textbox1.Foreground = Brushes.White;
@@ -1469,8 +1469,8 @@ namespace WpfApp1
         public void BackgroundU()
         {
             bg = 0;
+            
             Root.Background = Brushes.White;
-            Menu.Background = Brushes.Gray;
             Lister.Foreground = Brushes.Black;
             EnterC.Foreground = Brushes.Black;
             Textbox1.Foreground = Brushes.Black;
@@ -2490,40 +2490,42 @@ namespace WpfApp1
           
           
                 n.Show();
-               
+            Name.IsEnabled = false;
             
         }
 
         //Functon delete for Score
         private void Score_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            DialogeW.Text = Properties.Resources.Dialoge3;
+          
+            if (res == false)
+            {
+                DialogeW.Text = Properties.Resources.Dialoge3;
                 MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
 
 
-                    // Score.SelectedItem = false;
-                    value -= Int32.Parse(Score.SelectedItem.ToString());
-                    Score.Items.Remove(Score.SelectedItem);
-                  
-                    ClickS--;
-                        DialogeW.Text = Properties.Resources.Dialoge4;
-                  
+                        // Score.SelectedItem = false;
+                        res = true;
+                        value -= Int32.Parse(Score.SelectedItem.ToString());
+                        Score.Items.Remove(Score.SelectedItem);
 
-                    break;
+                        ClickS--;
+                        DialogeW.Text = Properties.Resources.Dialoge4;
+                       
+
+                        break;
                     case MessageBoxResult.No:
                         Score.SelectedItem = false;
                         DialogeW.Text = Properties.Resources.Dialoge4;
-                        
+
                         break;
 
                 }
-            result = MessageBoxResult.No;
-
-
+            }
+            res = false;
         }
 
    //Background pick
@@ -2882,7 +2884,7 @@ namespace WpfApp1
 
                 catch (Exception exp)
                 {
-                    DialogeW.Text = exp.Message;
+                    
                 ClickS--;
                 }
             
@@ -3051,7 +3053,7 @@ namespace WpfApp1
                         
                         DialogeW.Text = Properties.Resources.Dialoge4;
                         EnterC.IsEnabled = false;
-                       
+
                         foreach (UIElement el in Root.Children)
                         {
                             if (el is Button)
