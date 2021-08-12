@@ -1,0 +1,76 @@
+﻿using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace WpfApp1
+{
+    /// <summary>
+    /// Логика взаимодействия для CustomET.xaml
+    /// </summary>
+    
+    public partial class CustomET : Window
+    {
+        
+        public int ex;
+        public int tx;
+        public int bx;
+        public CustomET()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.ShowDialog();
+            try 
+            {
+                ImageSource image =  new ImageSourceConverter().ConvertFromString(dialog.FileName) as ImageSource;
+                FP.Text = dialog.FileName;
+                IP.Source = image;
+            }
+            catch(Exception exp)
+            {
+
+            }
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ex = 1;
+            this.Visibility = Visibility.Hidden;
+
+        }
+
+        private void CP_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            tx = CP.SelectedIndex;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            bx = Int32.Parse(BP.Text);
+            
+
+        }
+    }
+}

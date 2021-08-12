@@ -79,6 +79,11 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom.cs" />
+    <Compile Include="CustomEST.xaml.cs">
+      <DependentUpon>CustomEST.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomETNameViewModel.cs" />
     <Compile Include="Informations.xaml.cs">
       <DependentUpon>Informations.xaml</DependentUpon>
     </Compile>
@@ -144,6 +149,10 @@
       <DependentUpon>WindowLoad.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomEST.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

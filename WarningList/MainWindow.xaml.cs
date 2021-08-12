@@ -27,7 +27,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         UserInfo user = new UserInfo();
-     
+
         SernameD snr = new SernameD();
      
         NameD n = new NameD();
@@ -2106,6 +2106,7 @@ namespace WpfApp1
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("da-DK");
             }
+            
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
             check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
@@ -2378,11 +2379,10 @@ namespace WpfApp1
                 {
                     if (el is Button)
                     {
-                    ((Button)el).Click += Button_Click;
-                    ((Button)el).IsEnabled = false;
-
+                        ((Button)el).Click += Button_Click;
+                        ((Button)el).IsEnabled = false;
                     }
-
+                
                 }
 
             if (check == 1)
