@@ -156,3 +156,5 @@ C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\ru-RU\
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\WarningList.csproj.CopyComplete
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\WarningList.exe
 C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\WarningList.pdb
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\CustomEST.g.cs
+C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\obj\Debug\CustomEST.baml
