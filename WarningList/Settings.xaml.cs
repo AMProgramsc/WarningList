@@ -30,7 +30,6 @@ namespace WpfApp1
         int type = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
         int auto = Int32.Parse(File.ReadLines("Settings.txt").Skip(11).First());
 
-        
         public int _width =100;
         public int _height = 100;
     
@@ -62,12 +61,43 @@ namespace WpfApp1
                 Type.IsEnabled = false;
                 Texter.Clear();
             }
+            if(File.ReadAllText(@"EST.txt") != "")
+            {
+                int strings = System.IO.File.ReadAllLines("EST.txt").Length;
+                int str = 0;
+                int data = strings / 6;
+                for (int path = 0; path < data; path ++)
+                {
+                    WrapPanel wrapPanel = new WrapPanel();
+                    RadioButton rdn = new RadioButton();
+                    if (File.ReadLines("EST.txt").Skip(str + 3).First() != "")
+                    {
+                        ImageSource image = new ImageSourceConverter().ConvertFromString(File.ReadLines("EST.txt").Skip(str + 3).First()) as ImageSource;
+                        wrapPanel.Children.Add(new Image { Source = image, Width = 17, Height = 15 });
+                    }
+                    wrapPanel.Children.Add(new TextBlock { Text = File.ReadLines("EST.txt").Skip(str + 1).First(), Foreground = Brushes.White });
+
+                    rdn.TabIndex = Int32.Parse(File.ReadLines("EST.txt").Skip(5).First());
+                    rdn.Content = wrapPanel;
+                    rdn.Name = File.ReadLines("EST.txt").Skip(str + 1).First();
+                    Tsys.Items.Add(rdn);
+                    str += 6;
+                }
+            }
 
             foreach (UIElement uI in Tsys.Items)
             {
                 if (uI is RadioButton)
                 {
-                    ((RadioButton)uI).Checked += RadioButton_Checked_6;
+                    ((RadioButton)uI).Checked += Sys_Checked;
+
+                }
+            }
+            foreach (UIElement uI in Lang.Items)
+            {
+                if (uI is RadioButton)
+                {
+                    ((RadioButton)uI).Checked += Lang_Checked;
 
                 }
             }
@@ -297,223 +327,10 @@ namespace WpfApp1
 
         //Language
 
-        //Russian
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        private void Lang_Checked(object sender, RoutedEventArgs e)
         {
-            lang = 0;
-            if(auto == 1)
-            {
-                type = 1;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        //English
-        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
-        {
-            lang = 1;
-            if (auto == 1)
-            {
-                type = 0;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        //France
-        private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
-        {
-            lang = 2;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        //German
-        private void RadioButton_Checked_4(object sender, RoutedEventArgs e)
-        {
-            lang = 3;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        //Ukraine
-        private void RadioButton_Checked_5(object sender, RoutedEventArgs e)
-        {
-            lang = 4;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        private void BY_Checked(object sender, RoutedEventArgs e)
-        {
-            lang = 5;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        private void CZ_Checked(object sender, RoutedEventArgs e)
-        {
-            lang = 6;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-        private void FI_Checked(object sender, RoutedEventArgs e)
-        {
-            lang = 7;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-
-        private void BG_Checked(object sender, RoutedEventArgs e)
-        {
-            lang = 8;
-            if (auto == 1)
-            {
-                type = lang;
-            }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(check.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(screen.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(pb.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(lang.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(type.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(auto.ToString());
-            }
-        }
-
-        private void DK_Checked(object sender, RoutedEventArgs e)
-        {
-            lang = 9;
+            var radioButton = sender as RadioButton;
+            lang = Convert.ToInt32(radioButton.TabIndex.ToString());
             if (auto == 1)
             {
                 type = lang;
@@ -535,11 +352,11 @@ namespace WpfApp1
             }
         }
         //Type system
-        private void RadioButton_Checked_6(object sender, RoutedEventArgs e)
+        private void Sys_Checked(object sender, RoutedEventArgs e)
         {
             var radioButton = sender as RadioButton;
             type = Convert.ToInt32(radioButton.TabIndex.ToString());
-      
+            
                 using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
                 {
                     w.WriteLine("Debug:");
@@ -554,7 +371,12 @@ namespace WpfApp1
                     w.WriteLine(type.ToString());
                     w.WriteLine("Auto:");
                     w.WriteLine(auto.ToString());
+
                 }
+            if (radioButton.TabIndex > 9)
+            {
+                File.WriteAllText("NameEST.txt", radioButton.Name);
+            }
             
         }
        
@@ -681,14 +503,31 @@ namespace WpfApp1
                         ImageSource image = new ImageSourceConverter().ConvertFromString(CET.FP.Text) as ImageSource;
                         wrapPanel.Children.Add(new Image { Source = image, Width = 17, Height = 15 });
                     }
-                    wrapPanel.Children.Add(new TextBlock { Text = CET.NameET.Text, Foreground = Brushes.White });
-
+                    wrapPanel.Children.Add(new TextBlock { Text = CET.NameET.Text, Foreground = Brushes.White  , Name = CET.NameET.Text });
+                    rdn.Name = CET.NameET.Text;
                     rdn.TabIndex = CET.tx;
                     rdn.Content = wrapPanel;
-
-
-                    Tsys.Items.Add(rdn);
-
+                    using (StreamWriter w = new StreamWriter("EST.txt", true, Encoding.Default))
+                    {
+                        w.WriteLine("Name:");
+                        w.WriteLine(CET.NameET.Text);
+                        w.WriteLine("Image path:");
+                        w.WriteLine(CET.FP.Text);
+                        w.WriteLine("TabIndex:");
+                        w.WriteLine(CET.tx.ToString());
+                    }
+                    if (CET.tx > 9)
+                    {
+                        using (StreamWriter f = new StreamWriter(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + CET.NameET.Text + ".txt"))
+                        {
+                            f.WriteLine("Buttons:");
+                            f.WriteLine(CET.bx);
+                            f.WriteLine("GPA:");
+                            f.WriteLine(CET.GPA.SelectedIndex);
+                        }
+                    }
+                        Tsys.Items.Add(rdn);
+                    
 
 
                     CET.ex = 0;
@@ -698,7 +537,7 @@ namespace WpfApp1
                     {
                         if (uI is RadioButton)
                         {
-                            ((RadioButton)uI).Checked += RadioButton_Checked_6;
+                            ((RadioButton)uI).Checked += Sys_Checked;
 
                         }
                     }
@@ -713,6 +552,34 @@ namespace WpfApp1
         private void Tsys_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (Tsys.SelectedIndex > 9)
+                {
+                    Tsys.Items.Remove(Tsys.SelectedItem);
+                    using (StreamWriter w = new StreamWriter("EST.txt", true, Encoding.Default))
+                    {
+                        w.WriteLine("Name:");
+                        w.WriteLine(CET.NameET.Text);
+                        w.WriteLine("Image path:");
+                        w.WriteLine(CET.FP.Text);
+                        w.WriteLine("TabIndex:");
+                        w.WriteLine(CET.tx.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error", "System item cannot be deleted", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show("Error", exp.Message , MessageBoxButton.OK ,MessageBoxImage.Error);
+            }
         }
     }
 }

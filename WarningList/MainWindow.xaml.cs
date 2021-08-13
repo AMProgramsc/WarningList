@@ -32,6 +32,7 @@ namespace WpfApp1
      
         NameD n = new NameD();
 
+
         MessageBoxResult resultrt;
         double value, valueS, valueN;
         double ClickS;
@@ -64,6 +65,105 @@ namespace WpfApp1
         int mainE, file;
         int bg;
         int fs;
+        public void GPAEng()
+        {
+            D1.Content = "1";
+            D2.Content = "2";
+            D2.Background = Brushes.HotPink;
+            D3.Content = "3";
+            D3.Background = Brushes.Orange;
+            C1.Content = "4";
+            C1.Background = Brushes.Yellow;
+            T1.Visibility = Visibility.Visible;
+            T2.Visibility = Visibility.Visible;
+            T3.Visibility = Visibility.Visible;
+            T4.Visibility = Visibility.Visible;
+            T5.Visibility = Visibility.Visible;
+            T6.Visibility = Visibility.Visible;
+            T7.Visibility = Visibility.Visible;
+        }
+        public void GPAGer()
+        {
+            D1.Content = "0";
+            D2.Content = "3";
+            D2.Background = Brushes.Orange;
+            D3.Content = "6";
+            D3.Background = Brushes.Yellow;
+            C1.Content = "9";
+            C1.Background = Brushes.Green;
+            C2.Content = "12";
+            C2.Background = Brushes.Cyan;
+            C3.Content = "15";
+            C3.Background = Brushes.Blue;
+            T1.Visibility = Visibility.Visible;
+            T1.Text = "(6)";
+            T2.Visibility = Visibility.Visible;
+            T2.Text = "(5)";
+            T3.Visibility = Visibility.Visible;
+            T3.Text = "(4)";
+            T4.Visibility = Visibility.Visible;
+            T4.Text = "(3)";
+            T5.Visibility = Visibility.Visible;
+            T5.Text = "(2)";
+            T6.Visibility = Visibility.Visible;
+            T6.Text = "(1)";
+        }
+        public void GPAFra()
+        {
+            D1.Content = "1";
+            D2.Content = "2";
+            D3.Content = "3";
+            C1.Content = "4";
+            C1.Background = Brushes.Cyan;
+            C2.Content = "5";
+            C2.Background = Brushes.Blue;
+            T1.Visibility = Visibility.Visible;
+            T1.Text = "(<7)";
+            T1.Width = 22;
+            T2.Visibility = Visibility.Visible;
+            T2.Text = "(9-7)";
+            T2.Width = 25;
+            T3.Visibility = Visibility.Visible;
+            T3.Text = "(13-10)";
+            T3.Width = 38;
+            T4.Visibility = Visibility.Visible;
+            T4.Text = "(16-14)";
+            T4.Width = 38;
+            T5.Visibility = Visibility.Visible;
+            T5.Text = "(20-17)";
+
+            T5.Width = 38;
+        }
+        public void GPADen()
+        {
+            D1.Content = "-3";
+            D2.Content = "0";
+            D2.Background = Brushes.HotPink;
+            D3.Content = "2";
+            D3.Background = Brushes.Orange;
+            C1.Content = "4";
+            C1.Background = Brushes.Yellow;
+            C2.Content = "7";
+            C2.Background = Brushes.Green;
+            C3.Content = "10";
+            C3.Background = Brushes.Cyan;
+            B1.Content = "12";
+            B1.Background = Brushes.Blue;
+            T1.Text = "(F)";
+            T1.Visibility = Visibility.Visible;
+            T2.Text = "(Fx)";
+            T2.Visibility = Visibility.Visible;
+            T3.Text = "(E)";
+            T3.Visibility = Visibility.Visible;
+            T4.Text = "(D)";
+            T4.Visibility = Visibility.Visible;
+            T5.Text = "(C)";
+            T5.Visibility = Visibility.Visible;
+            T6.Text = "(B)";
+            T6.Visibility = Visibility.Visible;
+            T7.Text = "(A)";
+            T7.Visibility = Visibility.Visible;
+        }
         public void Russian()
         {
             if (type == 0)
@@ -2124,51 +2224,23 @@ namespace WpfApp1
             //English
             if (type == 1)
             {
-                D1.Content = "1";
-                D2.Content = "2";
-                D2.Background = Brushes.HotPink;
-                D3.Content = "3";
-                D3.Background = Brushes.Orange;
-                C1.Content = "4";
-                C1.Background = Brushes.Yellow;
+
                 C2.Visibility = Visibility.Visible;
                 C3.Visibility = Visibility.Visible;
                 B1.Visibility = Visibility.Visible;
-                T1.Visibility = Visibility.Visible;
-                T2.Visibility = Visibility.Visible;
-                T3.Visibility = Visibility.Visible;
-                T4.Visibility = Visibility.Visible;
-                T5.Visibility = Visibility.Visible;
-                T6.Visibility = Visibility.Visible;
-                T7.Visibility = Visibility.Visible;
+
+                GPAEng();
+
                 Score.Height = 210;
                 Score.Margin = new Thickness(162, 197, 0, 0);
             }
             //French
             if (type == 2)
             {
-                D1.Content = "1";
-                D2.Content = "2";
-                D3.Content = "3";
-                C1.Content = "4";
-                C1.Background = Brushes.Cyan;
-                C2.Content = "5";
-                C2.Background = Brushes.Blue;
+
                 C2.Visibility = Visibility.Visible;
-                T1.Visibility = Visibility.Visible;
-                T1.Text = "(<7)";
-                T1.Width = 22;
-                T2.Visibility = Visibility.Visible;
-                T2.Text = "(9-7)";
-                T2.Width = 25;
-                T3.Visibility = Visibility.Visible;
-                T3.Text = "(13-10)";
-                T3.Width = 38;
-                T4.Visibility = Visibility.Visible;
-                T4.Text = "(16-14)";
-                T4.Width = 38;
-                T5.Visibility = Visibility.Visible;
-                T5.Text = "(20-17)";
+
+                GPAFra();
                
                 T5.Width = 38;
                 Score.Height = 255;
@@ -2177,32 +2249,11 @@ namespace WpfApp1
             //German
             if (type == 3)
             {
-                D1.Content = "0";
-                D2.Content = "3";
-                D2.Background = Brushes.Orange;
-                D3.Content = "6";
-                D3.Background = Brushes.Yellow;
-                C1.Content = "9";
-                C1.Background = Brushes.Green;
-                C2.Content = "12";
-                C2.Background = Brushes.Cyan;
-                C3.Content = "15";
-                C3.Background = Brushes.Blue;
+
                 C3.Visibility = Visibility.Visible;
                 C2.Visibility = Visibility.Visible;
 
-                T1.Visibility = Visibility.Visible;
-                T1.Text = "(6)";
-                T2.Visibility = Visibility.Visible;
-                T2.Text = "(5)";
-                T3.Visibility = Visibility.Visible;
-                T3.Text = "(4)";
-                T4.Visibility = Visibility.Visible;
-                T4.Text = "(3)";
-                T5.Visibility = Visibility.Visible;
-                T5.Text = "(2)";
-                T6.Visibility = Visibility.Visible;
-                T6.Text = "(1)";
+                GPAGer();
                
                 Score.Height = 235;
                 Score.Margin = new Thickness(162, 172, 0, 0);
@@ -2334,38 +2385,74 @@ namespace WpfApp1
             //Denmark
             if (type == 9)
             {
-                D1.Content = "-3";
-                D2.Content = "0";
-                D2.Background = Brushes.HotPink;
-                D3.Content = "2";
-                D3.Background = Brushes.Orange;
-                C1.Content = "4";
-                C1.Background = Brushes.Yellow;
-                C2.Content = "7";
-                C2.Background = Brushes.Green;
-                C3.Content = "10";
-                C3.Background = Brushes.Cyan;
-                B1.Content = "12";
-                B1.Background = Brushes.Blue;
+
                 C2.Visibility = Visibility.Visible;
                 C3.Visibility = Visibility.Visible;
                 B1.Visibility = Visibility.Visible;
-                T1.Text = "(F)";
-                T1.Visibility = Visibility.Visible;
-                T2.Text = "(Fx)";
-                T2.Visibility = Visibility.Visible;
-                T3.Text = "(E)";
-                T3.Visibility = Visibility.Visible;
-                T4.Text = "(D)";
-                T4.Visibility = Visibility.Visible;
-                T5.Text = "(C)";
-                T5.Visibility = Visibility.Visible;
-                T6.Text = "(B)";
-                T6.Visibility = Visibility.Visible;
-                T7.Text = "(A)";
-                T7.Visibility = Visibility.Visible;
+
+                GPADen();
+
                 Score.Height = 210;
                 Score.Margin = new Thickness(162, 197, 0, 0);
+            }
+            //Custom
+            if (type > 9)
+            {
+                double heightS = Score.Height;
+                double posS = Score.Margin.Top;
+               
+                string path = File.ReadAllText("NameEST.txt");
+                int buttons = Int32.Parse(File.ReadLines(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + path + ".txt").Skip(1).First());
+                int gpa = Int32.Parse(File.ReadLines(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + path + ".txt").Skip(3).First());
+                int en = 1;
+
+                    foreach (UIElement es in Buttons.Children)
+                    {
+
+                        if (es is Button)
+                        {
+
+                            ((Button)es).Visibility = Visibility.Visible;
+
+
+                        }
+                        if(en >= 4)
+                    {
+                        heightS -= 25;
+                        posS += 25;
+                    }
+                    if (en == buttons)
+                    {
+                        break;
+                      
+                    }
+                    en++;
+                    Score.Height = heightS;
+                    Score.Margin = new Thickness(162, posS, 0, 0);
+
+                }
+
+                switch(gpa)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        GPAEng();
+                        break;
+                    case 2:
+                        GPAGer();
+                        break;
+                    case 3:
+                        GPAFra();
+                        break;
+                    case 4:
+                        GPADen();
+                        break;
+                }
+
+
+
+
             }
             if (lang == 2 || lang == 3 || lang == 6)
             {
@@ -2375,7 +2462,7 @@ namespace WpfApp1
             }
             //Russian - 0
 
-            foreach (UIElement el in Root.Children)
+            foreach (UIElement el in Buttons.Children)
                 {
                     if (el is Button)
                     {
@@ -2675,6 +2762,7 @@ namespace WpfApp1
         //Load function
         private void Window_Activated(object sender, EventArgs e)
         {
+
             Count = listbox.Items.Count;
             file = Int32.Parse(File.ReadLines("File.txt").First());
             if (file == 1)
@@ -2758,7 +2846,6 @@ namespace WpfApp1
                 File.WriteAllText(@"Sername.txt","\t");
 
             }
-        
 
         }
         //Save function
@@ -2931,7 +3018,7 @@ namespace WpfApp1
             Namer.IsEnabled = false;
             Sername.IsReadOnly = true;
             Name.IsReadOnly = false;
-            foreach (UIElement el in Root.Children)
+            foreach (UIElement el in Buttons.Children)
             {
                 if (el is Button)
                 {
@@ -2957,7 +3044,7 @@ namespace WpfApp1
             Namer.IsEnabled = true;
             Sername.IsReadOnly = true;
             Name.IsReadOnly = true;
-            foreach (UIElement el in Root.Children)
+            foreach (UIElement el in Buttons.Children)
             {
                 if (el is Button)
                 {
@@ -3054,7 +3141,7 @@ namespace WpfApp1
                         DialogeW.Text = Properties.Resources.Dialoge4;
                         EnterC.IsEnabled = false;
 
-                        foreach (UIElement el in Root.Children)
+                        foreach (UIElement el in Buttons.Children)
                         {
                             if (el is Button)
                             {
@@ -3172,7 +3259,7 @@ namespace WpfApp1
 
                 }
                 EnterC.IsEnabled = true;
-                foreach (UIElement el in Root.Children)
+                foreach (UIElement el in Buttons.Children)
                 {
                     if (el is Button)
                     {

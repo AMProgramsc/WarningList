@@ -23,22 +23,30 @@
             <TextBlock Text="Czech" Foreground="Black"/>
             <TextBlock Text="Finland" Foreground="Black"/>
             <TextBlock Text="Bulgaria" Foreground="Black"/>
-            <TextBlock Text="Denmark" Foreground="Black"
-                       />
+            <TextBlock Text="Denmark" Foreground="Black"/>
+            <TextBlock Text="Custom" Foreground="Black"/>
         </ComboBox>
         <ComboBox Name="BP" HorizontalAlignment="Left" Margin="225,79,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="True" Text="Buttons" Foreground="Gray" SelectionChanged="ComboBox_SelectionChanged" >
-            <TextBlock Text="4" Foreground="Black"/>
-            <TextBlock Text="5" Foreground="Black"/>
-            <TextBlock Text="6" Foreground="Black"/>
-            <TextBlock Text="7" Foreground="Black"/>
-            <TextBlock Text="8" Foreground="Black"/>
-            <TextBlock Text="9" Foreground="Black"/>
-            <TextBlock Text="10" Foreground="Black"/>
-            <TextBlock Text="11" Foreground="Black"/>
-            <TextBlock Text="12" Foreground="Black"/>
+            <ComboBoxItem Content = "4" Foreground="Black"  />
+            <ComboBoxItem Content = "5" Foreground="Black"/>
+            <ComboBoxItem Content = "6" Foreground="Black"/>
+            <ComboBoxItem Content = "7" Foreground="Black"/>
+            <ComboBoxItem Content = "8" Foreground="Black"/>
+            <ComboBoxItem Content = "9" Foreground="Black"/>
+            <ComboBoxItem Content = "10" Foreground="Black"/>
+            <ComboBoxItem Content = "11" Foreground="Black"/>
+            <ComboBoxItem Content = "12" Foreground="Black"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="225,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text=""/>
+        <ComboBox Name="GPA" HorizontalAlignment="Left" Margin="225,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text="GPA" Foreground="Gray" SelectionChanged="GPA_SelectionChanged">
+            <TextBlock Text="Default" Foreground="Black"/>
+            <TextBlock Text="English" Foreground="Black"/>
+            <TextBlock Text="German" Foreground="Black"/>
+            <TextBlock Text="France" Foreground="Black"/>
+            <TextBlock Text="Denmark" Foreground="Black"/>
+        </ComboBox>
         <ComboBox HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text=""/>
+        <Button Content="Buttons color" HorizontalAlignment="Left" Margin="225,33,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="225,9,0,0" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>

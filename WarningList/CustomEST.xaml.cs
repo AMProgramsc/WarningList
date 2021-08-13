@@ -24,10 +24,12 @@ namespace WpfApp1
         
         public int ex;
         public int tx;
-        public int bx;
+        public string bx;
         public CustomET()
         {
             InitializeComponent();
+            BP.IsEnabled = false;
+            GPA.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -55,21 +57,37 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ex = 1;
-            this.Visibility = Visibility.Hidden;
-
+            if (NameET.Text == "")
+            {
+                MessageBox.Show("Error", "Name not specified", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                ex = 1;
+                this.Visibility = Visibility.Hidden;
+            }
         }
 
         private void CP_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             tx = CP.SelectedIndex;
+            if(tx > 9)
+            {
+                BP.IsEnabled = true;
+                GPA.IsEnabled = true;
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ComboBoxItem ComboItem = (ComboBoxItem)BP.SelectedItem;
+            bx = ComboItem.Content.ToString();
 
-            bx = Int32.Parse(BP.Text);
-            
+
+        }
+
+        private void GPA_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

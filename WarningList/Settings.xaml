@@ -14,61 +14,61 @@
         <TextBox Name="Texter" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="772" Background="{x:Null}" Foreground="White"/>
         <Expander Header="{x:Static res:Resources.Language}" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="130" Foreground="White">
             <ListBox x:Name="Lang" Background="{x:Null}" BorderBrush="{x:Null}">
-                <RadioButton   Background="White" Foreground="White" Checked="RadioButton_Checked_1"     >
+                <RadioButton   Background="White" Foreground="White"  TabIndex="0"     >
                     <WrapPanel>
                         <Image Source="Flags_UK.png" Width="17" Height="15" />
                         <TextBlock Text=" English" Width="44" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_2">
+                <RadioButton  Background="White" Foreground="White"  TabIndex="1">
                     <WrapPanel>
                         <Image Source="RU.jpg" Width="17" Height="15" />
                         <TextBlock Text=" Русский" Width="49" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton  Foreground="White" Checked="RadioButton_Checked_3" >
+                <RadioButton  Foreground="White" TabIndex="2">
                     <WrapPanel>
-                        <Image Source="Fr.jpg" Width="17" Height="15" />
+                        <Image Source="Fr.jpg" Width="17" Height="15"  />
                         <TextBlock Text=" Français" Width="49" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_4" >
+                <RadioButton  Background="White" Foreground="White"  TabIndex="3">
                     <WrapPanel>
                         <Image Source="de-flag.jpg" Width="17" Height="15" />
                         <TextBlock Text=" Deutsche" Width="53" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton  Background="White" Foreground="White" Checked="RadioButton_Checked_5" >
+                <RadioButton  Background="White" Foreground="White" TabIndex="4" >
                     <WrapPanel>
                         <Image Source="UA.png" Width="17" Height="15" />
                         <TextBlock Text=" Український" Width="72" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton Name="BY"  Background="White" Foreground="White" Checked="BY_Checked"  >
+                <RadioButton Name="BY"  Background="White" Foreground="White" TabIndex="5" >
                     <WrapPanel>
                         <Image Source="BE.png" Width="17" Height="15" />
                         <TextBlock Text=" Беларускі" Width="72" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton Name="CZ"  Background="White" Foreground="White" Checked="CZ_Checked"   >
+                <RadioButton Name="CZ"  Background="White" Foreground="White" TabIndex="6"  >
                     <WrapPanel>
                         <Image Source="CZ.png" Width="17" Height="15" />
                         <TextBlock Text=" Čeština" Width="72" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton Name="FI"  Background="White" Foreground="White" Checked="FI_Checked"   >
+                <RadioButton Name="FI"  Background="White" Foreground="White" TabIndex="7"   >
                     <WrapPanel>
                         <Image Source="fl.jpg" Width="17" Height="15" />
                         <TextBlock Text=" Suomalainen" Width="72" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton Name="BG"  Background="White" Foreground="White" Checked="BG_Checked"   >
+                <RadioButton Name="BG"  Background="White" Foreground="White" TabIndex="8"   >
                     <WrapPanel>
                         <Image Source="bg.png" Width="17" Height="15" />
                         <TextBlock Text=" Български" Width="72" />
                     </WrapPanel>
                 </RadioButton>
-                <RadioButton Name="DK"  Background="White" Foreground="White" Checked="DK_Checked"    >
+                <RadioButton Name="DK"  Background="White" Foreground="White" TabIndex="9"   >
                     <WrapPanel>
                         <Image Source="DK.png" Width="17" Height="15" />
                         <TextBlock Text=" Dansk" Width="72" />
@@ -142,7 +142,8 @@
                     </RadioButton>
                 <ListBox.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Name="Add" Header="Add custom EType" Click="Add_Click" ></MenuItem>
+                        <MenuItem Name="Add" Header="Add custom ESType" Click="Add_Click" ></MenuItem>
+                        <MenuItem Name="Remove" Header="Remove custom ESType" Click="Remove_Click" ></MenuItem>
                     </ContextMenu>
                 </ListBox.ContextMenu>
             </ListBox>

@@ -7,6 +7,6 @@ Progressbar:
 Language:
 0
 TypeSys:
-7
+0
 Auto:
 0

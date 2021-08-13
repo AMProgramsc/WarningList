@@ -106,7 +106,7 @@ namespace WpfApp1
       
             window.Show();
 
-
+            
         }
 
         private void Exiter_Click(object sender, RoutedEventArgs e)
