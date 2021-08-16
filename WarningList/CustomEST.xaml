@@ -45,8 +45,7 @@
             <TextBlock Text="Denmark" Foreground="Black"/>
         </ComboBox>
         <ComboBox HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text=""/>
-        <Button Content="Buttons color" HorizontalAlignment="Left" Margin="225,33,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="225,9,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Buttons color" HorizontalAlignment="Left" Margin="225,31,0,0" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>

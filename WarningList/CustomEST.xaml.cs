@@ -57,9 +57,9 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (NameET.Text == "")
+            if (NameET.Text == "" || CP.SelectedIndex == -1)
             {
-                MessageBox.Show("Error", "Name not specified", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Name or type not specified", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
@@ -75,6 +75,11 @@ namespace WpfApp1
             {
                 BP.IsEnabled = true;
                 GPA.IsEnabled = true;
+            }
+            else
+            {
+                BP.IsEnabled = false;
+                GPA.IsEnabled = false;
             }
         }
 

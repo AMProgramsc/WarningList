@@ -68,20 +68,26 @@ namespace WpfApp1
                 int data = strings / 6;
                 for (int path = 0; path < data; path ++)
                 {
-                    WrapPanel wrapPanel = new WrapPanel();
-                    RadioButton rdn = new RadioButton();
-                    if (File.ReadLines("EST.txt").Skip(str + 3).First() != "")
+                    if (File.ReadLines("EST.txt").Skip(str + path).First() == "")
                     {
-                        ImageSource image = new ImageSourceConverter().ConvertFromString(File.ReadLines("EST.txt").Skip(str + 3).First()) as ImageSource;
-                        wrapPanel.Children.Add(new Image { Source = image, Width = 17, Height = 15 });
+                        continue;
                     }
-                    wrapPanel.Children.Add(new TextBlock { Text = File.ReadLines("EST.txt").Skip(str + 1).First(), Foreground = Brushes.White });
-
-                    rdn.TabIndex = Int32.Parse(File.ReadLines("EST.txt").Skip(5).First());
-                    rdn.Content = wrapPanel;
-                    rdn.Name = File.ReadLines("EST.txt").Skip(str + 1).First();
-                    Tsys.Items.Add(rdn);
-                    str += 6;
+                    else
+                    {
+                        WrapPanel wrapPanel = new WrapPanel();
+                        RadioButton rdn = new RadioButton();
+                        if (File.ReadLines("EST.txt").Skip(str + 3).First() != "")
+                        {
+                            ImageSource image = new ImageSourceConverter().ConvertFromString(File.ReadLines("EST.txt").Skip(str + 3).First()) as ImageSource;
+                            wrapPanel.Children.Add(new Image { Source = image, Width = 17, Height = 15 });
+                        }
+                        wrapPanel.Children.Add(new TextBlock { Text = File.ReadLines("EST.txt").Skip(str + 1).First(), Foreground = Brushes.White });
+                        rdn.TabIndex = Int32.Parse(File.ReadLines("EST.txt").Skip(5).First());
+                        rdn.Content = wrapPanel;
+                        rdn.Name = File.ReadLines("EST.txt").Skip(str + 1).First();
+                        Tsys.Items.Add(rdn);
+                        str += 6;
+                    }
                 }
             }
 
@@ -511,7 +517,7 @@ namespace WpfApp1
                     {
                         w.WriteLine("Name:");
                         w.WriteLine(CET.NameET.Text);
-                        w.WriteLine("Image path:");
+                        w.WriteLine("ImagePath:");
                         w.WriteLine(CET.FP.Text);
                         w.WriteLine("TabIndex:");
                         w.WriteLine(CET.tx.ToString());
@@ -558,18 +564,28 @@ namespace WpfApp1
         {
             try
             {
+                
                 if (Tsys.SelectedIndex > 9)
                 {
-                    Tsys.Items.Remove(Tsys.SelectedItem);
-                    using (StreamWriter w = new StreamWriter("EST.txt", true, Encoding.Default))
+
+                    int i = 0;
+                        var Lines = File.ReadAllLines("EST.txt");
+                    for(; i < Lines.Length; i++)
                     {
-                        w.WriteLine("Name:");
-                        w.WriteLine(CET.NameET.Text);
-                        w.WriteLine("Image path:");
-                        w.WriteLine(CET.FP.Text);
-                        w.WriteLine("TabIndex:");
-                        w.WriteLine(CET.tx.ToString());
+                        if(Lines[i] == ((RadioButton)Tsys.SelectedValue).Name.ToString())
+                        {
+                            Lines[i - 1] = " ";
+                            Lines[i + 1] = " ";
+                            Lines[i + 2] = " ";
+                            Lines[i + 3] = " ";
+                            Lines[i + 4] = " ";
+                            break;
+                        }
                     }
+                    var newLines = Lines.Where(line => !line.Contains(((RadioButton)Tsys.SelectedValue).Name.ToString()));
+                    var newLineA = newLines.Where(line => !line.Contains(Lines[i - 1]));
+                    File.WriteAllLines("EST.txt", newLineA);
+                    Tsys.Items.Remove(Tsys.SelectedItem);
                 }
                 else
                 {
@@ -578,7 +594,7 @@ namespace WpfApp1
             }
             catch(Exception exp)
             {
-                MessageBox.Show("Error", exp.Message , MessageBoxButton.OK ,MessageBoxImage.Error);
+                MessageBox.Show(exp.Message, "Error" , MessageBoxButton.OK ,MessageBoxImage.Error);
             }
         }
     }

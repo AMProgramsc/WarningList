@@ -1550,6 +1550,190 @@ namespace WpfApp1
                 }
             }
         }
+        public void Custom()
+        {
+            if (type > 9)
+            {
+                if (result <= 1.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "1" + "\r\n";
+
+                    for (; warning < 1.6;)
+                    {
+                        warning = (valueS + 2) / (NumberN + 1);
+                        valueS += 2;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "2" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 2.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "2" + "\r\n";
+
+                    for (; warning < 2.6;)
+                    {
+                        warning = (valueS + 3) / (NumberN + 1);
+                        valueS += 3;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "3" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 3.5)
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen1 + " - " + "3" + "\r\n";
+
+                    for (; warning < 3.6;)
+                    {
+                        warning = (valueS + 4) / (NumberN + 1);
+                        valueS += 4;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "4" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+                    warning = 0;
+
+                }
+                else if (result <= 4.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "4" + "\r\n";
+
+                    for (; warning < 4.6;)
+                    {
+                        warning = (valueS + 5) / (NumberN + 1);
+                        valueS += 5;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 5.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "5" + "\r\n";
+
+                    for (; warning < 5.6;)
+                    {
+                        warning = (valueS + 6) / (NumberN + 1);
+                        valueS += 6;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "5" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 6.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "6" + "\r\n";
+
+                    for (; warning < 6.6;)
+                    {
+                        warning = (valueS + 7) / (NumberN + 1);
+                        valueS += 7;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "7" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 7.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "7" + "\r\n";
+
+                    for (; warning < 7.6;)
+                    {
+                        warning = (valueS + 8) / (NumberN + 1);
+                        valueS += 8;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "8" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 8.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "8" + "\r\n";
+
+                    for (; warning < 8.6;)
+                    {
+                        warning = (valueS + 9) / (NumberN + 1);
+                        valueS += 9;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "9" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 9.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "9" + "\r\n";
+
+                    for (; warning < 9.6;)
+                    {
+                        warning = (valueS + 10) / (NumberN + 1);
+                        valueS += 10;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "10" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 10.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "10" + "\r\n";
+
+                    for (; warning < 10.6;)
+                    {
+                        warning = (valueS + 11) / (NumberN + 1);
+                        valueS += 11;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "11" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else if (result <= 11.5)
+                {
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen2 + "11" + "\r\n";
+
+                    for (; warning < 11.6;)
+                    {
+                        warning = (valueS + 12) / (NumberN + 1);
+                        valueS += 12;
+                        NumberN += 1;
+                        GEN.Text += Properties.Resources.GenN + "12" + Properties.Resources.GenF + warning + "\r\n";
+                    }
+
+                    warning = 0;
+                }
+                else
+                {
+
+                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text += Properties.Resources.Gen4 + "\r\n";
+
+                }
+                Lister.Items[listbox.SelectedIndex] = result;
+            }
+        
+        
+        }
 
         public void BackgroundN()
         {
@@ -1886,7 +2070,7 @@ namespace WpfApp1
                     }
                 }
                 //Ukraine
-                if (type == 4)
+                if (type == 4 || type > 9)
                 {
                     if (TotalResult <= 1.5)
                     {
@@ -3245,6 +3429,8 @@ namespace WpfApp1
                 Bulgaria();
                 //Denmark
                 Denmark();
+                //Custom
+                Custom();
 
                     value = 0;
                 result = 0;
