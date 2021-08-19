@@ -61,9 +61,14 @@ namespace WpfApp1
             {
                 MessageBox.Show("Name or type not specified", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            if(CP.SelectedIndex == 10 && (BP.SelectedIndex == -1 || GPA.SelectedIndex == -1))
+            {
+                MessageBox.Show("GPA or Buttons not changed", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             else
             {
                 ex = 1;
+               
                 this.Visibility = Visibility.Hidden;
             }
         }
@@ -85,8 +90,15 @@ namespace WpfApp1
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            BC.Items.Clear();
             ComboBoxItem ComboItem = (ComboBoxItem)BP.SelectedItem;
             bx = ComboItem.Content.ToString();
+            int BContent = Int32.Parse(ComboItem.Content.ToString());
+            for (int CountB = 1; CountB <= BContent; CountB++)
+            {
+               
+                BC.Items.Add(new ListBoxItem { Content = CountB.ToString() , HorizontalContentAlignment = HorizontalAlignment.Center , Background = Brushes.Gray});
+            }
 
 
         }
@@ -95,5 +107,26 @@ namespace WpfApp1
         {
 
         }
+
+        private void BC_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ColorP.Visibility = Visibility.Visible;
+        }
+
+        private void ColorP_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            string c1 = ColorP.SelectedColor.Value.ToString();
+            SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
+
+            ListBoxItem lbi = BC.Items[BC.SelectedIndex] as ListBoxItem;
+            lbi.Background = ck;
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ColorP.Visibility = Visibility.Hidden;
+        }
+
+
     }
 }

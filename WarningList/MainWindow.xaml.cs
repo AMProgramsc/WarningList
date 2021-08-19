@@ -2586,37 +2586,11 @@ namespace WpfApp1
                 double posS = Score.Margin.Top;
                
                 string path = File.ReadAllText("NameEST.txt");
-                int buttons = Int32.Parse(File.ReadLines(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + path + ".txt").Skip(1).First());
-                int gpa = Int32.Parse(File.ReadLines(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + path + ".txt").Skip(3).First());
+                int buttons = Int32.Parse(File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(1).First());
+                int gpa = Int32.Parse(File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(3).First());
+                int y = 5;
                 int en = 1;
-
-                    foreach (UIElement es in Buttons.Children)
-                    {
-
-                        if (es is Button)
-                        {
-
-                            ((Button)es).Visibility = Visibility.Visible;
-
-
-                        }
-                        if(en >= 4)
-                    {
-                        heightS -= 25;
-                        posS += 25;
-                    }
-                    if (en == buttons)
-                    {
-                        break;
-                      
-                    }
-                    en++;
-                    Score.Height = heightS;
-                    Score.Margin = new Thickness(162, posS, 0, 0);
-
-                }
-
-                switch(gpa)
+                switch (gpa)
                 {
                     case 0:
                         break;
@@ -2633,6 +2607,35 @@ namespace WpfApp1
                         GPADen();
                         break;
                 }
+                foreach (UIElement es in Buttons.Children)
+                    {
+                    string ch = File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(y).First();
+                    SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(ch);
+                    if (es is Button)
+                        {
+                      
+                        ((Button)es).Visibility = Visibility.Visible;
+                        ((Button)es).Background = ckl;
+
+                    }
+                        if(en >= 4)
+                    {
+                        heightS -= 25;
+                        posS += 25;
+                    }
+                    if (en == buttons)
+                    {
+                        break;
+                      
+                    }
+                    y++;
+                    en++;
+                    Score.Height = heightS;
+                    Score.Margin = new Thickness(162, posS, 0, 0);
+
+                }
+
+
 
 
 
@@ -2651,10 +2654,11 @@ namespace WpfApp1
                     if (el is Button)
                     {
                         ((Button)el).Click += Button_Click;
-                        ((Button)el).IsEnabled = false;
+                    ((Button)el).IsEnabled = false;
                     }
                 
                 }
+
 
             if (check == 1)
             {
@@ -3074,12 +3078,10 @@ namespace WpfApp1
             }
          
         }
-
-        private void Root_KeyDown(object sender, KeyEventArgs e)
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            
-                try
-                {
+            try
+            {
                 if (Textbox1.Text != "")
                 {
                     ClickS++;
@@ -3121,7 +3123,8 @@ namespace WpfApp1
                         Bulgaria();
                         //Denmark
                         Denmark();
-
+                        //Custom
+                        Custom();
                         value = 0;
                         result = 0;
                         ClickS = 0;
@@ -3151,16 +3154,16 @@ namespace WpfApp1
                     }
                     Res();
                 }
-                }
+            }
 
-                catch (Exception exp)
-                {
-                    
+            catch (Exception exp)
+            {
+
                 ClickS--;
-                }
-            
-            
+            }
         }
+
+
 
         //Color pick
         private void AE_Click(object sender, RoutedEventArgs e)
@@ -3334,6 +3337,7 @@ namespace WpfApp1
 
                         }
                         Textbox1.Text = "0";
+
                     }
                 }
                 catch(Exception exp)

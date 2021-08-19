@@ -8,9 +8,9 @@
         xmlns:dd="urn:gong-wpf-dragdrop"
         xmlns:res="clr-namespace:WpfApp1.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" Activated="Window_Activated" >
- 
-    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown" KeyDown="Root_KeyDown" >
+        Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" Activated="Window_Activated" PreviewKeyDown="Window_PreviewKeyDown"  >
+
+    <Grid x:Name="Root" HorizontalAlignment="Right" Width="810" Background="White" Margin="0,0,0,2" MouseDown="ColorPick_MouseDown"  >
         
         <xctk:ColorPicker x:Name="ColorPick" SelectedColorChanged="ColorPick_SelectedColorChanged"  Background="{x:Null}"  />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="380" Margin="5,27,0,0" VerticalAlignment="Top" Width="112"  SelectionChanged="ListBox_SelectionChanged1" Background="{x:Null}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" Drop="listbox_Drop"   >
@@ -76,7 +76,7 @@
             </MenuItem>
 
         </Menu>
-        <Grid x:Name="Buttons">
+        <Grid x:Name="Buttons"  >
             <Button  Name="D1" Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
             <Button x:Name="D2" Content="3" HorizontalAlignment="Left" Margin="162,52,0,0" VerticalAlignment="Top" Width="100" Background="Yellow" Height="20"/>
             <Button Name="D3" Content="4" HorizontalAlignment="Left" Margin="162,77,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>

@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1" d:DataContext="{d:DesignInstance Type=local:CustomETNameViewModel}"
+        xmlns:local="clr-namespace:WpfApp1" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" d:DataContext="{d:DesignInstance Type=local:CustomETNameViewModel}"
         mc:Ignorable="d"
-        Title="CustomEST" Height="200" Width="450" Closing="Window_Closing">
-    <Grid Background="Black" >
+        Title="CustomEST" Height="301" Width="547" Closing="Window_Closing">
+    <Grid Background="Black" MouseDown="Grid_MouseDown"  >
+        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}" HorizontalAlignment="Left" SelectedColorChanged="ColorP_SelectedColorChanged" Visibility="Hidden" />
         <TextBox Name="NT" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="Name System:" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="{x:Null}" Foreground="White"/>
         <TextBox Name="NameET" HorizontalAlignment="Left" Height="23" Margin="100,33,0,0" TextWrapping="Wrap" Text="{Binding Path=NameET}" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White"/>
         <TextBox Name="FP" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
@@ -45,7 +46,9 @@
             <TextBlock Text="Denmark" Foreground="Black"/>
         </ComboBox>
         <ComboBox HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text=""/>
-        <Button Content="Buttons color" HorizontalAlignment="Left" Margin="225,31,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox Name="BC" HorizontalAlignment="Left" Height="250" Margin="440,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" SelectionChanged="BC_SelectionChanged"  >
+
+        </ListBox>
 
 
     </Grid>

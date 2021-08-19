@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1" 
-        xmlns:res="clr-namespace:WpfApp1.Properties"
+        xmlns:res="clr-namespace:WpfApp1.Properties" d:DataContext="{d:DesignInstance Type=local:CustomETNameViewModel}"
         mc:Ignorable="d"
         Title="Settings"  Background="Black" Closing="Window_Closing"  Width="800" Height="450" Activated="Window_Activated" >
     <Grid >
@@ -78,7 +78,7 @@
             </ListBox>
         </Expander>
         <Button Content="{x:Static res:Resources.Restart}" HorizontalAlignment="Left" Margin="682,46,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" />
-            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="140,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White">
+            <Expander Name="Type" Header="{x:Static res:Resources.Education}" HorizontalAlignment="Left" Height="235" Margin="140,39,0,0" VerticalAlignment="Top" Width="174" Foreground="White" Background="{x:Null}">
                 <ListBox x:Name="Tsys" Background="Black" BorderBrush="{x:Null}" SelectionChanged="Tsys_SelectionChanged" >
                     <RadioButton  Background="White" Foreground="White" TabIndex="0"   >
                         <WrapPanel>

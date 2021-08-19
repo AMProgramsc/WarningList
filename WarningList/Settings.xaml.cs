@@ -524,21 +524,29 @@ namespace WpfApp1
                     }
                     if (CET.tx > 9)
                     {
-                        using (StreamWriter f = new StreamWriter(@"C:\Users\TopDesktop-1\source\repos\WarningList 1Exp\WarningList\bin\Debug\ESTData\" + CET.NameET.Text + ".txt"))
+                        using (StreamWriter f = new StreamWriter(System.IO.Path.Combine("ESTData" , CET.NameET.Text + ".txt") ))
                         {
                             f.WriteLine("Buttons:");
                             f.WriteLine(CET.bx);
                             f.WriteLine("GPA:");
                             f.WriteLine(CET.GPA.SelectedIndex);
+                            f.WriteLine("ButtonsColor:");
+                            foreach (ListBoxItem fs in CET.BC.Items)
+                            {
+                                string str = fs.Background + " ";
+                                f.WriteLine(str);
+                            }
                         }
                     }
+                
                         Tsys.Items.Add(rdn);
-                    
-
-
                     CET.ex = 0;
                     CET.FP.Clear();
                     CET.NameET.Clear();
+                    CET.BC.Items.Clear();
+                    CET.CP.SelectedIndex = -1;
+                    CET.GPA.SelectedIndex = -1;
+                    CET.BP.SelectedIndex = -1;
                     foreach (UIElement uI in Tsys.Items)
                     {
                         if (uI is RadioButton)
@@ -567,13 +575,19 @@ namespace WpfApp1
                 
                 if (Tsys.SelectedIndex > 9)
                 {
-
+                   
+                    var Lines = File.ReadAllLines("EST.txt");
                     int i = 0;
-                        var Lines = File.ReadAllLines("EST.txt");
+
                     for(; i < Lines.Length; i++)
                     {
                         if(Lines[i] == ((RadioButton)Tsys.SelectedValue).Name.ToString())
                         {
+                            int type = Int32.Parse(File.ReadLines("EST.txt").Skip(i + 4).First());
+                            if (type > 9)
+                            {
+                                System.IO.File.Delete(System.IO.Path.Combine("ESTData", ((RadioButton)Tsys.SelectedValue).Name.ToString() + ".txt"));
+                            }
                             Lines[i - 1] = " ";
                             Lines[i + 1] = " ";
                             Lines[i + 2] = " ";
