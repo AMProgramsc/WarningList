@@ -21,6 +21,7 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 
 -------------------------------
 # Latest News
+* 19.07.2021  - Offical release W#arningList 0.8.6 Beta
 * 16.07.2021  - Offical release W#arningList 0.8.6 Beta
 * 13.07.2021  - Offical release W#arningList 0.8.5 Beta
 * 12.07.2021  - Offical release W#arningList 0.8.4 Beta
