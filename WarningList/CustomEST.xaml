@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" d:DataContext="{d:DesignInstance Type=local:CustomETNameViewModel}"
         mc:Ignorable="d"
-        Title="CustomEST" Height="301" Width="547" Closing="Window_Closing">
+        Title="CustomEST" Height="305" Width="588" Closing="Window_Closing">
     <Grid Background="Black" MouseDown="Grid_MouseDown"  >
-        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}" HorizontalAlignment="Left" SelectedColorChanged="ColorP_SelectedColorChanged" Visibility="Hidden" />
+        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}"   SelectedColorChanged="ColorP_SelectedColorChanged" Margin="412,84,100,6" Visibility="Hidden" />
         <TextBox Name="NT" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="Name System:" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="{x:Null}" Foreground="White"/>
         <TextBox Name="NameET" HorizontalAlignment="Left" Height="23" Margin="100,33,0,0" TextWrapping="Wrap" Text="{Binding Path=NameET}" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White"/>
         <TextBox Name="FP" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
@@ -38,17 +38,25 @@
             <ComboBoxItem Content = "11" Foreground="Black"/>
             <ComboBoxItem Content = "12" Foreground="Black"/>
         </ComboBox>
-        <ComboBox Name="GPA" HorizontalAlignment="Left" Margin="225,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text="GPA" Foreground="Gray" SelectionChanged="GPA_SelectionChanged">
+        <ComboBox Name="Btype" HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text="Btype" Foreground="Gray" SelectionChanged="GPA_SelectionChanged">
             <TextBlock Text="Default" Foreground="Black"/>
             <TextBlock Text="English" Foreground="Black"/>
             <TextBlock Text="German" Foreground="Black"/>
             <TextBlock Text="France" Foreground="Black"/>
             <TextBlock Text="Denmark" Foreground="Black"/>
+            <TextBlock Text="Custom" Foreground="Black"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text=""/>
         <ListBox Name="BC" HorizontalAlignment="Left" Height="250" Margin="440,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" SelectionChanged="BC_SelectionChanged"  >
-
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="Color" Header="Color" Click="Color_Click"></MenuItem>
+                    <MenuItem Name="Content" Header="Content" Click="Content_Click"></MenuItem>
+                    <MenuItem Name="btype" Header="Btype" Click="btype_Click"  IsEnabled="False"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
         </ListBox>
+        <TextBox Name="ECB" HorizontalAlignment="Left" Height="22" Margin="225,106,0,0" TextWrapping="Wrap" Text="Enter content" VerticalAlignment="Top" Width="120" Foreground="Gray" IsReadOnly="True" KeyDown="ECB_KeyDown" />
+        <ListBox x:Name="BG" HorizontalAlignment="Left" Height="250" Margin="530,10,0,0" VerticalAlignment="Top" Width="40" Background="{x:Null}"   />
 
 
     </Grid>

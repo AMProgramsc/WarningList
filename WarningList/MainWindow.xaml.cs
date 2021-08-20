@@ -2587,9 +2587,14 @@ namespace WpfApp1
                
                 string path = File.ReadAllText("NameEST.txt");
                 int buttons = Int32.Parse(File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(1).First());
+                int types = buttons * 2;
                 int gpa = Int32.Parse(File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(3).First());
+                int strings = System.IO.File.ReadAllLines(System.IO.Path.Combine("ESTData", path + ".txt")).Length;
                 int y = 5;
+                int g = strings / 3 + 4;
+                int z = strings - g + 6;
                 int en = 1;
+                int et = 1;
                 switch (gpa)
                 {
                     case 0:
@@ -2606,41 +2611,72 @@ namespace WpfApp1
                     case 4:
                         GPADen();
                         break;
+                    case 5:
+                        break;
                 }
                 foreach (UIElement es in Buttons.Children)
-                    {
+                {
                     string ch = File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(y).First();
+                    string cb = File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(g).First();
                     SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(ch);
+
+                 
                     if (es is Button)
                         {
                       
                         ((Button)es).Visibility = Visibility.Visible;
                         ((Button)es).Background = ckl;
+                        ((Button)es).Content = cb;
+                        if (en >= 4)
+                        {
+                            heightS -= 25;
+                            posS += 25;
+                        }
+                        if (en == buttons)
+                        {
+                            break;
+                        }
+                        en++;
+                        y++;
+                        g++;
+                        
 
                     }
-                        if(en >= 4)
-                    {
-                        heightS -= 25;
-                        posS += 25;
-                    }
-                    if (en == buttons)
-                    {
-                        break;
-                      
-                    }
-                    y++;
-                    en++;
+             
+
+
+
+
+
+
                     Score.Height = heightS;
                     Score.Margin = new Thickness(162, posS, 0, 0);
 
                 }
+                foreach (UIElement ef in Buttons.Children)
+                {
+
+                    string cz = File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(z).First();
+                    if (ef is TextBlock)
+                    {
+                        ((TextBlock)ef).Visibility = Visibility.Visible;
+                        ((TextBlock)ef).Text = cz;
+                       
+                        
+                        if (et == buttons)
+                        {
+                            break;
+                        }
+                        et++;
+                        z++;
+                    }
+                  
 
 
 
-
-
-
+                }
             }
+         
             if (lang == 2 || lang == 3 || lang == 6)
             {
                 Namer.Height = 40;

@@ -25,11 +25,13 @@ namespace WpfApp1
         public int ex;
         public int tx;
         public string bx;
+        bool Gpa = false;
+        bool content = false;
         public CustomET()
         {
             InitializeComponent();
             BP.IsEnabled = false;
-            GPA.IsEnabled = false;
+            Btype.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -61,7 +63,7 @@ namespace WpfApp1
             {
                 MessageBox.Show("Name or type not specified", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            if(CP.SelectedIndex == 10 && (BP.SelectedIndex == -1 || GPA.SelectedIndex == -1))
+            if(CP.SelectedIndex == 10 && (BP.SelectedIndex == -1 || Btype.SelectedIndex == -1))
             {
                 MessageBox.Show("GPA or Buttons not changed", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -79,45 +81,64 @@ namespace WpfApp1
             if(tx > 9)
             {
                 BP.IsEnabled = true;
-                GPA.IsEnabled = true;
+                Btype.IsEnabled = true;
             }
             else
             {
                 BP.IsEnabled = false;
-                GPA.IsEnabled = false;
+                Btype.IsEnabled = false;
             }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            BC.Items.Clear();
-            ComboBoxItem ComboItem = (ComboBoxItem)BP.SelectedItem;
-            bx = ComboItem.Content.ToString();
-            int BContent = Int32.Parse(ComboItem.Content.ToString());
-            for (int CountB = 1; CountB <= BContent; CountB++)
-            {
-               
-                BC.Items.Add(new ListBoxItem { Content = CountB.ToString() , HorizontalContentAlignment = HorizontalAlignment.Center , Background = Brushes.Gray});
-            }
 
+            ComboBoxItem ComboItem = (ComboBoxItem)BP.SelectedItem;
+            int BContent = Int32.Parse(ComboItem.Content.ToString());
+            bx = ComboItem.Content.ToString();
+            BC.Items.Clear();
+            if (BG.Items.Count > BContent)
+            {
+                BG.Items.Clear();
+                for (int CountB = 1; CountB <= BContent; CountB++)
+                {
+                    BG.Items.Add(new ListBoxItem { Content = "", Foreground = Brushes.White });
+                }
+            }
+                BG.Items.Clear();
+                for (int CountB = 1; CountB <= BContent; CountB++)
+                {
+
+                    BC.Items.Add(new ListBoxItem { Content = CountB.ToString(), HorizontalContentAlignment = HorizontalAlignment.Center, Background = Brushes.Gray });
+                    BG.Items.Add(new ListBoxItem { Content = "", Foreground = Brushes.White });
+                }
+            
 
         }
 
         private void GPA_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if(Btype.SelectedIndex == 5)
+            {
+                btype.IsEnabled = true;
+            }
+            else 
+            {
+                btype.IsEnabled = false;
+            }
         }
 
         private void BC_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ColorP.Visibility = Visibility.Visible;
+
+
+
         }
 
         private void ColorP_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
             string c1 = ColorP.SelectedColor.Value.ToString();
             SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
-
             ListBoxItem lbi = BC.Items[BC.SelectedIndex] as ListBoxItem;
             lbi.Background = ck;
         }
@@ -127,6 +148,78 @@ namespace WpfApp1
             ColorP.Visibility = Visibility.Hidden;
         }
 
+        private void ECB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                if (content == true)
+                {
+                    BC.Items.Insert(BC.SelectedIndex, new ListBoxItem { Content = ECB.Text, HorizontalContentAlignment = HorizontalAlignment.Center, Background = Brushes.Gray });
+                    BC.Items.Remove(BC.SelectedItem);
+                    ECB.Clear();
+                    ECB.Foreground = Brushes.Gray;
+                    ECB.IsReadOnly = true;
+                    content = false;
+                }
+                if (Gpa == true)
+                {
+                    BG.Items.RemoveAt(BC.SelectedIndex);
+                    BG.Items.Insert(BC.SelectedIndex, new ListBoxItem { Content = "(" + ECB.Text + ")"  , Foreground = Brushes.White});
+                    
+                    ECB.Clear();
+                    ECB.Foreground = Brushes.Gray;
+                    ECB.IsReadOnly = true;
+                    Gpa = false;
+                }
+            }
+        }
 
+        private void Color_Click(object sender, RoutedEventArgs e)
+        {
+        MessageBoxResult result = MessageBox.Show("Yes - Color button", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        if (result == MessageBoxResult.Yes)
+        {
+            ColorP.Visibility = Visibility.Visible;
+        }
+        else
+        {
+        
+
+        }
+    }
+
+        private void Content_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                ECB.IsReadOnly = false;
+                ECB.Clear();
+                ECB.Foreground = Brushes.Black;
+                content = true;
+            }
+            else
+            {
+                
+
+            }
+        }
+
+        private void btype_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                ECB.IsReadOnly = false;
+                ECB.Clear();
+                ECB.Foreground = Brushes.Black;
+                Gpa = true;
+            }
+            if(result == MessageBoxResult.No)
+            {
+                
+
+            }
+        }
     }
 }

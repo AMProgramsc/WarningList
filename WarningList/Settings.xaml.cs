@@ -529,12 +529,35 @@ namespace WpfApp1
                             f.WriteLine("Buttons:");
                             f.WriteLine(CET.bx);
                             f.WriteLine("GPA:");
-                            f.WriteLine(CET.GPA.SelectedIndex);
+                            f.WriteLine(CET.Btype.SelectedIndex);
                             f.WriteLine("ButtonsColor:");
                             foreach (ListBoxItem fs in CET.BC.Items)
                             {
-                                string str = fs.Background + " ";
+                                string str = fs.Background + "";
                                 f.WriteLine(str);
+                            }
+                            f.WriteLine("ButtonsContent:");
+                            foreach (ListBoxItem fs in CET.BC.Items)
+                            {
+                                string str = fs.Content + "";
+                                f.WriteLine(str);
+                            }
+                            f.WriteLine("ButtonsType:");
+                            if (CET.Btype.SelectedIndex == 5)
+                            {
+                                foreach (ListBoxItem fs in CET.BG.Items)
+                                {
+                                    string str = fs.Content + "";
+                                    f.WriteLine(str);
+                                }
+                            }
+                            else
+                            {
+                                foreach (ListBoxItem fs in CET.BG.Items)
+                                {
+                                    string str = "";
+                                    f.WriteLine(str);
+                                }
                             }
                         }
                     }
@@ -545,7 +568,7 @@ namespace WpfApp1
                     CET.NameET.Clear();
                     CET.BC.Items.Clear();
                     CET.CP.SelectedIndex = -1;
-                    CET.GPA.SelectedIndex = -1;
+                    CET.Btype.SelectedIndex = -1;
                     CET.BP.SelectedIndex = -1;
                     foreach (UIElement uI in Tsys.Items)
                     {

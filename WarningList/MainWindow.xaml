@@ -78,17 +78,29 @@
         </Menu>
         <Grid x:Name="Buttons"  >
             <Button  Name="D1" Content="2" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Width="100" Background="#FFFF1717" Height="20"/>
+            <TextBlock Name="T1" HorizontalAlignment="Left" Margin="218,29,0,0" TextWrapping="Wrap" Text="(F)" VerticalAlignment="Top" Width="15" Visibility="Hidden" Height="19" RenderTransformOrigin="0.667,0.3"/>
             <Button x:Name="D2" Content="3" HorizontalAlignment="Left" Margin="162,52,0,0" VerticalAlignment="Top" Width="100" Background="Yellow" Height="20"/>
+            <TextBlock Name="T2" HorizontalAlignment="Left" Margin="218,54,0,0" TextWrapping="Wrap" Text="(E)" VerticalAlignment="Top" Width="19" Visibility="Hidden"/>
             <Button Name="D3" Content="4" HorizontalAlignment="Left" Margin="162,77,0,0" VerticalAlignment="Top" Width="100" Background="#FF0DB205"/>
-             <Button Name="C1" Content="5" HorizontalAlignment="Left" Margin="162,102,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>
+            <TextBlock Name="T3" HorizontalAlignment="Left" Margin="218,79,0,0" TextWrapping="Wrap" Text="(D)" VerticalAlignment="Top" Width="16" Visibility="Hidden"/>
+            <Button Name="C1" Content="5" HorizontalAlignment="Left" Margin="162,102,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20"/>
+            <TextBlock Name="T4" HorizontalAlignment="Left" Margin="218,104,0,0" TextWrapping="Wrap" Text="(C)" VerticalAlignment="Top" Width="17" Visibility="Hidden"/>
             <Button Name="C2" Content="5" HorizontalAlignment="Left" Margin="162,127,0,0" VerticalAlignment="Top" Width="100" Background="Green" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T5" HorizontalAlignment="Left" Margin="218,129,0,0" TextWrapping="Wrap" Text="(B)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
             <Button Name="C3" Content="6" HorizontalAlignment="Left" Margin="162,152,0,0" VerticalAlignment="Top" Width="100" Background="Cyan" Height="20" Visibility="Hidden"/>
-            <Button Name="B1" Content="7" HorizontalAlignment="Left" Margin="162,177,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden" />
+            <TextBlock Name="T6" HorizontalAlignment="Left" Margin="218,154,0,0" TextWrapping="Wrap" Text="(A)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
+            <Button Name="B1" Content="7" HorizontalAlignment="Left" Margin="162,177,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T7" HorizontalAlignment="Left" Margin="218,179,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
             <Button Name="B2" Content="8" HorizontalAlignment="Left" Margin="162,202,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T8" HorizontalAlignment="Left" Margin="218,202,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
             <Button Name="B3"  Content="9" HorizontalAlignment="Left" Margin="162,227,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T9" HorizontalAlignment="Left" Margin="218,227,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
             <Button Name="A1" Content="10" HorizontalAlignment="Left" Margin="162,252,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T10" HorizontalAlignment="Left" Margin="218,252,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
             <Button Name="A2" Content="11" HorizontalAlignment="Left" Margin="162,277,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T11" HorizontalAlignment="Left" Margin="218,277,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
             <Button Name="A3" Content="12" HorizontalAlignment="Left" Margin="162,302,0,0" VerticalAlignment="Top" Width="100" Background="Blue" Height="20" Visibility="Hidden"/>
+            <TextBlock Name="T12" HorizontalAlignment="Left" Margin="218,302,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
         </Grid>
         <TextBox Name="Clicker" HorizontalAlignment="Left" Height="23" Margin="267,52,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" IsReadOnly="True" Background="{x:Null}"/>
         <ListBox Name="Lister"  HorizontalAlignment="Left" Height="380" Margin="116,27,0,0" VerticalAlignment="Top" Width="43" Background="{x:Null}">
@@ -120,12 +132,6 @@
         <TextBox Name="Tres" HorizontalAlignment="Left" Height="82" Margin="262,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="60" FontFamily="Yu Gothic UI Semibold" Foreground="#FF569E00" Background="{x:Null}" IsReadOnly="True" />
         <TextBox Name="Result" HorizontalAlignment="Left" Height="23" Margin="262,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="{x:Static res:Resources.Totalresult}" IsReadOnly="True" Background="{x:Null}" />
         
-        <TextBlock Name="T1" HorizontalAlignment="Left" Margin="218,29,0,0" TextWrapping="Wrap" Text="(F)" VerticalAlignment="Top" Width="15" Visibility="Hidden" Height="19" RenderTransformOrigin="0.667,0.3"/>
-        <TextBlock Name="T2" HorizontalAlignment="Left" Margin="218,54,0,0" TextWrapping="Wrap" Text="(E)" VerticalAlignment="Top" Width="19" Visibility="Hidden"/>
-        <TextBlock Name="T3" HorizontalAlignment="Left" Margin="218,79,0,0" TextWrapping="Wrap" Text="(D)" VerticalAlignment="Top" Width="16" Visibility="Hidden"/>
-        <TextBlock Name="T4" HorizontalAlignment="Left" Margin="218,104,0,0" TextWrapping="Wrap" Text="(C)" VerticalAlignment="Top" Width="17" Visibility="Hidden"/>
-        <TextBlock Name="T5" HorizontalAlignment="Left" Margin="218,129,0,0" TextWrapping="Wrap" Text="(B)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
-        <TextBlock Name="T6" HorizontalAlignment="Left" Margin="218,154,0,0" TextWrapping="Wrap" Text="(A)" VerticalAlignment="Top" Width="15" Visibility="Hidden"/>
-        <TextBlock Name="T7" HorizontalAlignment="Left" Margin="218,179,0,0" TextWrapping="Wrap" Text="(A*)" VerticalAlignment="Top" Width="20" Visibility="Hidden"/>
+
     </Grid>
 </Window>
