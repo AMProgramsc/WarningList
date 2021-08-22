@@ -21,15 +21,16 @@ More information can be found in the [License](https://github.com/AMProgramms/Wa
 
 -------------------------------
 # Latest News
-* 19.07.2021  - Offical release W#arningList 0.8.8 Beta
-* 19.07.2021  - Offical release W#arningList 0.8.7 Beta
-* 16.07.2021  - Offical release W#arningList 0.8.6 Beta
-* 13.07.2021  - Offical release W#arningList 0.8.5 Beta
-* 12.07.2021  - Offical release W#arningList 0.8.4 Beta
-* 09.07.2021 - Offical release WarningList 0.8.2 Beta
-* 04.07.2021 - Offical release WarningList 0.8.1 Beta
-* 03.07.2021 - Offical release WarningList 0.8 Beta
-* 02.07.2021 - Offical release WarningList 0.7.9 Pre-beta
+* 22.08.2021 - Offical release W#arningList 0.8.9 Beta
+* 20.08.2021 - Offical release W#arningList 0.8.8 Beta
+* 19.08.2021 - Offical release W#arningList 0.8.7 Beta
+* 16.08.2021 - Offical release W#arningList 0.8.6 Beta
+* 13.08.2021 - Offical release W#arningList 0.8.5 Beta
+* 12.08.2021 - Offical release W#arningList 0.8.4 Beta
+* 09.08.2021 - Offical release WarningList 0.8.2 Beta
+* 04.08.2021 - Offical release WarningList 0.8.1 Beta
+* 03.08.2021 - Offical release WarningList 0.8 Beta
+* 02.08.2021 - Offical release WarningList 0.7.9 Pre-beta
 * 30.07.2021 - Offical release WarningList 0.7.8 Pre-beta
 * 28.07.2021 - Offical release WarningList 0.7.7 Pre-beta
 * 27.07.2021 - Offical release WarningList 0.7.6 Pre-beta
