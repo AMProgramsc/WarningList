@@ -144,14 +144,15 @@
                     <ContextMenu>
                         <MenuItem Name="Add" Header="Add custom ESType" Click="Add_Click" ></MenuItem>
                         <MenuItem Name="Remove" Header="Remove custom ESType" Click="Remove_Click" ></MenuItem>
+                        <MenuItem Name="Edit" Header="Edit custom ESType" Click="Edit_Click" ></MenuItem>
                     </ContextMenu>
                 </ListBox.ContextMenu>
             </ListBox>
             </Expander>
-        <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_1" />
-        <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Pb_Checked" MouseEnter="Pb_MouseEnter" MouseLeave="Pb_MouseLeave" Unchecked="Pb_Unchecked"    />
+        <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Reset_Click" />
+        <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Progressbar_Checked" MouseEnter="Progressbar_MouseEnter" MouseLeave="Progressbar_MouseLeave" Unchecked="Progressbar_Unchecked"    />
         <CheckBox x:Name="Sound" Content="{x:Static res:Resources.Sound}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" />
-        <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Test_Checked" Unchecked="Test_Unchecked" MouseEnter="Test_MouseEnter" MouseLeave="Test_MouseLeave"  />
+        <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Auto_Checked" Unchecked="Auto_Unchecked" MouseEnter="Auto_MouseEnter" MouseLeave="Auto_MouseLeave"  />
 
 
 

@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="CustomEST" Height="305" Width="588" Closing="Window_Closing">
     <Grid Background="Black" MouseDown="Grid_MouseDown"  >
-        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}"   SelectedColorChanged="ColorP_SelectedColorChanged" Margin="412,84,100,6" Visibility="Hidden" />
-        <TextBox Name="NT" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="Name System:" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="{x:Null}" Foreground="White"/>
+        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}"   SelectedColorChanged="ColorP_SelectedColorChanged" Margin="412,80,141,14" Visibility="Hidden" />
+        <TextBox Name="NameSys" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="Name System:" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="{x:Null}" Foreground="White"/>
         <TextBox Name="NameET" HorizontalAlignment="Left" Height="23" Margin="100,33,0,0" TextWrapping="Wrap" Text="{Binding Path=NameET}" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White"/>
-        <TextBox Name="FP" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
-        <Image Name="IP" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,10,0,0"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="412,56,0,0" VerticalAlignment="Top" Width="20" Height="23" FontSize="12" Click="Button_Click"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="100,139,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Foreground="Black"/>
-        <ComboBox Name="CP" Text="Type" HorizontalAlignment="Left" Margin="100,79,0,0" VerticalAlignment="Top" Width="120" Height="22"  IsEditable="True" IsReadOnly="True" Foreground="Gray" Background="Black" SelectionChanged="CP_SelectionChanged">
+        <TextBox Name="LoadImagePath" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
+        <Image Name="ImagePath" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,10,0,0"/>
+        <Button Name="OpenDialog" Content="..." HorizontalAlignment="Left" Margin="412,56,0,0" VerticalAlignment="Top" Width="20" Height="23" FontSize="12" Click="OpenDialog_Click"/>
+        <Button Name="Add" Content="Add" HorizontalAlignment="Left" Margin="100,139,0,0" VerticalAlignment="Top" Width="75" Click="Add_Click" Foreground="Black"/>
+        <ComboBox Name="EType" Text="Type" HorizontalAlignment="Left" Margin="100,79,0,0" VerticalAlignment="Top" Width="120" Height="22"  IsEditable="True" IsReadOnly="True" Foreground="Gray" Background="Black" SelectionChanged="CP_SelectionChanged">
             <TextBlock Text="Russian" Foreground="Black"/>
             <TextBlock Text="English" Foreground="Black"/>
             <TextBlock Text="Franch" Foreground="Black"/>
@@ -27,7 +27,7 @@
             <TextBlock Text="Denmark" Foreground="Black"/>
             <TextBlock Text="Custom" Foreground="Black"/>
         </ComboBox>
-        <ComboBox Name="BP" HorizontalAlignment="Left" Margin="225,79,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="True" Text="Buttons" Foreground="Gray" SelectionChanged="ComboBox_SelectionChanged" >
+        <ComboBox Name="BCount" HorizontalAlignment="Left" Margin="225,79,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="True" Text="Buttons" Foreground="Gray" SelectionChanged="ComboBox_SelectionChanged" >
             <ComboBoxItem Content = "4" Foreground="Black"  />
             <ComboBoxItem Content = "5" Foreground="Black"/>
             <ComboBoxItem Content = "6" Foreground="Black"/>
@@ -46,17 +46,17 @@
             <TextBlock Text="Denmark" Foreground="Black"/>
             <TextBlock Text="Custom" Foreground="Black"/>
         </ComboBox>
-        <ListBox Name="BC" HorizontalAlignment="Left" Height="250" Margin="440,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" SelectionChanged="BC_SelectionChanged"  >
+        <ListBox Name="ButtonsList" HorizontalAlignment="Left" Height="250" Margin="440,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" SelectionChanged="BC_SelectionChanged"  >
             <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Name="Color" Header="Color" Click="Color_Click"></MenuItem>
                     <MenuItem Name="Content" Header="Content" Click="Content_Click"></MenuItem>
-                    <MenuItem Name="btype" Header="Btype" Click="btype_Click"  IsEnabled="False"></MenuItem>
+                    <MenuItem Name="ButtonSupp" Header="Button supplement" Click="btype_Click"  IsEnabled="False"></MenuItem>
                 </ContextMenu>
             </ListBox.ContextMenu>
         </ListBox>
-        <TextBox Name="ECB" HorizontalAlignment="Left" Height="22" Margin="225,106,0,0" TextWrapping="Wrap" Text="Enter content" VerticalAlignment="Top" Width="120" Foreground="Gray" IsReadOnly="True" KeyDown="ECB_KeyDown" />
-        <ListBox x:Name="BG" HorizontalAlignment="Left" Height="250" Margin="530,10,0,0" VerticalAlignment="Top" Width="40" Background="{x:Null}"   />
+        <TextBox Name="EnterConSupp" HorizontalAlignment="Left" Height="22" Margin="225,106,0,0" TextWrapping="Wrap" Text="Enter content" VerticalAlignment="Top" Width="120" Foreground="Gray" IsReadOnly="True" KeyDown="ECB_KeyDown" />
+        <ListBox x:Name="ButtonSupplement" HorizontalAlignment="Left" Height="250" Margin="530,10,0,0" VerticalAlignment="Top" Width="40" Background="{x:Null}"   />
 
 
     </Grid>

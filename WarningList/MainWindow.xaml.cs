@@ -33,7 +33,7 @@ namespace WpfApp1
         NameD n = new NameD();
 
 
-        MessageBoxResult resultrt;
+        MessageBoxResult SelectionChangedResult;
         double value, valueS, valueN;
         double ClickS;
         double NumberN;
@@ -41,31 +41,26 @@ namespace WpfApp1
         double warning = 0;
         double Tresult;
         double TotalResult;
-        string inf = "Inf.txt";
-        string fileS;
-        string sizeN, sizeG, sizeH;
-        string cj = "Black";
+        string sizeG, sizeH;
+        string colorPick = "Black";
         string saveS = "Save.txt";
         bool delete = false;
         bool edit = false;
         bool name = false;
-        bool enter = false;
         bool drop = false;
         bool res = false;
         int Count;
-        int stringS,countS , countE;
-        int hit = 0;
-        int exit = 0, exit1;
-        int iy;
+        int countS , countE;
+        int exit = 0;
         int cls, cls2;
-        int check = 0;
+        int debugCheck = 0;
         int lang = 0;
         int type = 0;
         int sizeS = 0, sizeC = 0;
         int mainE, file;
-        int bg;
-        int fs;
-        public void GPAEng()
+        int backgroundCheck;
+        int fontType;
+        public void getGPAEng()
         {
             D1.Content = "1";
             D2.Content = "2";
@@ -82,7 +77,7 @@ namespace WpfApp1
             T6.Visibility = Visibility.Visible;
             T7.Visibility = Visibility.Visible;
         }
-        public void GPAGer()
+        public void getGPAGer()
         {
             D1.Content = "0";
             D2.Content = "3";
@@ -108,7 +103,7 @@ namespace WpfApp1
             T6.Visibility = Visibility.Visible;
             T6.Text = "(1)";
         }
-        public void GPAFra()
+        public void getGPAFra()
         {
             D1.Content = "1";
             D2.Content = "2";
@@ -134,7 +129,7 @@ namespace WpfApp1
 
             T5.Width = 38;
         }
-        public void GPADen()
+        public void getGPADen()
         {
             D1.Content = "-3";
             D2.Content = "0";
@@ -164,7 +159,8 @@ namespace WpfApp1
             T7.Text = "(A)";
             T7.Visibility = Visibility.Visible;
         }
-        public void Russian()
+        
+        public void RussianType()
         {
             if (type == 0)
             {
@@ -222,10 +218,10 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void English()
+        public void EnglishType()
         {
          
          
@@ -340,65 +336,65 @@ namespace WpfApp1
                 }
                 if (result <= 1.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "F";
+                    Lister.Items[Subjects.SelectedIndex] = "F";
                 }
                 else if (result < 2 && result > 1.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "E";
+                    Lister.Items[Subjects.SelectedIndex] = "E";
                 }
                 else if (result <= 2.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "D";
+                    Lister.Items[Subjects.SelectedIndex] = "D";
                 }
                 else if (result < 3 && result > 2.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "D+";
+                    Lister.Items[Subjects.SelectedIndex] = "D+";
                 }
                 else if (result < 3 && result >= 2.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "C-";
+                    Lister.Items[Subjects.SelectedIndex] = "C-";
                 }
                 else if (result <= 3.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "C";
+                    Lister.Items[Subjects.SelectedIndex] = "C";
                 }
                 else if (result < 4 && result > 3.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "C+";
+                    Lister.Items[Subjects.SelectedIndex] = "C+";
                 }
                 else if (result < 4 && result >= 3.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "B-";
+                    Lister.Items[Subjects.SelectedIndex] = "B-";
                 }
                 else if (result <= 4.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "B";
+                    Lister.Items[Subjects.SelectedIndex] = "B";
                 }
                 else if (result < 5 && result > 4.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "B+";
+                    Lister.Items[Subjects.SelectedIndex] = "B+";
                 }
                 else if (result < 5 && result >= 4.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "A-";
+                    Lister.Items[Subjects.SelectedIndex] = "A-";
                 }
                 else if (result <= 5.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "A";
+                    Lister.Items[Subjects.SelectedIndex] = "A";
                 }
                 else if (result <= 6 && result > 6.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "A*";
+                    Lister.Items[Subjects.SelectedIndex] = "A*";
                 }
                 else if (result == 6)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "A*";
+                    Lister.Items[Subjects.SelectedIndex] = "A*";
                 }
                 //End
 
             }
         }   
-        public void French()
+        public void FrenchType()
         {
             if (type == 2)
             {
@@ -626,63 +622,63 @@ namespace WpfApp1
 
                 if (result <= 1.2)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "<7";
+                    Lister.Items[Subjects.SelectedIndex] = "<7";
                 }
                 else if (result > 1.2 && result < 1.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "8";
+                    Lister.Items[Subjects.SelectedIndex] = "8";
                 }
                 else if (result < 2 && result >= 1.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "9";
+                    Lister.Items[Subjects.SelectedIndex] = "9";
                 }
                 else if (result < 2 && result >= 1.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "10";
+                    Lister.Items[Subjects.SelectedIndex] = "10";
                 }
                 else if (result < 2.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "11";
+                    Lister.Items[Subjects.SelectedIndex] = "11";
                 }
                 else if (result < 3 && result >= 2.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "12";
+                    Lister.Items[Subjects.SelectedIndex] = "12";
                 }
                 else if (result < 3 && result >= 2.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "13";
+                    Lister.Items[Subjects.SelectedIndex] = "13";
                 }
                 else if (result < 3.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "14";
+                    Lister.Items[Subjects.SelectedIndex] = "14";
                 }
                 else if (result < 4 && result >= 3.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "15";
+                    Lister.Items[Subjects.SelectedIndex] = "15";
                 }
                 else if (result < 4 && result >= 3.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "16";
+                    Lister.Items[Subjects.SelectedIndex] = "16";
                 }
                 else if (result < 4.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "17";
+                    Lister.Items[Subjects.SelectedIndex] = "17";
                 }
                 else if (result < 5 && result >= 4.5)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "18";
+                    Lister.Items[Subjects.SelectedIndex] = "18";
                 }
                 else if (result < 5 && result >= 4.9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "19";
+                    Lister.Items[Subjects.SelectedIndex] = "19";
                 }
                 else
                 {
-                    Lister.Items[listbox.SelectedIndex] = "20";
+                    Lister.Items[Subjects.SelectedIndex] = "20";
                 }
             }
         }
-        public void Germany()
+        public void GermanyType()
         {
             if (type == 3)
             {
@@ -781,31 +777,31 @@ namespace WpfApp1
                 }
                 if (result < 3)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "6";
+                    Lister.Items[Subjects.SelectedIndex] = "6";
                 }
                 else if (result <= 6 && result >= 3)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "5";
+                    Lister.Items[Subjects.SelectedIndex] = "5";
                 }
                 else if (result <= 9 && result >= 6)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "4";
+                    Lister.Items[Subjects.SelectedIndex] = "4";
                 }
                 else if (result <= 12 && result >= 9)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "3";
+                    Lister.Items[Subjects.SelectedIndex] = "3";
                 }
                 else if (result <= 15 && result >= 12)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "2";
+                    Lister.Items[Subjects.SelectedIndex] = "2";
                 }
                 else
                 {
-                    Lister.Items[listbox.SelectedIndex] = "1";
+                    Lister.Items[Subjects.SelectedIndex] = "1";
                 }
             }
         }
-        public void Ukraine()
+        public void UkraineType()
         {
             if (type == 4)
             {
@@ -984,10 +980,10 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void Belarus()
+        public void BelarusType()
         {
             if (type == 5)
             {
@@ -1136,10 +1132,10 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void Czech()
+        public void CzechType()
         {
             if (type == 6)
             {
@@ -1221,10 +1217,10 @@ namespace WpfApp1
 
                 }
 
-                    Lister.Items[listbox.SelectedIndex] = result;
+                    Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void Finland()
+        public void FinlandType()
         {
             if(type == 7)
             {
@@ -1331,10 +1327,10 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void Bulgaria()
+        public void BulgariaType()
         {
             if (type == 8)
             {
@@ -1416,10 +1412,10 @@ namespace WpfApp1
 
                 }
 
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         }
-        public void Denmark()
+        public void DenmarkType()
         {
             if(type == 9)
             {
@@ -1522,35 +1518,35 @@ namespace WpfApp1
                 }
                 if (result < 0)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "F";
+                    Lister.Items[Subjects.SelectedIndex] = "F";
                 }
                 else if (result < 2)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "Fx";
+                    Lister.Items[Subjects.SelectedIndex] = "Fx";
                 }
                 else if (result < 4)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "E";
+                    Lister.Items[Subjects.SelectedIndex] = "E";
                 }
                 else if (result < 7)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "D";
+                    Lister.Items[Subjects.SelectedIndex] = "D";
                 }
                 else if (result < 10)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "C";
+                    Lister.Items[Subjects.SelectedIndex] = "C";
                 }
                 else if (result < 12)
                 {
-                    Lister.Items[listbox.SelectedIndex] = "B";
+                    Lister.Items[Subjects.SelectedIndex] = "B";
                 }
                 else
                 {
-                    Lister.Items[listbox.SelectedIndex] = "A";
+                    Lister.Items[Subjects.SelectedIndex] = "A";
                 }
             }
         }
-        public void Custom()
+        public void CustomType()
         {
             if (type > 9)
             {
@@ -1729,144 +1725,131 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                Lister.Items[listbox.SelectedIndex] = result;
+                Lister.Items[Subjects.SelectedIndex] = result;
             }
         
         
         }
 
-        public void BackgroundN()
+        public void BackgroundCheck()
         {
-            bg = 1;
+            backgroundCheck = 1;
+            foreach (UIElement backgroundColor in Root.Children)
+            {
+                if (backgroundColor is TextBox)
+                {
+                    ((TextBox)backgroundColor).Foreground = Brushes.White;
+                }
+            }
             Root.Background = Brushes.Black;
             Lister.Foreground = Brushes.White;
-            EnterC.Foreground = Brushes.White;
-            Textbox1.Foreground = Brushes.White;
-            Name.Foreground = Brushes.White;
-            Sername.Foreground = Brushes.White;
-            Namer.Foreground = Brushes.White;
-            Result.Foreground = Brushes.White;
-            DialogeW.Foreground = Brushes.White;
-            GEN.Foreground = Brushes.White;
             Score.Foreground = Brushes.White;
-        }
-        public void BackgroundU()
-        {
-            bg = 0;
             
+        
+        }
+        public void BackgroundUnCheck()
+        {
+            backgroundCheck = 0;
+            
+            
+            foreach (UIElement backgroundColor in Root.Children)
+            {
+                if (backgroundColor is TextBox)
+                {
+                    ((TextBox)backgroundColor).Foreground = Brushes.Black;
+                }
+
+            }
             Root.Background = Brushes.White;
             Lister.Foreground = Brushes.Black;
-            EnterC.Foreground = Brushes.Black;
-            Textbox1.Foreground = Brushes.Black;
-            Name.Foreground = Brushes.Black;
-            Sername.Foreground = Brushes.Black;
-            Namer.Foreground = Brushes.Black;
-            Result.Foreground = Brushes.Black;
-            DialogeW.Foreground = Brushes.Black;
-            GEN.Foreground = Brushes.Black;
             Score.Foreground = Brushes.Black;
         }
 
         public void Bold()
         {
-            fs = 1;
-            listbox.FontWeight = FontWeights.Bold;
+            fontType = 1;
+            foreach (UIElement textbold in Root.Children)
+            {
+                if (textbold is TextBox)
+                {
+                    ((TextBox)textbold).FontWeight = FontWeights.Bold;
+                }
+
+            }
+            Subjects.FontWeight = FontWeights.Bold;
             Menu.FontWeight = FontWeights.Bold;
-            Lister.FontWeight = FontWeights.Bold;
-            EnterC.FontWeight = FontWeights.Bold;
-            Textbox1.FontWeight = FontWeights.Bold;
-            Name.FontWeight = FontWeights.Bold;
-            Sername.FontWeight = FontWeights.Bold;
-            Namer.FontWeight = FontWeights.Bold;
-            Result.FontWeight = FontWeights.Bold;
-            GEN.FontWeight = FontWeights.Bold;
+            Lister.FontWeight = FontWeights.Bold; 
             Score.FontWeight = FontWeights.Bold;
-            Clicker.FontWeight = FontWeights.Bold;
             Namer.Height = 40;
             Result.Margin = new Thickness(262, 223, 0, 0);
             Tres.Margin = new Thickness(262, 246, 0, 0);
         }
         public void Italic()
         {
-            fs = 2;
-            listbox.FontStyle = FontStyles.Italic;
+            fontType = 2;
+            foreach (UIElement textitalic in Root.Children)
+            {
+                if (textitalic is TextBox)
+                {
+                    ((TextBox)textitalic).FontStyle = FontStyles.Italic;
+                }
+
+            }
+            Subjects.FontStyle = FontStyles.Italic;
             Menu.FontStyle = FontStyles.Italic;
             Lister.FontStyle = FontStyles.Italic;
-            EnterC.FontStyle = FontStyles.Italic;
-            Textbox1.FontStyle = FontStyles.Italic;
-            Name.FontStyle = FontStyles.Italic;
-            Sername.FontStyle = FontStyles.Italic;
-            Namer.FontStyle = FontStyles.Italic;
-            Result.FontStyle = FontStyles.Italic;
-            GEN.FontStyle = FontStyles.Italic;
             Score.FontStyle = FontStyles.Italic;
-            Clicker.FontStyle = FontStyles.Italic;
         }
         public void Underline()
         {
-            fs = 3;
-            EnterC.TextDecorations = TextDecorations.Underline;
-            Textbox1.TextDecorations = TextDecorations.Underline;
-            Name.TextDecorations = TextDecorations.Underline;
-            Sername.TextDecorations = TextDecorations.Underline;
-            Namer.TextDecorations = TextDecorations.Underline;
-            Result.TextDecorations = TextDecorations.Underline;
-            GEN.TextDecorations = TextDecorations.Underline;
-            Clicker.TextDecorations = TextDecorations.Underline;
+            fontType = 3;
+            foreach (UIElement textunderline in Root.Children)
+            {
+                if (textunderline is TextBox)
+                {
+                    ((TextBox)textunderline).TextDecorations = TextDecorations.Underline;
+                }
+
+            }
         }
         public void Normal()
         {
-            fs = 0;
-            listbox.FontWeight = FontWeights.Normal;
+            fontType = 0;
+            foreach (UIElement textnormal in Root.Children)
+            {
+                if (textnormal is TextBox)
+                {
+                    ((TextBox)textnormal).FontWeight = FontWeights.Normal;
+                    ((TextBox)textnormal).FontStyle = FontStyles.Normal;
+                    ((TextBox)textnormal).TextDecorations = null;
+                }
+
+            }
+            Subjects.FontWeight = FontWeights.Normal;
             Menu.FontWeight = FontWeights.Normal;
             Lister.FontWeight = FontWeights.Normal;
-            EnterC.FontWeight = FontWeights.Normal;
-            Textbox1.FontWeight = FontWeights.Normal;
-            Name.FontWeight = FontWeights.Normal;
-            Sername.FontWeight = FontWeights.Normal;
-            Namer.FontWeight = FontWeights.Normal;
-            Result.FontWeight = FontWeights.Normal;
-            GEN.FontWeight = FontWeights.Normal;
             Score.FontWeight = FontWeights.Normal;
-            listbox.FontStyle = FontStyles.Normal;
-            Clicker.FontStyle = FontStyles.Normal;
+
+            Subjects.FontStyle = FontStyles.Normal;
             Menu.FontStyle = FontStyles.Normal;
             Lister.FontStyle = FontStyles.Normal;
-            EnterC.FontStyle = FontStyles.Normal;
-            Textbox1.FontStyle = FontStyles.Normal;
-            Name.FontStyle = FontStyles.Normal;
-            Sername.FontStyle = FontStyles.Normal;
-            Namer.FontStyle = FontStyles.Normal;
-            Result.FontStyle = FontStyles.Normal;
-            GEN.FontStyle = FontStyles.Normal;
             Score.FontStyle = FontStyles.Normal;
-            Clicker.FontStyle = FontStyles.Normal;
-            Result.TextDecorations = null;
-            EnterC.TextDecorations = null;
-            Textbox1.TextDecorations = null;
-            Name.TextDecorations = null;
-            Sername.TextDecorations = null;
-            Namer.TextDecorations = null;
-            Tres.TextDecorations = null;
-            GEN.TextDecorations = null;
-            Clicker.TextDecorations = null;
+ 
         }
         
-        public void ColorPickSC()
+        public void ColorPickSelectColor()
         {
-            SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(cj);
+            SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(colorPick);
+            foreach (UIElement textcolor in Root.Children)
+            {
+                if (textcolor is TextBox)
+                {
+                    ((TextBox)textcolor).Foreground = ck;
+                }
+
+            }
             Lister.Foreground = ck;
-            EnterC.Foreground = ck;
-            Textbox1.Foreground = ck;
-            Name.Foreground = ck;
-            Sername.Foreground = ck;
-            Namer.Foreground = ck;
-            Tres.Foreground = ck;
-            DialogeW.Foreground = ck;
-            GEN.Foreground = ck;
             Score.Foreground = ck;
-            Clicker.Foreground = ck;
-            Result.Foreground = ck;
         }
 
         void Res()
@@ -2393,13 +2376,13 @@ namespace WpfApp1
             
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
-            check = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
+            debugCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
             type = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
            
             ColorPick.IsEnabled = false;
             ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
-            listbox.IsEnabled = false;
+            Subjects.IsEnabled = false;
             EnterC.IsEnabled = false;
             Menu.IsEnabled = false;
             Edit.IsEnabled = false;
@@ -2413,7 +2396,7 @@ namespace WpfApp1
                 C3.Visibility = Visibility.Visible;
                 B1.Visibility = Visibility.Visible;
 
-                GPAEng();
+                getGPAEng();
 
                 Score.Height = 210;
                 Score.Margin = new Thickness(162, 197, 0, 0);
@@ -2424,7 +2407,7 @@ namespace WpfApp1
 
                 C2.Visibility = Visibility.Visible;
 
-                GPAFra();
+                getGPAFra();
                
                 T5.Width = 38;
                 Score.Height = 255;
@@ -2437,7 +2420,7 @@ namespace WpfApp1
                 C3.Visibility = Visibility.Visible;
                 C2.Visibility = Visibility.Visible;
 
-                GPAGer();
+                getGPAGer();
                
                 Score.Height = 235;
                 Score.Margin = new Thickness(162, 172, 0, 0);
@@ -2574,7 +2557,7 @@ namespace WpfApp1
                 C3.Visibility = Visibility.Visible;
                 B1.Visibility = Visibility.Visible;
 
-                GPADen();
+                getGPADen();
 
                 Score.Height = 210;
                 Score.Margin = new Thickness(162, 197, 0, 0);
@@ -2600,16 +2583,16 @@ namespace WpfApp1
                     case 0:
                         break;
                     case 1:
-                        GPAEng();
+                        getGPAEng();
                         break;
                     case 2:
-                        GPAGer();
+                        getGPAGer();
                         break;
                     case 3:
-                        GPAFra();
+                        getGPAFra();
                         break;
                     case 4:
-                        GPADen();
+                        getGPADen();
                         break;
                     case 5:
                         break;
@@ -2620,10 +2603,10 @@ namespace WpfApp1
                     string cb = File.ReadLines(System.IO.Path.Combine("ESTData", path + ".txt")).Skip(g).First();
                     SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(ch);
 
-                 
+
                     if (es is Button)
-                        {
-                      
+                    {
+
                         ((Button)es).Visibility = Visibility.Visible;
                         ((Button)es).Background = ckl;
                         ((Button)es).Content = cb;
@@ -2639,16 +2622,9 @@ namespace WpfApp1
                         en++;
                         y++;
                         g++;
-                        
+
 
                     }
-             
-
-
-
-
-
-
                     Score.Height = heightS;
                     Score.Margin = new Thickness(162, posS, 0, 0);
 
@@ -2670,10 +2646,6 @@ namespace WpfApp1
                         et++;
                         z++;
                     }
-                  
-
-
-
                 }
             }
          
@@ -2696,7 +2668,7 @@ namespace WpfApp1
                 }
 
 
-            if (check == 1)
+            if (debugCheck == 1)
             {
                 Debug.Visibility = Visibility.Visible;
             }
@@ -2721,11 +2693,11 @@ namespace WpfApp1
                   
                     //listbox.Items.Add(sizeN);
                     Lister.Items.Add(new ListBoxItem() { Content = "-"});
-                    listbox.Items.Add(new ListBoxItem() { Content = sizeH, Background = Brushes.Red });
-                    listbox.SelectedItem = sizeH;
+                    Subjects.Items.Add(new ListBoxItem() { Content = sizeH, Background = Brushes.Red });
+                    Subjects.SelectedItem = sizeH;
                     Count++;
                     Namer.IsEnabled = false;
-                    listbox.IsEnabled = true;
+                    Subjects.IsEnabled = true;
                     name = false;
                     Edit.IsEnabled = false;
                     Delete.IsEnabled = false;
@@ -2739,10 +2711,10 @@ namespace WpfApp1
                 {
 
                     sizeG = Namer.Text;
-                    listbox.Items.Insert(listbox.SelectedIndex, new ListBoxItem() { Content = sizeG, Background = Brushes.Red});
-                    listbox.Items.Remove(listbox.SelectedItem);
+                    Subjects.Items.Insert(Subjects.SelectedIndex, new ListBoxItem() { Content = sizeG, Background = Brushes.Red});
+                    Subjects.Items.Remove(Subjects.SelectedItem);
                     Namer.IsEnabled = false;
-                    listbox.IsEnabled = true;
+                    Subjects.IsEnabled = true;
                     Edit.IsEnabled = false;
                     Delete.IsEnabled = false;
                     Color.IsEnabled = false;
@@ -2842,11 +2814,11 @@ namespace WpfApp1
    //Background pick
         private void Background_Checked(object sender, RoutedEventArgs e)
         {
-            BackgroundN();
+            BackgroundCheck();
         }
         private void Background_Unchecked(object sender, RoutedEventArgs e)
         {
-            BackgroundU();
+            BackgroundUnCheck();
         }
         
         //Mouse right click menu
@@ -2857,7 +2829,7 @@ namespace WpfApp1
             {
                 case MessageBoxResult.Yes:
 
-                    listbox.IsEnabled = false;
+                    Subjects.IsEnabled = false;
                     Namer.IsEnabled = true;
                     name = true;
                     DialogeW.Text = Properties.Resources.Dialoge5;
@@ -2878,8 +2850,8 @@ namespace WpfApp1
                         delete = true;
 
                         DialogeW.Text = Properties.Resources.Dialoge6;
-                        Lister.Items.RemoveAt(listbox.SelectedIndex);
-                        listbox.Items.Remove(listbox.SelectedItem);
+                        Lister.Items.RemoveAt(Subjects.SelectedIndex);
+                        Subjects.Items.Remove(Subjects.SelectedItem);
                         Count--;
 
                         DialogeW.Text = Properties.Resources.Dialoge2;
@@ -2901,11 +2873,9 @@ namespace WpfApp1
             {
                 case MessageBoxResult.Yes:
                     edit = true;
-                    //listbox.IsEnabled = true;
-                    listbox.IsEnabled = false;
+                    Subjects.IsEnabled = false;
                     Namer.IsEnabled = true;
                     DialogeW.Text = Properties.Resources.Dialoge7;
-                    //nnr.Show();
                     
                     break;
                 case MessageBoxResult.No:
@@ -2960,7 +2930,7 @@ namespace WpfApp1
             Lister.Items.Clear();
             GEN.Clear();
             Tres.Clear();
-            for (int g= 0; g < listbox.Items.Count; g++)
+            for (int g= 0; g < Subjects.Items.Count; g++)
             {
                 Lister.Items.Add( new ListBoxItem() { Content = "-"});
             }
@@ -2977,46 +2947,41 @@ namespace WpfApp1
             Res();
         }
 
-        private void listbox_Drop(object sender, DragEventArgs e)
-        {
-            drop = true;
-            
-        }
 
         //Load function
         private void Window_Activated(object sender, EventArgs e)
         {
 
-            Count = listbox.Items.Count;
+            Count = Subjects.Items.Count;
             file = Int32.Parse(File.ReadLines("File.txt").First());
             if (file == 1)
             {
                 Name.IsEnabled = false;
                 Menu.IsEnabled = true;
-                listbox.IsEnabled = true;
+                Subjects.IsEnabled = true;
                 n.Close();
 
                 int strings = System.IO.File.ReadAllLines("Save.txt").Length;
 
 
-                listbox.Items.Clear();
+                Subjects.Items.Clear();
                 Lister.Items.Clear();
 
                 Name.Text = File.ReadLines("Save.txt").First();
                 Sername.Text = File.ReadLines("Save.txt").Skip(1).First();
-                bg = Int32.Parse(File.ReadLines("Save.txt").Skip(2).First());
-                fs = Int32.Parse(File.ReadLines("Save.txt").Skip(3).First());
-                cj = File.ReadLines("Save.txt").Skip(4).First();
+                backgroundCheck = Int32.Parse(File.ReadLines("Save.txt").Skip(2).First());
+                fontType = Int32.Parse(File.ReadLines("Save.txt").Skip(3).First());
+                colorPick = File.ReadLines("Save.txt").Skip(4).First();
                
-                if(bg == 1)
+                if(backgroundCheck == 1)
                 {
-                    BackgroundN();
+                    BackgroundCheck();
                 }
                 else 
                 {
-                    BackgroundU();
+                    BackgroundUnCheck();
                 }
-                switch(fs)
+                switch(fontType)
                 {
                     case 0:
                         Normal();
@@ -3032,7 +2997,7 @@ namespace WpfApp1
                         break;
 
                 }
-                ColorPickSC();
+                ColorPickSelectColor();
                 countS = strings / 3 + 4;
                 countE = strings - countS + 5;
                 int y = countE;
@@ -3041,7 +3006,7 @@ namespace WpfApp1
 
                     string ch = File.ReadLines("Save.txt").Skip(y).First();
                     SolidColorBrush ckl = (SolidColorBrush)new BrushConverter().ConvertFromString(ch);
-                    listbox.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(s).First(), Background = ckl });
+                    Subjects.Items.Add(new ListBoxItem() { Content = File.ReadLines("Save.txt").Skip(s).First(), Background = ckl });
                     y++;
 
                 }
@@ -3062,7 +3027,7 @@ namespace WpfApp1
 
                 Name.IsEnabled = false;
                 Menu.IsEnabled = true;
-                listbox.IsEnabled = true;
+                Subjects.IsEnabled = true;
                 Sername.IsReadOnly = true;
                 Name.Text = File.ReadAllText(@"Name.txt");
                 Sername.Text = File.ReadAllText(@"Sername.txt");
@@ -3085,10 +3050,10 @@ namespace WpfApp1
                     {
                         w.WriteLine(Name.Text);
                         w.WriteLine(Sername.Text);
-                        w.WriteLine(bg);
-                        w.WriteLine(fs);
-                        w.WriteLine(cj);
-                        foreach (ListBoxItem s in listbox.Items)
+                        w.WriteLine(backgroundCheck);
+                        w.WriteLine(fontType);
+                        w.WriteLine(colorPick);
+                        foreach (ListBoxItem s in Subjects.Items)
                         {
                             string str = s.Content + " ";
                             w.WriteLine(str);
@@ -3098,7 +3063,7 @@ namespace WpfApp1
                             string ster = sr.Content + " ";
                             w.WriteLine(ster);
                         }
-                        foreach (ListBoxItem fs in listbox.Items)
+                        foreach (ListBoxItem fs in Subjects.Items)
                         {
                             string str = fs.Background + " ";
                             w.WriteLine(str);
@@ -3139,33 +3104,22 @@ namespace WpfApp1
 
 
                         TotalResult += result;
-                        //Russian
-                        Russian();
-                        //English
-                        English();
-                        //French
-                        French();
-                        //Germany
-                        Germany();
-                        //Ukraine
-                        Ukraine();
-                        //Belarus
-                        Belarus();
-                        //Czech
-                        Czech();
-                        //Finland
-                        Finland();
-                        //Bulgaria
-                        Bulgaria();
-                        //Denmark
-                        Denmark();
-                        //Custom
-                        Custom();
+                        RussianType();
+                        EnglishType();
+                        FrenchType();
+                        GermanyType();
+                        UkraineType();
+                        BelarusType();
+                        CzechType();
+                        FinlandType();
+                        BulgariaType();
+                        DenmarkType();
+                        CustomType();
                         value = 0;
                         result = 0;
                         ClickS = 0;
                         sizeC = 0;
-                        if (Lister.Items[listbox.SelectedIndex] != "-")
+                        if (Lister.Items[Subjects.SelectedIndex] != "-")
                         {
                             sizeS++;
                         }
@@ -3185,7 +3139,7 @@ namespace WpfApp1
                         Textbox1.Clear();
                         EnterC.Clear();
                         EnterC.IsEnabled = false;
-                        listbox.IsEnabled = true;
+                        Subjects.IsEnabled = true;
                         Score.Items.Clear();
                     }
                     Res();
@@ -3207,7 +3161,7 @@ namespace WpfApp1
             ColorPick.IsEnabled = true;
             ColorPick.Visibility = Visibility.Visible;
             Namer.IsEnabled = true;
-            listbox.IsEnabled = true;
+            Subjects.IsEnabled = true;
             EnterC.IsEnabled = true;
             Menu.IsEnabled = true;
             GEN.IsReadOnly = false;
@@ -3233,7 +3187,7 @@ namespace WpfApp1
             ColorPick.IsEnabled = false;
             ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
-            listbox.IsEnabled = false;
+            Subjects.IsEnabled = false;
             EnterC.IsEnabled = false;
             Menu.IsEnabled = true;
             GEN.IsReadOnly = true;
@@ -3259,7 +3213,7 @@ namespace WpfApp1
             ColorPick.IsEnabled = false;
             ColorPick.Visibility = Visibility.Hidden;
             Namer.IsEnabled = false;
-            listbox.IsEnabled = true;
+            Subjects.IsEnabled = true;
             EnterC.IsEnabled = false;
             Menu.IsEnabled = true;
             GEN.IsReadOnly = true;
@@ -3302,8 +3256,8 @@ namespace WpfApp1
         {
             if (cls == 1)
             {
-                cj = ColorPick.SelectedColor.Value.ToString();
-                switch (fs)
+                colorPick = ColorPick.SelectedColor.Value.ToString();
+                switch (fontType)
                 {
                     case 0:
                         Normal();
@@ -3319,7 +3273,7 @@ namespace WpfApp1
                         break;
 
                 }
-                ColorPickSC();
+                ColorPickSelectColor();
                 DialogeW.Text = Properties.Resources.Dialoge8;
             }
             if(cls2 == 1)
@@ -3327,7 +3281,7 @@ namespace WpfApp1
                 string c1 = ColorPick.SelectedColor.Value.ToString();
                 SolidColorBrush ck = (SolidColorBrush)new BrushConverter().ConvertFromString(c1);
 
-                ListBoxItem lbi = listbox.Items[listbox.SelectedIndex] as ListBoxItem;
+                ListBoxItem lbi = Subjects.Items[Subjects.SelectedIndex] as ListBoxItem;
                 lbi.Background = ck;
                 DialogeW.Text = Properties.Resources.Dialoge8;
 
@@ -3387,7 +3341,7 @@ namespace WpfApp1
 
 
         //Main Selection
-        private void ListBox_SelectionChanged1(object sender, SelectionChangedEventArgs e)
+        private void Subjects_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
             cls = 0;
@@ -3398,17 +3352,17 @@ namespace WpfApp1
             DialogeW.Text = Properties.Resources.Dialoge2;
             if (delete == false && drop == false && edit == false)
             {
-                resultrt = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                SelectionChangedResult = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Box2, MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-                switch (resultrt)
+                switch (SelectionChangedResult)
                 {
                     case MessageBoxResult.Yes:
                         EnterC.IsEnabled = true;
-                        listbox.IsEnabled = false;
+                        Subjects.IsEnabled = false;
                         break;
                     case MessageBoxResult.No:
 
-                        listbox.SelectedItem = false;
+                        Subjects.SelectedItem = false;
                         Edit.IsEnabled = true;
                         Delete.IsEnabled = true;
                         Color.IsEnabled = true;
@@ -3424,8 +3378,13 @@ namespace WpfApp1
            
             
         }
-//(c)AMProgramms, 2021
-//Ultra main fuctions
+        private void Subjects_Drop(object sender, DragEventArgs e)
+        {
+            drop = true;
+
+        }
+        //(c)AMProgramms, 2021
+        //Ultra main fuctions
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string s = (string)((Button)e.OriginalSource).Content;
@@ -3449,34 +3408,23 @@ namespace WpfApp1
                 
                
                 TotalResult += result;
-                //Russian
-                Russian();
-                //English
-                English();
-                //French
-                French();
-                //Germany
-                Germany();
-                //Ukraine
-                Ukraine();
-                //Belarus
-                Belarus();
-                //Czech
-                Czech();
-                //Finland
-                Finland();
-                //Bulgaria
-                Bulgaria();
-                //Denmark
-                Denmark();
-                //Custom
-                Custom();
+                RussianType();
+                EnglishType();
+                FrenchType();
+                GermanyType();
+                UkraineType();
+                BelarusType();
+                CzechType();
+                FinlandType();
+                BulgariaType();
+                DenmarkType();
+                CustomType();
 
                     value = 0;
                 result = 0;
                 ClickS = 0;
                 sizeC = 0;
-                if (Lister.Items[listbox.SelectedIndex] != "-")
+                if (Lister.Items[Subjects.SelectedIndex] != "-")
                 {
                     sizeS++;
                 }
@@ -3496,7 +3444,7 @@ namespace WpfApp1
                 Textbox1.Clear();
                 EnterC.Clear();
                 EnterC.IsEnabled = false;
-                listbox.IsEnabled = true;
+                Subjects.IsEnabled = true;
                 Score.Items.Clear();
             }
             Res();
