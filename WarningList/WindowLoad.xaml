@@ -13,14 +13,14 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FF219731" Offset="1"/>
+                <GradientStop Color="#FFBDBD27" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="220,183,0,0" VerticalAlignment="Top" Width="371" Foreground="#FF1ECD1E" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="220,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="371" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   ><Run Text="WarningList 0.8.9"/><Run Text=" Beta"/></TextBlock>
+        <ProgressBar x:Name="ProgressLoad" HorizontalAlignment="Left" Height="19" Margin="230,183,0,0" VerticalAlignment="Top" Width="348" Foreground="#FFE6AD16" ValueChanged="ProgressLoad_ValueChanged" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="230,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="348" Height="51" Foreground="White" FontFamily="Yu Gothic UI Semibold" FontSize="36" RenderTransformOrigin="0.5,0.5"   ><Run Text="WarningList 0.9"/><Run Text=" Beta"/></TextBlock>
         <Button Name="Button2" Content="{x:Static res:Resources.Start}" HorizontalAlignment="Left" Margin="317,207,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click" Visibility="Hidden"/>
         <Button x:Name="Exiter" Content="{x:Static res:Resources.Exit}" HorizontalAlignment="Left" Margin="317,232,0,0" VerticalAlignment="Top" Width="167" Click="Exiter_Click" Visibility="Hidden"/>
         <Menu Name="T" Height="25" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="White">
@@ -48,5 +48,6 @@
         </Menu>
         <TextBlock HorizontalAlignment="Left" Margin="595,377,-10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="207"><Run Text="{x:Static res:Resources.Creator}"/><Run Text=" 2020,2021"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="595,393,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Rights}" VerticalAlignment="Top" Width="192" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,377,0,0" TextWrapping="Wrap" Text="Test early version build-23082021" VerticalAlignment="Top" Foreground="White" Height="31" Width="119"/>
     </Grid>
 </Window>

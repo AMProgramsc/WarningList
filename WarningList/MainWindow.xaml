@@ -70,9 +70,9 @@
 
             <MenuItem Name="Debug" Header="{x:Static res:Resources.DebugD}" Foreground="Black" Width="70" Visibility="Hidden" >
                 <MenuItem x:Name="Complete" Header="Complete" Click="Complete_Click"  />
-                <MenuItem Name="AE"  Header="All Enabled" Click="AE_Click"/>
-                <MenuItem Name="AP" Header="All Paused" Click="AP_Click"  />
-                <MenuItem Name="R" Header="Reset" Click="R_Click"   />
+                <MenuItem Name="AllEnabled"  Header="All Enabled" Click="AllEnabled_Click"/>
+                <MenuItem Name="AllPaused" Header="All Paused" Click="AllPaused_Click"  />
+                <MenuItem Name="ResetWindow" Header="Reset" Click="ResetWindow_Click"   />
             </MenuItem>
 
         </Menu>

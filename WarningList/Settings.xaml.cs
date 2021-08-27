@@ -29,9 +29,31 @@ namespace WpfApp1
         int languageCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
         int typeCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
         int autoCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(11).First());
+        int summarymodeCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(13).First());
         int editCustomEST;
         public int _width =100;
         public int _height = 100;
+
+        public void WriteAllSettings()
+        {
+            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
+            {
+                w.WriteLine("Debug:");
+                w.WriteLine(debugCheck.ToString());
+                w.WriteLine("Fullscreen:");
+                w.WriteLine(FscreenCheck.ToString());
+                w.WriteLine("Progressbar:");
+                w.WriteLine(progressbarCheck.ToString());
+                w.WriteLine("Language:");
+                w.WriteLine(languageCheck.ToString());
+                w.WriteLine("TypeSys:");
+                w.WriteLine(typeCheck.ToString());
+                w.WriteLine("Auto:");
+                w.WriteLine(autoCheck.ToString());
+                w.WriteLine("SummaryMode:");
+                w.WriteLine(summarymodeCheck.ToString());
+            }
+        }
     
         public Settings()
         {
@@ -113,50 +135,21 @@ namespace WpfApp1
         {
            
             debugCheck = 1;
-            VOID.Visibility = Visibility.Visible;
             Texter.Foreground = Brushes.Green;
             Texter.Text = Properties.Resources.Succeses;
 
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            WriteAllSettings();
+
 
         }
 
         private void Debug_Unchecked(object sender, RoutedEventArgs e)
         {
             debugCheck = 0;
-            VOID.Visibility = Visibility.Hidden;
             Texter.Foreground = Brushes.Green;
             Texter.Text = Properties.Resources.Succeses;
 
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            WriteAllSettings();
         }
 
         private void Fullscreen_Checked(object sender, RoutedEventArgs e)
@@ -166,22 +159,7 @@ namespace WpfApp1
             Texter.Foreground = Brushes.Green;
             Texter.Text = Properties.Resources.Succeses;
 
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
-
+            WriteAllSettings();
         }
 
         private void Fullscreen_Unchecked(object sender, RoutedEventArgs e)
@@ -191,23 +169,36 @@ namespace WpfApp1
             Texter.Foreground = Brushes.Green;
             Texter.Text = Properties.Resources.Succeses;
 
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            WriteAllSettings();
+        }
+        private void Progressbar_Checked(object sender, RoutedEventArgs e)
+        {
+            progressbarCheck = 1;
+            Texter.Foreground = Brushes.Green;
+            Texter.Text = Properties.Resources.Succeses;
+
+
+            WriteAllSettings();
+        }
+        private void Progressbar_Unchecked(object sender, RoutedEventArgs e)
+        {
+            progressbarCheck = 0;
+            Texter.Foreground = Brushes.Green;
+            Texter.Text = Properties.Resources.Succeses;
+
+            WriteAllSettings();
+        }
+        private void Auto_Checked(object sender, RoutedEventArgs e)
+        {
+            autoCheck = 1;
+            WriteAllSettings();
         }
 
+        private void Auto_Unchecked(object sender, RoutedEventArgs e)
+        {
+            autoCheck = 0;
+            WriteAllSettings();
+        }
         private void Debug_MouseEnter(object sender, MouseEventArgs e)
         {
             Texter.Text = Properties.Resources.Dm;
@@ -241,86 +232,6 @@ namespace WpfApp1
             Texter.Clear();
             Texter.Foreground = Brushes.White;
         }
-        //VOID
-        private void VOID_MouseLeave(object sender, MouseEventArgs e)
-        {
-            Texter.Foreground = Brushes.White;
-            Texter.Clear();
-        }
-        private void VOID_Checked(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.SureVoid1, MessageBoxButton.YesNo, MessageBoxImage.Warning);
-           
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
-                    MessageBoxResult results = MessageBox.Show(Properties.Resources.SV2, Properties.Resources.SureVoid2, MessageBoxButton.YesNo, MessageBoxImage.Error );
-                    switch (results)
-                    {
-                        case MessageBoxResult.Yes:
-                            MessageBoxResult resist = MessageBox.Show(Properties.Resources.SV3, Properties.Resources.SureVoid3, MessageBoxButton.OK , MessageBoxImage.Stop);
-                            VOID.IsChecked = false;
-                            break;
-                        case MessageBoxResult.No:
-
-                            break;
-                    }
-
-
-
-                    break;
-                case MessageBoxResult.No:
-                    
-                    break;
-            }
-        }
-        //Progressbar
-        private void Progressbar_Checked(object sender, RoutedEventArgs e)
-        {
-            progressbarCheck = 1;
-            Texter.Foreground = Brushes.Green;
-            Texter.Text = Properties.Resources.Succeses;
-
-
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
-        }
-        private void Progressbar_Unchecked(object sender, RoutedEventArgs e)
-        {
-            progressbarCheck = 0;
-            Texter.Foreground = Brushes.Green;
-            Texter.Text = Properties.Resources.Succeses;
-
-
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
-        }
         private void Progressbar_MouseEnter(object sender, MouseEventArgs e)
         {
             Texter.Text = Properties.Resources.Pb;
@@ -331,9 +242,6 @@ namespace WpfApp1
             Texter.Foreground = Brushes.White;
         }
 
-
-        //Language
-
         private void Lang_Checked(object sender, RoutedEventArgs e)
         {
             var radioButton = sender as RadioButton;
@@ -342,92 +250,31 @@ namespace WpfApp1
             {
                 typeCheck = languageCheck;
             }
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            WriteAllSettings();
         }
-        //Type system
         private void Sys_Checked(object sender, RoutedEventArgs e)
         {
             var radioButton = sender as RadioButton;
             typeCheck = Convert.ToInt32(radioButton.TabIndex.ToString());
-            
-                using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-                {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
 
-            }
+            WriteAllSettings();
+
             if (radioButton.TabIndex > 9)
             {
                 File.WriteAllText("NameEST.txt", radioButton.Name);
             }
             
         }
-       
-        //Auto choice
-        private void Auto_Checked(object sender, RoutedEventArgs e)
+        private void SummaryMode_Checked(object sender, RoutedEventArgs e)
         {
-            autoCheck = 1;
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            summarymodeCheck = 1;
+            WriteAllSettings();
         }
-
-        private void Auto_Unchecked(object sender, RoutedEventArgs e)
+        private void SummaryMode_Unchecked(object sender, RoutedEventArgs e)
         {
-            autoCheck = 0;
-            using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-            {
-                w.WriteLine("Debug:");
-                w.WriteLine(debugCheck.ToString());
-                w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
-                w.WriteLine("Progressbar:");
-                w.WriteLine(progressbarCheck.ToString());
-                w.WriteLine("Language:");
-                w.WriteLine(languageCheck.ToString());
-                w.WriteLine("TypeSys:");
-                w.WriteLine(typeCheck.ToString());
-                w.WriteLine("Auto:");
-                w.WriteLine(autoCheck.ToString());
-            }
+            summarymodeCheck = 0;
+            WriteAllSettings();
         }
-
         private void Auto_MouseEnter(object sender, MouseEventArgs e)
         {
             Texter.Text = Properties.Resources.AutoT;
@@ -437,7 +284,6 @@ namespace WpfApp1
         {
             Texter.Clear();
         }
-        //Reset
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(Properties.Resources.Box2, Properties.Resources.Sure, MessageBoxButton.YesNo, MessageBoxImage.Warning);
@@ -451,21 +297,7 @@ namespace WpfApp1
                     FscreenCheck = 0;
                     progressbarCheck = 0;
                     debugCheck = 0;
-                    using (StreamWriter w = new StreamWriter("Settings.txt", false, Encoding.GetEncoding(1251)))
-                    {
-                        w.WriteLine("Debug:");
-                        w.WriteLine(debugCheck.ToString());
-                        w.WriteLine("Fullscreen:");
-                        w.WriteLine(FscreenCheck.ToString());
-                        w.WriteLine("Progressbar:");
-                        w.WriteLine(progressbarCheck.ToString());
-                        w.WriteLine("Language:");
-                        w.WriteLine(languageCheck.ToString());
-                        w.WriteLine("TypeSys:");
-                        w.WriteLine(typeCheck.ToString());
-                        w.WriteLine("Auto:");
-                        w.WriteLine(autoCheck.ToString());
-                    }
+                    WriteAllSettings();
                     break;
                 case MessageBoxResult.No:
                    
@@ -744,6 +576,7 @@ namespace WpfApp1
                 MessageBox.Show(exp.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
     }
 }
 //(c)AMProgramms, 2021

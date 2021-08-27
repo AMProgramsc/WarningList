@@ -10,7 +10,6 @@
     <Grid >
         <CheckBox Name="Debug" Content="{x:Static res:Resources.Debug}" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="145" Checked="CheckBox_Checked" Unchecked="Debug_Unchecked" MouseEnter="Debug_MouseEnter" MouseLeave="Debug_MouseLeave"  />
         <CheckBox x:Name="Fullscreen" Content="{x:Static res:Resources.Fullscreen}" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="158" Checked="Fullscreen_Checked" Unchecked="Fullscreen_Unchecked" MouseEnter="Fullscreen_MouseEnter" MouseLeave="Fullscreen_MouseLeave"   />
-        <CheckBox x:Name="VOID" Content="{x:Static res:Resources.Void}" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93" Visibility="Hidden" MouseEnter="VOID_MouseEnter" MouseLeave="VOID_MouseLeave" Checked="VOID_Checked"  />
         <TextBox Name="Texter" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="772" Background="{x:Null}" Foreground="White"/>
         <Expander Header="{x:Static res:Resources.Language}" HorizontalAlignment="Left" Height="235" Margin="10,39,0,0" VerticalAlignment="Top" Width="130" Foreground="White">
             <ListBox x:Name="Lang" Background="{x:Null}" BorderBrush="{x:Null}">
@@ -151,7 +150,7 @@
             </Expander>
         <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Reset_Click" />
         <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Progressbar_Checked" MouseEnter="Progressbar_MouseEnter" MouseLeave="Progressbar_MouseLeave" Unchecked="Progressbar_Unchecked"    />
-        <CheckBox x:Name="Sound" Content="{x:Static res:Resources.Sound}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" />
+        <CheckBox x:Name="SummaryMode" Content="{x:Static res:Resources.Summarymode}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" Checked="SummaryMode_Checked" Unchecked="SummaryMode_Unchecked"  />
         <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Auto_Checked" Unchecked="Auto_Unchecked" MouseEnter="Auto_MouseEnter" MouseLeave="Auto_MouseLeave"  />
 
 
