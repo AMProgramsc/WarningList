@@ -5,10 +5,10 @@ Fullscreen:
 Progressbar:
 0
 Language:
-1
+0
 TypeSys:
 0
 Auto:
 0
 SummaryMode:
-1
+0

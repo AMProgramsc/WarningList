@@ -727,15 +727,6 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Sound.
-        /// </summary>
-        public static string Sound {
-            get {
-                return ResourceManager.GetString("Sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Start.
         /// </summary>
         public static string Start {
@@ -745,20 +736,29 @@ namespace WpfApp1.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Succeses! For the changes to take effect, restart the program..
         /// </summary>
         public static string Succeses {
             get {
                 return ResourceManager.GetString("Succeses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string SummaryM {
+            get {
+                return ResourceManager.GetString("SummaryM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Summary mode.
+        /// </summary>
+        public static string Summarymode {
+            get {
+                return ResourceManager.GetString("Summarymode", resourceCulture);
             }
         }
         

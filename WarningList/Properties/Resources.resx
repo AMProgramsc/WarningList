@@ -339,17 +339,17 @@
   <data name="Solicalscience" xml:space="preserve">
     <value>Solicalscience</value>
   </data>
-  <data name="Sound" xml:space="preserve">
-    <value>Sound</value>
-  </data>
   <data name="Start" xml:space="preserve">
     <value>Start</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="Succeses" xml:space="preserve">
     <value>Succeses! For the changes to take effect, restart the program.</value>
+  </data>
+  <data name="SummaryM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Summarymode" xml:space="preserve">
+    <value>Summary mode</value>
   </data>
   <data name="Sure" xml:space="preserve">
     <value>Are you sure?</value>
