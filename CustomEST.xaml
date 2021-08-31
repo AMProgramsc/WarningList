@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.CustomET"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" d:DataContext="{d:DesignInstance Type=local:CustomETNameViewModel}"
+        mc:Ignorable="d"
+        Title="CustomEST" Height="305" Width="588" Closing="Window_Closing">
+    <Grid Background="Black" MouseDown="Grid_MouseDown"  >
+        <xctk:ColorPicker x:Name="ColorP"  Background="{x:Null}"   SelectedColorChanged="ColorP_SelectedColorChanged" Margin="412,80,141,14" Visibility="Hidden" />
+        <TextBox Name="NameSys" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="Name System:" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="{x:Null}" Foreground="White"/>
+        <TextBox Name="NameET" HorizontalAlignment="Left" Height="23" Margin="100,33,0,0" TextWrapping="Wrap" Text="{Binding Path=NameET}" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White"/>
+        <TextBox Name="LoadImagePath" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
+        <Image Name="ImagePath" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,10,0,0"/>
+        <Button Name="OpenDialog" Content="..." HorizontalAlignment="Left" Margin="412,56,0,0" VerticalAlignment="Top" Width="20" Height="23" FontSize="12" Click="OpenDialog_Click"/>
+        <Button Name="Add" Content="Add" HorizontalAlignment="Left" Margin="100,133,0,0" VerticalAlignment="Top" Width="75" Click="Add_Click" Foreground="Black"/>
+        <ComboBox Name="EType" Text="Type" HorizontalAlignment="Left" Margin="100,79,0,0" VerticalAlignment="Top" Width="120" Height="22"  IsEditable="True" IsReadOnly="True" Foreground="Gray" Background="Black" SelectionChanged="CP_SelectionChanged">
+            <TextBlock Text="Russian" Foreground="Black"/>
+            <TextBlock Text="English" Foreground="Black"/>
+            <TextBlock Text="Franch" Foreground="Black"/>
+            <TextBlock Text="Deutschland" Foreground="Black"/>
+            <TextBlock Text="Ukraine" Foreground="Black"/>
+            <TextBlock Text="Belarus" Foreground="Black"/>
+            <TextBlock Text="Czech" Foreground="Black"/>
+            <TextBlock Text="Finland" Foreground="Black"/>
+            <TextBlock Text="Bulgaria" Foreground="Black"/>
+            <TextBlock Text="Denmark" Foreground="Black"/>
+            <TextBlock Text="Custom" Foreground="Black"/>
+        </ComboBox>
+        <ComboBox Name="BCount" HorizontalAlignment="Left" Margin="225,79,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="True" Text="Buttons" Foreground="Gray" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content = "4" Foreground="Black"  />
+            <ComboBoxItem Content = "5" Foreground="Black"/>
+            <ComboBoxItem Content = "6" Foreground="Black"/>
+            <ComboBoxItem Content = "7" Foreground="Black"/>
+            <ComboBoxItem Content = "8" Foreground="Black"/>
+            <ComboBoxItem Content = "9" Foreground="Black"/>
+            <ComboBoxItem Content = "10" Foreground="Black"/>
+            <ComboBoxItem Content = "11" Foreground="Black"/>
+            <ComboBoxItem Content = "12" Foreground="Black"/>
+        </ComboBox>
+        <ComboBox Name="Btype" HorizontalAlignment="Left" Margin="100,106,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsReadOnly="true" Text="Btype" Foreground="Gray" SelectionChanged="GPA_SelectionChanged">
+            <TextBlock Text="Default" Foreground="Black"/>
+            <TextBlock Text="English" Foreground="Black"/>
+            <TextBlock Text="German" Foreground="Black"/>
+            <TextBlock Text="France" Foreground="Black"/>
+            <TextBlock Text="Denmark" Foreground="Black"/>
+            <TextBlock Text="Custom" Foreground="Black"/>
+        </ComboBox>
+        <ListBox Name="ButtonsList" HorizontalAlignment="Left" Height="250" Margin="440,10,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" SelectionChanged="BC_SelectionChanged"  >
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="Color" Header="Color" Click="Color_Click"></MenuItem>
+                    <MenuItem Name="Content" Header="Content" Click="Content_Click"></MenuItem>
+                    <MenuItem Name="ButtonSupp" Header="Button supplement" Click="btype_Click"  IsEnabled="False"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <TextBox Name="EnterConSupp" HorizontalAlignment="Left" Height="22" Margin="225,106,0,0" TextWrapping="Wrap" Text="Enter content" VerticalAlignment="Top" Width="120" Foreground="Gray" IsReadOnly="True" KeyDown="ECB_KeyDown" />
+        <ListBox x:Name="ButtonSupplement" HorizontalAlignment="Left" Height="250" Margin="530,10,0,0" VerticalAlignment="Top" Width="40" Background="{x:Null}"   />
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+Debug:
+0
+Fullscreen:
+0
+Progressbar:
+0
+Language:
+0
+TypeSys:
+0
+Auto:
+0
+SummaryMode:
+0
