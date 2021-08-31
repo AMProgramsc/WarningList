@@ -42,7 +42,6 @@ namespace WpfApp1
         double NumberN;
         double result;
         double warning = 0;
-        double Tresult;
         double TotalResult;
         string sizeG, sizeH;
         string colorPick = "Black";
@@ -168,23 +167,25 @@ namespace WpfApp1
         {
             if (type == 0)
             {
+
                 if (result <= 2.5)
                 {
+                 
+                        GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                        GEN.Text += Properties.Resources.Gen1 + "\r\n";
 
-                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
-                    GEN.Text += Properties.Resources.Gen1 + "\r\n";
-
-                    for (; warning < 2.6;)
-                    {
-                        warning = (valueS + 3) / (NumberN + 1);
-                        valueS += 3;
-                        NumberN += 1;
-                        GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
-                    }
-                    warning = 0;
-
+                        for (; warning < 2.6;)
+                        {
+                            warning = (valueS + 3) / (NumberN + 1);
+                            valueS += 3;
+                            NumberN += 1;
+                            GEN.Text += Properties.Resources.GenN + 3 + Properties.Resources.GenF + warning + "\r\n";
+                        }
+                        warning = 0;
+                    
                 }
-                else if (result <= 3.5)
+
+                if (result <= 3.5)
                 {
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
                     GEN.Text += Properties.Resources.Gen2 + "3" + "\r\n";
@@ -228,9 +229,7 @@ namespace WpfApp1
         }
         public void EnglishType()
         {
-         
-         
-            //Main
+
             if (type == 1)
             {
                 if (result < 2)
@@ -1941,6 +1940,7 @@ namespace WpfApp1
                         Tres.Foreground = Brushes.DarkRed;
                         Tres.Text = "-";
                     }
+                    
                 }
                 //English GPA
                 if (type == 1)
@@ -2707,7 +2707,6 @@ namespace WpfApp1
                 Result.Margin = new Thickness(262, 223, 0, 0);
                 Tres.Margin = new Thickness(262, 246, 0, 0);
             }
-            //Russian - 0
 
             foreach (UIElement el in Buttons.Children)
                 {
@@ -2743,7 +2742,6 @@ namespace WpfApp1
                 {
                     sizeH = Namer.Text;
                   
-                    //listbox.Items.Add(sizeN);
                     Lister.Items.Add(new ListBoxItem() { Content = "-"});
                     Subjects.Items.Add(new ListBoxItem() { Content = sizeH, Background = Brushes.Red });
                     Subjects.SelectedItem = sizeH;
@@ -2984,9 +2982,8 @@ namespace WpfApp1
                 Lister.Items.Add( new ListBoxItem() { Content = "-"});
             }
       
-            Tresult = 0;
             sizeS = 0;
-
+            TotalResult = 0;
 
         }
     

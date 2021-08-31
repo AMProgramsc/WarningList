@@ -150,38 +150,45 @@ namespace WpfApp1
 
         private void ECB_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Enter)
+            try
             {
-                if (content == true)
+                if (e.Key == Key.Enter)
                 {
-                    ButtonsList.Items.Insert(ButtonsList.SelectedIndex, new ListBoxItem { Content = EnterConSupp.Text, HorizontalContentAlignment = HorizontalAlignment.Center, Background = Brushes.Gray });
-                    ButtonsList.Items.Remove(ButtonsList.SelectedItem);
-                    EnterConSupp.Clear();
-                    EnterConSupp.Foreground = Brushes.Gray;
-                    EnterConSupp.IsReadOnly = true;
-                    content = false;
-                }
-                if (Gpa == true)
-                {
-                    ButtonSupplement.Items.RemoveAt(ButtonsList.SelectedIndex);
-                    ButtonSupplement.Items.Insert(ButtonsList.SelectedIndex, new ListBoxItem { Content = "(" + EnterConSupp.Text + ")"  , Foreground = Brushes.White});
+                    if (content == true)
+                    {
+                        ButtonsList.Items.Insert(ButtonsList.SelectedIndex, new ListBoxItem { Content = EnterConSupp.Text, HorizontalContentAlignment = HorizontalAlignment.Center, Background = Brushes.Gray });
+                        ButtonsList.Items.Remove(ButtonsList.SelectedItem);
+                        EnterConSupp.Clear();
+                        EnterConSupp.Foreground = Brushes.Gray;
+                        EnterConSupp.IsReadOnly = true;
+                        content = false;
+                    }
+                    if (Gpa == true)
+                    {
+                        ButtonSupplement.Items.RemoveAt(ButtonsList.SelectedIndex);
+                        ButtonSupplement.Items.Insert(ButtonsList.SelectedIndex, new ListBoxItem { Content = "(" + EnterConSupp.Text + ")", Foreground = Brushes.White });
 
-                    EnterConSupp.Clear();
-                    EnterConSupp.Foreground = Brushes.Gray;
-                    EnterConSupp.IsReadOnly = true;
-                    Gpa = false;
+                        EnterConSupp.Clear();
+                        EnterConSupp.Foreground = Brushes.Gray;
+                        EnterConSupp.IsReadOnly = true;
+                        Gpa = false;
+                    }
                 }
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show(exp.Message,"Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
         }
 
         private void Color_Click(object sender, RoutedEventArgs e)
         {
-        MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
-        if (result == MessageBoxResult.Yes)
-        {
+          MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+          if (result == MessageBoxResult.Yes)
+          {
             ColorP.Visibility = Visibility.Visible;
+          }
         }
-    }
 
         private void Content_Click(object sender, RoutedEventArgs e)
         {
@@ -206,5 +213,6 @@ namespace WpfApp1
                 Gpa = true;
             }
         }
+
     }
 }

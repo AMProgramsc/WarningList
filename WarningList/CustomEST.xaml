@@ -13,7 +13,7 @@
         <TextBox Name="LoadImagePath" HorizontalAlignment="Left" Height="23" Margin="100,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" IsReadOnly="True" Foreground="White" Background="Black"/>
         <Image Name="ImagePath" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,10,0,0"/>
         <Button Name="OpenDialog" Content="..." HorizontalAlignment="Left" Margin="412,56,0,0" VerticalAlignment="Top" Width="20" Height="23" FontSize="12" Click="OpenDialog_Click"/>
-        <Button Name="Add" Content="Add" HorizontalAlignment="Left" Margin="100,139,0,0" VerticalAlignment="Top" Width="75" Click="Add_Click" Foreground="Black"/>
+        <Button Name="Add" Content="Add" HorizontalAlignment="Left" Margin="100,133,0,0" VerticalAlignment="Top" Width="75" Click="Add_Click" Foreground="Black"/>
         <ComboBox Name="EType" Text="Type" HorizontalAlignment="Left" Margin="100,79,0,0" VerticalAlignment="Top" Width="120" Height="22"  IsEditable="True" IsReadOnly="True" Foreground="Gray" Background="Black" SelectionChanged="CP_SelectionChanged">
             <TextBlock Text="Russian" Foreground="Black"/>
             <TextBlock Text="English" Foreground="Black"/>
