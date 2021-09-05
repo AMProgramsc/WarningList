@@ -326,6 +326,14 @@ namespace WpfApp1
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            CET.BCount.IsEnabled = false;
+            CET.Btype.IsEnabled = false;
+            CET.LoadImagePath.Clear();
+            CET.NameET.Clear();
+            CET.Add.Content = "Add";
+            CET.EType.SelectedIndex = -1;
+            CET.Btype.SelectedIndex = -1;
+            CET.BCount.SelectedIndex = -1;
             CET.Show();
         }
 
@@ -428,6 +436,7 @@ namespace WpfApp1
                     CET.LoadImagePath.Clear();
                     CET.NameET.Clear();
                     CET.ButtonsList.Items.Clear();
+                    CET.ButtonSupplement.Items.Clear();
                     CET.Add.Content = "Add";
                     CET.EType.SelectedIndex = -1;
                     CET.Btype.SelectedIndex = -1;

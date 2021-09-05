@@ -26,6 +26,7 @@ namespace WpfApp1
     public partial class WindowLoad : Window
     {
        
+        
         MainWindow window = new MainWindow();
         About about = new About();
 
@@ -190,7 +191,14 @@ namespace WpfApp1
 
 
             }
-        
+            if (exit == 3)
+            {
+
+                File.WriteAllText("Exit.txt", mainE.ToString());
+                Application.Current.Shutdown();
+
+
+            }
             if (exit == 0)
             {
                 MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, Properties.Resources.Message1, MessageBoxButton.YesNo, MessageBoxImage.Warning);

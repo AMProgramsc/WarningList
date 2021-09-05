@@ -150,7 +150,7 @@
             </Expander>
         <Button Content="{x:Static res:Resources.Reset}" HorizontalAlignment="Left" Margin="682,80,0,0" VerticalAlignment="Top" Width="100" Click="Reset_Click" />
         <CheckBox x:Name="Pb" Content="{x:Static res:Resources.Progressbar}" HorizontalAlignment="Left" Margin="173,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="93"  Checked="Progressbar_Checked" MouseEnter="Progressbar_MouseEnter" MouseLeave="Progressbar_MouseLeave" Unchecked="Progressbar_Unchecked"    />
-        <CheckBox x:Name="SummaryMode" Content="{x:Static res:Resources.Summarymode}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="111" Checked="SummaryMode_Checked" Unchecked="SummaryMode_Unchecked"  />
+        <CheckBox x:Name="SummaryMode" Content="{x:Static res:Resources.Summarymode}" HorizontalAlignment="Left" Margin="173,294,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.632,0.453" Width="129" Checked="SummaryMode_Checked" Unchecked="SummaryMode_Unchecked"  />
         <CheckBox x:Name="Auto" Content="{x:Static res:Resources.Auto}" HorizontalAlignment="Left" Margin="271,274,0,0" VerticalAlignment="Top" Background="White" Foreground="White" RenderTransformOrigin="0.494,0.494" Width="150" Checked="Auto_Checked" Unchecked="Auto_Unchecked" MouseEnter="Auto_MouseEnter" MouseLeave="Auto_MouseLeave"  />
 
 

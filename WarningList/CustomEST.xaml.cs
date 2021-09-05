@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,8 +31,7 @@ namespace WpfApp1
         public CustomET()
         {
             InitializeComponent();
-            BCount.IsEnabled = false;
-            Btype.IsEnabled = false;
+
         }
 
         private void OpenDialog_Click(object sender, RoutedEventArgs e)
@@ -51,9 +51,33 @@ namespace WpfApp1
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            int exit = Int32.Parse(File.ReadLines("Exit.txt").First());
+            if (exit != 1)
+            {
+                try
+                {
+                    MessageBoxResult resExit = MessageBox.Show("All changes don't save!", Properties.Resources.Sure, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                    if (resExit == MessageBoxResult.Yes)
+                    {
+                        e.Cancel = true;
+                        this.Visibility = Visibility.Hidden;
 
-            e.Cancel = true;
-            this.Visibility = Visibility.Hidden;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch(Exception exp)
+                {
+                    MessageBox.Show(exp.Message, "Error");
+                }
+            }
+            else
+            {
+                File.WriteAllText("Exit.txt", "3");
+            }
+
 
         }
 
@@ -86,6 +110,8 @@ namespace WpfApp1
             {
                 BCount.IsEnabled = false;
                 Btype.IsEnabled = false;
+                BCount.SelectedIndex = -1;
+                Btype.SelectedIndex = -1;
             }
         }
 
@@ -183,7 +209,7 @@ namespace WpfApp1
 
         private void Color_Click(object sender, RoutedEventArgs e)
         {
-          MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+          MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
           if (result == MessageBoxResult.Yes)
           {
             ColorP.Visibility = Visibility.Visible;
@@ -192,7 +218,7 @@ namespace WpfApp1
 
         private void Content_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show(Properties.Resources.Sure, "Choose further action:", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
                 EnterConSupp.IsReadOnly = false;
