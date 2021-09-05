@@ -342,6 +342,9 @@
   <data name="Succeses" xml:space="preserve">
     <value>Отлично! Перезагрузите программу что бы изменения вступили в силу!</value>
   </data>
+  <data name="Summarymode" xml:space="preserve">
+    <value>Суммарный режим</value>
+  </data>
   <data name="Sure" xml:space="preserve">
     <value>Вы уверены?</value>
   </data>
@@ -374,9 +377,6 @@
   </data>
   <data name="Versions" xml:space="preserve">
     <value>Версии</value>
-  </data>
-  <data name="Void" xml:space="preserve">
-    <value>VOID</value>
   </data>
   <data name="Voider" xml:space="preserve">
     <value>Ты не должен это делать...</value>
