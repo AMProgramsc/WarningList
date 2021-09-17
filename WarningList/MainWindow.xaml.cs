@@ -234,6 +234,8 @@ namespace WpfApp1
         {
             if (type == 1)
             {
+                string[] valueSymbol= new string[]{"E","F","D", "C","B" ,"A","*A" };
+                int countEnglish = 0;
                 iscountWarnString = true;
                 if (result < 2)
                 {
@@ -272,84 +274,25 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + " - " + "A*" + "\r\n";
 
                 }
-                if (result <= 1.5)
+                for (double i = 1; i <= result;)
                 {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "F" });
+                    i += 0.45;
+                    if (i >= result)
+                    {
+                        break;
+                    }
+                    countEnglish++;
                 }
-                else if (result < 2 && result > 1.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "E" });
-                }
-                else if (result <= 2.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "D" });
-                }
-                else if (result < 3 && result > 2.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "D+" });
-                }
-                else if (result < 3 && result >= 2.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "C-" });
-                }
-                else if (result <= 3.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "C" });
-                }
-                else if (result < 4 && result > 3.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "C+" });
-                }
-                else if (result < 4 && result >= 3.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "B-" });
-                }
-                else if (result <= 4.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "B" });
-                }
-                else if (result < 5 && result > 4.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "B+" });
-                }
-                else if (result < 5 && result >= 4.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "A-" });
-                }
-                else if (result <= 5.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "A" });
-                }
-                else if (result <= 6 && result > 6.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "A*" });
-                }
-                else if (result == 6)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "A*" });
-                }
-                //End
-
+                Lister.Items.RemoveAt(Subjects.SelectedIndex);
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = valueSymbol[countEnglish] });
             }
         }   
         public void FrenchType()
         {
+
             if (type == 2)
             {
+                int countFrench = 7;
                 iscountWarnString = true;
                 if (result <= 1.2)
                 {
@@ -359,12 +302,12 @@ namespace WpfApp1
                 else if (result > 1.2 && result < 1.5)
                 {
                     countType = "9";
-                    WarningResult(1.5, 2, "8");
+                    WarningResult(1.6, 2, "8");
                 }
-                else if (result < 2 && result > 1.5)
+                else if (result < 2 && result > 1.5 && result < 1.9)
                 {
                     countType = "10";
-                    WarningResult(2, 2, "9");
+                    WarningResult(1.9, 2, "9");
                 }
                 else if (result < 2 && result >= 1.9)
                 {
@@ -374,12 +317,12 @@ namespace WpfApp1
                 else if (result < 2.5)
                 {
                     countType = "12";
-                    WarningResult(2.5, 3, "11");
+                    WarningResult(2.6, 3, "11");
                 }
-                else if (result < 3 && result > 2.5)
+                else if (result < 3 && result > 2.5 && result < 2.9)
                 {
                     countType = "13";
-                    WarningResult(3, 3, "12");
+                    WarningResult(2.9, 3, "12");
                 }
                 else if (result < 3 && result >= 2.9)
                 {
@@ -391,10 +334,10 @@ namespace WpfApp1
                     countType = "15";
                     WarningResult(3.5, 4, "14");
                 }
-                else if (result < 4 && result > 3.5)
+                else if (result < 4 && result > 3.5 && result < 3.9)
                 {
                     countType = "16";
-                    WarningResult(4, 4, "15");
+                    WarningResult(3.9, 4, "15");
                 }
                 else if (result < 4 && result >= 3.9)
                 {
@@ -406,10 +349,10 @@ namespace WpfApp1
                     countType = "18";
                     WarningResult(4.5, 5, "17");
                 }
-                else if (result < 5 && result > 4.5)
+                else if (result < 5 && result > 4.5 && result < 4.9)
                 {
                     countType = "19";
-                    WarningResult(5, 5, "18");
+                    WarningResult(4.9, 5, "18");
                 }
                 else if (result < 5 && result >= 4.9)
                 {
@@ -423,83 +366,26 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + " - " + "20" + "\r\n";
 
                 }
-
-                if (result <= 1.2)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "<7" });
-                }
-                else if (result > 1.2 && result < 1.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "8" });
-                }
-                else if (result < 2 && result >= 1.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "9" });
-                }
-                else if (result < 2 && result >= 1.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "10" });
-                }
-                else if (result < 2.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "11" });
-                }
-                else if (result < 3 && result >= 2.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "12" });
-                }
-                else if (result < 3 && result >= 2.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "13" });
-                }
-                else if (result < 3.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "14" });
-                }
-                else if (result < 4 && result >= 3.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "15" });
-                }
-                else if (result < 4 && result >= 3.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "16" });
-                }
-                else if (result < 4.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "17" });
-                }
-                else if (result < 5 && result >= 4.5)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "18" });
-                }
-                else if (result < 5 && result >= 4.9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "19" });
-                }
-                else
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "20" });
-                }
+                
+                for (double i = 1; i <= result; )
+                    {
+                    i += 0.3;
+                    if(i >= result)
+                    {
+                        break;
+                    }
+                    countFrench++;
+                    }
+                Lister.Items.RemoveAt(Subjects.SelectedIndex);
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = countFrench });
+            
             }
         }
         public void GermanyType()
         {
             if (type == 3)
             {
+                int countGermany = 6;
                 iscountWarnString = true;
                 if (result < 3)
                 {
@@ -533,36 +419,17 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + " - " + "1" + "\r\n";
 
                 }
-                if (result < 3)
+                for (double i = 0; i <= result;)
                 {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "6" });
+                    i += 3;
+                    if (i >= result)
+                    {
+                        break;
+                    }
+                    countGermany--;
                 }
-                else if (result <= 6 && result >= 3)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "5" });
-                }
-                else if (result <= 9 && result >= 6)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "4" });
-                }
-                else if (result <= 12 && result >= 9)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "3" });
-                }
-                else if (result <= 15 && result >= 12)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "2" });
-                }
-                else
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "1" });
-                }
+                Lister.Items.RemoveAt(Subjects.SelectedIndex);
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = countGermany });
             }
         }
         public void UkraineType()
@@ -792,11 +659,13 @@ namespace WpfApp1
         {
             if(type == 9)
             {
+                string[] valueSymbol = new string[] { "F", "Fx", "E", "D", "C", "A", "*A" };
+                int countDenmark = 0;
                 iscountWarnString = true;
                 if (result < 0)
                 {
-                    countType = "Fx";
-                    WarningResult(0, 2, "F");
+                    countType = "F";
+                    WarningResult(0, 2, "Fx");
                 }
                 else if (result < 2)
                 {
@@ -2139,6 +2008,7 @@ namespace WpfApp1
         }
 
         private void Window_Activated(object sender, EventArgs e)
+       
         {
             // Load function
             Count = Subjects.Items.Count;

@@ -49,7 +49,6 @@ namespace WpfApp1
 
 
             T.IsEnabled = false;
-            screen = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
             pb = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
 
             if (screen == 1)
@@ -167,6 +166,7 @@ namespace WpfApp1
                 this.Visibility = Visibility.Hidden;
                 window.Show();
             }
+            else
             {
                 MessageBox.Show("File is empty", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
             }

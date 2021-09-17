@@ -24,7 +24,6 @@ namespace WpfApp1
         public CustomETNameViewModel CurrentModel = new CustomETNameViewModel();
         CustomET CET = new CustomET();
         int debugCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());
-        int FscreenCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(3).First());
         int progressbarCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(5).First());
         int languageCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
         int typeCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(9).First());
@@ -41,7 +40,7 @@ namespace WpfApp1
                 w.WriteLine("Debug:");
                 w.WriteLine(debugCheck.ToString());
                 w.WriteLine("Fullscreen:");
-                w.WriteLine(FscreenCheck.ToString());
+                w.WriteLine("");
                 w.WriteLine("Progressbar:");
                 w.WriteLine(progressbarCheck.ToString());
                 w.WriteLine("Language:");
@@ -64,11 +63,6 @@ namespace WpfApp1
             if (debugCheck == 1)
             {
                 Debug.IsChecked = true;
-                Texter.Clear();
-            }
-            if (FscreenCheck == 1)
-            {
-                Fullscreen.IsChecked = true;
                 Texter.Clear();
             }
             if (progressbarCheck == 1)
@@ -130,7 +124,7 @@ namespace WpfApp1
                 }
             }
         }
-        //Fullscreen/Debug/VOID
+        //Debug/VOID
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
            
@@ -152,25 +146,7 @@ namespace WpfApp1
             WriteAllSettings();
         }
 
-        private void Fullscreen_Checked(object sender, RoutedEventArgs e)
-        {
-           
-            FscreenCheck = 1;
-            Texter.Foreground = Brushes.Green;
-            Texter.Text = Properties.Resources.Succeses;
 
-            WriteAllSettings();
-        }
-
-        private void Fullscreen_Unchecked(object sender, RoutedEventArgs e)
-        {
-
-            FscreenCheck = 0;
-            Texter.Foreground = Brushes.Green;
-            Texter.Text = Properties.Resources.Succeses;
-
-            WriteAllSettings();
-        }
         private void Progressbar_Checked(object sender, RoutedEventArgs e)
         {
             progressbarCheck = 1;
@@ -294,7 +270,6 @@ namespace WpfApp1
                     autoCheck = 1;
                     typeCheck = 0;
                     languageCheck = 0;
-                    FscreenCheck = 0;
                     progressbarCheck = 0;
                     debugCheck = 0;
                     WriteAllSettings();

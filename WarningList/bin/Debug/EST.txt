@@ -1,6 +1,1 @@
-Name:
-Test
-ImagePath:
-
-TabIndex:
-10
+ 
