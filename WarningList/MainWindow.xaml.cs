@@ -131,8 +131,6 @@ namespace WpfApp1
             C3.Content = "15";
             C3.Background = Brushes.Blue;
 
-   
-
             T1.Visibility = Visibility.Visible;
             T1.Text = "(6)";
             T2.Visibility = Visibility.Visible;
@@ -211,12 +209,10 @@ namespace WpfApp1
                 {
                     WarningResult(2.6,3,"2");
                 }
-
                 else if (result <= 3.5)
                 {
                     WarningResult(3.6, 4, "3");
                 }
-
                 else if (result <= 4.5)
                 {
                     WarningResult(4.6, 5, "4");
@@ -394,23 +390,23 @@ namespace WpfApp1
                 }
                 else if (result <= 6 && result >= 3)
                 {
-                    countType = "5";
-                    WarningResult(3, 6, "4");
+                    countType = "4";
+                    WarningResult(3, 6, "5");
                 }
                 else if (result <= 9 && result >= 6)
                 {
-                    countType = "4";
-                    WarningResult(4.5, 9, "3");
+                    countType = "3";
+                    WarningResult(4.5, 9, "4");
                 }
                 else if (result <= 12 && result >= 9)
                 {
-                    countType = "3";
-                    WarningResult(6, 12, "2");
+                    countType = "2";
+                    WarningResult(6, 12, "3");
                 }
                 else if (result <= 15 && result >= 12)
                 {
-                    countType = "2";
-                    WarningResult(7.5, 15, "1");
+                    countType = "1";
+                    WarningResult(7.5, 15, "2");
                 }
                 else
                 {
@@ -422,7 +418,7 @@ namespace WpfApp1
                 for (double i = 0; i <= result;)
                 {
                     i += 3;
-                    if (i >= result)
+                    if (i > result)
                     {
                         break;
                     }
@@ -443,7 +439,6 @@ namespace WpfApp1
                 else if (result <= 2.5)
                 {
                     WarningResult(2.6, 3, "2");
-
                 }
                 else if (result <= 3.5)
                 {
@@ -659,23 +654,23 @@ namespace WpfApp1
         {
             if(type == 9)
             {
-                string[] valueSymbol = new string[] { "F", "Fx", "E", "D", "C", "A", "*A" };
+                string[] valueSymbol = new string[] { "F", "Fx", "E", "D", "C", "B", "A" };
                 int countDenmark = 0;
                 iscountWarnString = true;
                 if (result < 0)
                 {
-                    countType = "F";
-                    WarningResult(0, 2, "Fx");
+                    countType = "Fx";
+                    WarningResult(0, 2, "F");
                 }
                 else if (result < 2)
                 {
-                    countType = "Fx";
-                    WarningResult(1, 2, "E");
+                    countType = "E";
+                    WarningResult(1.5, 2, "Fx");
                 }
                 else if (result < 4)
                 {
                     countType = "D";
-                    WarningResult(2, 4, "E");
+                    WarningResult(2.5, 4, "E");
                 }
                 else if (result < 7)
                 {
@@ -699,41 +694,18 @@ namespace WpfApp1
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
-                if (result < 0)
+                
+                for (double i = -3; i <= result;)
                 {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "F" });
+                    i += 2.45;
+                    if (i >= result)
+                    {
+                        break;
+                    }
+                    countDenmark++;
                 }
-                else if (result < 2)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "Fx" });
-                }
-                else if (result < 4)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "E" });
-                }
-                else if (result < 7)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "D" });
-                }
-                else if (result < 10)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "C" });
-                }
-                else if (result < 12)
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "B" });
-                }
-                else
-                {
-                    Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                    Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = "A" });
-                }
+                Lister.Items.RemoveAt(Subjects.SelectedIndex);
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = valueSymbol[countDenmark] }); 
             }
         }
         public void CustomType()
@@ -1395,51 +1367,10 @@ namespace WpfApp1
         public MainWindow()
         {
             lang = Int32.Parse(File.ReadLines("Settings.txt").Skip(7).First());
-            if (lang == 0)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            string[] langResourcesName = new string[]{"en-US","ru-RU", "fr-FR","de-DE","uk-UA","be-BY","cs-CZ","fi-FI","bg-BG","da-DK" };
 
-            }
-            if (lang == 1)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("ru-RU");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(langResourcesName[lang]);
 
-            }
-            if (lang == 2)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
-
-            }
-            if (lang == 3)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("de-DE");
-            }
-            if (lang == 4)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk-UA");
-            }
-            if (lang == 5)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("be-BY");
-
-            }
-            if (lang == 6)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("cs-CZ");
-            }
-            if (lang == 7 )
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fi-FI");
-            }
-            if (lang == 8)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("bg-BG");
-            }
-            if (lang == 9)
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("da-DK");
-            }
-            
             InitializeComponent();
             File.WriteAllText("Exit.txt", "0");
             debugCheck = Int32.Parse(File.ReadLines("Settings.txt").Skip(1).First());

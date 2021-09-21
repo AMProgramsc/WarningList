@@ -37,10 +37,12 @@ namespace WpfApp1
         private void OpenDialog_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new OpenFileDialog();
+            dialog.Filter = "Images|*.bmp;*.png;*.jpg";
             dialog.ShowDialog();
             try 
             {
-                ImageSource image =  new ImageSourceConverter().ConvertFromString(dialog.FileName) as ImageSource;
+                
+                ImageSource image = new ImageSourceConverter().ConvertFromString(dialog.FileName) as ImageSource;
                 LoadImagePath.Text = dialog.FileName;
                 ImagePath.Source = image;
             }

@@ -7,7 +7,7 @@ Progressbar:
 Language:
 0
 TypeSys:
-0
+3
 Auto:
 0
 SummaryMode:
