@@ -7,7 +7,7 @@ When you find an error, bug, or just want to somehow help in development, write 
 # For Basic versions
 * Unpack and run exe file in Debug folder 
 # For Alpha and latest versions
-* Unpack and run exe file in WpfApp1\bin\Debug folder 
+* Unpack and run exe file in WarningList\bin\Debug folder 
 -------------------------------
 # System requirements
 
