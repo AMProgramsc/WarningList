@@ -44,6 +44,6 @@
         </Menu>
         <TextBlock HorizontalAlignment="Left" Margin="595,377,-10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="207"><Run Text="{x:Static res:Resources.Creator}"/><Run Text=" 2020,2021"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="595,393,0,0" TextWrapping="Wrap" Text="{x:Static res:Resources.Rights}" VerticalAlignment="Top" Width="192" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,377,0,0" TextWrapping="Wrap" Text="Version - 1.0 Release" VerticalAlignment="Top" Width="99" Height="32" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,377,0,0" TextWrapping="Wrap" Text="Version - 1.0.1 Release" VerticalAlignment="Top" Width="99" Height="32" Foreground="White"/>
     </Grid>
 </Window>

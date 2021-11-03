@@ -47,12 +47,14 @@ namespace WpfApp1
         string colorPick = "Black";
         string saveS = "Save.txt";
         string countType;
+
         bool delete = false;
         bool edit = false;
         bool name = false;
         bool drop = false;
         bool res = false;
         bool iscountWarnString = false;
+        int localsymbol;
         int Count;
         int countS , countE;
         int exit = 0;
@@ -230,57 +232,54 @@ namespace WpfApp1
         {
             if (type == 1)
             {
-                string[] valueSymbol= new string[]{"E","F","D", "C","B" ,"A","*A" };
-                int countEnglish = 0;
+                string[] valueSymbol= new string[]{"F","E","D", "C","B" ,"A","*A" };
+               
                 iscountWarnString = true;
                 if (result < 2)
                 {
                     countType = "E";
+                    localsymbol = 0;
                     WarningResult(1.5,2,"F");
                 }
                 else if (result < 3)
                 {
                     countType = "D";
+                    localsymbol = 1;
                     WarningResult(2.5, 3, "E");
                 }
                 else if (result < 4)
                 {
                     countType = "C";
+                    localsymbol = 2;
                     WarningResult(3.5, 4, "D");
                 }
                 else if (result < 5)
                 {
                     countType = "B";
+                    localsymbol = 3;
                     WarningResult(4.5, 5, "C");
                 }
                 else if (result <= 6)
                 {
                     countType = "A";
+                    localsymbol = 4;
                     WarningResult(5.5, 6, "B");
                 }
                 else if (result < 7)
                 {
                     countType = "A";
+                    localsymbol = 5;
                     WarningResult(6.5, 7, "A*");
                 }
                 else
                 {
-
+                    localsymbol = 6;
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
                     GEN.Text += Properties.Resources.Gen4 + " - " + "A*" + "\r\n";
 
                 }
-                for (double i = 1; i <= result;)
-                {
-                    i += 0.45;
-                    if (i >= result)
-                    {
-                        break;
-                    }
-                    countEnglish++;
-                }
                 Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = valueSymbol[countEnglish] });
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = valueSymbol[localsymbol] });
             }
         }   
         public void FrenchType()
@@ -293,85 +292,90 @@ namespace WpfApp1
                 if (result <= 1.2)
                 {
                     countType = "8";
+                    countFrench = 7;
                     WarningResult(1.3, 2, "<7");
                 }
                 else if (result > 1.2 && result < 1.5)
                 {
                     countType = "9";
+                    countFrench = 8;
                     WarningResult(1.6, 2, "8");
                 }
                 else if (result < 2 && result > 1.5 && result < 1.9)
                 {
                     countType = "10";
+                    countFrench = 9;
                     WarningResult(1.9, 2, "9");
                 }
                 else if (result < 2 && result >= 1.9)
                 {
                     countType = "11";
+                    countFrench = 10;
                     WarningResult(2, 2, "10");
                 }
                 else if (result < 2.5)
                 {
                     countType = "12";
+                    countFrench = 11;
                     WarningResult(2.6, 3, "11");
                 }
                 else if (result < 3 && result > 2.5 && result < 2.9)
                 {
                     countType = "13";
+                    countFrench = 12;
                     WarningResult(2.9, 3, "12");
                 }
                 else if (result < 3 && result >= 2.9)
                 {
                     countType = "14";
+                    countFrench = 13;
                     WarningResult(3, 3, "13");
                 }
                 else if (result < 3.5)
                 {
                     countType = "15";
+                    countFrench = 14;
                     WarningResult(3.5, 4, "14");
                 }
                 else if (result < 4 && result > 3.5 && result < 3.9)
                 {
                     countType = "16";
+                    countFrench = 15;
                     WarningResult(3.9, 4, "15");
                 }
                 else if (result < 4 && result >= 3.9)
                 {
                     countType = "17";
+                    countFrench = 16;
                     WarningResult(4, 4, "16");
                 }
                 else if (result < 4.5)
                 {
                     countType = "18";
+                    countFrench = 17;
                     WarningResult(4.5, 5, "17");
                 }
                 else if (result < 5 && result > 4.5 && result < 4.9)
                 {
                     countType = "19";
+                    countFrench = 18;
                     WarningResult(4.9, 5, "18");
                 }
                 else if (result < 5 && result >= 4.9)
                 {
                     countType = "20";
+                    countFrench = 19;
                     WarningResult(5, 5, "19");
                 }
                 else
                 {
-
+                    countFrench = 20;
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
                     GEN.Text += Properties.Resources.Gen4 + " - " + "20" + "\r\n";
 
                 }
                 
-                for (double i = 1; i <= result; )
-                    {
-                    i += 0.3;
-                    if(i >= result)
-                    {
-                        break;
-                    }
-                    countFrench++;
-                    }
+
                 Lister.Items.RemoveAt(Subjects.SelectedIndex);
                 Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = countFrench });
             
@@ -386,44 +390,41 @@ namespace WpfApp1
                 if (result < 3)
                 {
                     countType = "5";
+                    countGermany = 6;
                     WarningResult(1.5, 3, "6");
                 }
                 else if (result <= 6 && result >= 3)
                 {
                     countType = "4";
+                    countGermany = 5;
                     WarningResult(3, 6, "5");
                 }
                 else if (result <= 9 && result >= 6)
                 {
                     countType = "3";
+                    countGermany = 4;
                     WarningResult(4.5, 9, "4");
                 }
                 else if (result <= 12 && result >= 9)
                 {
                     countType = "2";
+                    countGermany = 3;
                     WarningResult(6, 12, "3");
                 }
                 else if (result <= 15 && result >= 12)
                 {
                     countType = "1";
+                    countGermany = 2;
                     WarningResult(7.5, 15, "2");
                 }
                 else
                 {
-
+                    countGermany = 1;
                     GEN.Text = Properties.Resources.Gen + result + "\r\n";
                     GEN.Text += Properties.Resources.Gen4 + " - " + "1" + "\r\n";
 
                 }
-                for (double i = 0; i <= result;)
-                {
-                    i += 3;
-                    if (i > result)
-                    {
-                        break;
-                    }
-                    countGermany--;
-                }
+    
                 Lister.Items.RemoveAt(Subjects.SelectedIndex);
                 Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = countGermany });
             }
@@ -479,7 +480,7 @@ namespace WpfApp1
                 else
                 {
 
-                    GEN.Text = Properties.Resources.Gen + result + "\r\n";
+                    GEN.Text = Properties.Resources.Gen + "12" + "\r\n";
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
@@ -660,52 +661,50 @@ namespace WpfApp1
                 if (result < 0)
                 {
                     countType = "Fx";
+                    countDenmark = 0;
                     WarningResult(0, 2, "F");
                 }
                 else if (result < 2)
                 {
                     countType = "E";
+                    countDenmark = 1;
                     WarningResult(1.5, 2, "Fx");
                 }
                 else if (result < 4)
                 {
                     countType = "D";
+                    countDenmark = 2;
                     WarningResult(2.5, 4, "E");
                 }
                 else if (result < 7)
                 {
                     countType = "C";
+                    countDenmark = 3;
                     WarningResult(3.5, 7, "D");
                 }
                 else if (result < 10)
                 {
                     countType = "B";
+                    countDenmark = 4;
                     WarningResult(5, 10, "C");
                 }
                 else if (result < 12)
                 {
                     countType = "A";
+                    countDenmark = 5;
                     WarningResult(6, 12, "B");
                 }
                 else
                 {
-
+                    countDenmark = 6;
                     GEN.Text = Properties.Resources.Gen + "A" + "\r\n";
                     GEN.Text += Properties.Resources.Gen4 + "\r\n";
 
                 }
                 
-                for (double i = -3; i <= result;)
-                {
-                    i += 2.45;
-                    if (i >= result)
-                    {
-                        break;
-                    }
-                    countDenmark++;
-                }
+      
                 Lister.Items.RemoveAt(Subjects.SelectedIndex);
-                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content = valueSymbol[countDenmark] }); 
+                Lister.Items.Insert(Subjects.SelectedIndex, new ListBoxItem { Content =  valueSymbol[countDenmark]}); 
             }
         }
         public void CustomType()

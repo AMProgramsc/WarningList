@@ -59,6 +59,7 @@ namespace WpfApp1
          
             InitializeComponent();
             this.DataContext = CurrentModel;
+            
      
             if (debugCheck == 1)
             {
